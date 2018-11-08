@@ -1,0 +1,2675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80891F9C-2D38-490E-B920-2064362E61A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tMax14</RootNamespace>
+    <AssemblyName>tMax14</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\MyPublish\tMax14\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <UpdateUrl>\\192.168.1.245\tMax14\tMax14Programs\tMax14\</UpdateUrl>
+    <ProductName>tMax14</ProductName>
+    <PublisherName>Şener DEMİRAL</PublisherName>
+    <SuiteName>tMax14</SuiteName>
+    <MinimumRequiredVersion>1.6.0.272</MinimumRequiredVersion>
+    <ApplicationRevision>273</ApplicationRevision>
+    <ApplicationVersion>1.6.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1966381A32799A66AAA4D9876439DE663A905DD8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>tMax14_3_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>animals-doves_of_peace.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v15.1.UI, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v15.1.Extensions, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.UI, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.Wizard, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1.Extensions, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Excel">
+      <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net20\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\FirebirdClient\Client4.5\net40\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountAk\AccountAkDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountAkDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccountAk\AkdXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountAk\AkdXF.Designer.cs">
+      <DependentUpon>AkdXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountAk\AkdyXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountAk\AkdyXF.Designer.cs">
+      <DependentUpon>AkdyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountAk\AkhXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountAk\AkhXF.Designer.cs">
+      <DependentUpon>AkhXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountAk\AkoXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountAk\AkoXF.Designer.cs">
+      <DependentUpon>AkoXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountAk\AktXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountAk\AktXF.Designer.cs">
+      <DependentUpon>AktXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountAk\AkXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountAk\AkXF.Designer.cs">
+      <DependentUpon>AkXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountETA\AcccountEtaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcccountEtaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccountETA\EtaFisAcilisXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountETA\EtaFisAcilisXF.Designer.cs">
+      <DependentUpon>EtaFisAcilisXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountETA\EtaFisXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountETA\EtaFisXF.Designer.cs">
+      <DependentUpon>EtaFisXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountETA\EtaFtrXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountETA\EtaFtrXF.Designer.cs">
+      <DependentUpon>EtaFtrXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AccAfbKlnDtyXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccAfbKlnDtyXF.Designer.cs">
+      <DependentUpon>AccAfbKlnDtyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AccAfbKlnHspXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccAfbKlnHspXF.Designer.cs">
+      <DependentUpon>AccAfbKlnHspXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AccAhpxPvtXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccAhpxPvtXF.Designer.cs">
+      <DependentUpon>AccAhpxPvtXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AccAvddxPvtXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccAvddxPvtXF.Designer.cs">
+      <DependentUpon>AccAvddxPvtXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AccKdvAlsXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccKdvAlsXF.Designer.cs">
+      <DependentUpon>AccKdvAlsXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AccKdvStsXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccKdvStsXF.Designer.cs">
+      <DependentUpon>AccKdvStsXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AccKlnDtyAllXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccKlnDtyAllXF.Designer.cs">
+      <DependentUpon>AccKlnDtyAllXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AccKlnOztAllXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccKlnOztAllXF.Designer.cs">
+      <DependentUpon>AccKlnOztAllXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AccMarkenFtrXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccMarkenFtrXF.Designer.cs">
+      <DependentUpon>AccMarkenFtrXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AccountRprDataSet.cs">
+      <DependentUpon>AccountRprDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccountRprDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountRprDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\AvdHstXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AvdHstXF.Designer.cs">
+      <DependentUpon>AvdHstXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\BaBsMtbktXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\BaBsMtbktXF.Designer.cs">
+      <DependentUpon>BaBsMtbktXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\DamgaVergisiXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\DamgaVergisiXF.Designer.cs">
+      <DependentUpon>DamgaVergisiXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\FrmMtbktHstXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\FrmMtbktHstXF.Designer.cs">
+      <DependentUpon>FrmMtbktHstXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\MizanDvzXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\MizanDvzXF.Designer.cs">
+      <DependentUpon>MizanDvzXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\MtbktXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\MtbktXF.Designer.cs">
+      <DependentUpon>MtbktXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AccHspNoBkyXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\AccHspNoBkyXF.Designer.cs">
+      <DependentUpon>AccHspNoBkyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AccMusteriBkyXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\AccMusteriBkyXF.Designer.cs">
+      <DependentUpon>AccMusteriBkyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AccountDataSet.cs">
+      <DependentUpon>AccountDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Account\AccountDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Account\CekXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\CekXF.Designer.cs">
+      <DependentUpon>CekXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DagitimAnahtarXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\DagitimAnahtarXF.Designer.cs">
+      <DependentUpon>DagitimAnahtarXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DekontXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\DekontXF.Designer.cs">
+      <DependentUpon>DekontXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DvzXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Account\DvzXUC.Designer.cs">
+      <DependentUpon>DvzXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRpr\ExtreXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\ExtreXF.Designer.cs">
+      <DependentUpon>ExtreXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FaturaDetayXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FaturaDetayXF.Designer.cs">
+      <DependentUpon>FaturaDetayXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FaturaKapaXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FaturaKapaXF.Designer.cs">
+      <DependentUpon>FaturaKapaXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FaturaLink2XF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FaturaLink2XF.Designer.cs">
+      <DependentUpon>FaturaLink2XF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FaturaLinkXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FaturaLinkXF.Designer.cs">
+      <DependentUpon>FaturaLinkXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FaturaXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FaturaXF.Designer.cs">
+      <DependentUpon>FaturaXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FirmaDvzBkyXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FirmaDvzBkyXF.Designer.cs">
+      <DependentUpon>FirmaDvzBkyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FisDetayHistoryXF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Account\FisDetayHistoryXF.Designer.cs">
+      <DependentUpon>FisDetayHistoryXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FisDetayXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FisDetayXF.Designer.cs">
+      <DependentUpon>FisDetayXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FisKapamaFisiXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FisKapamaFisiXF.Designer.cs">
+      <DependentUpon>FisKapamaFisiXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FisXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FisXF.Designer.cs">
+      <DependentUpon>FisXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\HesapBkyXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\HesapBkyXF.Designer.cs">
+      <DependentUpon>HesapBkyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\HesapPlanXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\HesapPlanXF.Designer.cs">
+      <DependentUpon>HesapPlanXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\HizmetXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\HizmetXF.Designer.cs">
+      <DependentUpon>HizmetXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\HspPlnAltXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\HspPlnAltXF.Designer.cs">
+      <DependentUpon>HspPlnAltXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\KurGirisXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\KurGirisXF.Designer.cs">
+      <DependentUpon>KurGirisXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\MizanXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\MizanXF.Designer.cs">
+      <DependentUpon>MizanXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Muavin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Account\Muavin.Designer.cs">
+      <DependentUpon>Muavin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\MusteriBkyXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\MusteriBkyXF.Designer.cs">
+      <DependentUpon>MusteriBkyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OdemeEmriXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\OdemeEmriXF.Designer.cs">
+      <DependentUpon>OdemeEmriXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButceForm.Designer.cs">
+      <DependentUpon>ButceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doc\DocDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Doc\DocXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doc\DocXF.Designer.cs">
+      <DependentUpon>DocXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doc\selDetXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doc\selDetXF.Designer.cs">
+      <DependentUpon>selDetXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eskiYerTanimlariXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eskiYerTanimlariXF.Designer.cs">
+      <DependentUpon>eskiYerTanimlariXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\AnlasmaOdemeXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Firma\AnlasmaOdemeXR.Designer.cs">
+      <DependentUpon>AnlasmaOdemeXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\FirmaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FirmaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\frcaXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Firma\frcaXF.Designer.cs">
+      <DependentUpon>frcaXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\frcmXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Firma\frcmXF.Designer.cs">
+      <DependentUpon>frcmXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\frs2tstXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Firma\frs2tstXF.Designer.cs">
+      <DependentUpon>frs2tstXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\frtEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Firma\frtEditForm.Designer.cs">
+      <DependentUpon>frtEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\frtSalesRepXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Firma\frtSalesRepXUC.Designer.cs">
+      <DependentUpon>frtSalesRepXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\frtTemsilciListeXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Firma\frtTemsilciListeXF.Designer.cs">
+      <DependentUpon>frtTemsilciListeXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\frtXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Firma\frtXUC.Designer.cs">
+      <DependentUpon>frtXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\OnayliTedarikcilerXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Firma\OnayliTedarikcilerXR.Designer.cs">
+      <DependentUpon>OnayliTedarikcilerXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firma\salesRepOpsUsrXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Firma\salesRepOpsUsrXF.Designer.cs">
+      <DependentUpon>salesRepOpsUsrXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\efuMdfyXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\efuMdfyXF.Designer.cs">
+      <DependentUpon>efuMdfyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\GenelDataSet.cs">
+      <DependentUpon>GenelDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Genel\GenelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\kkesXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\kkesXF.Designer.cs">
+      <DependentUpon>kkesXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\locForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\locForm.Designer.cs">
+      <DependentUpon>locForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\mapXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\mapXF.Designer.cs">
+      <DependentUpon>mapXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\newTagXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\newTagXF.Designer.cs">
+      <DependentUpon>newTagXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\onayXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\onayXF.Designer.cs">
+      <DependentUpon>onayXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\opstXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\opstXF.Designer.cs">
+      <DependentUpon>opstXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\rphXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\rphXF.Designer.cs">
+      <DependentUpon>rphXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\rppXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\rppXF.Designer.cs">
+      <DependentUpon>rppXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\rptdXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\rptdXF.Designer.cs">
+      <DependentUpon>rptdXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\rptXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Genel\rptXUC.Designer.cs">
+      <DependentUpon>rptXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\TblTagMdfyXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\TblTagMdfyXF.Designer.cs">
+      <DependentUpon>TblTagMdfyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\uytXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Genel\uytXUC.Designer.cs">
+      <DependentUpon>uytXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\xglFX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\xglFX.Designer.cs">
+      <DependentUpon>xglFX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\xgtForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\xgtForm.Designer.cs">
+      <DependentUpon>xgtForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\xgtNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\xgtNewForm.Designer.cs">
+      <DependentUpon>xgtNewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\xtgXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\xtgXF.Designer.cs">
+      <DependentUpon>xtgXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jurnal\jrnXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jurnal\jrnXF.Designer.cs">
+      <DependentUpon>jrnXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jurnal\JurnalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JurnalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kkDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkfBosXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkfBosXF.Designer.cs">
+      <DependentUpon>kkfBosXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkfXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkfXF.Designer.cs">
+      <DependentUpon>kkfXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkmXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkmXF.Designer.cs">
+      <DependentUpon>kkmXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkoBosXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkoBosXF.Designer.cs">
+      <DependentUpon>kkoBosXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkOlyFlytXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkOlyFlytXF.Designer.cs">
+      <DependentUpon>kkOlyFlytXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkoXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkoXF.Designer.cs">
+      <DependentUpon>kkoXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkSendMailXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KaliteKontrol\kkSendMailXF.Designer.cs">
+      <DependentUpon>kkSendMailXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\PwdChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\PwdChangeForm.Designer.cs">
+      <DependentUpon>PwdChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailClass.cs" />
+    <Compile Include="MainDataSet.cs">
+      <DependentUpon>MainDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuSetup\MenuSetupDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MenuSetupDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MenuSetup\MenuXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuSetup\MenuXF.Designer.cs">
+      <DependentUpon>MenuXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\FrkContactsXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\FrkContactsXF.Designer.cs">
+      <DependentUpon>FrkContactsXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\frkSendXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\frkSendXF.Designer.cs">
+      <DependentUpon>frkSendXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\frkXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\frkXF.Designer.cs">
+      <DependentUpon>frkXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\KampanyaXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\KampanyaXF.Designer.cs">
+      <DependentUpon>KampanyaXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\MiscDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiscDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\denemeXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\denemeXF.Designer.cs">
+      <DependentUpon>denemeXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\dnmTklfFtrXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\dnmTklfFtrXF.Designer.cs">
+      <DependentUpon>dnmTklfFtrXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\MarkenSiteListXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\MarkenSiteListXF.Designer.cs">
+      <DependentUpon>MarkenSiteListXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opContainerLoadingXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\opContainerLoadingXF.Designer.cs">
+      <DependentUpon>opContainerLoadingXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opContainerXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ops\opContainerXUC.Designer.cs">
+      <DependentUpon>opContainerXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\ophBosXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\ophBosXF.Designer.cs">
+      <DependentUpon>ophBosXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\ophChargeCreateXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\ophChargeCreateXF.Designer.cs">
+      <DependentUpon>ophChargeCreateXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opHouseBioBookXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\opHouseBioBookXF.Designer.cs">
+      <DependentUpon>opHouseBioBookXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opHouseEditXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\opHouseEditXF.Designer.cs">
+      <DependentUpon>opHouseEditXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opHouseXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ops\opHouseXUC.Designer.cs">
+      <DependentUpon>opHouseXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opMasterEditXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\opMasterEditXF.Designer.cs">
+      <DependentUpon>opMasterEditXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opMasterLoadingXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\opMasterLoadingXF.Designer.cs">
+      <DependentUpon>opMasterLoadingXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opMasterProfitXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\opMasterProfitXF.Designer.cs">
+      <DependentUpon>opMasterProfitXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opMasterXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ops\opMasterXUC.Designer.cs">
+      <DependentUpon>opMasterXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opMAWBstokXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\opMAWBstokXF.Designer.cs">
+      <DependentUpon>opMAWBstokXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opmBosXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\opmBosXF.Designer.cs">
+      <DependentUpon>opmBosXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opPackageTypeXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\opPackageTypeXF.Designer.cs">
+      <DependentUpon>opPackageTypeXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\OpsDataSet.cs">
+      <DependentUpon>OpsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ops\OpsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\ProjeSablonEditXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\ProjeSablonEditXF.Designer.cs">
+      <DependentUpon>ProjeSablonEditXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\ProjeSablonXUC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\ProjeSablonXUC.Designer.cs">
+      <DependentUpon>ProjeSablonXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\ProjeXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ops\ProjeXUC.Designer.cs">
+      <DependentUpon>ProjeXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\ophoXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\ophoXF.Designer.cs">
+      <DependentUpon>ophoXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\OrderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pvt\afbPvtXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\afbPvtXF.Designer.cs">
+      <DependentUpon>afbPvtXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\afdPvtXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\afdPvtXF.Designer.cs">
+      <DependentUpon>afdPvtXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\kpiHouseXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\kpiHouseXF.Designer.cs">
+      <DependentUpon>kpiHouseXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\kpiMasterXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\kpiMasterXF.Designer.cs">
+      <DependentUpon>kpiMasterXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\opcChargesXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\opcChargesXF.Designer.cs">
+      <DependentUpon>opcChargesXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\opccPvtXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\opccPvtXF.Designer.cs">
+      <DependentUpon>opccPvtXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\OphPgExcelXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\OphPgExcelXF.Designer.cs">
+      <DependentUpon>OphPgExcelXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\OphPgXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\OphPgXF.Designer.cs">
+      <DependentUpon>OphPgXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\ophProfit2XF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\ophProfit2XF.Designer.cs">
+      <DependentUpon>ophProfit2XF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\ophProfitXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\ophProfitXF.Designer.cs">
+      <DependentUpon>ophProfitXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\ophPvtXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\ophPvtXF.Designer.cs">
+      <DependentUpon>ophPvtXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\opmPvtXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\opmPvtXF.Designer.cs">
+      <DependentUpon>opmPvtXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\Pivot1XF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\Pivot1XF.Designer.cs">
+      <DependentUpon>Pivot1XF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\Pivot2XF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\Pivot2XF.Designer.cs">
+      <DependentUpon>Pivot2XF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\Pivot3XF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\Pivot3XF.Designer.cs">
+      <DependentUpon>Pivot3XF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\PvtDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PvtDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\PvtNetworkXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\PvtNetworkXF.Designer.cs">
+      <DependentUpon>PvtNetworkXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\RdpColMnfXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\RdpColMnfXF.Designer.cs">
+      <DependentUpon>RdpColMnfXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\rprCMgridFX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\rprCMgridFX.Designer.cs">
+      <DependentUpon>rprCMgridFX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\salesRepOpsXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\salesRepOpsXF.Designer.cs">
+      <DependentUpon>salesRepOpsXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\TracingXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\TracingXF.Designer.cs">
+      <DependentUpon>TracingXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\QryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsvOpcXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsvOpcXUC.Designer.cs">
+      <DependentUpon>qsvOpcXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsvAvbXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsvAvbXUC.Designer.cs">
+      <DependentUpon>qsvAvbXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsvFrtSalesRepXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsvFrtSalesRepXUC.Designer.cs">
+      <DependentUpon>qsvFrtSalesRepXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsOphoXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsOphoXUC.Designer.cs">
+      <DependentUpon>qsOphoXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsvAfbXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsvAfbXUC.Designer.cs">
+      <DependentUpon>qsvAfbXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsvJrnXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsvJrnXUC.Designer.cs">
+      <DependentUpon>qsvJrnXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsvRphXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsvRphXUC.Designer.cs">
+      <DependentUpon>qsvRphXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsvTafXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsvTafXUC.Designer.cs">
+      <DependentUpon>qsvTafXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\QryDataSet.cs">
+      <DependentUpon>QryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Qry\qryPrmsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qry\qryPrmsForm.Designer.cs">
+      <DependentUpon>qryPrmsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qryXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qry\qryXF.Designer.cs">
+      <DependentUpon>qryXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsDocXF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsDocXF.Designer.cs">
+      <DependentUpon>qsDocXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsJrnXF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsJrnXF.Designer.cs">
+      <DependentUpon>qsJrnXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsLocXF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsLocXF.Designer.cs">
+      <DependentUpon>qsLocXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsOphXF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsOphXF.Designer.cs">
+      <DependentUpon>qsOphXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsOpmXF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsOpmXF.Designer.cs">
+      <DependentUpon>qsOpmXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsvFrtXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsvFrtXUC.Designer.cs">
+      <DependentUpon>qsvFrtXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\qsvTstXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qry\qsvTstXUC.Designer.cs">
+      <DependentUpon>qsvTstXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TeklifAlisFiyatRprXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TeklifAlisFiyatRprXF.Designer.cs">
+      <DependentUpon>TeklifAlisFiyatRprXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TeklifAlisFiyatXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TeklifAlisFiyatXF.designer.cs">
+      <DependentUpon>TeklifAlisFiyatXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TeklifAlisSecXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TeklifAlisSecXF.Designer.cs">
+      <DependentUpon>TeklifAlisSecXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TeklifDataSet.cs">
+      <DependentUpon>TeklifDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Teklif\TeklifDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeklifDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TeklifFtrAlsXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TeklifFtrAlsXF.Designer.cs">
+      <DependentUpon>TeklifFtrAlsXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TeklifKarMarjXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TeklifKarMarjXF.Designer.cs">
+      <DependentUpon>TeklifKarMarjXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TeklifSatisTalepRprXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TeklifSatisTalepRprXF.Designer.cs">
+      <DependentUpon>TeklifSatisTalepRprXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TeklifSatisTalepXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TeklifSatisTalepXF.Designer.cs">
+      <DependentUpon>TeklifSatisTalepXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TeklifSatisXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TeklifSatisXF.Designer.cs">
+      <DependentUpon>TeklifSatisXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Traxon\TraxonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TraxonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Traxon\Trx2XF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Traxon\Trx2XF.Designer.cs">
+      <DependentUpon>Trx2XF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\usaPivot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\usaPivot.Designer.cs">
+      <DependentUpon>usaPivot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UsersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Users\usiPivot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\usiPivot.Designer.cs">
+      <DependentUpon>usiPivot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\uskPivot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\uskPivot.Designer.cs">
+      <DependentUpon>uskPivot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\usmPivot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\usmPivot.Designer.cs">
+      <DependentUpon>usmPivot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ustForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ustForm.Designer.cs">
+      <DependentUpon>ustForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ustInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ustInfoForm.Designer.cs">
+      <DependentUpon>ustInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WAN\matalanOrderXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WAN\matalanOrderXF.Designer.cs">
+      <DependentUpon>matalanOrderXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WAN\wanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WAN\wmoXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WAN\wmoXF.Designer.cs">
+      <DependentUpon>wmoXF.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountAk\AkdXF.resx">
+      <DependentUpon>AkdXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountAk\AkdyXF.resx">
+      <DependentUpon>AkdyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountAk\AkhXF.resx">
+      <DependentUpon>AkhXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountAk\AkoXF.resx">
+      <DependentUpon>AkoXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountAk\AktXF.resx">
+      <DependentUpon>AktXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountAk\AkXF.resx">
+      <DependentUpon>AkXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountETA\EtaFisAcilisXF.resx">
+      <DependentUpon>EtaFisAcilisXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountETA\EtaFisXF.resx">
+      <DependentUpon>EtaFisXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountETA\EtaFtrXF.resx">
+      <DependentUpon>EtaFtrXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccAfbKlnDtyXF.resx">
+      <DependentUpon>AccAfbKlnDtyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccAfbKlnHspXF.resx">
+      <DependentUpon>AccAfbKlnHspXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccAhpxPvtXF.resx">
+      <DependentUpon>AccAhpxPvtXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccAvddxPvtXF.resx">
+      <DependentUpon>AccAvddxPvtXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccKdvAlsXF.resx">
+      <DependentUpon>AccKdvAlsXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccKdvStsXF.resx">
+      <DependentUpon>AccKdvStsXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccKlnDtyAllXF.resx">
+      <DependentUpon>AccKlnDtyAllXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccKlnOztAllXF.resx">
+      <DependentUpon>AccKlnOztAllXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccMarkenFtrXF.resx">
+      <DependentUpon>AccMarkenFtrXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AvdHstXF.resx">
+      <DependentUpon>AvdHstXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\BaBsMtbktXF.resx">
+      <DependentUpon>BaBsMtbktXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\DamgaVergisiXF.resx">
+      <DependentUpon>DamgaVergisiXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\FrmMtbktHstXF.resx">
+      <DependentUpon>FrmMtbktHstXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\MizanDvzXF.resx">
+      <DependentUpon>MizanDvzXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\MtbktXF.resx">
+      <DependentUpon>MtbktXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\AccHspNoBkyXF.resx">
+      <DependentUpon>AccHspNoBkyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\AccMusteriBkyXF.resx">
+      <DependentUpon>AccMusteriBkyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\CekXF.resx">
+      <DependentUpon>CekXF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\DagitimAnahtarXF.resx">
+      <DependentUpon>DagitimAnahtarXF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\DekontXF.resx">
+      <DependentUpon>DekontXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\DvzXUC.resx">
+      <DependentUpon>DvzXUC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\ExtreXF.resx">
+      <DependentUpon>ExtreXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FaturaDetayXF.resx">
+      <DependentUpon>FaturaDetayXF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FaturaKapaXF.resx">
+      <DependentUpon>FaturaKapaXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FaturaLink2XF.resx">
+      <DependentUpon>FaturaLink2XF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FaturaLinkXF.resx">
+      <DependentUpon>FaturaLinkXF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FaturaXF.resx">
+      <DependentUpon>FaturaXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FirmaDvzBkyXF.resx">
+      <DependentUpon>FirmaDvzBkyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FisDetayHistoryXF.resx">
+      <DependentUpon>FisDetayHistoryXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FisDetayXF.resx">
+      <DependentUpon>FisDetayXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FisKapamaFisiXF.resx">
+      <DependentUpon>FisKapamaFisiXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FisXF.resx">
+      <DependentUpon>FisXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\HesapBkyXF.resx">
+      <DependentUpon>HesapBkyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\HesapPlanXF.resx">
+      <DependentUpon>HesapPlanXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\HizmetXF.resx">
+      <DependentUpon>HizmetXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\HspPlnAltXF.resx">
+      <DependentUpon>HspPlnAltXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\KurGirisXF.resx">
+      <DependentUpon>KurGirisXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\MizanXF.resx">
+      <DependentUpon>MizanXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\Muavin.resx">
+      <DependentUpon>Muavin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\MusteriBkyXF.resx">
+      <DependentUpon>MusteriBkyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\OdemeEmriXF.resx">
+      <DependentUpon>OdemeEmriXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButceForm.resx">
+      <DependentUpon>ButceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doc\DocXF.resx">
+      <DependentUpon>DocXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doc\selDetXF.resx">
+      <DependentUpon>selDetXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eskiYerTanimlariXF.resx">
+      <DependentUpon>eskiYerTanimlariXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firma\AnlasmaOdemeXR.resx">
+      <DependentUpon>AnlasmaOdemeXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firma\frcaXF.resx">
+      <DependentUpon>frcaXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firma\frcmXF.resx">
+      <DependentUpon>frcmXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firma\frs2tstXF.resx">
+      <DependentUpon>frs2tstXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firma\frtEditForm.resx">
+      <DependentUpon>frtEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firma\frtSalesRepXUC.resx">
+      <DependentUpon>frtSalesRepXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firma\frtTemsilciListeXF.resx">
+      <DependentUpon>frtTemsilciListeXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firma\frtXUC.resx">
+      <DependentUpon>frtXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firma\OnayliTedarikcilerXR.resx">
+      <DependentUpon>OnayliTedarikcilerXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firma\salesRepOpsUsrXF.resx">
+      <DependentUpon>salesRepOpsUsrXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\efuMdfyXF.resx">
+      <DependentUpon>efuMdfyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\kkesXF.resx">
+      <DependentUpon>kkesXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\locForm.resx">
+      <DependentUpon>locForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\mapXF.resx">
+      <DependentUpon>mapXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\newTagXF.resx">
+      <DependentUpon>newTagXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\onayXF.resx">
+      <DependentUpon>onayXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\opstXF.resx">
+      <DependentUpon>opstXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\rphXF.resx">
+      <DependentUpon>rphXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\rppXF.resx">
+      <DependentUpon>rppXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\rptdXF.resx">
+      <DependentUpon>rptdXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\rptXUC.resx">
+      <DependentUpon>rptXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\TblTagMdfyXF.resx">
+      <DependentUpon>TblTagMdfyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\uytXUC.resx">
+      <DependentUpon>uytXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\xglFX.resx">
+      <DependentUpon>xglFX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\xgtForm.resx">
+      <DependentUpon>xgtForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\xgtNewForm.resx">
+      <DependentUpon>xgtNewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\xtgXF.resx">
+      <DependentUpon>xtgXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jurnal\jrnXF.resx">
+      <DependentUpon>jrnXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KaliteKontrol\kkfBosXF.resx">
+      <DependentUpon>kkfBosXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KaliteKontrol\kkfXF.resx">
+      <DependentUpon>kkfXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KaliteKontrol\kkmXF.resx">
+      <DependentUpon>kkmXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KaliteKontrol\kkoBosXF.resx">
+      <DependentUpon>kkoBosXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KaliteKontrol\kkOlyFlytXF.resx">
+      <DependentUpon>kkOlyFlytXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KaliteKontrol\kkoXF.resx">
+      <DependentUpon>kkoXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KaliteKontrol\kkSendMailXF.resx">
+      <DependentUpon>kkSendMailXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\PwdChangeForm.resx">
+      <DependentUpon>PwdChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuSetup\MenuXF.resx">
+      <DependentUpon>MenuXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\FrkContactsXF.resx">
+      <DependentUpon>FrkContactsXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\frkSendXF.resx">
+      <DependentUpon>frkSendXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\frkXF.resx">
+      <DependentUpon>frkXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\KampanyaXF.resx">
+      <DependentUpon>KampanyaXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\denemeXF.resx">
+      <DependentUpon>denemeXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\dnmTklfFtrXF.resx">
+      <DependentUpon>dnmTklfFtrXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\MarkenSiteListXF.resx">
+      <DependentUpon>MarkenSiteListXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opContainerLoadingXF.resx">
+      <DependentUpon>opContainerLoadingXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opContainerXUC.resx">
+      <DependentUpon>opContainerXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\ophBosXF.resx">
+      <DependentUpon>ophBosXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\ophChargeCreateXF.resx">
+      <DependentUpon>ophChargeCreateXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opHouseBioBookXF.resx">
+      <DependentUpon>opHouseBioBookXF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opHouseEditXF.resx">
+      <DependentUpon>opHouseEditXF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opHouseXUC.resx">
+      <DependentUpon>opHouseXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opMasterEditXF.resx">
+      <DependentUpon>opMasterEditXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opMasterLoadingXF.resx">
+      <DependentUpon>opMasterLoadingXF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opMasterProfitXF.resx">
+      <DependentUpon>opMasterProfitXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opMasterXUC.resx">
+      <DependentUpon>opMasterXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opMAWBstokXF.resx">
+      <DependentUpon>opMAWBstokXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opmBosXF.resx">
+      <DependentUpon>opmBosXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opPackageTypeXF.resx">
+      <DependentUpon>opPackageTypeXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\ProjeSablonEditXF.resx">
+      <DependentUpon>ProjeSablonEditXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\ProjeSablonXUC.resx">
+      <DependentUpon>ProjeSablonXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\ProjeXUC.resx">
+      <DependentUpon>ProjeXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\ophoXF.resx">
+      <DependentUpon>ophoXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Pvt\afbPvtXF.resx">
+      <DependentUpon>afbPvtXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\afdPvtXF.resx">
+      <DependentUpon>afdPvtXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\kpiHouseXF.resx">
+      <DependentUpon>kpiHouseXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\kpiMasterXF.resx">
+      <DependentUpon>kpiMasterXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\opcChargesXF.resx">
+      <DependentUpon>opcChargesXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\opccPvtXF.resx">
+      <DependentUpon>opccPvtXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\OphPgExcelXF.resx">
+      <DependentUpon>OphPgExcelXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\OphPgXF.resx">
+      <DependentUpon>OphPgXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\ophProfit2XF.resx">
+      <DependentUpon>ophProfit2XF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\ophProfitXF.resx">
+      <DependentUpon>ophProfitXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\ophPvtXF.resx">
+      <DependentUpon>ophPvtXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\opmPvtXF.resx">
+      <DependentUpon>opmPvtXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\Pivot2XF.resx">
+      <DependentUpon>Pivot2XF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\Pivot3XF.resx">
+      <DependentUpon>Pivot3XF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\PvtNetworkXF.resx">
+      <DependentUpon>PvtNetworkXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\RdpColMnfXF.resx">
+      <DependentUpon>RdpColMnfXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\rprCMgridFX.resx">
+      <DependentUpon>rprCMgridFX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\salesRepOpsXF.resx">
+      <DependentUpon>salesRepOpsXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\TracingXF.resx">
+      <DependentUpon>TracingXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsvOpcXUC.resx">
+      <DependentUpon>qsvOpcXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsvAvbXUC.resx">
+      <DependentUpon>qsvAvbXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsvFrtSalesRepXUC.resx">
+      <DependentUpon>qsvFrtSalesRepXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsOphoXUC.resx">
+      <DependentUpon>qsOphoXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsvAfbXUC.resx">
+      <DependentUpon>qsvAfbXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsvJrnXUC.resx">
+      <DependentUpon>qsvJrnXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsvRphXUC.resx">
+      <DependentUpon>qsvRphXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsvTafXUC.resx">
+      <DependentUpon>qsvTafXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qryPrmsForm.resx">
+      <DependentUpon>qryPrmsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qryXF.resx">
+      <DependentUpon>qryXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsDocXF.resx">
+      <DependentUpon>qsDocXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsJrnXF.resx">
+      <DependentUpon>qsJrnXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsLocXF.resx">
+      <DependentUpon>qsLocXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsOphXF.resx">
+      <DependentUpon>qsOphXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsOpmXF.resx">
+      <DependentUpon>qsOpmXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsvFrtXUC.resx">
+      <DependentUpon>qsvFrtXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\qsvTstXUC.resx">
+      <DependentUpon>qsvTstXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TeklifAlisFiyatRprXF.resx">
+      <DependentUpon>TeklifAlisFiyatRprXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TeklifAlisFiyatXF.resx">
+      <DependentUpon>TeklifAlisFiyatXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TeklifAlisSecXF.resx">
+      <DependentUpon>TeklifAlisSecXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TeklifFtrAlsXF.resx">
+      <DependentUpon>TeklifFtrAlsXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TeklifKarMarjXF.resx">
+      <DependentUpon>TeklifKarMarjXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TeklifSatisTalepRprXF.resx">
+      <DependentUpon>TeklifSatisTalepRprXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TeklifSatisTalepXF.resx">
+      <DependentUpon>TeklifSatisTalepXF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TeklifSatisXF.resx">
+      <DependentUpon>TeklifSatisXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Traxon\Trx2XF.resx">
+      <DependentUpon>Trx2XF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\usaPivot.resx">
+      <DependentUpon>usaPivot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\usiPivot.resx">
+      <DependentUpon>usiPivot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\uskPivot.resx">
+      <DependentUpon>uskPivot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\usmPivot.resx">
+      <DependentUpon>usmPivot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ustForm.resx">
+      <DependentUpon>ustForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ustInfoForm.resx">
+      <DependentUpon>ustInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WAN\matalanOrderXF.resx">
+      <DependentUpon>matalanOrderXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WAN\wmoXF.resx">
+      <DependentUpon>wmoXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AccountAk\AccountAkDataSet.xsc">
+      <DependentUpon>AccountAkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccountAk\AccountAkDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountAkDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccountAk\AccountAkDataSet.xss">
+      <DependentUpon>AccountAkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccountETA\AcccountEtaDataSet.xsc">
+      <DependentUpon>AcccountEtaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccountETA\AcccountEtaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AcccountEtaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccountETA\AcccountEtaDataSet.xss">
+      <DependentUpon>AcccountEtaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccountRpr\AccountRprDataSet.xsc">
+      <DependentUpon>AccountRprDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccountRpr\AccountRprDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountRprDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccountRpr\AccountRprDataSet.xss">
+      <DependentUpon>AccountRprDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Account\AccountDataSet.xsc">
+      <DependentUpon>AccountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Account\AccountDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Account\AccountDataSet.xss">
+      <DependentUpon>AccountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Doc\DocDataSet.xsc">
+      <DependentUpon>DocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Doc\DocDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DocDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Doc\DocDataSet.xss">
+      <DependentUpon>DocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Firma\FirmaDataSet.xsc">
+      <DependentUpon>FirmaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Firma\FirmaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FirmaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Firma\FirmaDataSet.xss">
+      <DependentUpon>FirmaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Genel\GenelDataSet.xsc">
+      <DependentUpon>GenelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Genel\GenelDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GenelDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Genel\GenelDataSet.xss">
+      <DependentUpon>GenelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Jurnal\JurnalDataSet.xsc">
+      <DependentUpon>JurnalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Jurnal\JurnalDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JurnalDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Jurnal\JurnalDataSet.xss">
+      <DependentUpon>JurnalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KaliteKontrol\kkDataSet.xsc">
+      <DependentUpon>kkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KaliteKontrol\kkDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kkDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="KaliteKontrol\kkDataSet.xss">
+      <DependentUpon>kkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Login\LoginDataSet.xsc">
+      <DependentUpon>LoginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Login\LoginDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LoginDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Login\LoginDataSet.xss">
+      <DependentUpon>LoginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MainDataSet.xsc">
+      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MainDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MainDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MainDataSet.xss">
+      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MenuSetup\MenuSetupDataSet.xsc">
+      <DependentUpon>MenuSetupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MenuSetup\MenuSetupDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MenuSetupDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MenuSetup\MenuSetupDataSet.xss">
+      <DependentUpon>MenuSetupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Misc\MiscDataSet.xsc">
+      <DependentUpon>MiscDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Misc\MiscDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MiscDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Misc\MiscDataSet.xss">
+      <DependentUpon>MiscDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Ops\OpsDataSet.xsc">
+      <DependentUpon>OpsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Ops\OpsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OpsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Ops\OpsDataSet.xss">
+      <DependentUpon>OpsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Order\OrderDataSet.xsc">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Order\OrderDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Order\OrderDataSet.xss">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Pvt\PvtDataSet.xsc">
+      <DependentUpon>PvtDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Pvt\PvtDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PvtDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pvt\PvtDataSet.xss">
+      <DependentUpon>PvtDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Qry\QryDataSet.xsc">
+      <DependentUpon>QryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Qry\QryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Qry\QryDataSet.xss">
+      <DependentUpon>QryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Teklif\TeklifDataSet.xsc">
+      <DependentUpon>TeklifDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Teklif\TeklifDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TeklifDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Teklif\TeklifDataSet.xss">
+      <DependentUpon>TeklifDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tMax14_1_TemporaryKey.pfx" />
+    <None Include="tMax14_2_TemporaryKey.pfx" />
+    <None Include="tMax14_3_TemporaryKey.pfx" />
+    <None Include="tMax14_TemporaryKey.pfx" />
+    <None Include="Traxon\TraxonDataSet.xsc">
+      <DependentUpon>TraxonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Traxon\TraxonDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TraxonDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Traxon\TraxonDataSet.xss">
+      <DependentUpon>TraxonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Users\UsersDataSet.xsc">
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Users\UsersDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsersDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Users\UsersDataSet.xss">
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WAN\wanDataSet.xsc">
+      <DependentUpon>wanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WAN\wanDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>wanDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WAN\wanDataSet.xss">
+      <DependentUpon>wanDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cari\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.BonusSkins.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Charts.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.CodeParser.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v15.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Docs.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Images.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Map.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v15.1.Drawing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.PivotGrid.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Snap.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Snap.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Snap.v15.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Spreadsheet.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v15.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Xpo.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.1.Wizard">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v15.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraMap.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPivotGrid.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v15.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v15.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraWizard.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FirebirdSql.Data.FirebirdClient">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="animals-doves_of_peace.ico" />
+    <None Include="Resources\BrcIcon.ico" />
+    <None Include="Resources\BrcIcon.bmp" />
+    <None Include="Resources\BarIcon.ico" />
+    <None Include="Resources\Hydrattz-Multipurpose-Alphabet-Letter-A-dg.ico" />
+    <None Include="Resources\Hydrattz-Multipurpose-Alphabet-Letter-B-red.ico" />
+    <None Include="Resources\mail-forward-3.png" />
+    <None Include="Resources\arrow-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tMax14ReportClassLibrary\tMax14ReportClassLibrary.csproj">
+      <Project>{13d4de43-a926-4c29-9410-02221735767a}</Project>
+      <Name>tMax14ReportClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

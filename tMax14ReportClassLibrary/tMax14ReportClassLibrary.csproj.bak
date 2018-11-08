@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13D4DE43-A926-4C29-9410-02221735767A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tMax14ReportClassLibrary</RootNamespace>
+    <AssemblyName>tMax14ReportClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.Wizard, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.1.UI, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\FirebirdClient\Client4.5\net40\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\OrtakClass.cs">
+      <Link>OrtakClass.cs</Link>
+    </Compile>
+    <Compile Include="AcentaBeyanFormuXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AcentaBeyanFormuXR.Designer.cs">
+      <DependentUpon>AcentaBeyanFormuXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AktarmaBilgilendirmeXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AktarmaBilgilendirmeXR.Designer.cs">
+      <DependentUpon>AktarmaBilgilendirmeXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaBsMtkbtFrmXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaBsMtkbtFrmXR.Designer.cs">
+      <DependentUpon>BaBsMtkbtFrmXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BioDmyInvXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BioDmyInvXR.Designer.cs">
+      <DependentUpon>BioDmyInvXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CargoManifestXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CargoManifestXR.Designer.cs">
+      <DependentUpon>CargoManifestXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CikisIhbariXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CikisIhbariXR.Designer.cs">
+      <DependentUpon>CikisIhbariXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="EcsRateRequestXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EcsRateRequestXR.Designer.cs">
+      <DependentUpon>EcsRateRequestXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HblXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HblXR.Designer.cs">
+      <DependentUpon>HblXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura32XR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura32XR.Designer.cs">
+      <DependentUpon>Fatura32XR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DmrgClaimXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DmrgClaimXR.Designer.cs">
+      <DependentUpon>DmrgClaimXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENSformXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ENSformXR.Designer.cs">
+      <DependentUpon>ENSformXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtreXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtreXR.Designer.cs">
+      <DependentUpon>ExtreXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura2XR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura2XR.Designer.cs">
+      <DependentUpon>Fatura2XR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura3XR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura3XR.Designer.cs">
+      <DependentUpon>Fatura3XR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura5XR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura5XR.Designer.cs">
+      <DependentUpon>Fatura5XR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FaturaXR.designer.cs">
+      <DependentUpon>FaturaXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FblXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FblXR.Designer.cs">
+      <DependentUpon>FblXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FcrXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FcrXR.Designer.cs">
+      <DependentUpon>FcrXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HawbXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HawbXR.Designer.cs">
+      <DependentUpon>HawbXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IcNakliyeBilgisiXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IcNakliyeBilgisiXR.Designer.cs">
+      <DependentUpon>IcNakliyeBilgisiXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IcNakliyeTalimatiXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IcNakliyeTalimatiXR.Designer.cs">
+      <DependentUpon>IcNakliyeTalimatiXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IhracatciGuvenlikFormuXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IhracatciGuvenlikFormuXR.Designer.cs">
+      <DependentUpon>IhracatciGuvenlikFormuXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MawbXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MawbXR.Designer.cs">
+      <DependentUpon>MawbXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MrkHAWBrequestXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MrkHAWBrequestXR.Designer.cs">
+      <DependentUpon>MrkHAWBrequestXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtbktXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MtbktXR.Designer.cs">
+      <DependentUpon>MtbktXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mtbkt_BaBsXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mtbkt_BaBsXR.Designer.cs">
+      <DependentUpon>Mtbkt_BaBsXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdinoEtiketXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrdinoEtiketXR.Designer.cs">
+      <DependentUpon>OrdinoEtiketXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdinoTeslimFormuXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrdinoTeslimFormuXR.Designer.cs">
+      <DependentUpon>OrdinoTeslimFormuXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParsiyelListesiXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ParsiyelListesiXR.Designer.cs">
+      <DependentUpon>ParsiyelListesiXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreShippingAdviceXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PreShippingAdviceXR.Designer.cs">
+      <DependentUpon>PreShippingAdviceXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProofOfDeliveryXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProofOfDeliveryXR.Designer.cs">
+      <DependentUpon>ProofOfDeliveryXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDataSet.cs">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RezervasyonTeyitFormXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RezervasyonTeyitFormXR.Designer.cs">
+      <DependentUpon>RezervasyonTeyitFormXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerbestTeslimFormHouseXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerbestTeslimFormHouseXR.Designer.cs">
+      <DependentUpon>SerbestTeslimFormHouseXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerbestTeslimFormMasterXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerbestTeslimFormMasterXR.Designer.cs">
+      <DependentUpon>SerbestTeslimFormMasterXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingAdviceHouseXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShippingAdviceHouseXR.Designer.cs">
+      <DependentUpon>ShippingAdviceHouseXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingAdviceMasterXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShippingAdviceMasterXR.Designer.cs">
+      <DependentUpon>ShippingAdviceMasterXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopluAlertXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopluAlertXF.Designer.cs">
+      <DependentUpon>TopluAlertXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopluExtreXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopluExtreXF.Designer.cs">
+      <DependentUpon>TopluExtreXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopluFaturaXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopluFaturaXF.Designer.cs">
+      <DependentUpon>TopluFaturaXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VarisIhbarSonXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VarisIhbarSonXR.Designer.cs">
+      <DependentUpon>VarisIhbarSonXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VarisIhbarXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VarisIhbarXR.Designer.cs">
+      <DependentUpon>VarisIhbarXR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuklemeTalimatiXR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YuklemeTalimatiXR.Designer.cs">
+      <DependentUpon>YuklemeTalimatiXR.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AcentaBeyanFormuXR.resx">
+      <DependentUpon>AcentaBeyanFormuXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktarmaBilgilendirmeXR.resx">
+      <DependentUpon>AktarmaBilgilendirmeXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaBsMtkbtFrmXR.resx">
+      <DependentUpon>BaBsMtkbtFrmXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BioDmyInvXR.resx">
+      <DependentUpon>BioDmyInvXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargoManifestXR.resx">
+      <DependentUpon>CargoManifestXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CikisIhbariXR.resx">
+      <DependentUpon>CikisIhbariXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EcsRateRequestXR.resx">
+      <DependentUpon>EcsRateRequestXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HblXR.resx">
+      <DependentUpon>HblXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura32XR.resx">
+      <DependentUpon>Fatura32XR.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DmrgClaimXR.resx">
+      <DependentUpon>DmrgClaimXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENSformXR.resx">
+      <DependentUpon>ENSformXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtreXR.resx">
+      <DependentUpon>ExtreXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura2XR.resx">
+      <DependentUpon>Fatura2XR.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura3XR.resx">
+      <DependentUpon>Fatura3XR.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura5XR.resx">
+      <DependentUpon>Fatura5XR.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaturaXR.resx">
+      <DependentUpon>FaturaXR.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FblXR.resx">
+      <DependentUpon>FblXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FcrXR.resx">
+      <DependentUpon>FcrXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HawbXR.resx">
+      <DependentUpon>HawbXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IcNakliyeBilgisiXR.resx">
+      <DependentUpon>IcNakliyeBilgisiXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IcNakliyeTalimatiXR.resx">
+      <DependentUpon>IcNakliyeTalimatiXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IhracatciGuvenlikFormuXR.resx">
+      <DependentUpon>IhracatciGuvenlikFormuXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MawbXR.resx">
+      <DependentUpon>MawbXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MrkHAWBrequestXR.resx">
+      <DependentUpon>MrkHAWBrequestXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtbktXR.resx">
+      <DependentUpon>MtbktXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mtbkt_BaBsXR.resx">
+      <DependentUpon>Mtbkt_BaBsXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdinoEtiketXR.resx">
+      <DependentUpon>OrdinoEtiketXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdinoTeslimFormuXR.resx">
+      <DependentUpon>OrdinoTeslimFormuXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParsiyelListesiXR.resx">
+      <DependentUpon>ParsiyelListesiXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreShippingAdviceXR.resx">
+      <DependentUpon>PreShippingAdviceXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProofOfDeliveryXR.resx">
+      <DependentUpon>ProofOfDeliveryXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervasyonTeyitFormXR.resx">
+      <DependentUpon>RezervasyonTeyitFormXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerbestTeslimFormHouseXR.resx">
+      <DependentUpon>SerbestTeslimFormHouseXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerbestTeslimFormMasterXR.resx">
+      <DependentUpon>SerbestTeslimFormMasterXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShippingAdviceHouseXR.resx">
+      <DependentUpon>ShippingAdviceHouseXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShippingAdviceMasterXR.resx">
+      <DependentUpon>ShippingAdviceMasterXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopluAlertXF.resx">
+      <DependentUpon>TopluAlertXF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopluExtreXF.resx">
+      <DependentUpon>TopluExtreXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopluFaturaXF.resx">
+      <DependentUpon>TopluFaturaXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VarisIhbarSonXR.resx">
+      <DependentUpon>VarisIhbarSonXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VarisIhbarXR.resx">
+      <DependentUpon>VarisIhbarXR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuklemeTalimatiXR.resx">
+      <DependentUpon>YuklemeTalimatiXR.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportDataSet.xsc">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportDataSet.xss">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,3 @@
+NuGet: ExcelDataReader
+  ExcelDataReader.2.1.2.3  
+  SharpZipLib.0.86.0

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="13.2.5.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="MawbXR" Font="Tahoma, 10pt" TextAlignment="MiddleLeft" Version="13.2" PageWidth="827" PageHeight="1169" PaperKind="A4" Margins="50, 50, 30, 30">
+  <Bands>
+    <Item1 Ref="1" ControlType="DetailBand" Name="Detail" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+      <StylePriority Ref="2" UseTextAlignment="false" />
+    </Item1>
+    <Item2 Ref="3" Name="TopMargin" ControlType="TopMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="30" />
+    <Item3 Ref="4" Name="BottomMargin" ControlType="BottomMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="30" />
+    <Item4 Ref="5" ControlType="ReportHeaderBand" Name="ReportHeader" />
+    <Item5 Ref="6" ControlType="ReportFooterBand" Name="ReportFooter" KeepTogether="true" PrintAtBottom="true" />
+  </Bands>
+</XtraReportsLayoutSerializer>

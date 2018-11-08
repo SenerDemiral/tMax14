@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="tMax14.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="tMax06ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;character set=WIN1254;data source=192.168.1.245;initial catalog=tMax06;user id=sysdba;password=masterkey;connectiontimeout=30&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">character set=WIN1254;data source=192.168.1.245;initial catalog=tMax06;user id=sysdba;password=masterkey;connectiontimeout=30</Value>
+    </Setting>
+    <Setting Name="ConnectionStringDoc" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;character set=WIN1254;data source=192.168.1.245;user id=sysdba;password=masterkey;initial catalog=tmax14doc;connectionlifetime=30;pooling=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">character set=WIN1254;data source=192.168.1.245;user id=sysdba;password=masterkey;initial catalog=tmax14doc;connectionlifetime=30;pooling=True</Value>
+    </Setting>
+    <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

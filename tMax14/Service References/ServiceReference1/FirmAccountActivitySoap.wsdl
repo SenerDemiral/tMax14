@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://odemeler.garanti.com.tr/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://odemeler.garanti.com.tr/" targetNamespace="http://odemeler.garanti.com.tr/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://odemeler.garanti.com.tr/">
+      <xsd:complexType name="SecureToken">
+        <xsd:sequence>
+          <xsd:element name="UserId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Password" nillable="true" type="xsd:string" />
+          <xsd:element name="CreateTimestamp" nillable="true" type="xsd:string" />
+          <xsd:element name="Encoded" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="FirmAccountActivity">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="securetoken" type="impl:SecureToken" />
+            <xsd:element name="FirmCode" nillable="true" type="xsd:string" />
+            <xsd:element name="StartDate" nillable="true" type="xsd:string" />
+            <xsd:element name="EndDate" nillable="true" type="xsd:string" />
+            <xsd:element name="BranchNum" nillable="true" type="xsd:string" />
+            <xsd:element name="AccountNum" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="IBAN" type="xsd:string" />
+            <xsd:element name="TransactionId" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="AccountActivityDetail">
+        <xsd:sequence>
+          <xsd:element name="ActivityDate" nillable="true" type="xsd:string" />
+          <xsd:element name="Amount" nillable="true" type="xsd:string" />
+          <xsd:element name="Balance" nillable="true" type="xsd:string" />
+          <xsd:element name="Explanation" nillable="true" type="xsd:string" />
+          <xsd:element name="TransactionId" nillable="true" type="xsd:string" />
+          <xsd:element name="TransactionReferenceId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CorrBankNum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CorrBranchNum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CorrIBAN" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CorrVKN" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FirmAccountDetail">
+        <xsd:sequence>
+          <xsd:element name="AccountName" nillable="true" type="xsd:string" />
+          <xsd:element name="AccountType" nillable="true" type="xsd:string" />
+          <xsd:element name="BranchNum" nillable="true" type="xsd:string" />
+          <xsd:element name="AccountNum" nillable="true" type="xsd:string" />
+          <xsd:element name="CurrencyCode" nillable="true" type="xsd:string" />
+          <xsd:element name="IBAN" type="xsd:string" />
+          <xsd:element name="OpenDate" nillable="true" type="xsd:string" />
+          <xsd:element name="LastActivityDate" nillable="true" type="xsd:string" />
+          <xsd:element name="Balance" nillable="true" type="xsd:string" />
+          <xsd:element name="BlockedAmount" nillable="true" type="xsd:string" />
+          <xsd:element name="AvailableBalance" nillable="true" type="xsd:string" />
+          <xsd:element name="CreditLimit" nillable="true" type="xsd:string" />
+          <xsd:element name="AvailableBalanceWithCredit" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="AccountActivities" nillable="true" type="impl:AccountActivityDetail" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="FirmAccountActivityResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ReturnVal" nillable="true" type="xsd:string" />
+            <xsd:element name="MessageText" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="CurrentDateTime" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="CustomerNum" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="FirmAccounts" nillable="true" type="impl:FirmAccountDetail" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="FirmAccountActivityRequest">
+    <wsdl:part name="FirmAccountActivity" element="impl:FirmAccountActivity" />
+  </wsdl:message>
+  <wsdl:message name="FirmAccountActivityResponse">
+    <wsdl:part name="FirmAccountActivityResponse" element="impl:FirmAccountActivityResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FirmAccountActivitySoap">
+    <wsdl:operation name="FirmAccountActivity" parameterOrder="FirmAccountActivity">
+      <wsdl:input name="FirmAccountActivityRequest" message="impl:FirmAccountActivityRequest" />
+      <wsdl:output name="FirmAccountActivityResponse" message="impl:FirmAccountActivityResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FirmAccountActivitySoapSoapBinding" type="impl:FirmAccountActivitySoap">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FirmAccountActivity">
+      <wsdlsoap:operation soapAction="http://odemeler.garanti.com.tr/services/FirmAccountActivitySoap" />
+      <wsdl:input name="FirmAccountActivityRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="FirmAccountActivityResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FirmAccountActivity">
+    <wsdl:port name="FirmAccountActivitySoap" binding="impl:FirmAccountActivitySoapSoapBinding">
+      <wsdlsoap:address location="https://inboundrstintws.garanti.com.tr/services/FirmAccountActivitySoap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

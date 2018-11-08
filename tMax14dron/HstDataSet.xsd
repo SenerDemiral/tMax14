@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HstDataSet" targetNamespace="http://tempuri.org/HstDataSet.xsd" xmlns:mstns="http://tempuri.org/HstDataSet.xsd" xmlns="http://tempuri.org/HstDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HstDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False" msprop:Generator_DataSetName="HstDataSet" msprop:Generator_UserDSName="HstDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HST" msprop:Generator_TableClassName="HSTDataTable" msprop:Generator_TableVarName="tableHST" msprop:Generator_TablePropName="HST" msprop:Generator_RowDeletingName="HSTRowDeleting" msprop:Generator_RowChangingName="HSTRowChanging" msprop:Generator_RowEvHandlerName="HSTRowChangeEventHandler" msprop:Generator_RowDeletedName="HSTRowDeleted" msprop:Generator_UserTableName="HST" msprop:Generator_RowChangedName="HSTRowChanged" msprop:Generator_RowEvArgName="HSTRowChangeEvent" msprop:Generator_RowClassName="HSTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EXD" msprop:Generator_ColumnVarNameInTable="columnEXD" msprop:Generator_ColumnPropNameInRow="EXD" msprop:Generator_ColumnPropNameInTable="EXDColumn" msprop:Generator_UserColumnName="EXD" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Konu" msprop:Generator_ColumnVarNameInTable="columnKonu" msprop:Generator_ColumnPropNameInRow="Konu" msprop:Generator_ColumnPropNameInTable="KonuColumn" msprop:Generator_UserColumnName="Konu" type="xs:string" minOccurs="0" />
+              <xs:element name="Err" msprop:Generator_ColumnVarNameInTable="columnErr" msprop:Generator_ColumnPropNameInRow="Err" msprop:Generator_ColumnPropNameInTable="ErrColumn" msprop:Generator_UserColumnName="Err" type="xs:string" minOccurs="0" />
+              <xs:element name="Msj" msprop:Generator_ColumnVarNameInTable="columnMsj" msprop:Generator_ColumnPropNameInRow="Msj" msprop:Generator_ColumnPropNameInTable="MsjColumn" msprop:Generator_UserColumnName="Msj" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
