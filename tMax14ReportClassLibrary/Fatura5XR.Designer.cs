@@ -44,6 +44,7 @@
             this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
             this.formattingRuleAntet = new DevExpress.XtraReports.UI.FormattingRule();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
@@ -73,7 +74,6 @@
             this.antetli = new DevExpress.XtraReports.Parameters.Parameter();
             this.formattingRuleKDV = new DevExpress.XtraReports.UI.FormattingRule();
             this.formattingRuleKDVdty = new DevExpress.XtraReports.UI.FormattingRule();
-            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.reportDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichTextFooter)).BeginInit();
@@ -229,6 +229,19 @@
             this.ReportHeader.Dpi = 254F;
             this.ReportHeader.HeightF = 875F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrLabel17
+            // 
+            this.xrLabel17.CanGrow = false;
+            this.xrLabel17.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "RPR_FATURA.ACIKLAMA")});
+            this.xrLabel17.Dpi = 254F;
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(0F, 726.9199F);
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(1457.854F, 58.41998F);
+            this.xrLabel17.Text = "xrLabel4";
+            this.xrLabel17.WordWrap = false;
             // 
             // xrRichText2
             // 
@@ -578,19 +591,6 @@
             this.formattingRuleKDVdty.Formatting.Visible = DevExpress.Utils.DefaultBoolean.False;
             this.formattingRuleKDVdty.Name = "formattingRuleKDVdty";
             // 
-            // xrLabel17
-            // 
-            this.xrLabel17.CanGrow = false;
-            this.xrLabel17.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "RPR_FATURA.ACIKLAMA")});
-            this.xrLabel17.Dpi = 254F;
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(0F, 726.9199F);
-            this.xrLabel17.Name = "xrLabel17";
-            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel17.SizeF = new System.Drawing.SizeF(1457.854F, 58.41998F);
-            this.xrLabel17.Text = "xrLabel4";
-            this.xrLabel17.WordWrap = false;
-            // 
             // Fatura5XR
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -617,7 +617,8 @@
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.antetli});
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
-            this.Version = "15.1";
+            this.SnapGridSize = 25F;
+            this.Version = "16.1";
             ((System.ComponentModel.ISupportInitialize)(this.reportDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichTextFooter)).EndInit();

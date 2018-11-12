@@ -21,6 +21,7 @@ namespace tMax14agn
         {
             Program.agn = Convert.ToInt32(agnIDtextEdit.Text);
             Program.agnAd = queriesTableAdapter.WAN_AGN_LOGIN(Program.agn, pwdTextEdit.Text).ToString();
+            Program.agnLocID = Program.agnAd.GetCharsBetween("[", "]");
             if (Program.agnAd == "")
                 XtraMessageBox.Show("Incorrect agentID/password");
             else

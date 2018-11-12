@@ -17895,6 +17895,8 @@ namespace tMax14.Pvt {
             
             private global::System.Data.DataColumn columnHPODINF;
             
+            private global::System.Data.DataColumn columnHDTM;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PVT_KPI_HDataTable() {
@@ -19186,6 +19188,14 @@ namespace tMax14.Pvt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn HDTMColumn {
+                get {
+                    return this.columnHDTM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -19378,7 +19388,8 @@ namespace tMax14.Pvt {
                         string GROUSR, 
                         System.DateTime GROTRH, 
                         System.DateTime MLCD, 
-                        string HPODINF) {
+                        string HPODINF, 
+                        string HDTM) {
                 PVT_KPI_HRow rowPVT_KPI_HRow = ((PVT_KPI_HRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         HID,
@@ -19537,7 +19548,8 @@ namespace tMax14.Pvt {
                         GROUSR,
                         GROTRH,
                         MLCD,
-                        HPODINF};
+                        HPODINF,
+                        HDTM};
                 rowPVT_KPI_HRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPVT_KPI_HRow);
                 return rowPVT_KPI_HRow;
@@ -19717,6 +19729,7 @@ namespace tMax14.Pvt {
                 this.columnGROTRH = base.Columns["GROTRH"];
                 this.columnMLCD = base.Columns["MLCD"];
                 this.columnHPODINF = base.Columns["HPODINF"];
+                this.columnHDTM = base.Columns["HDTM"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20036,6 +20049,8 @@ namespace tMax14.Pvt {
                 base.Columns.Add(this.columnMLCD);
                 this.columnHPODINF = new global::System.Data.DataColumn("HPODINF", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHPODINF);
+                this.columnHDTM = new global::System.Data.DataColumn("HDTM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHDTM);
                 this.columnHNSTU.MaxLength = 2;
                 this.columnHPSTU.MaxLength = 2;
                 this.columnHTOB.MaxLength = 1;
@@ -20089,6 +20104,7 @@ namespace tMax14.Pvt {
                 this.columnCABW.MaxLength = 1;
                 this.columnGROUSR.MaxLength = 4;
                 this.columnHPODINF.MaxLength = 20;
+                this.columnHDTM.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -40959,6 +40975,22 @@ namespace tMax14.Pvt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string HDTM {
+                get {
+                    try {
+                        return ((string)(this[this.tablePVT_KPI_H.HDTMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HDTM\' in table \'PVT_KPI_H\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePVT_KPI_H.HDTMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsHIDNull() {
                 return this.IsNull(this.tablePVT_KPI_H.HIDColumn);
             }
@@ -42839,6 +42871,18 @@ namespace tMax14.Pvt {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetHPODINFNull() {
                 this[this.tablePVT_KPI_H.HPODINFColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsHDTMNull() {
+                return this.IsNull(this.tablePVT_KPI_H.HDTMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetHDTMNull() {
+                this[this.tablePVT_KPI_H.HDTMColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -50893,6 +50937,7 @@ namespace tMax14.Pvt.PvtDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("GROTRH", "GROTRH");
             tableMapping.ColumnMappings.Add("MLCD", "MLCD");
             tableMapping.ColumnMappings.Add("HPODINF", "HPODINF");
+            tableMapping.ColumnMappings.Add("HDTM", "HDTM");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

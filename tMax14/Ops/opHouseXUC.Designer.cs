@@ -108,6 +108,7 @@
             this.aktarmaBilgilendirmeEMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teslimEvragiEMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ozetBeyanEMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gumrukBilgiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.onaylaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -286,7 +287,7 @@
             this.ophSelTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OPH_SELTableAdapter();
             this.opsQueriesTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OpsQueriesTableAdapter();
             this.rprOztbTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.RPR_OZTBTableAdapter();
-            this.gumrukBilgiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colBYNMDRM = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.opsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ophGridControl)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
@@ -357,7 +358,7 @@
             this.gorulduOnayToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip.Size = new System.Drawing.Size(197, 578);
+            this.contextMenuStrip.Size = new System.Drawing.Size(197, 556);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // editToolStripMenuItem
@@ -954,6 +955,13 @@
             this.ozetBeyanEMailToolStripMenuItem.Text = "Ozet Beyan eMail";
             this.ozetBeyanEMailToolStripMenuItem.Click += new System.EventHandler(this.ozetBeyanEMailToolStripMenuItem_Click);
             // 
+            // gumrukBilgiToolStripMenuItem
+            // 
+            this.gumrukBilgiToolStripMenuItem.Name = "gumrukBilgiToolStripMenuItem";
+            this.gumrukBilgiToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.gumrukBilgiToolStripMenuItem.Text = "Gümrük Bilgi";
+            this.gumrukBilgiToolStripMenuItem.Click += new System.EventHandler(this.gumrukBilgisiEMailToolStripMenuItem_Click);
+            // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
@@ -1235,7 +1243,8 @@
             this.colKPITRH,
             this.colGROUSR,
             this.colGROTRH,
-            this.colVGM});
+            this.colVGM,
+            this.colBYNMDRM});
             styleFormatCondition1.Appearance.ForeColor = System.Drawing.Color.Coral;
             styleFormatCondition1.Appearance.Options.UseForeColor = true;
             styleFormatCondition1.ApplyToRow = true;
@@ -2497,12 +2506,13 @@
             // 
             this.rprOztbTableAdapter.ClearBeforeFill = true;
             // 
-            // gumrukBilgiToolStripMenuItem
+            // colBYNMDRM
             // 
-            this.gumrukBilgiToolStripMenuItem.Name = "gumrukBilgiToolStripMenuItem";
-            this.gumrukBilgiToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.gumrukBilgiToolStripMenuItem.Text = "Gümrük Bilgi";
-            this.gumrukBilgiToolStripMenuItem.Click += new System.EventHandler(this.gumrukBilgisiEMailToolStripMenuItem_Click);
+            this.colBYNMDRM.Caption = "BynmDrm";
+            this.colBYNMDRM.FieldName = "BYNMDRM";
+            this.colBYNMDRM.Name = "colBYNMDRM";
+            this.colBYNMDRM.Visible = true;
+            this.colBYNMDRM.VisibleIndex = 58;
             // 
             // opHouseXUC
             // 
@@ -2786,5 +2796,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colGROTRH;
         private DevExpress.XtraGrid.Columns.GridColumn colVGM;
         private System.Windows.Forms.ToolStripMenuItem gumrukBilgiToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colBYNMDRM;
     }
 }

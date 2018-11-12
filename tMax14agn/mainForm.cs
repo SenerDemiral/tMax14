@@ -52,5 +52,20 @@ namespace tMax14agn
             frm.Show();
         }
 
+        private void afbSimpleButton_Click(object sender, EventArgs e)
+        {
+            if (Program.agnLocID.StartsWith("TR"))
+            {
+                afbIcXF frm = new afbIcXF();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                afbDisXF frm = new afbDisXF();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
 }

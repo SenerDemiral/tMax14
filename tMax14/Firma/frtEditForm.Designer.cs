@@ -292,6 +292,7 @@
             this.frcContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.yeniContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.duplicateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frcGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFRCIDc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFRTIDc = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -321,14 +322,14 @@
             this.dockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.hideContainerBottom = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.panelContainer1 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.frcDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.frrDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.froDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.fraDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer2 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.frcDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
-            this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.frocDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer4 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.frsDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
@@ -478,14 +479,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
             this.hideContainerBottom.SuspendLayout();
             this.panelContainer1.SuspendLayout();
+            this.frcDockPanel.SuspendLayout();
+            this.controlContainer3.SuspendLayout();
             this.frrDockPanel.SuspendLayout();
             this.dockPanel2_Container.SuspendLayout();
             this.froDockPanel.SuspendLayout();
             this.controlContainer1.SuspendLayout();
             this.fraDockPanel.SuspendLayout();
             this.controlContainer2.SuspendLayout();
-            this.frcDockPanel.SuspendLayout();
-            this.controlContainer3.SuspendLayout();
             this.frocDockPanel.SuspendLayout();
             this.controlContainer4.SuspendLayout();
             this.frsDockPanel.SuspendLayout();
@@ -3150,9 +3151,10 @@
             // 
             this.frcContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.yeniContactToolStripMenuItem,
-            this.silContactToolStripMenuItem});
+            this.silContactToolStripMenuItem,
+            this.duplicateToolStripMenuItem});
             this.frcContextMenuStrip.Name = "frcContextMenuStrip";
-            this.frcContextMenuStrip.Size = new System.Drawing.Size(146, 48);
+            this.frcContextMenuStrip.Size = new System.Drawing.Size(146, 70);
             // 
             // yeniContactToolStripMenuItem
             // 
@@ -3169,6 +3171,13 @@
             this.silContactToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.silContactToolStripMenuItem.Text = "Sil";
             this.silContactToolStripMenuItem.Click += new System.EventHandler(this.silContactToolStripMenuItem_Click);
+            // 
+            // duplicateToolStripMenuItem
+            // 
+            this.duplicateToolStripMenuItem.Name = "duplicateToolStripMenuItem";
+            this.duplicateToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.duplicateToolStripMenuItem.Text = "Duplicate";
+            this.duplicateToolStripMenuItem.Click += new System.EventHandler(this.duplicateToolStripMenuItem_Click);
             // 
             // frcGridView
             // 
@@ -3414,7 +3423,7 @@
             // 
             // panelContainer1
             // 
-            this.panelContainer1.ActiveChild = this.frrDockPanel;
+            this.panelContainer1.ActiveChild = this.frcDockPanel;
             this.panelContainer1.Controls.Add(this.frrDockPanel);
             this.panelContainer1.Controls.Add(this.froDockPanel);
             this.panelContainer1.Controls.Add(this.fraDockPanel);
@@ -3435,6 +3444,25 @@
             this.panelContainer1.Tabbed = true;
             this.panelContainer1.Text = "panelContainer1";
             this.panelContainer1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            // 
+            // frcDockPanel
+            // 
+            this.frcDockPanel.Controls.Add(this.controlContainer3);
+            this.frcDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
+            this.frcDockPanel.ID = new System.Guid("15cfbd3a-620c-4878-b436-052d8663d397");
+            this.frcDockPanel.Location = new System.Drawing.Point(4, 24);
+            this.frcDockPanel.Name = "frcDockPanel";
+            this.frcDockPanel.OriginalSize = new System.Drawing.Size(991, 326);
+            this.frcDockPanel.Size = new System.Drawing.Size(991, 326);
+            this.frcDockPanel.Text = "Contacts";
+            // 
+            // controlContainer3
+            // 
+            this.controlContainer3.Controls.Add(this.frcGridControl);
+            this.controlContainer3.Location = new System.Drawing.Point(0, 0);
+            this.controlContainer3.Name = "controlContainer3";
+            this.controlContainer3.Size = new System.Drawing.Size(991, 326);
+            this.controlContainer3.TabIndex = 0;
             // 
             // frrDockPanel
             // 
@@ -3494,25 +3522,6 @@
             this.controlContainer2.Name = "controlContainer2";
             this.controlContainer2.Size = new System.Drawing.Size(991, 326);
             this.controlContainer2.TabIndex = 0;
-            // 
-            // frcDockPanel
-            // 
-            this.frcDockPanel.Controls.Add(this.controlContainer3);
-            this.frcDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.frcDockPanel.ID = new System.Guid("15cfbd3a-620c-4878-b436-052d8663d397");
-            this.frcDockPanel.Location = new System.Drawing.Point(4, 24);
-            this.frcDockPanel.Name = "frcDockPanel";
-            this.frcDockPanel.OriginalSize = new System.Drawing.Size(991, 326);
-            this.frcDockPanel.Size = new System.Drawing.Size(991, 326);
-            this.frcDockPanel.Text = "Contacts";
-            // 
-            // controlContainer3
-            // 
-            this.controlContainer3.Controls.Add(this.frcGridControl);
-            this.controlContainer3.Location = new System.Drawing.Point(0, 0);
-            this.controlContainer3.Name = "controlContainer3";
-            this.controlContainer3.Size = new System.Drawing.Size(991, 326);
-            this.controlContainer3.TabIndex = 0;
             // 
             // frocDockPanel
             // 
@@ -3802,14 +3811,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).EndInit();
             this.hideContainerBottom.ResumeLayout(false);
             this.panelContainer1.ResumeLayout(false);
+            this.frcDockPanel.ResumeLayout(false);
+            this.controlContainer3.ResumeLayout(false);
             this.frrDockPanel.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
             this.froDockPanel.ResumeLayout(false);
             this.controlContainer1.ResumeLayout(false);
             this.fraDockPanel.ResumeLayout(false);
             this.controlContainer2.ResumeLayout(false);
-            this.frcDockPanel.ResumeLayout(false);
-            this.controlContainer3.ResumeLayout(false);
             this.frocDockPanel.ResumeLayout(false);
             this.controlContainer4.ResumeLayout(false);
             this.frsDockPanel.ResumeLayout(false);
@@ -4142,5 +4151,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup Group7;
         private DevExpress.XtraLayout.LayoutControlGroup Group4;
         private DevExpress.XtraLayout.LayoutControlGroup Group5;
+        private System.Windows.Forms.ToolStripMenuItem duplicateToolStripMenuItem;
     }
 }

@@ -46,6 +46,8 @@ namespace tMax14agn {
         
         private OPSTPDataTable tableOPSTP;
         
+        private WAN_AGN_RPR_FATURADataTable tableWAN_AGN_RPR_FATURA;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -106,6 +108,9 @@ namespace tMax14agn {
                 }
                 if ((ds.Tables["OPSTP"] != null)) {
                     base.Tables.Add(new OPSTPDataTable(ds.Tables["OPSTP"]));
+                }
+                if ((ds.Tables["WAN_AGN_RPR_FATURA"] != null)) {
+                    base.Tables.Add(new WAN_AGN_RPR_FATURADataTable(ds.Tables["WAN_AGN_RPR_FATURA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -237,6 +242,16 @@ namespace tMax14agn {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public WAN_AGN_RPR_FATURADataTable WAN_AGN_RPR_FATURA {
+            get {
+                return this.tableWAN_AGN_RPR_FATURA;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -334,6 +349,9 @@ namespace tMax14agn {
                 }
                 if ((ds.Tables["OPSTP"] != null)) {
                     base.Tables.Add(new OPSTPDataTable(ds.Tables["OPSTP"]));
+                }
+                if ((ds.Tables["WAN_AGN_RPR_FATURA"] != null)) {
+                    base.Tables.Add(new WAN_AGN_RPR_FATURADataTable(ds.Tables["WAN_AGN_RPR_FATURA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -434,6 +452,12 @@ namespace tMax14agn {
                     this.tableOPSTP.InitVars();
                 }
             }
+            this.tableWAN_AGN_RPR_FATURA = ((WAN_AGN_RPR_FATURADataTable)(base.Tables["WAN_AGN_RPR_FATURA"]));
+            if ((initTable == true)) {
+                if ((this.tableWAN_AGN_RPR_FATURA != null)) {
+                    this.tableWAN_AGN_RPR_FATURA.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -466,6 +490,8 @@ namespace tMax14agn {
             base.Tables.Add(this.tableOPSTN);
             this.tableOPSTP = new OPSTPDataTable();
             base.Tables.Add(this.tableOPSTP);
+            this.tableWAN_AGN_RPR_FATURA = new WAN_AGN_RPR_FATURADataTable();
+            base.Tables.Add(this.tableWAN_AGN_RPR_FATURA);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -531,6 +557,12 @@ namespace tMax14agn {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeOPSTP() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeWAN_AGN_RPR_FATURA() {
             return false;
         }
         
@@ -621,6 +653,9 @@ namespace tMax14agn {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void OPSTPRowChangeEventHandler(object sender, OPSTPRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void WAN_AGN_RPR_FATURARowChangeEventHandler(object sender, WAN_AGN_RPR_FATURARowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5880,6 +5915,583 @@ namespace tMax14agn {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class WAN_AGN_RPR_FATURADataTable : global::System.Data.TypedTableBase<WAN_AGN_RPR_FATURARow> {
+            
+            private global::System.Data.DataColumn columnAFBID;
+            
+            private global::System.Data.DataColumn columnEFTR;
+            
+            private global::System.Data.DataColumn columnTUR;
+            
+            private global::System.Data.DataColumn columnFTRNO;
+            
+            private global::System.Data.DataColumn columnFTRTRH;
+            
+            private global::System.Data.DataColumn columnODMVDE;
+            
+            private global::System.Data.DataColumn columnODMSKL;
+            
+            private global::System.Data.DataColumn columnFTRTUT;
+            
+            private global::System.Data.DataColumn columnFTRKDV;
+            
+            private global::System.Data.DataColumn columnFTRTOPTUT;
+            
+            private global::System.Data.DataColumn columnKDVINF;
+            
+            private global::System.Data.DataColumn columnDVZ;
+            
+            private global::System.Data.DataColumn columnOPID;
+            
+            private global::System.Data.DataColumn columnOPHM;
+            
+            private global::System.Data.DataColumn columnINFO;
+            
+            private global::System.Data.DataColumn columnAHTINF3;
+            
+            private global::System.Data.DataColumn columnACIKLAMA;
+            
+            private global::System.Data.DataColumn columnOPINF;
+            
+            private global::System.Data.DataColumn columnDKNFRTAD;
+            
+            private global::System.Data.DataColumn columnDKNFRTID;
+            
+            private global::System.Data.DataColumn columnDKNDVZ;
+            
+            private global::System.Data.DataColumn columnDKNNO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public WAN_AGN_RPR_FATURADataTable() {
+                this.TableName = "WAN_AGN_RPR_FATURA";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal WAN_AGN_RPR_FATURADataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected WAN_AGN_RPR_FATURADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn AFBIDColumn {
+                get {
+                    return this.columnAFBID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EFTRColumn {
+                get {
+                    return this.columnEFTR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TURColumn {
+                get {
+                    return this.columnTUR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FTRNOColumn {
+                get {
+                    return this.columnFTRNO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FTRTRHColumn {
+                get {
+                    return this.columnFTRTRH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ODMVDEColumn {
+                get {
+                    return this.columnODMVDE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ODMSKLColumn {
+                get {
+                    return this.columnODMSKL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FTRTUTColumn {
+                get {
+                    return this.columnFTRTUT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FTRKDVColumn {
+                get {
+                    return this.columnFTRKDV;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FTRTOPTUTColumn {
+                get {
+                    return this.columnFTRTOPTUT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn KDVINFColumn {
+                get {
+                    return this.columnKDVINF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DVZColumn {
+                get {
+                    return this.columnDVZ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn OPIDColumn {
+                get {
+                    return this.columnOPID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn OPHMColumn {
+                get {
+                    return this.columnOPHM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn INFOColumn {
+                get {
+                    return this.columnINFO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn AHTINF3Column {
+                get {
+                    return this.columnAHTINF3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ACIKLAMAColumn {
+                get {
+                    return this.columnACIKLAMA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn OPINFColumn {
+                get {
+                    return this.columnOPINF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DKNFRTADColumn {
+                get {
+                    return this.columnDKNFRTAD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DKNFRTIDColumn {
+                get {
+                    return this.columnDKNFRTID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DKNDVZColumn {
+                get {
+                    return this.columnDKNDVZ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DKNNOColumn {
+                get {
+                    return this.columnDKNNO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public WAN_AGN_RPR_FATURARow this[int index] {
+                get {
+                    return ((WAN_AGN_RPR_FATURARow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event WAN_AGN_RPR_FATURARowChangeEventHandler WAN_AGN_RPR_FATURARowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event WAN_AGN_RPR_FATURARowChangeEventHandler WAN_AGN_RPR_FATURARowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event WAN_AGN_RPR_FATURARowChangeEventHandler WAN_AGN_RPR_FATURARowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event WAN_AGN_RPR_FATURARowChangeEventHandler WAN_AGN_RPR_FATURARowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddWAN_AGN_RPR_FATURARow(WAN_AGN_RPR_FATURARow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public WAN_AGN_RPR_FATURARow AddWAN_AGN_RPR_FATURARow(
+                        int AFBID, 
+                        string EFTR, 
+                        string TUR, 
+                        string FTRNO, 
+                        System.DateTime FTRTRH, 
+                        System.DateTime ODMVDE, 
+                        string ODMSKL, 
+                        decimal FTRTUT, 
+                        decimal FTRKDV, 
+                        decimal FTRTOPTUT, 
+                        string KDVINF, 
+                        string DVZ, 
+                        int OPID, 
+                        string OPHM, 
+                        string INFO, 
+                        string AHTINF3, 
+                        string ACIKLAMA, 
+                        string OPINF, 
+                        string DKNFRTAD, 
+                        int DKNFRTID, 
+                        string DKNDVZ, 
+                        string DKNNO) {
+                WAN_AGN_RPR_FATURARow rowWAN_AGN_RPR_FATURARow = ((WAN_AGN_RPR_FATURARow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        AFBID,
+                        EFTR,
+                        TUR,
+                        FTRNO,
+                        FTRTRH,
+                        ODMVDE,
+                        ODMSKL,
+                        FTRTUT,
+                        FTRKDV,
+                        FTRTOPTUT,
+                        KDVINF,
+                        DVZ,
+                        OPID,
+                        OPHM,
+                        INFO,
+                        AHTINF3,
+                        ACIKLAMA,
+                        OPINF,
+                        DKNFRTAD,
+                        DKNFRTID,
+                        DKNDVZ,
+                        DKNNO};
+                rowWAN_AGN_RPR_FATURARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowWAN_AGN_RPR_FATURARow);
+                return rowWAN_AGN_RPR_FATURARow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                WAN_AGN_RPR_FATURADataTable cln = ((WAN_AGN_RPR_FATURADataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new WAN_AGN_RPR_FATURADataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnAFBID = base.Columns["AFBID"];
+                this.columnEFTR = base.Columns["EFTR"];
+                this.columnTUR = base.Columns["TUR"];
+                this.columnFTRNO = base.Columns["FTRNO"];
+                this.columnFTRTRH = base.Columns["FTRTRH"];
+                this.columnODMVDE = base.Columns["ODMVDE"];
+                this.columnODMSKL = base.Columns["ODMSKL"];
+                this.columnFTRTUT = base.Columns["FTRTUT"];
+                this.columnFTRKDV = base.Columns["FTRKDV"];
+                this.columnFTRTOPTUT = base.Columns["FTRTOPTUT"];
+                this.columnKDVINF = base.Columns["KDVINF"];
+                this.columnDVZ = base.Columns["DVZ"];
+                this.columnOPID = base.Columns["OPID"];
+                this.columnOPHM = base.Columns["OPHM"];
+                this.columnINFO = base.Columns["INFO"];
+                this.columnAHTINF3 = base.Columns["AHTINF3"];
+                this.columnACIKLAMA = base.Columns["ACIKLAMA"];
+                this.columnOPINF = base.Columns["OPINF"];
+                this.columnDKNFRTAD = base.Columns["DKNFRTAD"];
+                this.columnDKNFRTID = base.Columns["DKNFRTID"];
+                this.columnDKNDVZ = base.Columns["DKNDVZ"];
+                this.columnDKNNO = base.Columns["DKNNO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnAFBID = new global::System.Data.DataColumn("AFBID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAFBID);
+                this.columnEFTR = new global::System.Data.DataColumn("EFTR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEFTR);
+                this.columnTUR = new global::System.Data.DataColumn("TUR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTUR);
+                this.columnFTRNO = new global::System.Data.DataColumn("FTRNO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFTRNO);
+                this.columnFTRTRH = new global::System.Data.DataColumn("FTRTRH", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFTRTRH);
+                this.columnODMVDE = new global::System.Data.DataColumn("ODMVDE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnODMVDE);
+                this.columnODMSKL = new global::System.Data.DataColumn("ODMSKL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnODMSKL);
+                this.columnFTRTUT = new global::System.Data.DataColumn("FTRTUT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFTRTUT);
+                this.columnFTRKDV = new global::System.Data.DataColumn("FTRKDV", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFTRKDV);
+                this.columnFTRTOPTUT = new global::System.Data.DataColumn("FTRTOPTUT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFTRTOPTUT);
+                this.columnKDVINF = new global::System.Data.DataColumn("KDVINF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKDVINF);
+                this.columnDVZ = new global::System.Data.DataColumn("DVZ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDVZ);
+                this.columnOPID = new global::System.Data.DataColumn("OPID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOPID);
+                this.columnOPHM = new global::System.Data.DataColumn("OPHM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOPHM);
+                this.columnINFO = new global::System.Data.DataColumn("INFO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINFO);
+                this.columnAHTINF3 = new global::System.Data.DataColumn("AHTINF3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAHTINF3);
+                this.columnACIKLAMA = new global::System.Data.DataColumn("ACIKLAMA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACIKLAMA);
+                this.columnOPINF = new global::System.Data.DataColumn("OPINF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOPINF);
+                this.columnDKNFRTAD = new global::System.Data.DataColumn("DKNFRTAD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDKNFRTAD);
+                this.columnDKNFRTID = new global::System.Data.DataColumn("DKNFRTID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDKNFRTID);
+                this.columnDKNDVZ = new global::System.Data.DataColumn("DKNDVZ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDKNDVZ);
+                this.columnDKNNO = new global::System.Data.DataColumn("DKNNO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDKNNO);
+                this.columnEFTR.MaxLength = 1;
+                this.columnTUR.MaxLength = 20;
+                this.columnFTRNO.MaxLength = 20;
+                this.columnODMSKL.MaxLength = 10;
+                this.columnKDVINF.MaxLength = 250;
+                this.columnDVZ.MaxLength = 3;
+                this.columnOPHM.MaxLength = 1;
+                this.columnINFO.MaxLength = 100;
+                this.columnAHTINF3.MaxLength = 250;
+                this.columnACIKLAMA.MaxLength = 250;
+                this.columnOPINF.MaxLength = 2147483647;
+                this.columnDKNFRTAD.MaxLength = 100;
+                this.columnDKNDVZ.MaxLength = 3;
+                this.columnDKNNO.MaxLength = 20;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public WAN_AGN_RPR_FATURARow NewWAN_AGN_RPR_FATURARow() {
+                return ((WAN_AGN_RPR_FATURARow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new WAN_AGN_RPR_FATURARow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(WAN_AGN_RPR_FATURARow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.WAN_AGN_RPR_FATURARowChanged != null)) {
+                    this.WAN_AGN_RPR_FATURARowChanged(this, new WAN_AGN_RPR_FATURARowChangeEvent(((WAN_AGN_RPR_FATURARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.WAN_AGN_RPR_FATURARowChanging != null)) {
+                    this.WAN_AGN_RPR_FATURARowChanging(this, new WAN_AGN_RPR_FATURARowChangeEvent(((WAN_AGN_RPR_FATURARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.WAN_AGN_RPR_FATURARowDeleted != null)) {
+                    this.WAN_AGN_RPR_FATURARowDeleted(this, new WAN_AGN_RPR_FATURARowChangeEvent(((WAN_AGN_RPR_FATURARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.WAN_AGN_RPR_FATURARowDeleting != null)) {
+                    this.WAN_AGN_RPR_FATURARowDeleting(this, new WAN_AGN_RPR_FATURARowChangeEvent(((WAN_AGN_RPR_FATURARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveWAN_AGN_RPR_FATURARow(WAN_AGN_RPR_FATURARow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSet ds = new DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "WAN_AGN_RPR_FATURADataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class DOCRow : global::System.Data.DataRow {
@@ -10753,6 +11365,637 @@ namespace tMax14agn {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class WAN_AGN_RPR_FATURARow : global::System.Data.DataRow {
+            
+            private WAN_AGN_RPR_FATURADataTable tableWAN_AGN_RPR_FATURA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal WAN_AGN_RPR_FATURARow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableWAN_AGN_RPR_FATURA = ((WAN_AGN_RPR_FATURADataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int AFBID {
+                get {
+                    try {
+                        return ((int)(this[this.tableWAN_AGN_RPR_FATURA.AFBIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AFBID\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.AFBIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string EFTR {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.EFTRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EFTR\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.EFTRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string TUR {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.TURColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TUR\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.TURColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FTRNO {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.FTRNOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FTRNO\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.FTRNOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime FTRTRH {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableWAN_AGN_RPR_FATURA.FTRTRHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FTRTRH\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.FTRTRHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime ODMVDE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableWAN_AGN_RPR_FATURA.ODMVDEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ODMVDE\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.ODMVDEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ODMSKL {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.ODMSKLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ODMSKL\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.ODMSKLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal FTRTUT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableWAN_AGN_RPR_FATURA.FTRTUTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FTRTUT\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.FTRTUTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal FTRKDV {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableWAN_AGN_RPR_FATURA.FTRKDVColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FTRKDV\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.FTRKDVColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal FTRTOPTUT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableWAN_AGN_RPR_FATURA.FTRTOPTUTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FTRTOPTUT\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.FTRTOPTUTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string KDVINF {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.KDVINFColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KDVINF\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.KDVINFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DVZ {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.DVZColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DVZ\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.DVZColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int OPID {
+                get {
+                    try {
+                        return ((int)(this[this.tableWAN_AGN_RPR_FATURA.OPIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OPID\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.OPIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string OPHM {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.OPHMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OPHM\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.OPHMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string INFO {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.INFOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INFO\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.INFOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string AHTINF3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.AHTINF3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AHTINF3\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.AHTINF3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ACIKLAMA {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.ACIKLAMAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ACIKLAMA\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.ACIKLAMAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string OPINF {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.OPINFColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OPINF\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.OPINFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DKNFRTAD {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.DKNFRTADColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DKNFRTAD\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.DKNFRTADColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int DKNFRTID {
+                get {
+                    try {
+                        return ((int)(this[this.tableWAN_AGN_RPR_FATURA.DKNFRTIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DKNFRTID\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.DKNFRTIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DKNDVZ {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.DKNDVZColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DKNDVZ\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.DKNDVZColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DKNNO {
+                get {
+                    try {
+                        return ((string)(this[this.tableWAN_AGN_RPR_FATURA.DKNNOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DKNNO\' in table \'WAN_AGN_RPR_FATURA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWAN_AGN_RPR_FATURA.DKNNOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsAFBIDNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.AFBIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetAFBIDNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.AFBIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsEFTRNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.EFTRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetEFTRNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.EFTRColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTURNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.TURColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTURNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.TURColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFTRNONull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.FTRNOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFTRNONull() {
+                this[this.tableWAN_AGN_RPR_FATURA.FTRNOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFTRTRHNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.FTRTRHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFTRTRHNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.FTRTRHColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsODMVDENull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.ODMVDEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetODMVDENull() {
+                this[this.tableWAN_AGN_RPR_FATURA.ODMVDEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsODMSKLNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.ODMSKLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetODMSKLNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.ODMSKLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFTRTUTNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.FTRTUTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFTRTUTNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.FTRTUTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFTRKDVNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.FTRKDVColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFTRKDVNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.FTRKDVColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFTRTOPTUTNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.FTRTOPTUTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFTRTOPTUTNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.FTRTOPTUTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsKDVINFNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.KDVINFColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetKDVINFNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.KDVINFColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDVZNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.DVZColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDVZNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.DVZColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsOPIDNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.OPIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetOPIDNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.OPIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsOPHMNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.OPHMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetOPHMNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.OPHMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsINFONull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.INFOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetINFONull() {
+                this[this.tableWAN_AGN_RPR_FATURA.INFOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsAHTINF3Null() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.AHTINF3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetAHTINF3Null() {
+                this[this.tableWAN_AGN_RPR_FATURA.AHTINF3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsACIKLAMANull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.ACIKLAMAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetACIKLAMANull() {
+                this[this.tableWAN_AGN_RPR_FATURA.ACIKLAMAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsOPINFNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.OPINFColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetOPINFNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.OPINFColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDKNFRTADNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.DKNFRTADColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDKNFRTADNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.DKNFRTADColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDKNFRTIDNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.DKNFRTIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDKNFRTIDNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.DKNFRTIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDKNDVZNull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.DKNDVZColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDKNDVZNull() {
+                this[this.tableWAN_AGN_RPR_FATURA.DKNDVZColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDKNNONull() {
+                return this.IsNull(this.tableWAN_AGN_RPR_FATURA.DKNNOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDKNNONull() {
+                this[this.tableWAN_AGN_RPR_FATURA.DKNNOColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -11112,6 +12355,40 @@ namespace tMax14agn {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public OPSTPRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class WAN_AGN_RPR_FATURARowChangeEvent : global::System.EventArgs {
+            
+            private WAN_AGN_RPR_FATURARow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public WAN_AGN_RPR_FATURARowChangeEvent(WAN_AGN_RPR_FATURARow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public WAN_AGN_RPR_FATURARow Row {
                 get {
                     return this.eventRow;
                 }
@@ -13147,6 +14424,168 @@ namespace tMax14agn.DataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
         public virtual int Fill(DataSet.OPSTPDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class WAN_AGN_RPR_FATURATableAdapter : global::System.ComponentModel.Component {
+        
+        private global::FirebirdSql.Data.FirebirdClient.FbDataAdapter _adapter;
+        
+        private global::FirebirdSql.Data.FirebirdClient.FbConnection _connection;
+        
+        private global::FirebirdSql.Data.FirebirdClient.FbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public WAN_AGN_RPR_FATURATableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private global::FirebirdSql.Data.FirebirdClient.FbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::FirebirdSql.Data.FirebirdClient.FbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::FirebirdSql.Data.FirebirdClient.FbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::FirebirdSql.Data.FirebirdClient.FbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "WAN_AGN_RPR_FATURA";
+            tableMapping.ColumnMappings.Add("AFBID", "AFBID");
+            tableMapping.ColumnMappings.Add("EFTR", "EFTR");
+            tableMapping.ColumnMappings.Add("TUR", "TUR");
+            tableMapping.ColumnMappings.Add("FTRNO", "FTRNO");
+            tableMapping.ColumnMappings.Add("FTRTRH", "FTRTRH");
+            tableMapping.ColumnMappings.Add("ODMVDE", "ODMVDE");
+            tableMapping.ColumnMappings.Add("ODMSKL", "ODMSKL");
+            tableMapping.ColumnMappings.Add("FTRTUT", "FTRTUT");
+            tableMapping.ColumnMappings.Add("FTRKDV", "FTRKDV");
+            tableMapping.ColumnMappings.Add("FTRTOPTUT", "FTRTOPTUT");
+            tableMapping.ColumnMappings.Add("KDVINF", "KDVINF");
+            tableMapping.ColumnMappings.Add("DVZ", "DVZ");
+            tableMapping.ColumnMappings.Add("OPID", "OPID");
+            tableMapping.ColumnMappings.Add("OPHM", "OPHM");
+            tableMapping.ColumnMappings.Add("INFO", "INFO");
+            tableMapping.ColumnMappings.Add("AHTINF3", "AHTINF3");
+            tableMapping.ColumnMappings.Add("ACIKLAMA", "ACIKLAMA");
+            tableMapping.ColumnMappings.Add("OPINF", "OPINF");
+            tableMapping.ColumnMappings.Add("DKNFRTAD", "DKNFRTAD");
+            tableMapping.ColumnMappings.Add("DKNFRTID", "DKNFRTID");
+            tableMapping.ColumnMappings.Add("DKNDVZ", "DKNDVZ");
+            tableMapping.ColumnMappings.Add("DKNNO", "DKNNO");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
+            this._connection.ConnectionString = global::tMax14agn.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::FirebirdSql.Data.FirebirdClient.FbCommand[1];
+            this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "\"WAN_AGN_RPR_FATURA\"";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "AGNID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            this._commandCollection[0].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSet.WAN_AGN_RPR_FATURADataTable dataTable, global::System.Nullable<int> AGNID) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((AGNID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(AGNID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }

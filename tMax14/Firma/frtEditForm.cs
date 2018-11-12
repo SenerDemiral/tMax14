@@ -426,5 +426,14 @@ namespace tMax14.Firma
             }
         }
 
+        private void duplicateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frcBindingSource.EndEdit();
+            frcTableAdapter.Update(firmaDataSet.FRC);
+
+            firmaQueriesTableAdapter.FRC_DUP((int)frcGridView.GetFocusedRowCellValue(colFRCIDc));
+
+            frcTableAdapter.FillByFRT(firmaDataSet.FRC, FRTid);
+        }
     }
 }

@@ -88,13 +88,15 @@
             this.colFTRNO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFTRTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colODMVDE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colODMTRH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colODMGCK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBDVZ = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBKUR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBTUTBRT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRTUTBRT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKLN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colODMTRH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVDEGUN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colODMGUN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colODMGCK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colONYYTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colONYUSR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colONYTRH = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -132,8 +134,6 @@
             this.qsDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.afbTableAdapter = new tMax14.Account.AccountDataSetTableAdapters.AFBTableAdapter();
-            this.colVDEGUN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colODMGUN = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.accountDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.afbGridControl)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
@@ -768,28 +768,6 @@
             this.colODMVDE.VisibleIndex = 11;
             this.colODMVDE.Width = 52;
             // 
-            // colODMTRH
-            // 
-            this.colODMTRH.Caption = "ÖdmTrh";
-            this.colODMTRH.DisplayFormat.FormatString = "dd.MM.yy";
-            this.colODMTRH.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.colODMTRH.FieldName = "ODMTRH";
-            this.colODMTRH.Name = "colODMTRH";
-            this.colODMTRH.OptionsColumn.AllowEdit = false;
-            this.colODMTRH.OptionsColumn.AllowFocus = false;
-            this.colODMTRH.Visible = true;
-            this.colODMTRH.VisibleIndex = 17;
-            // 
-            // colODMGCK
-            // 
-            this.colODMGCK.Caption = "ÖdmGck";
-            this.colODMGCK.FieldName = "ODMGCK";
-            this.colODMGCK.Name = "colODMGCK";
-            this.colODMGCK.OptionsColumn.AllowEdit = false;
-            this.colODMGCK.OptionsColumn.AllowFocus = false;
-            this.colODMGCK.Visible = true;
-            this.colODMGCK.VisibleIndex = 20;
-            // 
             // colBDVZ
             // 
             this.colBDVZ.Caption = "Dvz";
@@ -858,6 +836,46 @@
             this.colKLN.Visible = true;
             this.colKLN.VisibleIndex = 16;
             this.colKLN.Width = 60;
+            // 
+            // colODMTRH
+            // 
+            this.colODMTRH.Caption = "ÖdmTrh";
+            this.colODMTRH.DisplayFormat.FormatString = "dd.MM.yy";
+            this.colODMTRH.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colODMTRH.FieldName = "ODMTRH";
+            this.colODMTRH.Name = "colODMTRH";
+            this.colODMTRH.OptionsColumn.AllowEdit = false;
+            this.colODMTRH.OptionsColumn.AllowFocus = false;
+            this.colODMTRH.Visible = true;
+            this.colODMTRH.VisibleIndex = 17;
+            // 
+            // colVDEGUN
+            // 
+            this.colVDEGUN.Caption = "VdeGün";
+            this.colVDEGUN.FieldName = "VDEGUN";
+            this.colVDEGUN.Name = "colVDEGUN";
+            this.colVDEGUN.ToolTip = "ÖdmVde - ÖdmTrh";
+            this.colVDEGUN.Visible = true;
+            this.colVDEGUN.VisibleIndex = 18;
+            // 
+            // colODMGUN
+            // 
+            this.colODMGUN.Caption = "ÖdmGün";
+            this.colODMGUN.FieldName = "ODMGUN";
+            this.colODMGUN.Name = "colODMGUN";
+            this.colODMGUN.ToolTip = "ÖdmTrh - FtrTrh";
+            this.colODMGUN.Visible = true;
+            this.colODMGUN.VisibleIndex = 19;
+            // 
+            // colODMGCK
+            // 
+            this.colODMGCK.Caption = "ÖdmGck";
+            this.colODMGCK.FieldName = "ODMGCK";
+            this.colODMGCK.Name = "colODMGCK";
+            this.colODMGCK.OptionsColumn.AllowEdit = false;
+            this.colODMGCK.OptionsColumn.AllowFocus = false;
+            this.colODMGCK.Visible = true;
+            this.colODMGCK.VisibleIndex = 20;
             // 
             // colONYYTK
             // 
@@ -1248,24 +1266,6 @@
             // afbTableAdapter
             // 
             this.afbTableAdapter.ClearBeforeFill = true;
-            // 
-            // colVDEGUN
-            // 
-            this.colVDEGUN.Caption = "VdeGün";
-            this.colVDEGUN.FieldName = "VDEGUN";
-            this.colVDEGUN.Name = "colVDEGUN";
-            this.colVDEGUN.ToolTip = "ÖdmVde - ÖdmTrh";
-            this.colVDEGUN.Visible = true;
-            this.colVDEGUN.VisibleIndex = 18;
-            // 
-            // colODMGUN
-            // 
-            this.colODMGUN.Caption = "ÖdmGün";
-            this.colODMGUN.FieldName = "ODMGUN";
-            this.colODMGUN.Name = "colODMGUN";
-            this.colODMGUN.ToolTip = "ÖdmTrh - FtrTrh";
-            this.colODMGUN.Visible = true;
-            this.colODMGUN.VisibleIndex = 19;
             // 
             // FaturaXF
             // 

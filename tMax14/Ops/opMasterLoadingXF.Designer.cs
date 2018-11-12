@@ -69,6 +69,7 @@
             this.colGRWs = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTUSs = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDLVADRs = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEOHs = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dst2srcSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.src2dstSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.dstGridControl = new DevExpress.XtraGrid.GridControl();
@@ -106,7 +107,7 @@
             this.splitterItem1 = new DevExpress.XtraLayout.SplitterItem();
             this.ophTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OPHTableAdapter();
             this.opsQueriesTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OpsQueriesTableAdapter();
-            this.colEOHs = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colATR = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2)).BeginInit();
@@ -222,9 +223,9 @@
             this.upDstSimpleButton.AutoWidthInLayoutControl = true;
             this.upDstSimpleButton.Image = ((System.Drawing.Image)(resources.GetObject("upDstSimpleButton.Image")));
             this.upDstSimpleButton.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.upDstSimpleButton.Location = new System.Drawing.Point(1175, 17);
+            this.upDstSimpleButton.Location = new System.Drawing.Point(1177, 17);
             this.upDstSimpleButton.Name = "upDstSimpleButton";
-            this.upDstSimpleButton.Size = new System.Drawing.Size(42, 38);
+            this.upDstSimpleButton.Size = new System.Drawing.Size(40, 38);
             this.upDstSimpleButton.StyleController = this.layoutControl1;
             this.upDstSimpleButton.TabIndex = 5;
             this.upDstSimpleButton.Text = "UpDst";
@@ -235,9 +236,9 @@
             this.downDstSimpleButton.AutoWidthInLayoutControl = true;
             this.downDstSimpleButton.Image = ((System.Drawing.Image)(resources.GetObject("downDstSimpleButton.Image")));
             this.downDstSimpleButton.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.downDstSimpleButton.Location = new System.Drawing.Point(1175, 59);
+            this.downDstSimpleButton.Location = new System.Drawing.Point(1177, 59);
             this.downDstSimpleButton.Name = "downDstSimpleButton";
-            this.downDstSimpleButton.Size = new System.Drawing.Size(42, 38);
+            this.downDstSimpleButton.Size = new System.Drawing.Size(40, 38);
             this.downDstSimpleButton.StyleController = this.layoutControl1;
             this.downDstSimpleButton.TabIndex = 6;
             this.downDstSimpleButton.Click += new System.EventHandler(this.downDstSimpleButton_Click);
@@ -285,7 +286,8 @@
             this.colGRWs,
             this.colTUSs,
             this.colDLVADRs,
-            this.colEOHs});
+            this.colEOHs,
+            this.colATR});
             this.srcGridView.GridControl = this.srcGridControl;
             this.srcGridView.Name = "srcGridView";
             this.srcGridView.OptionsBehavior.Editable = false;
@@ -491,14 +493,21 @@
             this.colDLVADRs.Visible = true;
             this.colDLVADRs.VisibleIndex = 16;
             // 
+            // colEOHs
+            // 
+            this.colEOHs.FieldName = "EOH";
+            this.colEOHs.Name = "colEOHs";
+            this.colEOHs.Visible = true;
+            this.colEOHs.VisibleIndex = 17;
+            // 
             // dst2srcSimpleButton
             // 
             this.dst2srcSimpleButton.AutoWidthInLayoutControl = true;
             this.dst2srcSimpleButton.Image = ((System.Drawing.Image)(resources.GetObject("dst2srcSimpleButton.Image")));
             this.dst2srcSimpleButton.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.dst2srcSimpleButton.Location = new System.Drawing.Point(1175, 143);
+            this.dst2srcSimpleButton.Location = new System.Drawing.Point(1177, 143);
             this.dst2srcSimpleButton.Name = "dst2srcSimpleButton";
-            this.dst2srcSimpleButton.Size = new System.Drawing.Size(42, 38);
+            this.dst2srcSimpleButton.Size = new System.Drawing.Size(40, 38);
             this.dst2srcSimpleButton.StyleController = this.layoutControl1;
             this.dst2srcSimpleButton.TabIndex = 3;
             this.dst2srcSimpleButton.Click += new System.EventHandler(this.dst2srcSimpleButton_Click);
@@ -508,9 +517,9 @@
             this.src2dstSimpleButton.AutoWidthInLayoutControl = true;
             this.src2dstSimpleButton.Image = ((System.Drawing.Image)(resources.GetObject("src2dstSimpleButton.Image")));
             this.src2dstSimpleButton.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.src2dstSimpleButton.Location = new System.Drawing.Point(1175, 101);
+            this.src2dstSimpleButton.Location = new System.Drawing.Point(1177, 101);
             this.src2dstSimpleButton.Name = "src2dstSimpleButton";
-            this.src2dstSimpleButton.Size = new System.Drawing.Size(42, 38);
+            this.src2dstSimpleButton.Size = new System.Drawing.Size(40, 38);
             this.src2dstSimpleButton.StyleController = this.layoutControl1;
             this.src2dstSimpleButton.TabIndex = 2;
             this.src2dstSimpleButton.Click += new System.EventHandler(this.src2dstSimpleButton_Click);
@@ -521,7 +530,7 @@
             this.dstGridControl.Location = new System.Drawing.Point(12, 28);
             this.dstGridControl.MainView = this.dstGridView;
             this.dstGridControl.Name = "dstGridControl";
-            this.dstGridControl.Size = new System.Drawing.Size(1154, 175);
+            this.dstGridControl.Size = new System.Drawing.Size(1156, 175);
             this.dstGridControl.TabIndex = 0;
             this.dstGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dstGridView});
@@ -791,7 +800,7 @@
             this.layoutControlItem1.CustomizationFormText = "Destination";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1158, 195);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1160, 195);
             this.layoutControlItem1.Text = "Loaded";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(35, 13);
@@ -818,10 +827,10 @@
             this.src2dstLayoutControlItem,
             this.dst2srcLayoutControlItem,
             this.emptySpaceItem1});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(1158, 0);
+            this.layoutControlGroup2.Location = new System.Drawing.Point(1160, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(56, 195);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(54, 195);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // upDstLayoutControlItem
@@ -830,7 +839,7 @@
             this.upDstLayoutControlItem.CustomizationFormText = "UpDst";
             this.upDstLayoutControlItem.Location = new System.Drawing.Point(0, 0);
             this.upDstLayoutControlItem.Name = "upDstLayoutControlItem";
-            this.upDstLayoutControlItem.Size = new System.Drawing.Size(46, 42);
+            this.upDstLayoutControlItem.Size = new System.Drawing.Size(44, 42);
             this.upDstLayoutControlItem.Text = "UpDst";
             this.upDstLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
             this.upDstLayoutControlItem.TextVisible = false;
@@ -841,7 +850,7 @@
             this.downDstLayoutControlItem.CustomizationFormText = "DownDst";
             this.downDstLayoutControlItem.Location = new System.Drawing.Point(0, 42);
             this.downDstLayoutControlItem.Name = "downDstLayoutControlItem";
-            this.downDstLayoutControlItem.Size = new System.Drawing.Size(46, 42);
+            this.downDstLayoutControlItem.Size = new System.Drawing.Size(44, 42);
             this.downDstLayoutControlItem.Text = "DownDst";
             this.downDstLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
             this.downDstLayoutControlItem.TextVisible = false;
@@ -852,7 +861,7 @@
             this.src2dstLayoutControlItem.CustomizationFormText = "src2dst";
             this.src2dstLayoutControlItem.Location = new System.Drawing.Point(0, 84);
             this.src2dstLayoutControlItem.Name = "src2dstLayoutControlItem";
-            this.src2dstLayoutControlItem.Size = new System.Drawing.Size(46, 42);
+            this.src2dstLayoutControlItem.Size = new System.Drawing.Size(44, 42);
             this.src2dstLayoutControlItem.Text = "src2dst";
             this.src2dstLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
             this.src2dstLayoutControlItem.TextVisible = false;
@@ -863,7 +872,7 @@
             this.dst2srcLayoutControlItem.CustomizationFormText = "dst2src";
             this.dst2srcLayoutControlItem.Location = new System.Drawing.Point(0, 126);
             this.dst2srcLayoutControlItem.Name = "dst2srcLayoutControlItem";
-            this.dst2srcLayoutControlItem.Size = new System.Drawing.Size(46, 42);
+            this.dst2srcLayoutControlItem.Size = new System.Drawing.Size(44, 42);
             this.dst2srcLayoutControlItem.Text = "dst2src";
             this.dst2srcLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
             this.dst2srcLayoutControlItem.TextVisible = false;
@@ -874,7 +883,7 @@
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 168);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(46, 17);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(44, 17);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // splitterItem1
@@ -889,12 +898,13 @@
             // 
             this.ophTableAdapter.ClearBeforeFill = true;
             // 
-            // colEOHs
+            // colATR
             // 
-            this.colEOHs.FieldName = "EOH";
-            this.colEOHs.Name = "colEOHs";
-            this.colEOHs.Visible = true;
-            this.colEOHs.VisibleIndex = 17;
+            this.colATR.Caption = "ATR";
+            this.colATR.FieldName = "ATR";
+            this.colATR.Name = "colATR";
+            this.colATR.Visible = true;
+            this.colATR.VisibleIndex = 18;
             // 
             // opMasterLoadingXF
             // 
@@ -1010,5 +1020,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTUSd;
         private DevExpress.XtraGrid.Columns.GridColumn colDLVADRd;
         private DevExpress.XtraGrid.Columns.GridColumn colEOHs;
+        private DevExpress.XtraGrid.Columns.GridColumn colATR;
     }
 }

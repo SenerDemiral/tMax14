@@ -18,6 +18,7 @@ namespace tMax14agn
         public static string rprDvz = "EUR";
         public static int agn = 17;
         public static string agnAd = "";
+        public static string agnLocID = "";
         public static mainForm MF;
 
         [STAThread]

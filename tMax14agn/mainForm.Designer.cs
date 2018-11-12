@@ -28,28 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
-            this.documentManager = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
-            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.dockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
-            this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
+            this.documentManager = new DevExpress.XtraBars.Docking2010.DocumentManager();
+            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
+            this.dockManager = new DevExpress.XtraBars.Docking.DockManager();
             this.menuDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.afbSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ophSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.opmSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.mainPersistentRepository = new DevExpress.XtraEditors.Repository.PersistentRepository(this.components);
+            this.mainPersistentRepository = new DevExpress.XtraEditors.Repository.PersistentRepository();
             this.OPSTNrepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.oPSTNBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.oPSTNBindingSource = new System.Windows.Forms.BindingSource();
             this.dataSet = new tMax14agn.DataSet();
             this.OPSTPrepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.oPSTPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.oPSTPBindingSource = new System.Windows.Forms.BindingSource();
             this.oPSTNTableAdapter = new tMax14agn.DataSetTableAdapters.OPSTNTableAdapter();
             this.oPSTPTableAdapter = new tMax14agn.DataSetTableAdapters.OPSTPTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
-            this.hideContainerLeft.SuspendLayout();
             this.menuDockPanel.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OPSTNrepositoryItemLookUpEdit)).BeginInit();
@@ -66,11 +64,15 @@
             this.documentManager.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView});
             // 
+            // tabbedView
+            // 
+            this.tabbedView.RootContainer.Element = null;
+            // 
             // dockManager
             // 
-            this.dockManager.AutoHideContainers.AddRange(new DevExpress.XtraBars.Docking.AutoHideContainer[] {
-            this.hideContainerLeft});
             this.dockManager.Form = this;
+            this.dockManager.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
+            this.menuDockPanel});
             this.dockManager.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -79,15 +81,6 @@
             "System.Windows.Forms.StatusStrip",
             "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
             "DevExpress.XtraBars.Ribbon.RibbonControl"});
-            // 
-            // hideContainerLeft
-            // 
-            this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.hideContainerLeft.Controls.Add(this.menuDockPanel);
-            this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.hideContainerLeft.Location = new System.Drawing.Point(0, 0);
-            this.hideContainerLeft.Name = "hideContainerLeft";
-            this.hideContainerLeft.Size = new System.Drawing.Size(19, 603);
             // 
             // menuDockPanel
             // 
@@ -99,27 +92,34 @@
             this.menuDockPanel.Options.ShowCloseButton = false;
             this.menuDockPanel.Options.ShowMaximizeButton = false;
             this.menuDockPanel.OriginalSize = new System.Drawing.Size(103, 200);
-            this.menuDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.menuDockPanel.SavedIndex = 0;
             this.menuDockPanel.Size = new System.Drawing.Size(103, 603);
             this.menuDockPanel.Text = "Menu";
-            this.menuDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
             // dockPanel1_Container
             // 
+            this.dockPanel1_Container.Controls.Add(this.afbSimpleButton);
             this.dockPanel1_Container.Controls.Add(this.ophSimpleButton);
             this.dockPanel1_Container.Controls.Add(this.opmSimpleButton);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(95, 576);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(94, 576);
             this.dockPanel1_Container.TabIndex = 0;
+            // 
+            // afbSimpleButton
+            // 
+            this.afbSimpleButton.Location = new System.Drawing.Point(0, 46);
+            this.afbSimpleButton.Name = "afbSimpleButton";
+            this.afbSimpleButton.Size = new System.Drawing.Size(94, 24);
+            this.afbSimpleButton.TabIndex = 4;
+            this.afbSimpleButton.Text = "Fatura/Invoice";
+            this.afbSimpleButton.Click += new System.EventHandler(this.afbSimpleButton_Click);
             // 
             // ophSimpleButton
             // 
             this.ophSimpleButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ophSimpleButton.Location = new System.Drawing.Point(0, 23);
             this.ophSimpleButton.Name = "ophSimpleButton";
-            this.ophSimpleButton.Size = new System.Drawing.Size(95, 23);
+            this.ophSimpleButton.Size = new System.Drawing.Size(94, 23);
             this.ophSimpleButton.TabIndex = 3;
             this.ophSimpleButton.Text = "Houses";
             this.ophSimpleButton.Click += new System.EventHandler(this.ophSimpleButton_Click);
@@ -129,7 +129,7 @@
             this.opmSimpleButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.opmSimpleButton.Location = new System.Drawing.Point(0, 0);
             this.opmSimpleButton.Name = "opmSimpleButton";
-            this.opmSimpleButton.Size = new System.Drawing.Size(95, 23);
+            this.opmSimpleButton.Size = new System.Drawing.Size(94, 23);
             this.opmSimpleButton.TabIndex = 2;
             this.opmSimpleButton.Text = "Masters";
             this.opmSimpleButton.Click += new System.EventHandler(this.opmSimpleButton_Click);
@@ -194,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 603);
-            this.Controls.Add(this.hideContainerLeft);
+            this.Controls.Add(this.menuDockPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "mainForm";
@@ -203,7 +203,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).EndInit();
-            this.hideContainerLeft.ResumeLayout(false);
             this.menuDockPanel.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OPSTNrepositoryItemLookUpEdit)).EndInit();
@@ -223,7 +222,6 @@
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
         private DevExpress.XtraBars.Docking.DockManager dockManager;
         private DevExpress.XtraEditors.SimpleButton opmSimpleButton;
-        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
         private DataSet dataSet;
         private System.Windows.Forms.BindingSource oPSTNBindingSource;
         private DataSetTableAdapters.OPSTNTableAdapter oPSTNTableAdapter;
@@ -233,6 +231,6 @@
         public DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit OPSTPrepositoryItemLookUpEdit;
         public DevExpress.XtraEditors.Repository.PersistentRepository mainPersistentRepository;
         private DevExpress.XtraEditors.SimpleButton ophSimpleButton;
-
+        private DevExpress.XtraEditors.SimpleButton afbSimpleButton;
     }
 }

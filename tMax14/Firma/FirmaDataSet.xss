@@ -25,7 +25,7 @@
     <Shape ID="DesignTable:FRCA" ZOrder="5" X="1148" Y="-18" Height="305" Width="175" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:FAF" ZOrder="2" X="1075" Y="334" Height="305" Width="166" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:FAF_SEL_TEST" ZOrder="3" X="1257" Y="331" Height="305" Width="170" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignSources:FirmaQueriesTableAdapter" ZOrder="9" X="-45" Y="-21" Height="86" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="82" />
+    <Shape ID="DesignSources:FirmaQueriesTableAdapter" ZOrder="9" X="-24" Y="-40" Height="105" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="101" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FRC_FRT1" ZOrder="26" LineWidth="11">
