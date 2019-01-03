@@ -7716,6 +7716,8 @@ namespace tMax14.Ops {
             
             private global::System.Data.DataColumn columnPOU;
             
+            private global::System.Data.DataColumn columnACD;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public OPM_SELDataTable() {
@@ -8287,6 +8289,14 @@ namespace tMax14.Ops {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ACDColumn {
+                get {
+                    return this.columnACD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -8389,7 +8399,8 @@ namespace tMax14.Ops {
                         string KPIUSR, 
                         System.DateTime KPITRH, 
                         string POL, 
-                        string POU) {
+                        string POU, 
+                        System.DateTime ACD) {
                 OPM_SELRow rowOPM_SELRow = ((OPM_SELRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OPMID,
@@ -8458,7 +8469,8 @@ namespace tMax14.Ops {
                         KPIUSR,
                         KPITRH,
                         POL,
-                        POU};
+                        POU,
+                        ACD};
                 rowOPM_SELRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOPM_SELRow);
                 return rowOPM_SELRow;
@@ -8555,6 +8567,7 @@ namespace tMax14.Ops {
                 this.columnKPITRH = base.Columns["KPITRH"];
                 this.columnPOL = base.Columns["POL"];
                 this.columnPOU = base.Columns["POU"];
+                this.columnACD = base.Columns["ACD"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8694,6 +8707,8 @@ namespace tMax14.Ops {
                 base.Columns.Add(this.columnPOL);
                 this.columnPOU = new global::System.Data.DataColumn("POU", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPOU);
+                this.columnACD = new global::System.Data.DataColumn("ACD", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACD);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnOPMID}, true));
                 this.columnOPMID.AllowDBNull = false;
@@ -17754,6 +17769,8 @@ namespace tMax14.Ops {
             
             private global::System.Data.DataColumn columnGUMRUK;
             
+            private global::System.Data.DataColumn columnGUMRUKNOT;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public OPMDataTable() {
@@ -18749,6 +18766,14 @@ namespace tMax14.Ops {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn GUMRUKNOTColumn {
+                get {
+                    return this.columnGUMRUKNOT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -18904,7 +18929,8 @@ namespace tMax14.Ops {
                         System.DateTime KPITRH, 
                         string BTY, 
                         string GYYB, 
-                        string GUMRUK) {
+                        string GUMRUK, 
+                        string GUMRUKNOT) {
                 OPMRow rowOPMRow = ((OPMRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OPMID,
@@ -19026,7 +19052,8 @@ namespace tMax14.Ops {
                         KPITRH,
                         BTY,
                         GYYB,
-                        GUMRUK};
+                        GUMRUK,
+                        GUMRUKNOT};
                 rowOPMRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOPMRow);
                 return rowOPMRow;
@@ -19176,6 +19203,7 @@ namespace tMax14.Ops {
                 this.columnBTY = base.Columns["BTY"];
                 this.columnGYYB = base.Columns["GYYB"];
                 this.columnGUMRUK = base.Columns["GUMRUK"];
+                this.columnGUMRUKNOT = base.Columns["GUMRUKNOT"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19421,6 +19449,8 @@ namespace tMax14.Ops {
                 base.Columns.Add(this.columnGYYB);
                 this.columnGUMRUK = new global::System.Data.DataColumn("GUMRUK", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGUMRUK);
+                this.columnGUMRUKNOT = new global::System.Data.DataColumn("GUMRUKNOT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUMRUKNOT);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnOPMID}, true));
                 this.columnOPMID.AllowDBNull = false;
@@ -19485,6 +19515,7 @@ namespace tMax14.Ops {
                 this.columnBTY.MaxLength = 250;
                 this.columnGYYB.MaxLength = 40;
                 this.columnGUMRUK.MaxLength = 40;
+                this.columnGUMRUKNOT.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -34122,6 +34153,22 @@ namespace tMax14.Ops {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime ACD {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableOPM_SEL.ACDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ACD\' in table \'OPM_SEL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOPM_SEL.ACDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsREFNONull() {
                 return this.IsNull(this.tableOPM_SEL.REFNOColumn);
             }
@@ -34910,6 +34957,18 @@ namespace tMax14.Ops {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPOUNull() {
                 this[this.tableOPM_SEL.POUColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsACDNull() {
+                return this.IsNull(this.tableOPM_SEL.ACDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetACDNull() {
+                this[this.tableOPM_SEL.ACDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -47343,6 +47402,22 @@ namespace tMax14.Ops {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string GUMRUKNOT {
+                get {
+                    try {
+                        return ((string)(this[this.tableOPM.GUMRUKNOTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GUMRUKNOT\' in table \'OPM\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOPM.GUMRUKNOTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsEXDNull() {
                 return this.IsNull(this.tableOPM.EXDColumn);
             }
@@ -48767,6 +48842,18 @@ namespace tMax14.Ops {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetGUMRUKNull() {
                 this[this.tableOPM.GUMRUKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsGUMRUKNOTNull() {
+                return this.IsNull(this.tableOPM.GUMRUKNOTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetGUMRUKNOTNull() {
+                this[this.tableOPM.GUMRUKNOTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -59471,6 +59558,7 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("KPITRH", "KPITRH");
             tableMapping.ColumnMappings.Add("POL", "POL");
             tableMapping.ColumnMappings.Add("POU", "POU");
+            tableMapping.ColumnMappings.Add("ACD", "ACD");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
@@ -67492,6 +67580,7 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("BTY", "BTY");
             tableMapping.ColumnMappings.Add("GYYB", "GYYB");
             tableMapping.ColumnMappings.Add("GUMRUK", "GUMRUK");
+            tableMapping.ColumnMappings.Add("GUMRUKNOT", "GUMRUKNOT");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -67519,17 +67608,18 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
                 "\", \"VGLOC\", \"EAWB\", \"ONYAYTK\", \"ONYAUSR\", \"ONYATRH\", \"OGRF\", \"DSRF\", \"NOP\", \"ETG" +
                 "B\", \"KARNENO\", \"TRO\", \"TRS\", \"TRI\", \"TPAD2\", \"TPDD2\", \"ULSD\", \"ULCD\", \"ULCD2\", \"" +
                 "TRXAA\", \"VGKOD\", \"AWBTYP\", \"RETD\", \"RETA\", \"OCD\", \"KPI\", \"KPIUSR\", \"KPITRH\", \"BT" +
-                "Y\", \"GYYB\", \"GUMRUK\") VALUES (@OPMID, @EXD, @REFNO, @VHC, @ROT, @MOT, @OWNR, @NS" +
-                "TU, @NSTUTS, @PSTU, @PSTUTS, @DPSTU, @ASTU, @ONYYTK, @ONYUSR, @ONYTRH, @ORG, @DS" +
-                "T, @POL, @POT, @POU, @SHPID, @CNEID, @CRRID, @CRAID, @NFYID, @NF2ID, @ACCID, @TS" +
-                "TID, @HNOP, @HPCS, @HVM3, @HGRW, @HCHW, @HCNT, @TOC, @WBD, @RRT, @EOH, @ROH, @AO" +
-                "H, @RTR, @ATR, @ETD, @ATD, @ETA, @ATA, @AOC, @ROS, @COD, @RTD, @PAT, @NOU, @IMO," +
-                " @GYY, @MBLTYP, @CIKKAPI, @INF, @BKMS, @TAGS, @LM_TS, @XTTXT, @XTBLB, @GODINF, @" +
-                "HNDINF, @ACCINF, @TRACK, @ACD, @ARP, @RBT, @LCD, @MO, @GL, @ACOT, @TPAD, @TPDD, " +
-                "@SOCRD, @SOC, @TOS, @TOB, @POD, @PODINF, @DTM, @DTP, @PTM, @TOL, @FPT, @OBTT, @O" +
-                "BTNO, @VGLOC, @EAWB, @ONYAYTK, @ONYAUSR, @ONYATRH, @OGRF, @DSRF, @NOP, @ETGB, @K" +
-                "ARNENO, @TRO, @TRS, @TRI, @TPAD2, @TPDD2, @ULSD, @ULCD, @ULCD2, @TRXAA, @VGKOD, " +
-                "@AWBTYP, @RETD, @RETA, @OCD, @KPI, @KPIUSR, @KPITRH, @BTY, @GYYB, @GUMRUK)";
+                "Y\", \"GYYB\", \"GUMRUK\", \"GUMRUKNOT\") VALUES (@OPMID, @EXD, @REFNO, @VHC, @ROT, @MO" +
+                "T, @OWNR, @NSTU, @NSTUTS, @PSTU, @PSTUTS, @DPSTU, @ASTU, @ONYYTK, @ONYUSR, @ONYT" +
+                "RH, @ORG, @DST, @POL, @POT, @POU, @SHPID, @CNEID, @CRRID, @CRAID, @NFYID, @NF2ID" +
+                ", @ACCID, @TSTID, @HNOP, @HPCS, @HVM3, @HGRW, @HCHW, @HCNT, @TOC, @WBD, @RRT, @E" +
+                "OH, @ROH, @AOH, @RTR, @ATR, @ETD, @ATD, @ETA, @ATA, @AOC, @ROS, @COD, @RTD, @PAT" +
+                ", @NOU, @IMO, @GYY, @MBLTYP, @CIKKAPI, @INF, @BKMS, @TAGS, @LM_TS, @XTTXT, @XTBL" +
+                "B, @GODINF, @HNDINF, @ACCINF, @TRACK, @ACD, @ARP, @RBT, @LCD, @MO, @GL, @ACOT, @" +
+                "TPAD, @TPDD, @SOCRD, @SOC, @TOS, @TOB, @POD, @PODINF, @DTM, @DTP, @PTM, @TOL, @F" +
+                "PT, @OBTT, @OBTNO, @VGLOC, @EAWB, @ONYAYTK, @ONYAUSR, @ONYATRH, @OGRF, @DSRF, @N" +
+                "OP, @ETGB, @KARNENO, @TRO, @TRS, @TRI, @TPAD2, @TPDD2, @ULSD, @ULCD, @ULCD2, @TR" +
+                "XAA, @VGKOD, @AWBTYP, @RETD, @RETA, @OCD, @KPI, @KPIUSR, @KPITRH, @BTY, @GYYB, @" +
+                "GUMRUK, @GUMRUKNOT)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@OPMID";
@@ -68304,6 +68394,12 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "GUMRUK";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@GUMRUKNOT";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "GUMRUKNOT";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE \"OPM\" SET \"OPMID\" = @OPMID, \"EXD\" = @EXD, \"REFNO\" = @REFNO, \"VHC\" = @VHC, " +
@@ -68330,7 +68426,8 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
                 "@TPDD2, \"ULSD\" = @ULSD, \"ULCD\" = @ULCD, \"ULCD2\" = @ULCD2, \"TRXAA\" = @TRXAA, \"VGK" +
                 "OD\" = @VGKOD, \"AWBTYP\" = @AWBTYP, \"RETD\" = @RETD, \"RETA\" = @RETA, \"OCD\" = @OCD, " +
                 "\"KPI\" = @KPI, \"KPIUSR\" = @KPIUSR, \"KPITRH\" = @KPITRH, \"BTY\" = @BTY, \"GYYB\" = @GY" +
-                "YB, \"GUMRUK\" = @GUMRUK WHERE ((\"OPMID\" = @Original_OPMID))";
+                "YB, \"GUMRUK\" = @GUMRUK, \"GUMRUKNOT\" = @GUMRUKNOT WHERE ((\"OPMID\" = @Original_OPM" +
+                "ID))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@OPMID";
@@ -69106,6 +69203,12 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             param.SourceColumn = "GUMRUK";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@GUMRUKNOT";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "GUMRUKNOT";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_OPMID";
             param.DbType = global::System.Data.DbType.Int32;
             param.Size = 4;
@@ -69128,11 +69231,11 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             this._commandCollection = new global::FirebirdSql.Data.FirebirdClient.FbCommand[2];
             this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM OPM";
+            this._commandCollection[0].CommandText = @"SELECT OPMID, EXD, REFNO, VHC, ROT, MOT, OWNR, NSTU, NSTUTS, PSTU, PSTUTS, DPSTU, ASTU, ONYYTK, ONYUSR, ONYTRH, ORG, DST, POL, POT, POU, SHPID, CNEID, CRRID, CRAID, NFYID, NF2ID, ACCID, TSTID, HNOP, HPCS, HVM3, HGRW, HCHW, HCNT, TOC, WBD, RRT, EOH, ROH, AOH, RTR, ATR, ETD, ATD, ETA, ATA, AOC, ROS, COD, RTD, PAT, NOU, IMO, GYY, MBLTYP, CIKKAPI, INF, BKMS, TAGS, LM_TS, XTTXT, XTBLB, GODINF, HNDINF, ACCINF, TRACK, ACD, ARP, RBT, LCD, MO, GL, ACOT, TPAD, TPDD, SOCRD, SOC, TOS, TOB, POD, PODINF, DTM, DTP, PTM, TOL, FPT, OBTT, OBTNO, VGLOC, EAWB, ONYAYTK, ONYAUSR, ONYATRH, OGRF, DSRF, NOP, ETGB, KARNENO, TRO, TRS, TRI, TPAD2, TPDD2, ULSD, ULCD, ULCD2, TRXAA, VGKOD, AWBTYP, RETD, RETA, OCD, KPI, KPIUSR, KPITRH, BTY, GYYB, GUMRUK, GUMRUKNOT FROM OPM";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT ACCID, ACCINF, ACD, ACOT, AOC, AOH, ARP, ASTU, ATA, ATD, ATR, AWBTYP, BKMS, BTY, CIKKAPI, CNEID, COD, CRAID, CRRID, DPSTU, DSRF, DST, DTM, DTP, EAWB, EOH, ETA, ETD, ETGB, EXD, FPT, GL, GODINF, GUMRUK, GYY, GYYB, HCHW, HCNT, HGRW, HNDINF, HNOP, HPCS, HVM3, IMO, INF, KARNENO, KPI, KPITRH, KPIUSR, LCD, LM_TS, MBLTYP, MO, MOT, NF2ID, NFYID, NOP, NOU, NSTU, NSTUTS, OBTNO, OBTT, OCD, OGRF, ONYATRH, ONYAUSR, ONYAYTK, ONYTRH, ONYUSR, ONYYTK, OPMID, ORG, OWNR, PAT, POD, PODINF, POL, POT, POU, PSTU, PSTUTS, PTM, RBT, REFNO, RETA, RETD, ROH, ROS, ROT, RRT, RTD, RTR, SHPID, SOC, SOCRD, TAGS, TOB, TOC, TOL, TOS, TPAD, TPAD2, TPDD, TPDD2, TRACK, TRI, TRO, TRS, TRXAA, TSTID, ULCD, ULCD2, ULSD, VGKOD, VGLOC, VHC, WBD, XTBLB, XTTXT FROM OPM WHERE (OPMID = @OPMID)";
+            this._commandCollection[1].CommandText = @"SELECT ACCID, ACCINF, ACD, ACOT, AOC, AOH, ARP, ASTU, ATA, ATD, ATR, AWBTYP, BKMS, BTY, CIKKAPI, CNEID, COD, CRAID, CRRID, DPSTU, DSRF, DST, DTM, DTP, EAWB, EOH, ETA, ETD, ETGB, EXD, FPT, GL, GODINF, GUMRUK, GUMRUKNOT, GYY, GYYB, HCHW, HCNT, HGRW, HNDINF, HNOP, HPCS, HVM3, IMO, INF, KARNENO, KPI, KPITRH, KPIUSR, LCD, LM_TS, MBLTYP, MO, MOT, NF2ID, NFYID, NOP, NOU, NSTU, NSTUTS, OBTNO, OBTT, OCD, OGRF, ONYATRH, ONYAUSR, ONYAYTK, ONYTRH, ONYUSR, ONYYTK, OPMID, ORG, OWNR, PAT, POD, PODINF, POL, POT, POU, PSTU, PSTUTS, PTM, RBT, REFNO, RETA, RETD, ROH, ROS, ROT, RRT, RTD, RTR, SHPID, SOC, SOCRD, TAGS, TOB, TOC, TOL, TOS, TPAD, TPAD2, TPDD, TPDD2, TRACK, TRI, TRO, TRS, TRXAA, TSTID, ULCD, ULCD2, ULSD, VGKOD, VGLOC, VHC, WBD, XTBLB, XTTXT FROM OPM WHERE (OPMID = @OPMID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@OPMID";

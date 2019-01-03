@@ -5,26 +5,26 @@
     <Setting Name="tMax14ConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14;user id=sysdba;password=masterkey;connectionlifetime=10;pooling=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;character set=WIN1254;data source=LOCALHOST;initial catalog=C:\DATA\tMax\TMAX14-181115.FDB;user id=sysdba;password=masterkey;connectionlifetime=10;pooling=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14;user id=sysdba;password=masterkey;connectionlifetime=10;pooling=True</Value>
+      <Value Profile="(Default)">character set=WIN1254;data source=LOCALHOST;initial catalog=C:\DATA\tMax\TMAX14-181115.FDB;user id=sysdba;password=masterkey;connectionlifetime=10;pooling=True</Value>
     </Setting>
     <Setting Name="tMax14docConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14doc;user id=sysdba;password=masterkey;connectionlifetime=10;pooling=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;character set=WIN1254;data source=LOCALHOST;initial catalog=tMax14doc;user id=sysdba;password=masterkey;connectionlifetime=10;pooling=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14doc;user id=sysdba;password=masterkey;connectionlifetime=10;pooling=True</Value>
+      <Value Profile="(Default)">character set=WIN1254;data source=LOCALHOST;initial catalog=tMax14doc;user id=sysdba;password=masterkey;connectionlifetime=10;pooling=True</Value>
     </Setting>
     <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;character set=WIN1254;data source=LOCALHOST;initial catalog=C:\DATA\tMax\TMAX14-181115.FDB;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30</Value>
+      <Value Profile="(Default)">character set=WIN1254;data source=LOCALHOST;initial catalog=C:\DATA\tMax\TMAX14-181115.FDB;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -1558,12 +1558,12 @@
             this.kurUpdDockPanel.Controls.Add(this.controlContainer1);
             this.kurUpdDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.kurUpdDockPanel.ID = new System.Guid("a039e3bd-f3da-4f9e-b7c6-097dc9b4e828");
-            this.kurUpdDockPanel.Location = new System.Drawing.Point(19, 24);
+            this.kurUpdDockPanel.Location = new System.Drawing.Point(0, 0);
             this.kurUpdDockPanel.Name = "kurUpdDockPanel";
             this.kurUpdDockPanel.OriginalSize = new System.Drawing.Size(200, 200);
             this.kurUpdDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.kurUpdDockPanel.SavedIndex = 0;
-            this.kurUpdDockPanel.Size = new System.Drawing.Size(200, 515);
+            this.kurUpdDockPanel.Size = new System.Drawing.Size(200, 539);
             this.kurUpdDockPanel.Text = "Kur değiştir";
             this.kurUpdDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
@@ -1572,7 +1572,7 @@
             this.controlContainer1.Controls.Add(this.layoutControl2);
             this.controlContainer1.Location = new System.Drawing.Point(4, 23);
             this.controlContainer1.Name = "controlContainer1";
-            this.controlContainer1.Size = new System.Drawing.Size(192, 488);
+            this.controlContainer1.Size = new System.Drawing.Size(191, 512);
             this.controlContainer1.TabIndex = 0;
             // 
             // layoutControl2
@@ -1584,7 +1584,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.Root;
-            this.layoutControl2.Size = new System.Drawing.Size(192, 488);
+            this.layoutControl2.Size = new System.Drawing.Size(191, 512);
             this.layoutControl2.TabIndex = 4;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -1592,7 +1592,7 @@
             // 
             this.kurUpdSimpleButton.Location = new System.Drawing.Point(12, 60);
             this.kurUpdSimpleButton.Name = "kurUpdSimpleButton";
-            this.kurUpdSimpleButton.Size = new System.Drawing.Size(168, 22);
+            this.kurUpdSimpleButton.Size = new System.Drawing.Size(167, 22);
             this.kurUpdSimpleButton.StyleController = this.layoutControl2;
             this.kurUpdSimpleButton.TabIndex = 2;
             this.kurUpdSimpleButton.Text = "Kur değiştir";
@@ -1603,7 +1603,7 @@
             this.kurUpdDvzTextEdit.Location = new System.Drawing.Point(33, 12);
             this.kurUpdDvzTextEdit.Name = "kurUpdDvzTextEdit";
             this.kurUpdDvzTextEdit.Properties.MaxLength = 3;
-            this.kurUpdDvzTextEdit.Size = new System.Drawing.Size(147, 20);
+            this.kurUpdDvzTextEdit.Size = new System.Drawing.Size(146, 20);
             this.kurUpdDvzTextEdit.StyleController = this.layoutControl2;
             this.kurUpdDvzTextEdit.TabIndex = 0;
             // 
@@ -1614,7 +1614,7 @@
             this.kurUpdKurTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.kurUpdKurTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.kurUpdKurTextEdit.Size = new System.Drawing.Size(147, 20);
+            this.kurUpdKurTextEdit.Size = new System.Drawing.Size(146, 20);
             this.kurUpdKurTextEdit.StyleController = this.layoutControl2;
             this.kurUpdKurTextEdit.TabIndex = 1;
             // 
@@ -1629,7 +1629,7 @@
             this.layoutControlItem8});
             this.Root.Location = new System.Drawing.Point(0, 0);
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(192, 488);
+            this.Root.Size = new System.Drawing.Size(191, 512);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem6
@@ -1638,7 +1638,7 @@
             this.layoutControlItem6.CustomizationFormText = "Dvz";
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(172, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(171, 24);
             this.layoutControlItem6.Text = "Dvz";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(18, 13);
             // 
@@ -1648,7 +1648,7 @@
             this.layoutControlItem7.CustomizationFormText = "Kur";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(172, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(171, 24);
             this.layoutControlItem7.Text = "Kur";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(18, 13);
             // 
@@ -1658,7 +1658,7 @@
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem8";
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(172, 420);
+            this.layoutControlItem8.Size = new System.Drawing.Size(171, 444);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 

@@ -27,8 +27,8 @@
     <ProductName>tMax14</ProductName>
     <PublisherName>Şener DEMİRAL</PublisherName>
     <SuiteName>tMax14</SuiteName>
-    <MinimumRequiredVersion>1.6.0.448</MinimumRequiredVersion>
-    <ApplicationRevision>449</ApplicationRevision>
+    <MinimumRequiredVersion>1.6.0.460</MinimumRequiredVersion>
+    <ApplicationRevision>461</ApplicationRevision>
     <ApplicationVersion>1.6.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -365,9 +365,6 @@
     </Compile>
     <Compile Include="AccountRpr\AccOdmPerformansXF.Designer.cs">
       <DependentUpon>AccOdmPerformansXF.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AccountRpr\AccountRprDataSet.cs">
-      <DependentUpon>AccountRprDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="AccountRpr\AccountRprDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1468,6 +1465,12 @@
     <Compile Include="Teklif\TeklifSatisXF.Designer.cs">
       <DependentUpon>TeklifSatisXF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teklif\TstBosXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TstBosXF.Designer.cs">
+      <DependentUpon>TstBosXF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Traxon\TraxonDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2128,6 +2131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teklif\TeklifSatisXF.resx">
       <DependentUpon>TeklifSatisXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TstBosXF.resx">
+      <DependentUpon>TstBosXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Traxon\Trx2XF.resx">
       <DependentUpon>Trx2XF.cs</DependentUpon>

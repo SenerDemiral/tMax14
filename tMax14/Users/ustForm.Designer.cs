@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition2 = new DevExpress.XtraGrid.StyleFormatCondition();
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition1 = new DevExpress.XtraGrid.StyleFormatCondition();
             this.colDRM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.usersDataSet = new tMax14.Users.UsersDataSet();
             this.ustBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -70,6 +70,7 @@
             this.colTKIBH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colINFO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEMAIL = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEMAILPWD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMKK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSKK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEY = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -133,6 +134,7 @@
             this.jurnalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersQueriesTableAdapter = new tMax14.Users.UsersDataSetTableAdapters.UsersQueriesTableAdapter();
+            this.PWDrepositoryItemTextEdit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ustBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ustGridControl)).BeginInit();
@@ -163,6 +165,7 @@
             this.contextMenuStripUSP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uspBindingSource)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PWDrepositoryItemTextEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // colDRM
@@ -196,6 +199,7 @@
             this.tableAdapterManager.USITableAdapter = this.usiTableAdapter;
             this.tableAdapterManager.USKTableAdapter = this.uskTableAdapter;
             this.tableAdapterManager.USMTableAdapter = this.usmTableAdapter;
+            this.tableAdapterManager.USP_SELTableAdapter = null;
             this.tableAdapterManager.USTTableAdapter = this.ustTableAdapter;
             this.tableAdapterManager.UYITableAdapter = null;
             // 
@@ -223,7 +227,8 @@
             this.ustGridControl.MainView = this.ustGridView;
             this.ustGridControl.Name = "ustGridControl";
             this.ustGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.AC4repositoryItemTextEdit});
+            this.AC4repositoryItemTextEdit,
+            this.PWDrepositoryItemTextEdit});
             this.ustGridControl.ShowOnlyPredefinedDetails = true;
             this.ustGridControl.Size = new System.Drawing.Size(1007, 479);
             this.ustGridControl.TabIndex = 1;
@@ -263,6 +268,7 @@
             this.colTKIBH,
             this.colINFO,
             this.colEMAIL,
+            this.colEMAILPWD,
             this.colMKK,
             this.colSKK,
             this.colEY,
@@ -275,14 +281,14 @@
             this.colYMKTUR,
             this.colTRNOVR,
             this.colHDNFS});
-            styleFormatCondition2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
-            styleFormatCondition2.Appearance.Options.UseFont = true;
-            styleFormatCondition2.ApplyToRow = true;
-            styleFormatCondition2.Column = this.colDRM;
-            styleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
-            styleFormatCondition2.Value1 = "Z";
+            styleFormatCondition1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            styleFormatCondition1.Appearance.Options.UseFont = true;
+            styleFormatCondition1.ApplyToRow = true;
+            styleFormatCondition1.Column = this.colDRM;
+            styleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
+            styleFormatCondition1.Value1 = "Z";
             this.ustGridView.FormatConditions.AddRange(new DevExpress.XtraGrid.StyleFormatCondition[] {
-            styleFormatCondition2});
+            styleFormatCondition1});
             this.ustGridView.GridControl = this.ustGridControl;
             this.ustGridView.Name = "ustGridView";
             this.ustGridView.OptionsView.ColumnAutoWidth = false;
@@ -564,6 +570,15 @@
             this.colEMAIL.Name = "colEMAIL";
             this.colEMAIL.Visible = true;
             this.colEMAIL.VisibleIndex = 15;
+            // 
+            // colEMAILPWD
+            // 
+            this.colEMAILPWD.Caption = "eMailPwd";
+            this.colEMAILPWD.ColumnEdit = this.PWDrepositoryItemTextEdit;
+            this.colEMAILPWD.FieldName = "EMAILPWD";
+            this.colEMAILPWD.Name = "colEMAILPWD";
+            this.colEMAILPWD.Visible = true;
+            this.colEMAILPWD.VisibleIndex = 41;
             // 
             // colMKK
             // 
@@ -1150,6 +1165,12 @@
             this.layoutsToolStripMenuItem.Text = "Layouts";
             this.layoutsToolStripMenuItem.Click += new System.EventHandler(this.layoutsToolStripMenuItem_Click);
             // 
+            // PWDrepositoryItemTextEdit
+            // 
+            this.PWDrepositoryItemTextEdit.AutoHeight = false;
+            this.PWDrepositoryItemTextEdit.Name = "PWDrepositoryItemTextEdit";
+            this.PWDrepositoryItemTextEdit.PasswordChar = '*';
+            // 
             // ustForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1194,6 +1215,7 @@
             this.contextMenuStripUSP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uspBindingSource)).EndInit();
             this.contextMenuStrip.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PWDrepositoryItemTextEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1303,5 +1325,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colYMKTUR;
         private DevExpress.XtraGrid.Columns.GridColumn colTRNOVR;
         private DevExpress.XtraGrid.Columns.GridColumn colHDNFS;
+        private DevExpress.XtraGrid.Columns.GridColumn colEMAILPWD;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit PWDrepositoryItemTextEdit;
     }
 }

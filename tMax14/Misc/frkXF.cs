@@ -19,7 +19,7 @@ namespace tMax14.Misc
 
             Program.MF.GridControlSettings(frkGridControl);
             frkGridControl.ExternalRepository = Program.MF.mainPersistentRepository;
-            colFRTTAGS.ColumnEdit = Program.MF.TAGselFRTrepositoryItemCheckedComboBoxEdit;
+            colRPTID.ColumnEdit = Program.MF.RPTrepositoryItemCheckedComboBoxEdit;
         }
 
         public void Save()
@@ -96,6 +96,16 @@ namespace tMax14.Misc
             frkSendXF frm = new frkSendXF();
             frm.frkID = PK;
             frm.info = view.GetFocusedRowCellDisplayText(colAD);
+            frm.ShowDialog();
+            frm.Dispose();
+        }
+
+        private void reportHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Genel.rphXF frm = new Genel.rphXF();
+
+            frm.iQry = $"INFO = 'FrkID:{frkGridView.GetFocusedRowCellValue(colFRKID)}'";
+
             frm.ShowDialog();
             frm.Dispose();
         }

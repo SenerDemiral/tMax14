@@ -332,6 +332,7 @@
             this.OpcStuRepositoryItemCheckedComboBoxEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
             this.KpiRepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.BBOXTYPrepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.OphVGMrepositoryItemImageComboBox = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.xgtTableAdapter = new tMax14.MainDataSetTableAdapters.XGTTableAdapter();
             this.ustTableAdapter = new tMax14.MainDataSetTableAdapters.USTTableAdapter();
             this.ftTableAdapter = new tMax14.MainDataSetTableAdapters.FTTableAdapter();
@@ -354,7 +355,7 @@
             this.afbtTableAdapter = new tMax14.MainDataSetTableAdapters.AFBTTableAdapter();
             this.kkesTableAdapter = new tMax14.MainDataSetTableAdapters.KKESTableAdapter();
             this.smtpTableAdapter = new tMax14.MainDataSetTableAdapters.SMTPTableAdapter();
-            this.OphVGMrepositoryItemImageComboBox = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.RPTrepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.uspBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1)).BeginInit();
@@ -594,9 +595,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.OpcStuRepositoryItemCheckedComboBoxEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KpiRepositoryItemLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BBOXTYPrepositoryItemLookUpEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OphVGMrepositoryItemImageComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OphVGMrepositoryItemImageComboBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPTrepositoryItemLookUpEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // mainDataSet
@@ -1136,7 +1138,8 @@
             this.OpcStuRepositoryItemCheckedComboBoxEdit,
             this.KpiRepositoryItemLookUpEdit,
             this.BBOXTYPrepositoryItemLookUpEdit,
-            this.OphVGMrepositoryItemImageComboBox});
+            this.OphVGMrepositoryItemImageComboBox,
+            this.RPTrepositoryItemLookUpEdit});
             // 
             // uspFrmRepositoryItemLookUpEdit
             // 
@@ -3835,6 +3838,15 @@
             this.BBOXTYPrepositoryItemLookUpEdit.Name = "BBOXTYPrepositoryItemLookUpEdit";
             this.BBOXTYPrepositoryItemLookUpEdit.ValueMember = "ID";
             // 
+            // OphVGMrepositoryItemImageComboBox
+            // 
+            this.OphVGMrepositoryItemImageComboBox.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.OphVGMrepositoryItemImageComboBox.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("TIF", "T", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Müşteri", "M", -1)});
+            this.OphVGMrepositoryItemImageComboBox.Name = "OphVGMrepositoryItemImageComboBox";
+            // 
             // xgtTableAdapter
             // 
             this.xgtTableAdapter.ClearBeforeFill = true;
@@ -3923,14 +3935,18 @@
             // 
             this.smtpTableAdapter.ClearBeforeFill = true;
             // 
-            // OphVGMrepositoryItemImageComboBox
+            // RPTrepositoryItemLookUpEdit
             // 
-            this.OphVGMrepositoryItemImageComboBox.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.RPTrepositoryItemLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.OphVGMrepositoryItemImageComboBox.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("TIF", "T", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Müşteri", "M", -1)});
-            this.OphVGMrepositoryItemImageComboBox.Name = "OphVGMrepositoryItemImageComboBox";
+            this.RPTrepositoryItemLookUpEdit.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AD", "AD", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("KOD", "KOD", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RPTID", "RPTID", 20, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far)});
+            this.RPTrepositoryItemLookUpEdit.DataSource = this.rptBindingSource;
+            this.RPTrepositoryItemLookUpEdit.DisplayMember = "AD";
+            this.RPTrepositoryItemLookUpEdit.Name = "RPTrepositoryItemLookUpEdit";
+            this.RPTrepositoryItemLookUpEdit.ValueMember = "RPTID";
             // 
             // mainForm
             // 
@@ -4187,9 +4203,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.OpcStuRepositoryItemCheckedComboBoxEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KpiRepositoryItemLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BBOXTYPrepositoryItemLookUpEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OphVGMrepositoryItemImageComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OphVGMrepositoryItemImageComboBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPTrepositoryItemLookUpEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4511,5 +4528,6 @@
         public DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit KpiRepositoryItemLookUpEdit;
         public DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit BBOXTYPrepositoryItemLookUpEdit;
         public DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox OphVGMrepositoryItemImageComboBox;
+        public DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit RPTrepositoryItemLookUpEdit;
     }
 }

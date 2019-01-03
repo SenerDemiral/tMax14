@@ -189,6 +189,7 @@
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.opmSelTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OPM_SELTableAdapter();
             this.opsQueriesTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OpsQueriesTableAdapter();
+            this.colACD = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.opsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opmGridControl)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
@@ -921,7 +922,8 @@
             this.colKPIUSR,
             this.colKPITRH,
             this.colPOL,
-            this.colPOU});
+            this.colPOU,
+            this.colACD});
             styleFormatCondition1.Appearance.ForeColor = System.Drawing.Color.Coral;
             styleFormatCondition1.Appearance.Options.UseForeColor = true;
             styleFormatCondition1.ApplyToRow = true;
@@ -1766,6 +1768,15 @@
             // 
             this.opmSelTableAdapter.ClearBeforeFill = true;
             // 
+            // colACD
+            // 
+            this.colACD.DisplayFormat.FormatString = "dd.MM.yy HH:mm";
+            this.colACD.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colACD.FieldName = "ACD";
+            this.colACD.Name = "colACD";
+            this.colACD.Visible = true;
+            this.colACD.VisibleIndex = 63;
+            // 
             // opMasterXUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1954,5 +1965,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colKPITRH;
         private DevExpress.XtraGrid.Columns.GridColumn colPOL;
         private DevExpress.XtraGrid.Columns.GridColumn colPOU;
+        private DevExpress.XtraGrid.Columns.GridColumn colACD;
     }
 }

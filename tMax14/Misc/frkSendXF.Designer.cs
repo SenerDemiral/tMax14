@@ -35,6 +35,7 @@
             this.frkKmpnyGridControl = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mailGonderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frkKmpnyGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFRTID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFRTAD = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,15 +46,12 @@
             this.colSendMsj = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rptGetTableAdapter = new tMax14.Misc.MiscDataSetTableAdapters.RPT_GETTableAdapter();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.eMailBodyRichEditControl = new DevExpress.XtraRichEdit.RichEditControl();
             this.eMailSubjectTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.miscQueriesTableAdapter = new tMax14.Misc.MiscDataSetTableAdapters.MiscQueriesTableAdapter();
             this.docSelDetTableAdapter = new tMax14.Misc.MiscDataSetTableAdapters.DOC_SEL_DETTableAdapter();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.miscDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frkKmpnyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frkKmpnyGridControl)).BeginInit();
@@ -66,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // miscDataSet
@@ -92,7 +89,7 @@
             this.frkKmpnyGridControl.Name = "frkKmpnyGridControl";
             this.frkKmpnyGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.mailStatuRepositoryItemImageComboBox});
-            this.frkKmpnyGridControl.Size = new System.Drawing.Size(767, 277);
+            this.frkKmpnyGridControl.Size = new System.Drawing.Size(767, 386);
             this.frkKmpnyGridControl.TabIndex = 0;
             this.frkKmpnyGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.frkKmpnyGridView});
@@ -103,14 +100,21 @@
             this.mailGonderToolStripMenuItem,
             this.exportToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip.Size = new System.Drawing.Size(139, 48);
             // 
             // mailGonderToolStripMenuItem
             // 
             this.mailGonderToolStripMenuItem.Name = "mailGonderToolStripMenuItem";
-            this.mailGonderToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.mailGonderToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.mailGonderToolStripMenuItem.Text = "Mail gonder";
             this.mailGonderToolStripMenuItem.Click += new System.EventHandler(this.mailGonderToolStripMenuItem_Click);
+            // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.exportToolStripMenuItem.Text = "Export";
+            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
             // frkKmpnyGridView
             // 
@@ -123,6 +127,8 @@
             this.colSendMsj});
             this.frkKmpnyGridView.GridControl = this.frkKmpnyGridControl;
             this.frkKmpnyGridView.Name = "frkKmpnyGridView";
+            this.frkKmpnyGridView.OptionsView.EnableAppearanceEvenRow = true;
+            this.frkKmpnyGridView.OptionsView.ShowFooter = true;
             this.frkKmpnyGridView.OptionsView.ShowGroupPanel = false;
             this.frkKmpnyGridView.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.frkKmpnyGridView_ShowingEditor);
             this.frkKmpnyGridView.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.frkKmpnyGridView_CellValueChanging);
@@ -134,6 +140,8 @@
             this.colFRTID.Name = "colFRTID";
             this.colFRTID.OptionsColumn.AllowEdit = false;
             this.colFRTID.OptionsColumn.FixedWidth = true;
+            this.colFRTID.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "FRTID", "{0}")});
             this.colFRTID.Visible = true;
             this.colFRTID.VisibleIndex = 0;
             this.colFRTID.Width = 60;
@@ -205,41 +213,19 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.eMailBodyRichEditControl);
             this.layoutControl1.Controls.Add(this.eMailSubjectTextEdit);
             this.layoutControl1.Controls.Add(this.frkKmpnyGridControl);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseBackColor = true;
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseFont = true;
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseTextOptions = true;
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.layoutControl1.OptionsPrint.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.layoutControl1.OptionsPrint.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.layoutControl1.OptionsPrint.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(791, 434);
             this.layoutControl1.TabIndex = 3;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // eMailBodyRichEditControl
-            // 
-            this.eMailBodyRichEditControl.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
-            this.eMailBodyRichEditControl.EnableToolTips = true;
-            this.eMailBodyRichEditControl.Location = new System.Drawing.Point(12, 335);
-            this.eMailBodyRichEditControl.Name = "eMailBodyRichEditControl";
-            this.eMailBodyRichEditControl.Options.Comments.Author = "";
-            this.eMailBodyRichEditControl.Size = new System.Drawing.Size(767, 87);
-            this.eMailBodyRichEditControl.TabIndex = 16;
-            this.eMailBodyRichEditControl.Text = "richEditControl1";
-            // 
             // eMailSubjectTextEdit
             // 
-            this.eMailSubjectTextEdit.Location = new System.Drawing.Point(80, 293);
+            this.eMailSubjectTextEdit.Location = new System.Drawing.Point(80, 402);
             this.eMailSubjectTextEdit.Name = "eMailSubjectTextEdit";
             this.eMailSubjectTextEdit.Size = new System.Drawing.Size(699, 20);
             this.eMailSubjectTextEdit.StyleController = this.layoutControl1;
@@ -251,8 +237,7 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3});
+            this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(791, 434);
@@ -263,7 +248,7 @@
             this.layoutControlItem1.Control = this.frkKmpnyGridControl;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(771, 281);
+            this.layoutControlItem1.Size = new System.Drawing.Size(771, 390);
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
@@ -271,7 +256,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.eMailSubjectTextEdit;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 281);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 390);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(771, 24);
             this.layoutControlItem2.Text = "eMail Subject";
@@ -279,28 +264,9 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(63, 13);
             this.layoutControlItem2.TextToControlDistance = 5;
             // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.eMailBodyRichEditControl;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 305);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(771, 109);
-            this.layoutControlItem3.Text = "eMail Body";
-            this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(51, 13);
-            this.layoutControlItem3.TextToControlDistance = 5;
-            // 
             // docSelDetTableAdapter
             // 
             this.docSelDetTableAdapter.ClearBeforeFill = true;
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exportToolStripMenuItem.Text = "Export";
-            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
             // frkSendXF
             // 
@@ -323,7 +289,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,8 +312,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.TextEdit eMailSubjectTextEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraRichEdit.RichEditControl eMailBodyRichEditControl;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem mailGonderToolStripMenuItem;
         private MiscDataSetTableAdapters.MiscQueriesTableAdapter miscQueriesTableAdapter;

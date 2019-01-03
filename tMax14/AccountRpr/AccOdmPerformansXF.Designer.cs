@@ -54,6 +54,9 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.colTOPTUTZ = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colORTVDEGUNZ = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTOPTUTZXVDEGUN = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountRprDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -123,7 +126,10 @@
             this.colTOPTUTXVDEGUN,
             this.colTOPTUTXODMGUN,
             this.colORTVDEGUN,
-            this.colORTODMGUN});
+            this.colORTODMGUN,
+            this.colTOPTUTZ,
+            this.colORTVDEGUNZ,
+            this.colTOPTUTZXVDEGUN});
             this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(684, 641, 210, 172);
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -176,6 +182,8 @@
             // colTOPTUT
             // 
             this.colTOPTUT.Caption = "Top(Tut)";
+            this.colTOPTUT.DisplayFormat.FormatString = "n2";
+            this.colTOPTUT.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colTOPTUT.FieldName = "TOPTUT";
             this.colTOPTUT.Name = "colTOPTUT";
             this.colTOPTUT.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -329,6 +337,25 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
+            // colTOPTUTZ
+            // 
+            this.colTOPTUTZ.Caption = "ÖdemeYok";
+            this.colTOPTUTZ.DisplayFormat.FormatString = "n2";
+            this.colTOPTUTZ.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colTOPTUTZ.FieldName = "TOPTUTZ";
+            this.colTOPTUTZ.Name = "colTOPTUTZ";
+            // 
+            // colORTVDEGUNZ
+            // 
+            this.colORTVDEGUNZ.Caption = "ÖdemesizVdeGün";
+            this.colORTVDEGUNZ.FieldName = "ORTVDEGUNZ";
+            this.colORTVDEGUNZ.Name = "colORTVDEGUNZ";
+            // 
+            // colTOPTUTZXVDEGUN
+            // 
+            this.colTOPTUTZXVDEGUN.FieldName = "TOPTUTZXVDEGUN";
+            this.colTOPTUTZXVDEGUN.Name = "colTOPTUTZXVDEGUN";
+            // 
             // AccOdmPerformansXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,5 +412,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraGrid.Columns.GridColumn colTOPTUTZ;
+        private DevExpress.XtraGrid.Columns.GridColumn colORTVDEGUNZ;
+        private DevExpress.XtraGrid.Columns.GridColumn colTOPTUTZXVDEGUN;
     }
 }

@@ -228,6 +228,7 @@ namespace tMax14.Ops
                 int id = (int)ophGridView.GetFocusedRowCellValue(colOPMID);
                 var panel = dockManager.AddPanel(DevExpress.XtraBars.Docking.DockingStyle.Bottom);
                 panel.Name = "opmPanel";
+                panel.Options.ShowCloseButton = true;
 
                 opMasterFrm = new opMasterXUC();
                 opMasterFrm.OPMID = id;

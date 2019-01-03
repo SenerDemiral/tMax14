@@ -12,7 +12,7 @@ namespace tMax14ReportClassLibrary.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,8 +26,8 @@ namespace tMax14ReportClassLibrary.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14;user id=sy" +
-            "sdba;password=masterkey;connectionlifetime=10;pooling=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=LOCALHOST;initial catalog=C:\\DATA\\tMax\\TMAX14-1" +
+            "81115.FDB;user id=sysdba;password=masterkey;connectionlifetime=10;pooling=True")]
         public string tMax14ConnectionString {
             get {
                 return ((string)(this["tMax14ConnectionString"]));
@@ -37,8 +37,8 @@ namespace tMax14ReportClassLibrary.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14doc;user id" +
-            "=sysdba;password=masterkey;connectionlifetime=10;pooling=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=LOCALHOST;initial catalog=tMax14doc;user id=sys" +
+            "dba;password=masterkey;connectionlifetime=10;pooling=True")]
         public string tMax14docConnectionString {
             get {
                 return ((string)(this["tMax14docConnectionString"]));
@@ -48,8 +48,8 @@ namespace tMax14ReportClassLibrary.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14;user id=sy" +
-            "sdba;password=masterkey;pooling=True;connectionlifetime=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=LOCALHOST;initial catalog=C:\\DATA\\tMax\\TMAX14-1" +
+            "81115.FDB;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

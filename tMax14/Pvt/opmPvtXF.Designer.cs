@@ -63,11 +63,12 @@
             this.fieldACC = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldHTOPS = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldINF = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldPOL = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldPOU = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pvtOpmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pvtDataSet = new tMax14.Pvt.PvtDataSet();
             this.pvtOpmTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.PVT_OPMTableAdapter();
-            this.fieldPOL = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldPOU = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldTAGS = new DevExpress.XtraPivotGrid.PivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pvtOpmBindingSource)).BeginInit();
@@ -111,7 +112,8 @@
             this.fieldHTOPS,
             this.fieldINF,
             this.fieldPOL,
-            this.fieldPOU});
+            this.fieldPOU,
+            this.fieldTAGS});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.OptionsDataField.RowHeaderWidth = 179;
@@ -405,20 +407,6 @@
             this.fieldINF.FieldName = "INF";
             this.fieldINF.Name = "fieldINF";
             // 
-            // pvtOpmBindingSource
-            // 
-            this.pvtOpmBindingSource.DataMember = "PVT_OPM";
-            this.pvtOpmBindingSource.DataSource = this.pvtDataSet;
-            // 
-            // pvtDataSet
-            // 
-            this.pvtDataSet.DataSetName = "PvtDataSet";
-            this.pvtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pvtOpmTableAdapter
-            // 
-            this.pvtOpmTableAdapter.ClearBeforeFill = true;
-            // 
             // fieldPOL
             // 
             this.fieldPOL.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
@@ -434,6 +422,29 @@
             this.fieldPOU.AreaIndex = 28;
             this.fieldPOU.FieldName = "POU";
             this.fieldPOU.Name = "fieldPOU";
+            // 
+            // pvtOpmBindingSource
+            // 
+            this.pvtOpmBindingSource.DataMember = "PVT_OPM";
+            this.pvtOpmBindingSource.DataSource = this.pvtDataSet;
+            // 
+            // pvtDataSet
+            // 
+            this.pvtDataSet.DataSetName = "PvtDataSet";
+            this.pvtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pvtOpmTableAdapter
+            // 
+            this.pvtOpmTableAdapter.ClearBeforeFill = true;
+            // 
+            // fieldTAGS
+            // 
+            this.fieldTAGS.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
+            | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
+            this.fieldTAGS.AreaIndex = 29;
+            this.fieldTAGS.Caption = "TAGs";
+            this.fieldTAGS.FieldName = "TAGS";
+            this.fieldTAGS.Name = "fieldTAGS";
             // 
             // opmPvtXF
             // 
@@ -493,5 +504,6 @@
         private DevExpress.XtraPivotGrid.PivotGridField fieldINF;
         private DevExpress.XtraPivotGrid.PivotGridField fieldPOL;
         private DevExpress.XtraPivotGrid.PivotGridField fieldPOU;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldTAGS;
     }
 }

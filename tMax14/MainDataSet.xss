@@ -27,13 +27,13 @@
     <Shape ID="DesignTable:AHP" ZOrder="8" X="453" Y="544" Height="69" Width="165" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="228" SplitterPosition="22" />
     <Shape ID="DesignTable:AKM" ZOrder="16" X="702" Y="606" Height="122" Width="167" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="75" />
     <Shape ID="DesignTable:AVBT" ZOrder="14" X="605" Y="292" Height="156" Width="171" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="109" />
-    <Shape ID="DesignTable:RPT" ZOrder="12" X="964" Y="211" Height="69" Width="164" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="194" SplitterPosition="22" />
+    <Shape ID="DesignTable:RPT" ZOrder="12" X="964" Y="211" Height="71" Width="164" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="194" SplitterPosition="24" />
     <Shape ID="DesignTable:USP_SEL_USR" ZOrder="10" X="8" Y="140" Height="122" Width="155" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="75" />
     <Shape ID="DesignTable:AFBT" ZOrder="7" X="996" Y="363" Height="122" Width="170" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="75" />
     <Shape ID="DesignTable:KKES" ZOrder="6" X="1204" Y="469" Height="172" Width="174" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:SMTP" ZOrder="2" X="8" Y="277" Height="75" Width="217" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="216" SplitterPosition="24" />
+    <Shape ID="DesignTable:SMTP" ZOrder="2" X="8" Y="277" Height="75" Width="200" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="216" SplitterPosition="24" />
     <Shape ID="DesignTable:OWNER" ZOrder="4" X="228" Y="681" Height="75" Width="238" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="178" SplitterPosition="24" />
-    <Shape ID="DesignTable:TST_LUP" ZOrder="3" X="0" Y="0" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:TST_LUP" ZOrder="3" X="984" Y="-19" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
     <Shape ID="DesignSources:MainQueriesTableAdapter" ZOrder="1" X="221" Y="629" Height="28" Width="300" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="253" SplitterPosition="24" />
   </Shapes>
   <Connectors />

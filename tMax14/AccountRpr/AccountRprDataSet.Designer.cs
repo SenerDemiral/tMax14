@@ -13116,6 +13116,12 @@ namespace tMax14.AccountRpr {
             
             private global::System.Data.DataColumn columnORTODMGUN;
             
+            private global::System.Data.DataColumn columnTOPTUTZ;
+            
+            private global::System.Data.DataColumn columnTOPTUTZXVDEGUN;
+            
+            private global::System.Data.DataColumn columnORTVDEGUNZ;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ACC_ODM_PERFORMANSDataTable() {
@@ -13223,6 +13229,30 @@ namespace tMax14.AccountRpr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TOPTUTZColumn {
+                get {
+                    return this.columnTOPTUTZ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TOPTUTZXVDEGUNColumn {
+                get {
+                    return this.columnTOPTUTZXVDEGUN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ORTVDEGUNZColumn {
+                get {
+                    return this.columnORTVDEGUNZ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -13258,7 +13288,7 @@ namespace tMax14.AccountRpr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ACC_ODM_PERFORMANSRow AddACC_ODM_PERFORMANSRow(string BA, string ICDIS, int FRTID, string FRTAD, decimal TOPTUT, decimal TOPTUTXVDEGUN, decimal TOPTUTXODMGUN, int ORTVDEGUN, int ORTODMGUN) {
+            public ACC_ODM_PERFORMANSRow AddACC_ODM_PERFORMANSRow(string BA, string ICDIS, int FRTID, string FRTAD, decimal TOPTUT, decimal TOPTUTXVDEGUN, decimal TOPTUTXODMGUN, int ORTVDEGUN, int ORTODMGUN, decimal TOPTUTZ, decimal TOPTUTZXVDEGUN, int ORTVDEGUNZ) {
                 ACC_ODM_PERFORMANSRow rowACC_ODM_PERFORMANSRow = ((ACC_ODM_PERFORMANSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         BA,
@@ -13269,7 +13299,10 @@ namespace tMax14.AccountRpr {
                         TOPTUTXVDEGUN,
                         TOPTUTXODMGUN,
                         ORTVDEGUN,
-                        ORTODMGUN};
+                        ORTODMGUN,
+                        TOPTUTZ,
+                        TOPTUTZXVDEGUN,
+                        ORTVDEGUNZ};
                 rowACC_ODM_PERFORMANSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowACC_ODM_PERFORMANSRow);
                 return rowACC_ODM_PERFORMANSRow;
@@ -13301,6 +13334,9 @@ namespace tMax14.AccountRpr {
                 this.columnTOPTUTXODMGUN = base.Columns["TOPTUTXODMGUN"];
                 this.columnORTVDEGUN = base.Columns["ORTVDEGUN"];
                 this.columnORTODMGUN = base.Columns["ORTODMGUN"];
+                this.columnTOPTUTZ = base.Columns["TOPTUTZ"];
+                this.columnTOPTUTZXVDEGUN = base.Columns["TOPTUTZXVDEGUN"];
+                this.columnORTVDEGUNZ = base.Columns["ORTVDEGUNZ"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13324,6 +13360,12 @@ namespace tMax14.AccountRpr {
                 base.Columns.Add(this.columnORTVDEGUN);
                 this.columnORTODMGUN = new global::System.Data.DataColumn("ORTODMGUN", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnORTODMGUN);
+                this.columnTOPTUTZ = new global::System.Data.DataColumn("TOPTUTZ", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTOPTUTZ);
+                this.columnTOPTUTZXVDEGUN = new global::System.Data.DataColumn("TOPTUTZXVDEGUN", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTOPTUTZXVDEGUN);
+                this.columnORTVDEGUNZ = new global::System.Data.DataColumn("ORTVDEGUNZ", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORTVDEGUNZ);
                 this.columnBA.MaxLength = 1;
                 this.columnICDIS.MaxLength = 1;
                 this.columnFRTAD.MaxLength = 100;
@@ -25559,6 +25601,54 @@ namespace tMax14.AccountRpr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal TOPTUTZ {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableACC_ODM_PERFORMANS.TOPTUTZColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TOPTUTZ\' in table \'ACC_ODM_PERFORMANS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACC_ODM_PERFORMANS.TOPTUTZColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal TOPTUTZXVDEGUN {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableACC_ODM_PERFORMANS.TOPTUTZXVDEGUNColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TOPTUTZXVDEGUN\' in table \'ACC_ODM_PERFORMANS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACC_ODM_PERFORMANS.TOPTUTZXVDEGUNColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int ORTVDEGUNZ {
+                get {
+                    try {
+                        return ((int)(this[this.tableACC_ODM_PERFORMANS.ORTVDEGUNZColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ORTVDEGUNZ\' in table \'ACC_ODM_PERFORMANS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACC_ODM_PERFORMANS.ORTVDEGUNZColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsBANull() {
                 return this.IsNull(this.tableACC_ODM_PERFORMANS.BAColumn);
             }
@@ -25663,6 +25753,42 @@ namespace tMax14.AccountRpr {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetORTODMGUNNull() {
                 this[this.tableACC_ODM_PERFORMANS.ORTODMGUNColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTOPTUTZNull() {
+                return this.IsNull(this.tableACC_ODM_PERFORMANS.TOPTUTZColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTOPTUTZNull() {
+                this[this.tableACC_ODM_PERFORMANS.TOPTUTZColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTOPTUTZXVDEGUNNull() {
+                return this.IsNull(this.tableACC_ODM_PERFORMANS.TOPTUTZXVDEGUNColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTOPTUTZXVDEGUNNull() {
+                this[this.tableACC_ODM_PERFORMANS.TOPTUTZXVDEGUNColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsORTVDEGUNZNull() {
+                return this.IsNull(this.tableACC_ODM_PERFORMANS.ORTVDEGUNZColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetORTVDEGUNZNull() {
+                this[this.tableACC_ODM_PERFORMANS.ORTVDEGUNZColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -30882,6 +31008,9 @@ namespace tMax14.AccountRpr.AccountRprDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TOPTUTXODMGUN", "TOPTUTXODMGUN");
             tableMapping.ColumnMappings.Add("ORTVDEGUN", "ORTVDEGUN");
             tableMapping.ColumnMappings.Add("ORTODMGUN", "ORTODMGUN");
+            tableMapping.ColumnMappings.Add("TOPTUTZ", "TOPTUTZ");
+            tableMapping.ColumnMappings.Add("TOPTUTZXVDEGUN", "TOPTUTZXVDEGUN");
+            tableMapping.ColumnMappings.Add("ORTVDEGUNZ", "ORTVDEGUNZ");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

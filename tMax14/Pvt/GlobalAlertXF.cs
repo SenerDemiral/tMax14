@@ -100,9 +100,9 @@ namespace tMax14.Pvt
                         if (resSB.Length == 0)  // Hata Yoksa
                         {
                             if (DENEMEcheckEdit.Checked)    // Deneme: Sadece kullaniciya gonder
-                                row.Result = sendMail(Program.USReMail, row.EMAILSUBJECT, row.EMAILBODY, row.RPTID, row.RPTKOD, row.OPS, row.OPSID);
+                                row.Result = sendMail(Program.USReMail, row.EMAILSUBJECT, row.EMAILBODY, row.RPTID, row.RPTKOD, row.OPS, row.OPSID, row.MAIL_FROM_ADDRESS, row.CREDENTIALS_USER_NAME, row.CREDENTIALS_USER_PASSWORD);
                             else
-                                row.Result = sendMail(row.EMAILS, row.EMAILSUBJECT, row.EMAILBODY, row.RPTID, row.RPTKOD, row.OPS, row.OPSID);
+                                row.Result = sendMail(row.EMAILS, row.EMAILSUBJECT, row.EMAILBODY, row.RPTID, row.RPTKOD, row.OPS, row.OPSID, row.MAIL_FROM_ADDRESS, row.CREDENTIALS_USER_NAME, row.CREDENTIALS_USER_PASSWORD);
                         }
                         else
                             row.Result = "! " + resSB.ToString();
@@ -298,7 +298,7 @@ namespace tMax14.Pvt
             }
             else if (rptID == 904)    // TS TeklifSorgulama  (TST 
             {
-                attDocumentSon(rptKod, "TST", opID, "TKLF", false);
+                attDocumentSon(rptKod, "TST", opID, "TKLF", true); // Attachment yoksa bos gitmemeli!!!
             }
             else if (rptID == 906)    // YTT YuklemeTalimatiTalep
             {
@@ -308,6 +308,11 @@ namespace tMax14.Pvt
             else if (rptID == 908)    // KTB KargoTakipBilgisi
             {
                 attEmpty(rptKod, "OPH", opID);
+                // Rapor&Ek yok sadece Subject/Body gidecek
+            }
+            else if (rptID == 913)    // CIM EvrakTaip
+            {
+                attEmpty(rptKod, "OPM", opID);
                 // Rapor&Ek yok sadece Subject/Body gidecek
             }
             else if (rptID == 5)    // POD
@@ -334,7 +339,7 @@ namespace tMax14.Pvt
             //SENDsimpleButton.Enabled = !hata;
         }
 
-        private string sendMail(string mailTo, string subject, string body, int rptID, string rptKod, string Ops, int OpsID)
+        private string sendMail(string mailTo, string subject, string body, int rptID, string rptKod, string Ops, int OpsID, string mailFrom, string cUsrNme, string cUsrPwd)
         {
             string result = "OK";
             Cursor = Cursors.WaitCursor;
@@ -357,9 +362,11 @@ namespace tMax14.Pvt
                 mail.Body = body;
                 mail.IsBodyHtml = true;
 
-                mail.From = new MailAddress(SMTP.MAIL_FROM_ADDRESS, SMTP.MAIL_FROM_DISPLAY_NAME);
+                //mail.From = new MailAddress(SMTP.MAIL_FROM_ADDRESS, SMTP.MAIL_FROM_DISPLAY_NAME);
+                mail.From = new MailAddress(mailFrom, SMTP.MAIL_FROM_DISPLAY_NAME);
                 SmtpClient smtp = new SmtpClient(SMTP.CLIENT_HOST);
-                smtp.Credentials = new System.Net.NetworkCredential(SMTP.CREDENTIALS_USER_NAME, SMTP.CREDENTIALS_USER_PASSWORD);
+                //smtp.Credentials = new System.Net.NetworkCredential(SMTP.CREDENTIALS_USER_NAME, SMTP.CREDENTIALS_USER_PASSWORD);
+                smtp.Credentials = new System.Net.NetworkCredential(cUsrNme, cUsrPwd);
                 smtp.EnableSsl = SMTP.ENABLE_SSL == "T" ? true : false;
                 smtp.Port = SMTP.PORT;
 

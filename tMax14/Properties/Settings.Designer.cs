@@ -12,7 +12,7 @@ namespace tMax14.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -38,7 +38,7 @@ namespace tMax14.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=LOCALHOST;user id=sysdba;password=masterkey;ini" +
-            "tial catalog=tmax14doc;connectionlifetime=30;pooling=True")]
+            "tial catalog=tMax14doc;connectionlifetime=30;pooling=True")]
         public string ConnectionStringDoc {
             get {
                 return ((string)(this["ConnectionStringDoc"]));
@@ -48,9 +48,8 @@ namespace tMax14.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=LOCALHOST;initial catalog=D:\\DataYEDEK\\Transori" +
-            "ent\\TMAX14-180119.FDB;user id=sysdba;password=masterkey;pooling=True;connectionl" +
-            "ifetime=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=LOCALHOST;initial catalog=C:\\DATA\\tMax\\TMAX14-1" +
+            "81115.FDB;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

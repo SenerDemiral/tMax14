@@ -35,6 +35,10 @@
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.fAFBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.firmaDataSet = new tMax14.Firma.FirmaDataSet();
+            this.fillToolStrip = new System.Windows.Forms.ToolStrip();
+            this.mIDToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.mIDToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.fillToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.fafTestGridControl = new DevExpress.XtraGrid.GridControl();
             this.fAF_SEL_TESTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -55,10 +59,6 @@
             this.colKDY2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colINFO2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKURAL2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.fillToolStrip = new System.Windows.Forms.ToolStrip();
-            this.mIDToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.mIDToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.fAFBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -73,6 +73,8 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.fAFBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.fafGridControl = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.duplicateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFAFID1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHM1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -103,21 +105,20 @@
             this.fAFTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FAFTableAdapter();
             this.fAF_SEL_TESTTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FAF_SEL_TESTTableAdapter();
             this.firmaQueriesTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FirmaQueriesTableAdapter();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.duplicateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fAFBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firmaDataSet)).BeginInit();
+            this.fillToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fafTestGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fAF_SEL_TESTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            this.fillToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fAFBindingNavigator)).BeginInit();
             this.fAFBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fafGridControl)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpsFrtRepositoryItemImageComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -130,7 +131,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -152,8 +152,9 @@
             // 
             // memoEdit2
             // 
-            this.memoEdit2.EditValue = "Kullanılabilen alanlar: \r\nMaster: [MORG], [MDST], [MCRR], [MTAGS], [MTOPS]\r\nHouse" +
-    ": [HORG], [HDST], [HACC], [HSENARYO], [HTAGS]";
+            this.memoEdit2.EditValue = "Kullanılabilen alanlar: \r\nMaster: [MORG], [MDST], [MCRR], [MSHP], [MACC], [MTAGS]" +
+    ", [MTOPS]\r\nHouse: [HORG], [HDST], [HCNE], [HDCN], [HACC], [HNOP], [HCHW], [HSENA" +
+    "RYO], [HTAGS]";
             this.memoEdit2.Location = new System.Drawing.Point(24, 546);
             this.memoEdit2.Name = "memoEdit2";
             this.memoEdit2.Properties.ReadOnly = true;
@@ -184,6 +185,39 @@
             // 
             this.firmaDataSet.DataSetName = "FirmaDataSet";
             this.firmaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fillToolStrip
+            // 
+            this.fillToolStrip.AutoSize = false;
+            this.fillToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.fillToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mIDToolStripLabel,
+            this.mIDToolStripTextBox,
+            this.fillToolStripButton});
+            this.fillToolStrip.Location = new System.Drawing.Point(24, 46);
+            this.fillToolStrip.Name = "fillToolStrip";
+            this.fillToolStrip.Size = new System.Drawing.Size(876, 20);
+            this.fillToolStrip.TabIndex = 1;
+            this.fillToolStrip.Text = "fillToolStrip";
+            // 
+            // mIDToolStripLabel
+            // 
+            this.mIDToolStripLabel.Name = "mIDToolStripLabel";
+            this.mIDToolStripLabel.Size = new System.Drawing.Size(32, 17);
+            this.mIDToolStripLabel.Text = "MID:";
+            // 
+            // mIDToolStripTextBox
+            // 
+            this.mIDToolStripTextBox.Name = "mIDToolStripTextBox";
+            this.mIDToolStripTextBox.Size = new System.Drawing.Size(100, 20);
+            // 
+            // fillToolStripButton
+            // 
+            this.fillToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillToolStripButton.Name = "fillToolStripButton";
+            this.fillToolStripButton.Size = new System.Drawing.Size(26, 17);
+            this.fillToolStripButton.Text = "Fill";
+            this.fillToolStripButton.Click += new System.EventHandler(this.fillToolStripButton_Click);
             // 
             // fafTestGridControl
             // 
@@ -342,39 +376,6 @@
             this.colKURAL2.FieldName = "KURAL";
             this.colKURAL2.Name = "colKURAL2";
             // 
-            // fillToolStrip
-            // 
-            this.fillToolStrip.AutoSize = false;
-            this.fillToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.fillToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mIDToolStripLabel,
-            this.mIDToolStripTextBox,
-            this.fillToolStripButton});
-            this.fillToolStrip.Location = new System.Drawing.Point(24, 46);
-            this.fillToolStrip.Name = "fillToolStrip";
-            this.fillToolStrip.Size = new System.Drawing.Size(876, 20);
-            this.fillToolStrip.TabIndex = 1;
-            this.fillToolStrip.Text = "fillToolStrip";
-            // 
-            // mIDToolStripLabel
-            // 
-            this.mIDToolStripLabel.Name = "mIDToolStripLabel";
-            this.mIDToolStripLabel.Size = new System.Drawing.Size(32, 17);
-            this.mIDToolStripLabel.Text = "MID:";
-            // 
-            // mIDToolStripTextBox
-            // 
-            this.mIDToolStripTextBox.Name = "mIDToolStripTextBox";
-            this.mIDToolStripTextBox.Size = new System.Drawing.Size(100, 20);
-            // 
-            // fillToolStripButton
-            // 
-            this.fillToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillToolStripButton.Name = "fillToolStripButton";
-            this.fillToolStripButton.Size = new System.Drawing.Size(26, 17);
-            this.fillToolStripButton.Text = "Fill";
-            this.fillToolStripButton.Click += new System.EventHandler(this.fillToolStripButton_Click);
-            // 
             // fAFBindingNavigator
             // 
             this.fAFBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -515,6 +516,20 @@
             this.fafGridControl.Tag = "FAF";
             this.fafGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.duplicateToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 26);
+            // 
+            // duplicateToolStripMenuItem
+            // 
+            this.duplicateToolStripMenuItem.Name = "duplicateToolStripMenuItem";
+            this.duplicateToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.duplicateToolStripMenuItem.Text = "Duplicate";
+            this.duplicateToolStripMenuItem.Click += new System.EventHandler(this.duplicateToolStripMenuItem_Click);
             // 
             // gridView1
             // 
@@ -807,20 +822,6 @@
             // 
             this.fAF_SEL_TESTTableAdapter.ClearBeforeFill = true;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.duplicateToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
-            // 
-            // duplicateToolStripMenuItem
-            // 
-            this.duplicateToolStripMenuItem.Name = "duplicateToolStripMenuItem";
-            this.duplicateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.duplicateToolStripMenuItem.Text = "Duplicate";
-            this.duplicateToolStripMenuItem.Click += new System.EventHandler(this.duplicateToolStripMenuItem_Click);
-            // 
             // fafXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -836,15 +837,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fAFBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firmaDataSet)).EndInit();
+            this.fillToolStrip.ResumeLayout(false);
+            this.fillToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fafTestGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fAF_SEL_TESTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            this.fillToolStrip.ResumeLayout(false);
-            this.fillToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fAFBindingNavigator)).EndInit();
             this.fAFBindingNavigator.ResumeLayout(false);
             this.fAFBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fafGridControl)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpsFrtRepositoryItemImageComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -857,7 +859,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

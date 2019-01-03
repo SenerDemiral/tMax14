@@ -242,7 +242,7 @@
             // eMailToolStripMenuItem
             // 
             this.eMailToolStripMenuItem.Name = "eMailToolStripMenuItem";
-            this.eMailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eMailToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.eMailToolStripMenuItem.Text = "eMail";
             this.eMailToolStripMenuItem.Click += new System.EventHandler(this.eMailToolStripMenuItem_Click);
             // 
@@ -316,7 +316,7 @@
             // richEditControl1
             // 
             this.richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
-            this.richEditControl1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mKTBindingSource, "BODY", true));
+            this.richEditControl1.DataBindings.Add(new System.Windows.Forms.Binding("HtmlText", this.mKTBindingSource, "BODY", true));
             this.richEditControl1.Location = new System.Drawing.Point(24, 46);
             this.richEditControl1.Name = "richEditControl1";
             this.richEditControl1.Size = new System.Drawing.Size(830, 414);
@@ -339,8 +339,8 @@
             this.tabbedControlGroup1.CustomizationFormText = "tabbedControlGroup1";
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.SelectedTabPageIndex = 1;
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup2;
+            this.tabbedControlGroup1.SelectedTabPageIndex = 0;
             this.tabbedControlGroup1.Size = new System.Drawing.Size(858, 464);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,

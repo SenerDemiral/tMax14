@@ -58,10 +58,12 @@
             this.fieldACCCNTRY = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldDST = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldORG = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.pVT_AFDTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.PVT_AFDTableAdapter();
             this.fieldFTRTRHy = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldFTRTRHq = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldFTRTRHm = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.pVT_AFDTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.PVT_AFDTableAdapter();
+            this.fieldBPRTNO = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldINSTYP = new DevExpress.XtraPivotGrid.PivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pVTAFDBindingSource)).BeginInit();
@@ -99,7 +101,9 @@
             this.fieldORG,
             this.fieldFTRTRHy,
             this.fieldFTRTRHq,
-            this.fieldFTRTRHm});
+            this.fieldFTRTRHm,
+            this.fieldBPRTNO,
+            this.fieldINSTYP});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.OptionsDataField.RowHeaderWidth = 131;
@@ -189,7 +193,7 @@
             // 
             this.fieldAHTAD.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldAHTAD.AreaIndex = 5;
+            this.fieldAHTAD.AreaIndex = 4;
             this.fieldAHTAD.Caption = "Charge";
             this.fieldAHTAD.FieldName = "AHTAD";
             this.fieldAHTAD.Name = "fieldAHTAD";
@@ -198,7 +202,7 @@
             // 
             this.fieldFRTAD.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldFRTAD.AreaIndex = 6;
+            this.fieldFRTAD.AreaIndex = 5;
             this.fieldFRTAD.Caption = "Firma";
             this.fieldFRTAD.FieldName = "FRTAD";
             this.fieldFRTAD.Name = "fieldFRTAD";
@@ -207,7 +211,7 @@
             // 
             this.fieldOPID.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldOPID.AreaIndex = 7;
+            this.fieldOPID.AreaIndex = 6;
             this.fieldOPID.Caption = "OpID";
             this.fieldOPID.FieldName = "OPID";
             this.fieldOPID.Name = "fieldOPID";
@@ -216,7 +220,7 @@
             // 
             this.fieldOPHM.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldOPHM.AreaIndex = 8;
+            this.fieldOPHM.AreaIndex = 7;
             this.fieldOPHM.Caption = "OpHM";
             this.fieldOPHM.FieldName = "OPHM";
             this.fieldOPHM.Name = "fieldOPHM";
@@ -225,7 +229,7 @@
             // 
             this.fieldATD.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldATD.AreaIndex = 10;
+            this.fieldATD.AreaIndex = 9;
             this.fieldATD.Caption = "ATD";
             this.fieldATD.FieldName = "ATD";
             this.fieldATD.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.Date;
@@ -236,7 +240,7 @@
             // 
             this.fieldOPSTU.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldOPSTU.AreaIndex = 9;
+            this.fieldOPSTU.AreaIndex = 8;
             this.fieldOPSTU.Caption = "OpStu";
             this.fieldOPSTU.FieldName = "OPSTU";
             this.fieldOPSTU.Name = "fieldOPSTU";
@@ -267,7 +271,7 @@
             // 
             this.fieldATDq.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldATDq.AreaIndex = 12;
+            this.fieldATDq.AreaIndex = 11;
             this.fieldATDq.Caption = "ATDq";
             this.fieldATDq.FieldName = "ATD";
             this.fieldATDq.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateQuarter;
@@ -278,7 +282,7 @@
             // 
             this.fieldATDm.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldATDm.AreaIndex = 13;
+            this.fieldATDm.AreaIndex = 12;
             this.fieldATDm.Caption = "ATDm";
             this.fieldATDm.FieldName = "ATD";
             this.fieldATDm.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth;
@@ -299,7 +303,7 @@
             // 
             this.fieldATDy.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldATDy.AreaIndex = 11;
+            this.fieldATDy.AreaIndex = 10;
             this.fieldATDy.Caption = "ATDy";
             this.fieldATDy.FieldName = "ATD";
             this.fieldATDy.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
@@ -310,7 +314,7 @@
             // 
             this.fieldROT.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldROT.AreaIndex = 14;
+            this.fieldROT.AreaIndex = 13;
             this.fieldROT.FieldName = "ROT";
             this.fieldROT.Name = "fieldROT";
             // 
@@ -318,7 +322,7 @@
             // 
             this.fieldMOT.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldMOT.AreaIndex = 15;
+            this.fieldMOT.AreaIndex = 14;
             this.fieldMOT.FieldName = "MOT";
             this.fieldMOT.Name = "fieldMOT";
             // 
@@ -326,7 +330,7 @@
             // 
             this.fieldACC.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldACC.AreaIndex = 16;
+            this.fieldACC.AreaIndex = 15;
             this.fieldACC.Caption = "Acc";
             this.fieldACC.FieldName = "ACC";
             this.fieldACC.Name = "fieldACC";
@@ -335,7 +339,7 @@
             // 
             this.fieldACCCNTRY.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldACCCNTRY.AreaIndex = 17;
+            this.fieldACCCNTRY.AreaIndex = 16;
             this.fieldACCCNTRY.Caption = "AccCntry";
             this.fieldACCCNTRY.FieldName = "ACCCNTRY";
             this.fieldACCCNTRY.Name = "fieldACCCNTRY";
@@ -344,7 +348,7 @@
             // 
             this.fieldDST.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldDST.AreaIndex = 18;
+            this.fieldDST.AreaIndex = 17;
             this.fieldDST.Caption = "Dst";
             this.fieldDST.FieldName = "DST";
             this.fieldDST.Name = "fieldDST";
@@ -353,14 +357,10 @@
             // 
             this.fieldORG.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldORG.AreaIndex = 19;
+            this.fieldORG.AreaIndex = 18;
             this.fieldORG.Caption = "Org";
             this.fieldORG.FieldName = "ORG";
             this.fieldORG.Name = "fieldORG";
-            // 
-            // pVT_AFDTableAdapter
-            // 
-            this.pVT_AFDTableAdapter.ClearBeforeFill = true;
             // 
             // fieldFTRTRHy
             // 
@@ -394,6 +394,28 @@
             this.fieldFTRTRHm.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth;
             this.fieldFTRTRHm.Name = "fieldFTRTRHm";
             this.fieldFTRTRHm.UnboundFieldName = "fieldFTRTRHm";
+            // 
+            // pVT_AFDTableAdapter
+            // 
+            this.pVT_AFDTableAdapter.ClearBeforeFill = true;
+            // 
+            // fieldBPRTNO
+            // 
+            this.fieldBPRTNO.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
+            | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
+            this.fieldBPRTNO.AreaIndex = 23;
+            this.fieldBPRTNO.Caption = "bPrtNo";
+            this.fieldBPRTNO.FieldName = "BPRTNO";
+            this.fieldBPRTNO.Name = "fieldBPRTNO";
+            // 
+            // fieldINSTYP
+            // 
+            this.fieldINSTYP.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
+            | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
+            this.fieldINSTYP.AreaIndex = 24;
+            this.fieldINSTYP.Caption = "InsTyp";
+            this.fieldINSTYP.FieldName = "INSTYP";
+            this.fieldINSTYP.Name = "fieldINSTYP";
             // 
             // afdPvtXF
             // 
@@ -447,5 +469,7 @@
         private DevExpress.XtraPivotGrid.PivotGridField fieldFTRTRHy;
         private DevExpress.XtraPivotGrid.PivotGridField fieldFTRTRHq;
         private DevExpress.XtraPivotGrid.PivotGridField fieldFTRTRHm;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldBPRTNO;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldINSTYP;
     }
 }

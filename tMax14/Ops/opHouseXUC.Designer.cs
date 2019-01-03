@@ -280,6 +280,7 @@
             this.colGROUSR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGROTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVGM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBYNMDRM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.qsDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
@@ -287,7 +288,6 @@
             this.ophSelTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OPH_SELTableAdapter();
             this.opsQueriesTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OpsQueriesTableAdapter();
             this.rprOztbTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.RPR_OZTBTableAdapter();
-            this.colBYNMDRM = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.opsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ophGridControl)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
@@ -317,7 +317,7 @@
             this.ophGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.OWNRrepositoryItemImageComboBox,
             this.INFOrepositoryItemMemoEdit});
-            this.ophGridControl.Size = new System.Drawing.Size(1190, 471);
+            this.ophGridControl.Size = new System.Drawing.Size(1190, 336);
             this.ophGridControl.TabIndex = 1;
             this.ophGridControl.Tag = "Ops.opHouseXUC";
             this.ophGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2452,6 +2452,14 @@
             this.colVGM.Visible = true;
             this.colVGM.VisibleIndex = 57;
             // 
+            // colBYNMDRM
+            // 
+            this.colBYNMDRM.Caption = "BynmDrm";
+            this.colBYNMDRM.FieldName = "BYNMDRM";
+            this.colBYNMDRM.Name = "colBYNMDRM";
+            this.colBYNMDRM.Visible = true;
+            this.colBYNMDRM.VisibleIndex = 58;
+            // 
             // dockManager
             // 
             this.dockManager.AutoHideContainers.AddRange(new DevExpress.XtraBars.Docking.AutoHideContainer[] {
@@ -2474,7 +2482,7 @@
             this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.hideContainerLeft.Location = new System.Drawing.Point(0, 0);
             this.hideContainerLeft.Name = "hideContainerLeft";
-            this.hideContainerLeft.Size = new System.Drawing.Size(19, 471);
+            this.hideContainerLeft.Size = new System.Drawing.Size(19, 336);
             // 
             // qsDockPanel
             // 
@@ -2487,7 +2495,7 @@
             this.qsDockPanel.OriginalSize = new System.Drawing.Size(240, 200);
             this.qsDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.qsDockPanel.SavedIndex = 0;
-            this.qsDockPanel.Size = new System.Drawing.Size(240, 471);
+            this.qsDockPanel.Size = new System.Drawing.Size(240, 336);
             this.qsDockPanel.Text = "House Quick Search";
             this.qsDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
@@ -2495,7 +2503,7 @@
             // 
             this.controlContainer1.Location = new System.Drawing.Point(4, 23);
             this.controlContainer1.Name = "controlContainer1";
-            this.controlContainer1.Size = new System.Drawing.Size(232, 444);
+            this.controlContainer1.Size = new System.Drawing.Size(231, 309);
             this.controlContainer1.TabIndex = 0;
             // 
             // ophSelTableAdapter
@@ -2506,14 +2514,6 @@
             // 
             this.rprOztbTableAdapter.ClearBeforeFill = true;
             // 
-            // colBYNMDRM
-            // 
-            this.colBYNMDRM.Caption = "BynmDrm";
-            this.colBYNMDRM.FieldName = "BYNMDRM";
-            this.colBYNMDRM.Name = "colBYNMDRM";
-            this.colBYNMDRM.Visible = true;
-            this.colBYNMDRM.VisibleIndex = 58;
-            // 
             // opHouseXUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2521,7 +2521,7 @@
             this.Controls.Add(this.ophGridControl);
             this.Controls.Add(this.hideContainerLeft);
             this.Name = "opHouseXUC";
-            this.Size = new System.Drawing.Size(1209, 471);
+            this.Size = new System.Drawing.Size(1209, 336);
             this.Load += new System.EventHandler(this.opHouseXUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.opsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ophGridControl)).EndInit();

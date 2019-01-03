@@ -195,6 +195,7 @@
             this.colGROTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMLCD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHPODINF = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHDTM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
             this.contextMenuStripPivot = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -318,7 +319,7 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.colHDTM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMTPDD2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pvtDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvtKpiHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvtKpiHGridControl)).BeginInit();
@@ -552,7 +553,8 @@
             this.colGROTRH,
             this.colMLCD,
             this.colHPODINF,
-            this.colHDTM});
+            this.colHDTM,
+            this.colMTPDD2});
             this.gridView1.GridControl = this.pvtKpiHGridControl;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Average, "HPOD_HAOH", this.colHPOD_HAOH, "(HPOD_HAOH: AVG={0:0.##})"),
@@ -1975,6 +1977,14 @@
             this.colHPODINF.Visible = true;
             this.colHPODINF.VisibleIndex = 156;
             // 
+            // colHDTM
+            // 
+            this.colHDTM.Caption = "hDTM";
+            this.colHDTM.FieldName = "HDTM";
+            this.colHDTM.Name = "colHDTM";
+            this.colHDTM.Visible = true;
+            this.colHDTM.VisibleIndex = 157;
+            // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.pivotGridControl1);
@@ -3025,13 +3035,13 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // colHDTM
+            // colMTPDD2
             // 
-            this.colHDTM.Caption = "hDTM";
-            this.colHDTM.FieldName = "HDTM";
-            this.colHDTM.Name = "colHDTM";
-            this.colHDTM.Visible = true;
-            this.colHDTM.VisibleIndex = 157;
+            this.colMTPDD2.Caption = "mTPDD2";
+            this.colMTPDD2.FieldName = "MTPDD2";
+            this.colMTPDD2.Name = "colMTPDD2";
+            this.colMTPDD2.Visible = true;
+            this.colMTPDD2.VisibleIndex = 158;
             // 
             // kpiHouseXF
             // 
@@ -3353,5 +3363,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMLCD;
         private DevExpress.XtraGrid.Columns.GridColumn colHPODINF;
         private DevExpress.XtraGrid.Columns.GridColumn colHDTM;
+        private DevExpress.XtraGrid.Columns.GridColumn colMTPDD2;
     }
 }

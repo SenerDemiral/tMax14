@@ -749,6 +749,10 @@ namespace tMax14.Users {
             
             private global::System.Data.DataColumn columnHDNFS;
             
+            private global::System.Data.DataColumn columnEMAILPWD;
+            
+            private global::System.Data.DataColumn columnCANKPISET;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public USTDataTable() {
@@ -1152,6 +1156,22 @@ namespace tMax14.Users {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EMAILPWDColumn {
+                get {
+                    return this.columnEMAILPWD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CANKPISETColumn {
+                get {
+                    return this.columnCANKPISET;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1233,7 +1253,9 @@ namespace tMax14.Users {
                         string ROTS, 
                         string YMKTUR, 
                         string TRNOVR, 
-                        string HDNFS) {
+                        string HDNFS, 
+                        string EMAILPWD, 
+                        string CANKPISET) {
                 USTRow rowUSTRow = ((USTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         USTID,
@@ -1281,7 +1303,9 @@ namespace tMax14.Users {
                         ROTS,
                         YMKTUR,
                         TRNOVR,
-                        HDNFS};
+                        HDNFS,
+                        EMAILPWD,
+                        CANKPISET};
                 rowUSTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUSTRow);
                 return rowUSTRow;
@@ -1357,6 +1381,8 @@ namespace tMax14.Users {
                 this.columnYMKTUR = base.Columns["YMKTUR"];
                 this.columnTRNOVR = base.Columns["TRNOVR"];
                 this.columnHDNFS = base.Columns["HDNFS"];
+                this.columnEMAILPWD = base.Columns["EMAILPWD"];
+                this.columnCANKPISET = base.Columns["CANKPISET"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1454,6 +1480,10 @@ namespace tMax14.Users {
                 base.Columns.Add(this.columnTRNOVR);
                 this.columnHDNFS = new global::System.Data.DataColumn("HDNFS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHDNFS);
+                this.columnEMAILPWD = new global::System.Data.DataColumn("EMAILPWD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEMAILPWD);
+                this.columnCANKPISET = new global::System.Data.DataColumn("CANKPISET", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCANKPISET);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUSTID}, true));
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
@@ -1499,6 +1529,8 @@ namespace tMax14.Users {
                 this.columnYMKTUR.MaxLength = 1;
                 this.columnTRNOVR.MaxLength = 40;
                 this.columnHDNFS.MaxLength = 2147483647;
+                this.columnEMAILPWD.MaxLength = 20;
+                this.columnCANKPISET.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5526,6 +5558,38 @@ namespace tMax14.Users {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string EMAILPWD {
+                get {
+                    try {
+                        return ((string)(this[this.tableUST.EMAILPWDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EMAILPWD\' in table \'UST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUST.EMAILPWDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CANKPISET {
+                get {
+                    try {
+                        return ((string)(this[this.tableUST.CANKPISETColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CANKPISET\' in table \'UST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUST.CANKPISETColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsADNull() {
                 return this.IsNull(this.tableUST.ADColumn);
             }
@@ -6050,6 +6114,30 @@ namespace tMax14.Users {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetHDNFSNull() {
                 this[this.tableUST.HDNFSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsEMAILPWDNull() {
+                return this.IsNull(this.tableUST.EMAILPWDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetEMAILPWDNull() {
+                this[this.tableUST.EMAILPWDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCANKPISETNull() {
+                return this.IsNull(this.tableUST.CANKPISETColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCANKPISETNull() {
+                this[this.tableUST.CANKPISETColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8185,6 +8273,8 @@ namespace tMax14.Users.UsersDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("YMKTUR", "YMKTUR");
             tableMapping.ColumnMappings.Add("TRNOVR", "TRNOVR");
             tableMapping.ColumnMappings.Add("HDNFS", "HDNFS");
+            tableMapping.ColumnMappings.Add("EMAILPWD", "EMAILPWD");
+            tableMapping.ColumnMappings.Add("CANKPISET", "CANKPISET");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -8208,7 +8298,7 @@ namespace tMax14.Users.UsersDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""UST"" (""USTID"", ""USR"", ""TMU"", ""DRM"", ""PWD"", ""AD"", ""UNVT"", ""UNVE"", ""KRYSVY"", ""MNTRID"", ""TCKNO"", ""SEX"", ""DGMTRH"", ""SMTEL"", ""SOTEL"", ""KMTEL"", ""KETEL"", ""DPT"", ""GRV"", ""KANGRP"", ""KSEMT"", ""ISYERI"", ""CLSGRP"", ""ISGRSTRH"", ""ISAYRTRH"", ""OFSKART"", ""OTPKART"", ""TKIBH"", ""INFO"", ""LM_USR"", ""LM_TS"", ""LM_PWDTS"", ""EMAIL"", ""MKK"", ""SKK"", ""SYY"", ""EY"", ""MBGT"", ""MBKB"", ""MZD"", ""MOTS"", ""ROTS"", ""YMKTUR"", ""TRNOVR"", ""HDNFS"") VALUES (@USTID, @USR, @TMU, @DRM, @PWD, @AD, @UNVT, @UNVE, @KRYSVY, @MNTRID, @TCKNO, @SEX, @DGMTRH, @SMTEL, @SOTEL, @KMTEL, @KETEL, @DPT, @GRV, @KANGRP, @KSEMT, @ISYERI, @CLSGRP, @ISGRSTRH, @ISAYRTRH, @OFSKART, @OTPKART, @TKIBH, @INFO, @LM_USR, @LM_TS, @LM_PWDTS, @EMAIL, @MKK, @SKK, @SYY, @EY, @MBGT, @MBKB, @MZD, @MOTS, @ROTS, @YMKTUR, @TRNOVR, @HDNFS)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""UST"" (""USTID"", ""USR"", ""TMU"", ""DRM"", ""PWD"", ""AD"", ""UNVT"", ""UNVE"", ""KRYSVY"", ""MNTRID"", ""TCKNO"", ""SEX"", ""DGMTRH"", ""SMTEL"", ""SOTEL"", ""KMTEL"", ""KETEL"", ""DPT"", ""GRV"", ""KANGRP"", ""KSEMT"", ""ISYERI"", ""CLSGRP"", ""ISGRSTRH"", ""ISAYRTRH"", ""OFSKART"", ""OTPKART"", ""TKIBH"", ""INFO"", ""LM_USR"", ""LM_TS"", ""LM_PWDTS"", ""EMAIL"", ""EMAILPWD"", ""MKK"", ""SKK"", ""SYY"", ""EY"", ""MBGT"", ""MBKB"", ""MZD"", ""MOTS"", ""ROTS"", ""YMKTUR"", ""TRNOVR"", ""HDNFS"", ""CANKPISET"") VALUES (@USTID, @USR, @TMU, @DRM, @PWD, @AD, @UNVT, @UNVE, @KRYSVY, @MNTRID, @TCKNO, @SEX, @DGMTRH, @SMTEL, @SOTEL, @KMTEL, @KETEL, @DPT, @GRV, @KANGRP, @KSEMT, @ISYERI, @CLSGRP, @ISGRSTRH, @ISAYRTRH, @OFSKART, @OTPKART, @TKIBH, @INFO, @LM_USR, @LM_TS, @LM_PWDTS, @EMAIL, @EMAILPWD, @MKK, @SKK, @SYY, @EY, @MBGT, @MBKB, @MZD, @MOTS, @ROTS, @YMKTUR, @TRNOVR, @HDNFS, @CANKPISET)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@USTID";
@@ -8418,6 +8508,12 @@ namespace tMax14.Users.UsersDataSetTableAdapters {
             param.SourceColumn = "EMAIL";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@EMAILPWD";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "EMAILPWD";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@MKK";
             param.Size = 10;
             param.IsNullable = true;
@@ -8486,13 +8582,19 @@ namespace tMax14.Users.UsersDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@HDNFS";
-            param.Size = 2147483647;
+            param.Size = 100;
             param.IsNullable = true;
             param.SourceColumn = "HDNFS";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@CANKPISET";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "CANKPISET";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""UST"" SET ""USTID"" = @USTID, ""USR"" = @USR, ""TMU"" = @TMU, ""DRM"" = @DRM, ""PWD"" = @PWD, ""AD"" = @AD, ""UNVT"" = @UNVT, ""UNVE"" = @UNVE, ""KRYSVY"" = @KRYSVY, ""MNTRID"" = @MNTRID, ""TCKNO"" = @TCKNO, ""SEX"" = @SEX, ""DGMTRH"" = @DGMTRH, ""SMTEL"" = @SMTEL, ""SOTEL"" = @SOTEL, ""KMTEL"" = @KMTEL, ""KETEL"" = @KETEL, ""DPT"" = @DPT, ""GRV"" = @GRV, ""KANGRP"" = @KANGRP, ""KSEMT"" = @KSEMT, ""ISYERI"" = @ISYERI, ""CLSGRP"" = @CLSGRP, ""ISGRSTRH"" = @ISGRSTRH, ""ISAYRTRH"" = @ISAYRTRH, ""OFSKART"" = @OFSKART, ""OTPKART"" = @OTPKART, ""TKIBH"" = @TKIBH, ""INFO"" = @INFO, ""LM_USR"" = @LM_USR, ""LM_TS"" = @LM_TS, ""LM_PWDTS"" = @LM_PWDTS, ""EMAIL"" = @EMAIL, ""MKK"" = @MKK, ""SKK"" = @SKK, ""SYY"" = @SYY, ""EY"" = @EY, ""MBGT"" = @MBGT, ""MBKB"" = @MBKB, ""MZD"" = @MZD, ""MOTS"" = @MOTS, ""ROTS"" = @ROTS, ""YMKTUR"" = @YMKTUR, ""TRNOVR"" = @TRNOVR, ""HDNFS"" = @HDNFS WHERE ((""USTID"" = @Original_USTID) AND (""USR"" = @Original_USR))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""UST"" SET ""USTID"" = @USTID, ""USR"" = @USR, ""TMU"" = @TMU, ""DRM"" = @DRM, ""PWD"" = @PWD, ""AD"" = @AD, ""UNVT"" = @UNVT, ""UNVE"" = @UNVE, ""KRYSVY"" = @KRYSVY, ""MNTRID"" = @MNTRID, ""TCKNO"" = @TCKNO, ""SEX"" = @SEX, ""DGMTRH"" = @DGMTRH, ""SMTEL"" = @SMTEL, ""SOTEL"" = @SOTEL, ""KMTEL"" = @KMTEL, ""KETEL"" = @KETEL, ""DPT"" = @DPT, ""GRV"" = @GRV, ""KANGRP"" = @KANGRP, ""KSEMT"" = @KSEMT, ""ISYERI"" = @ISYERI, ""CLSGRP"" = @CLSGRP, ""ISGRSTRH"" = @ISGRSTRH, ""ISAYRTRH"" = @ISAYRTRH, ""OFSKART"" = @OFSKART, ""OTPKART"" = @OTPKART, ""TKIBH"" = @TKIBH, ""INFO"" = @INFO, ""LM_USR"" = @LM_USR, ""LM_TS"" = @LM_TS, ""LM_PWDTS"" = @LM_PWDTS, ""EMAIL"" = @EMAIL, ""EMAILPWD"" = @EMAILPWD, ""MKK"" = @MKK, ""SKK"" = @SKK, ""SYY"" = @SYY, ""EY"" = @EY, ""MBGT"" = @MBGT, ""MBKB"" = @MBKB, ""MZD"" = @MZD, ""MOTS"" = @MOTS, ""ROTS"" = @ROTS, ""YMKTUR"" = @YMKTUR, ""TRNOVR"" = @TRNOVR, ""HDNFS"" = @HDNFS, ""CANKPISET"" = @CANKPISET WHERE ((""USTID"" = @Original_USTID) AND (""USR"" = @Original_USR))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@USTID";
@@ -8702,6 +8804,12 @@ namespace tMax14.Users.UsersDataSetTableAdapters {
             param.SourceColumn = "EMAIL";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@EMAILPWD";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "EMAILPWD";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@MKK";
             param.Size = 10;
             param.IsNullable = true;
@@ -8770,9 +8878,15 @@ namespace tMax14.Users.UsersDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@HDNFS";
-            param.Size = 2147483647;
+            param.Size = 100;
             param.IsNullable = true;
             param.SourceColumn = "HDNFS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@CANKPISET";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "CANKPISET";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_USTID";
@@ -8808,7 +8922,7 @@ namespace tMax14.Users.UsersDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT USTID, USR, AD, UNVT FROM UST WHERE TMU = \'T\' AND DRM = \'-\'";
+            this._commandCollection[1].CommandText = @"SELECT AD, CANKPISET, CLSGRP, DGMTRH, DPT, DRM, EMAIL, EMAILPWD, EY, GRV, HDNFS, INFO, ISAYRTRH, ISGRSTRH, ISYERI, KANGRP, KETEL, KMTEL, KRYSVY, KSEMT, LM_PWDTS, LM_TS, LM_USR, MBGT, MBKB, MKK, MNTRID, MOTS, MZD, OFSKART, OTPKART, PWD, ROTS, SEX, SKK, SMTEL, SOTEL, SYY, TCKNO, TKIBH, TMU, TRNOVR, UNVE, UNVT, USR, USRTAG, USTID, YMKTUR FROM UST WHERE (TMU = 'T') AND (DRM = '-')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -29,13 +29,12 @@ namespace tMax14.Misc
         private void frkSendXF_Load(object sender, EventArgs e)
         {
             Text = string.Format("{0}  [frkSend]", info);
-
             
             this.rptGetTableAdapter.Fill(this.miscDataSet.RPT_GET, 120);  // Kampanya
             rptRow = this.miscDataSet.RPT_GET[0];
 
             eMailSubjectTextEdit.Text = rptRow.EMAILSUBJECT;
-            eMailBodyRichEditControl.Document.HtmlText = rptRow.EMAILBODY;
+            //eMailBodyRichEditControl.Document.HtmlText = rptRow.EMAILBODY;
 
             this.frkKmpnyTableAdapter.Fill(this.miscDataSet.FRK_KMPNY, frkID);
 
@@ -61,13 +60,56 @@ namespace tMax14.Misc
             if (XtraMessageBox.Show("Seçilmiş Firmalara toplu eMail atılacaktır.  Eminmisiniz?", "Toplu eMail", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
                 return;
 
+            docSelDetTableAdapter.Fill(this.miscDataSet.DOC_SEL_DET, "FRK", frkID, "FRK");
+            int rowCount = miscDataSet.DOC_SEL_DET.Rows.Count;
+
+            if (rowCount == 0)
+            {
+                XtraMessageBox.Show("FRK Attachemnt bulunamadı", Text);
+                return;
+            }
+
+            MiscDataSet.DOC_SEL_DETRow drow = (MiscDataSet.DOC_SEL_DETRow)miscDataSet.DOC_SEL_DET.Rows[0];
+            byte[] byteArray = drow.BLB;
+            string body = System.Text.Encoding.UTF8.GetString(byteArray, 0, byteArray.Length);
+
+            MainDataSet.SMTPRow SMTP = Program.MF.SMTP();
+
+            mail.Subject = eMailSubjectTextEdit.Text;
+
+            // Body Attachment dan gelsin
+            mail.Body = body;
+            //mail.Body = eMailBodyRichEditControl.Document.HtmlText;
+            mail.IsBodyHtml = true;
+
+            mail.From = new MailAddress(SMTP.MAIL_FROM_ADDRESS, SMTP.MAIL_FROM_DISPLAY_NAME);
+            SmtpClient smtp = new SmtpClient(SMTP.CLIENT_HOST);
+            smtp.Credentials = new System.Net.NetworkCredential(SMTP.CREDENTIALS_USER_NAME, SMTP.CREDENTIALS_USER_PASSWORD);
+            smtp.EnableSsl = SMTP.ENABLE_SSL == "T" ? true : false;
+            smtp.Port = SMTP.PORT;
+
+            foreach (MiscDataSet.FRK_KMPNYRow row in miscDataSet.FRK_KMPNY.Rows)
+            {
+                if (row.SendMail)
+                    send2Firma(smtp, row);
+            }
+
+            smtp.Dispose();
+        }
+
+        private void mailGonderToolStripMenuItem_Click_OLD(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("Seçilmiş Firmalara toplu eMail atılacaktır.  Eminmisiniz?", "Toplu eMail", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
+                return;
+
             if (!attDocuments("FRK", frkID))
                 return;
 
             MainDataSet.SMTPRow SMTP = Program.MF.SMTP();
 
             mail.Subject = eMailSubjectTextEdit.Text;
-            mail.Body = eMailBodyRichEditControl.Document.HtmlText;
+
+            //mail.Body = eMailBodyRichEditControl.Document.HtmlText;
             mail.IsBodyHtml = true;
 
             mail.From = new MailAddress(SMTP.MAIL_FROM_ADDRESS, SMTP.MAIL_FROM_DISPLAY_NAME);
@@ -89,8 +131,8 @@ namespace tMax14.Misc
         {
             string eMails = row.EMAILS;
 
-            if (!string.IsNullOrEmpty(Program.USReMail))
-                eMails += ", " + Program.USReMail;  // Aktif usera da mail gonder Control
+            //if (!string.IsNullOrEmpty(Program.USReMail))
+            //    eMails += ", " + Program.USReMail;  // Aktif usera da mail gonder Control
 
             try
             {
@@ -101,7 +143,7 @@ namespace tMax14.Misc
 
                 row.SendMail = false;
                 row.SendStatu = (int)sendStatu.Gonderildi;
-                miscQueriesTableAdapter.RPH_INS(rptRow.KOD, "FRT", row.FRTID, Program.USR, "F", null);
+                miscQueriesTableAdapter.RPH_INS(rptRow.KOD, "FRT", row.FRTID, Program.USR, "F", $"FrkID:{frkID}");
             }
             catch (Exception ex)
             {
@@ -191,8 +233,6 @@ namespace tMax14.Misc
             link.CreateDocument();
             link.ShowPreview();
         }
-
-
 
     }
 }

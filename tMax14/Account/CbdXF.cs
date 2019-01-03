@@ -86,6 +86,7 @@ namespace tMax14.Account
 
         private void GetGarantiExtre()
         {
+            /*
             var client = new ServiceReference1.FirmAccountActivitySoapClient();
 
             ServiceReference1.SecureToken secureToken = new ServiceReference1.SecureToken();
@@ -95,24 +96,52 @@ namespace tMax14.Account
             secureToken.Password = "";
             secureToken.CreateTimestamp = "";
 
-            /*
-            GARANTİ BANKASI - TEKSTİLKENT ŞUBESİ ŞUBE KODU: 1120
-            TL  : 6202627 - IBAN NO:TR490006200112000006202627
-            EUR : 9094374 - IBAN NO:TR230006200112000009094374
-            GBP : 9011124 - IBAN NO:TR890006200112000009011124
-            USD : 9011125 - IBAN NO:TR620006200112000009011125
-            */
             Dictionary<string, string> IBANs = new Dictionary<string, string>();
-            IBANs["TR490006200112000006202627"] = "TL";
-            IBANs["TR230006200112000009094374"] = "EUR";
-            IBANs["TR890006200112000009011124"] = "GBP";
-            IBANs["TR620006200112000009011125"] = "USD";
+            
+            // Eski
+            // GARANTİ BANKASI - TEKSTİLKENT ŞUBESİ ŞUBE KODU: 1120
+            // IBANs["TR490006200112000006202627"] = "TL";
+            // IBANs["TR620006200112000009011125"] = "USD";
+            // IBANs["TR230006200112000009094374"] = "EUR";
+            // IBANs["TR890006200112000009011124"] = "GBP";
+            
+            //GARANTİ BANKASI - ??? ŞUBESİ ŞUBE KODU: 1672
+            IBANs["TR250006200167200006202627"] = "TL";
+            IBANs["TR380006200167200009011125"] = "USD";
+            IBANs["TR960006200167200009094374"] = "EUR";
+            IBANs["TR650006200167200009011124"] = "GBP";
 
             ServiceReference1.FirmAccountActivity firmAccountActivity = new ServiceReference1.FirmAccountActivity();
             
             firmAccountActivity.FirmCode = "187528";
             // Herhangi biriyle sorgulandiginda Bankanin kayitli tum hesaplari geliyor
-            firmAccountActivity.IBAN = "TR490006200112000006202627";
+            firmAccountActivity.IBAN = "TR250006200167200006202627";
+            */
+
+            cbbBnkInfoTableAdapter.Fill(accountDataSet.CBB_BNK_INFO, "GB");
+            AccountDataSet.CBB_BNK_INFORow bnkInfo = (AccountDataSet.CBB_BNK_INFORow)accountDataSet.CBB_BNK_INFO.Rows[0];
+            if (string.IsNullOrEmpty(bnkInfo.STUSERID))
+                return;
+
+            var client = new ServiceReference1.FirmAccountActivitySoapClient();
+
+            ServiceReference1.SecureToken secureToken = new ServiceReference1.SecureToken();
+            secureToken.UserId = bnkInfo.STUSERID;
+            secureToken.Encoded = bnkInfo.STENCODED;   // MD5 of "90.158.110.194135219fa:25x9z15fgdf:"  Transorient
+            secureToken.Password = "";
+            secureToken.CreateTimestamp = "";
+
+            ServiceReference1.FirmAccountActivity firmAccountActivity = new ServiceReference1.FirmAccountActivity();
+            firmAccountActivity.FirmCode = bnkInfo.FIRMCODE;
+            // Herhangi biriyle sorgulandiginda Bankanin kayitli tum hesaplari geliyor
+            firmAccountActivity.IBAN = bnkInfo.TL;
+
+            Dictionary<string, string> IBANs = new Dictionary<string, string>();
+            IBANs[bnkInfo.TL]  = "TL";
+            IBANs[bnkInfo.USD] = "USD";
+            IBANs[bnkInfo.EUR] = "EUR";
+            IBANs[bnkInfo.GBP] = "GBP";
+
 
             DateTime sD, eD;
             sD = trh;

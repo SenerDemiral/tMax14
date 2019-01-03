@@ -36,17 +36,19 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.attachmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onaylaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mailGonderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frkGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFRKID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTRH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFRTTAGS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFQRY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRPTID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colONYUSR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colONYYTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colONYTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEDITABLE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.miscQueriesTableAdapter = new tMax14.Misc.MiscDataSetTableAdapters.MiscQueriesTableAdapter();
-            this.mailGonderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.miscDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frkGridControl)).BeginInit();
@@ -87,23 +89,38 @@
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.attachmentsToolStripMenuItem,
             this.onaylaToolStripMenuItem,
-            this.mailGonderToolStripMenuItem});
+            this.mailGonderToolStripMenuItem,
+            this.reportHistoryToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(153, 92);
+            this.contextMenuStrip.Size = new System.Drawing.Size(151, 92);
             // 
             // attachmentsToolStripMenuItem
             // 
             this.attachmentsToolStripMenuItem.Name = "attachmentsToolStripMenuItem";
-            this.attachmentsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.attachmentsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.attachmentsToolStripMenuItem.Text = "Attachments";
             this.attachmentsToolStripMenuItem.Click += new System.EventHandler(this.attachmentsToolStripMenuItem_Click);
             // 
             // onaylaToolStripMenuItem
             // 
             this.onaylaToolStripMenuItem.Name = "onaylaToolStripMenuItem";
-            this.onaylaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onaylaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.onaylaToolStripMenuItem.Text = "Onayla";
             this.onaylaToolStripMenuItem.Click += new System.EventHandler(this.onaylaToolStripMenuItem_Click);
+            // 
+            // mailGonderToolStripMenuItem
+            // 
+            this.mailGonderToolStripMenuItem.Name = "mailGonderToolStripMenuItem";
+            this.mailGonderToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.mailGonderToolStripMenuItem.Text = "Mail gonder";
+            this.mailGonderToolStripMenuItem.Click += new System.EventHandler(this.mailGonderToolStripMenuItem_Click);
+            // 
+            // reportHistoryToolStripMenuItem
+            // 
+            this.reportHistoryToolStripMenuItem.Name = "reportHistoryToolStripMenuItem";
+            this.reportHistoryToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.reportHistoryToolStripMenuItem.Text = "Report History";
+            this.reportHistoryToolStripMenuItem.Click += new System.EventHandler(this.reportHistoryToolStripMenuItem_Click);
             // 
             // frkGridView
             // 
@@ -111,7 +128,8 @@
             this.colFRKID,
             this.colAD,
             this.colTRH,
-            this.colFRTTAGS,
+            this.colFQRY,
+            this.colRPTID,
             this.colONYUSR,
             this.colONYYTK,
             this.colONYTRH,
@@ -154,14 +172,22 @@
             this.colTRH.VisibleIndex = 3;
             this.colTRH.Width = 52;
             // 
-            // colFRTTAGS
+            // colFQRY
             // 
-            this.colFRTTAGS.Caption = "Firma TAGs";
-            this.colFRTTAGS.FieldName = "FRTTAGS";
-            this.colFRTTAGS.Name = "colFRTTAGS";
-            this.colFRTTAGS.Visible = true;
-            this.colFRTTAGS.VisibleIndex = 4;
-            this.colFRTTAGS.Width = 181;
+            this.colFQRY.Caption = "Firma Query";
+            this.colFQRY.FieldName = "FQRY";
+            this.colFQRY.Name = "colFQRY";
+            this.colFQRY.Visible = true;
+            this.colFQRY.VisibleIndex = 4;
+            this.colFQRY.Width = 181;
+            // 
+            // colRPTID
+            // 
+            this.colRPTID.Caption = "Rapor";
+            this.colRPTID.FieldName = "RPTIDS";
+            this.colRPTID.Name = "colRPTID";
+            this.colRPTID.Visible = true;
+            this.colRPTID.VisibleIndex = 5;
             // 
             // colONYUSR
             // 
@@ -171,7 +197,7 @@
             this.colONYUSR.OptionsColumn.AllowEdit = false;
             this.colONYUSR.OptionsColumn.FixedWidth = true;
             this.colONYUSR.Visible = true;
-            this.colONYUSR.VisibleIndex = 5;
+            this.colONYUSR.VisibleIndex = 6;
             this.colONYUSR.Width = 50;
             // 
             // colONYYTK
@@ -182,7 +208,7 @@
             this.colONYYTK.OptionsColumn.AllowEdit = false;
             this.colONYYTK.OptionsColumn.FixedWidth = true;
             this.colONYYTK.Visible = true;
-            this.colONYYTK.VisibleIndex = 6;
+            this.colONYYTK.VisibleIndex = 7;
             this.colONYYTK.Width = 50;
             // 
             // colONYTRH
@@ -195,7 +221,7 @@
             this.colONYTRH.OptionsColumn.AllowEdit = false;
             this.colONYTRH.OptionsColumn.FixedWidth = true;
             this.colONYTRH.Visible = true;
-            this.colONYTRH.VisibleIndex = 7;
+            this.colONYTRH.VisibleIndex = 8;
             this.colONYTRH.Width = 95;
             // 
             // colEDITABLE
@@ -209,13 +235,6 @@
             this.colEDITABLE.Visible = true;
             this.colEDITABLE.VisibleIndex = 1;
             this.colEDITABLE.Width = 22;
-            // 
-            // mailGonderToolStripMenuItem
-            // 
-            this.mailGonderToolStripMenuItem.Name = "mailGonderToolStripMenuItem";
-            this.mailGonderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.mailGonderToolStripMenuItem.Text = "Mail gonder";
-            this.mailGonderToolStripMenuItem.Click += new System.EventHandler(this.mailGonderToolStripMenuItem_Click);
             // 
             // frkXF
             // 
@@ -245,7 +264,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFRKID;
         private DevExpress.XtraGrid.Columns.GridColumn colAD;
         private DevExpress.XtraGrid.Columns.GridColumn colTRH;
-        private DevExpress.XtraGrid.Columns.GridColumn colFRTTAGS;
+        private DevExpress.XtraGrid.Columns.GridColumn colFQRY;
         private DevExpress.XtraGrid.Columns.GridColumn colONYUSR;
         private DevExpress.XtraGrid.Columns.GridColumn colONYYTK;
         private DevExpress.XtraGrid.Columns.GridColumn colONYTRH;
@@ -255,5 +274,7 @@
         private System.Windows.Forms.ToolStripMenuItem attachmentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem onaylaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mailGonderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportHistoryToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colRPTID;
     }
 }

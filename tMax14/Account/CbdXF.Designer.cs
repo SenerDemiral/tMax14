@@ -72,6 +72,7 @@
             this.colTUT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colINFO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.accountQueriesTableAdapter = new tMax14.Account.AccountDataSetTableAdapters.AccountQueriesTableAdapter();
+            this.cbbBnkInfoTableAdapter = new tMax14.Account.AccountDataSetTableAdapters.CBB_BNK_INFOTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DrmRepositoryItemImageComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cBDBindingSource)).BeginInit();
@@ -475,6 +476,10 @@
             this.colINFO.VisibleIndex = 10;
             this.colINFO.Width = 186;
             // 
+            // cbbBnkInfoTableAdapter
+            // 
+            this.cbbBnkInfoTableAdapter.ClearBeforeFill = true;
+            // 
             // CbdXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,5 +546,6 @@
         private AccountDataSetTableAdapters.AccountQueriesTableAdapter accountQueriesTableAdapter;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
+        private AccountDataSetTableAdapters.CBB_BNK_INFOTableAdapter cbbBnkInfoTableAdapter;
     }
 }

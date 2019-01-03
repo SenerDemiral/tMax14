@@ -268,6 +268,11 @@
               <Mapping SourceColumn="METD" DataSetColumn="METD" />
               <Mapping SourceColumn="OPSKIM" DataSetColumn="OPSKIM" />
               <Mapping SourceColumn="REFNO" DataSetColumn="REFNO" />
+              <Mapping SourceColumn="BTY" DataSetColumn="BTY" />
+              <Mapping SourceColumn="VGLOC" DataSetColumn="VGLOC" />
+              <Mapping SourceColumn="VGKOD" DataSetColumn="VGKOD" />
+              <Mapping SourceColumn="GUMRUKNOT" DataSetColumn="GUMRUKNOT" />
+              <Mapping SourceColumn="GUMRUK" DataSetColumn="GUMRUK" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -3180,6 +3185,41 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BTY" msprop:Generator_ColumnVarNameInTable="columnBTY" msprop:Generator_ColumnPropNameInRow="BTY" msprop:Generator_ColumnPropNameInTable="BTYColumn" msprop:Generator_UserColumnName="BTY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VGLOC" msprop:Generator_ColumnVarNameInTable="columnVGLOC" msprop:Generator_ColumnPropNameInRow="VGLOC" msprop:Generator_ColumnPropNameInTable="VGLOCColumn" msprop:Generator_UserColumnName="VGLOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VGKOD" msprop:Generator_ColumnVarNameInTable="columnVGKOD" msprop:Generator_ColumnPropNameInRow="VGKOD" msprop:Generator_ColumnPropNameInTable="VGKODColumn" msprop:Generator_UserColumnName="VGKOD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GUMRUKNOT" msprop:Generator_ColumnVarNameInTable="columnGUMRUKNOT" msprop:Generator_ColumnPropNameInRow="GUMRUKNOT" msprop:Generator_ColumnPropNameInTable="GUMRUKNOTColumn" msprop:Generator_UserColumnName="GUMRUKNOT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GUMRUK" msprop:Generator_ColumnVarNameInTable="columnGUMRUK" msprop:Generator_ColumnPropNameInRow="GUMRUK" msprop:Generator_ColumnPropNameInTable="GUMRUKColumn" msprop:Generator_UserColumnName="GUMRUK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

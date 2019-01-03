@@ -82,7 +82,7 @@
             this.wAN_AGN_RPR_FATURAGridControl.Location = new System.Drawing.Point(0, 0);
             this.wAN_AGN_RPR_FATURAGridControl.MainView = this.gridView1;
             this.wAN_AGN_RPR_FATURAGridControl.Name = "wAN_AGN_RPR_FATURAGridControl";
-            this.wAN_AGN_RPR_FATURAGridControl.Size = new System.Drawing.Size(1054, 312);
+            this.wAN_AGN_RPR_FATURAGridControl.Size = new System.Drawing.Size(1282, 312);
             this.wAN_AGN_RPR_FATURAGridControl.TabIndex = 2;
             this.wAN_AGN_RPR_FATURAGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -134,6 +134,7 @@
             // 
             // colTUR
             // 
+            this.colTUR.Caption = "Tür";
             this.colTUR.FieldName = "TUR";
             this.colTUR.Name = "colTUR";
             this.colTUR.Visible = true;
@@ -231,7 +232,7 @@
             this.colINFO.FieldName = "INFO";
             this.colINFO.Name = "colINFO";
             this.colINFO.Visible = true;
-            this.colINFO.VisibleIndex = 15;
+            this.colINFO.VisibleIndex = 17;
             // 
             // colAHTINF3
             // 
@@ -244,7 +245,7 @@
             this.colACIKLAMA.FieldName = "ACIKLAMA";
             this.colACIKLAMA.Name = "colACIKLAMA";
             this.colACIKLAMA.Visible = true;
-            this.colACIKLAMA.VisibleIndex = 14;
+            this.colACIKLAMA.VisibleIndex = 16;
             // 
             // colOPINF
             // 
@@ -270,11 +271,11 @@
             // 
             // colDKNDVZ
             // 
-            this.colDKNDVZ.Caption = "Dvz";
+            this.colDKNDVZ.Caption = "DekontDvz";
             this.colDKNDVZ.FieldName = "DKNDVZ";
             this.colDKNDVZ.Name = "colDKNDVZ";
             this.colDKNDVZ.Visible = true;
-            this.colDKNDVZ.VisibleIndex = 16;
+            this.colDKNDVZ.VisibleIndex = 14;
             // 
             // colDKNNO
             // 
@@ -282,13 +283,13 @@
             this.colDKNNO.FieldName = "DKNNO";
             this.colDKNNO.Name = "colDKNNO";
             this.colDKNNO.Visible = true;
-            this.colDKNNO.VisibleIndex = 17;
+            this.colDKNNO.VisibleIndex = 15;
             // 
             // afbIcXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 312);
+            this.ClientSize = new System.Drawing.Size(1282, 312);
             this.Controls.Add(this.wAN_AGN_RPR_FATURAGridControl);
             this.Name = "afbIcXF";
             this.Text = "afbIcXF";

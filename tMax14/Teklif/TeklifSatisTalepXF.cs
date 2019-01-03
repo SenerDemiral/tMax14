@@ -573,8 +573,8 @@ private void Form1_Load(object sender, EventArgs e) {
                 //tsfGridView.OptionsView.ShowFooter = true;
                 tsfGridView.OptionsPrint.ExpandAllGroups = false;
                 tsfGridView.OptionsPrint.PrintFooter = true;
-                tsfGridView.OptionsPrint.AutoWidth = false;
-
+                //tsfGridView.OptionsPrint.AutoWidth = false;
+                tsfGridView.OptionsPrint.AutoWidth = true;
             }
             else
             {
@@ -582,9 +582,8 @@ private void Form1_Load(object sender, EventArgs e) {
                 //tsfGridView.OptionsView.ShowFooter = false;
                 tsfGridView.OptionsPrint.ExpandAllGroups = true;
                 tsfGridView.OptionsPrint.PrintFooter = false;
-                tsfGridView.OptionsPrint.AutoWidth = false;
-
-                //tsfGridView.OptionsPrint.AutoWidth = true;
+                //tsfGridView.OptionsPrint.AutoWidth = false;
+                tsfGridView.OptionsPrint.AutoWidth = true;
                 //tsfGridView.BestFitColumns();
             }
 
@@ -1007,7 +1006,33 @@ private void Form1_Load(object sender, EventArgs e) {
         }
 
         rptInfo rpti = new rptInfo();
-        
+
+        private void firmaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Program.MF.EntryCheck("Firma.frtEditForm", false))
+                return;
+
+            int FRTid = 0;
+            if (!string.IsNullOrWhiteSpace(tstGridView.GetFocusedRowCellDisplayText(colFRTIDt)))
+                FRTid = (int)tstGridView.GetFocusedRowCellValue(colFRTIDt);
+            Firma.frtEditForm frm = new Firma.frtEditForm();
+            frm.FRTid = FRTid;
+            frm.ShowDialog();
+            FRTid = frm.FRTid;
+            frm.Dispose();
+        }
+
+        private void bosUpdateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Program.MF.EntryCheck("Teklif.TstBosXF", isSilent: false))
+                return;
+
+            TstBosXF frm = new TstBosXF();
+            frm.tstID = (int)tstGridView.GetFocusedRowCellValue(colTSTIDt);
+            frm.ShowDialog();
+
+        }
+
         private void eCSRateRequestEMailToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var view = tstGridView;

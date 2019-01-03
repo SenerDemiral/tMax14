@@ -59,7 +59,7 @@ namespace tMax14
 
         public MainDataSet.SMTPRow SMTP()
         {
-            smtpTableAdapter.Fill(mainDataSet.SMTP);
+            smtpTableAdapter.Fill(mainDataSet.SMTP, Program.USR);   // Usr.eMailPwd yoksa doc@tra... kullaniyor
             return (MainDataSet.SMTPRow)mainDataSet.SMTP.Rows[0];
 
             //smtpTableAdapter.GetData();
@@ -381,7 +381,7 @@ namespace tMax14
                 // Update UI thread
                 //stopSW(string.Format("{0:N0} Tanım entries read in", t.Result));
 
-                smtpTableAdapter.Fill(mainDataSet.SMTP);
+                smtpTableAdapter.Fill(mainDataSet.SMTP, Program.USR);
                 MainDataSet.SMTPRow SMTP = (MainDataSet.SMTPRow)mainDataSet.SMTP.Rows[0];
                 Program.smtp_FIRMA                     = SMTP.FIRMA;
                 Program.smtp_MAIL_FROM_ADDRESS         = SMTP.MAIL_FROM_ADDRESS;

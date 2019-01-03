@@ -36,11 +36,14 @@
             this.attachmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.panelContainer1 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.eMailBodyHTMLdockPanel = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer5 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.eMailBodyHTMLrichEditControl = new DevExpress.XtraRichEdit.RichEditControl();
+            this.rptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.genelDataSet = new tMax14.Genel.GenelDataSet();
             this.ustNotDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.ustNotRichEditControl = new DevExpress.XtraRichEdit.RichEditControl();
-            this.rptBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.genelDataSet = new tMax14.Genel.GenelDataSet();
             this.altNotDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.altNotRichEditControl = new DevExpress.XtraRichEdit.RichEditControl();
@@ -81,16 +84,15 @@
             this.colTOACC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rptGridControl = new DevExpress.XtraGrid.GridControl();
             this.rptTableAdapter = new tMax14.Genel.GenelDataSetTableAdapters.RPTTableAdapter();
-            this.eMailBodyHTMLdockPanel = new DevExpress.XtraBars.Docking.DockPanel();
-            this.controlContainer5 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.eMailBodyHTMLrichEditControl = new DevExpress.XtraRichEdit.RichEditControl();
             this.contextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
             this.panelContainer1.SuspendLayout();
-            this.ustNotDockPanel.SuspendLayout();
-            this.dockPanel1_Container.SuspendLayout();
+            this.eMailBodyHTMLdockPanel.SuspendLayout();
+            this.controlContainer5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rptBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genelDataSet)).BeginInit();
+            this.ustNotDockPanel.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
             this.altNotDockPanel.SuspendLayout();
             this.controlContainer1.SuspendLayout();
             this.footerDockPanel.SuspendLayout();
@@ -105,8 +107,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.HMrepositoryItemImageComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TFrepositoryItemCheckEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rptGridControl)).BeginInit();
-            this.eMailBodyHTMLdockPanel.SuspendLayout();
-            this.controlContainer5.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip
@@ -179,6 +179,45 @@
             this.panelContainer1.Tabbed = true;
             this.panelContainer1.Text = "panelContainer1";
             // 
+            // eMailBodyHTMLdockPanel
+            // 
+            this.eMailBodyHTMLdockPanel.Controls.Add(this.controlContainer5);
+            this.eMailBodyHTMLdockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
+            this.eMailBodyHTMLdockPanel.ID = new System.Guid("36c8b4c1-4d81-48aa-802f-eabe37b87940");
+            this.eMailBodyHTMLdockPanel.Location = new System.Drawing.Point(4, 24);
+            this.eMailBodyHTMLdockPanel.Name = "eMailBodyHTMLdockPanel";
+            this.eMailBodyHTMLdockPanel.OriginalSize = new System.Drawing.Size(200, 200);
+            this.eMailBodyHTMLdockPanel.Size = new System.Drawing.Size(928, 174);
+            this.eMailBodyHTMLdockPanel.Text = "eMailBodyHTML";
+            // 
+            // controlContainer5
+            // 
+            this.controlContainer5.Controls.Add(this.eMailBodyHTMLrichEditControl);
+            this.controlContainer5.Location = new System.Drawing.Point(0, 0);
+            this.controlContainer5.Name = "controlContainer5";
+            this.controlContainer5.Size = new System.Drawing.Size(928, 174);
+            this.controlContainer5.TabIndex = 0;
+            // 
+            // eMailBodyHTMLrichEditControl
+            // 
+            this.eMailBodyHTMLrichEditControl.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
+            this.eMailBodyHTMLrichEditControl.DataBindings.Add(new System.Windows.Forms.Binding("RtfText", this.rptBindingSource, "EMAILBODYHTML", true));
+            this.eMailBodyHTMLrichEditControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eMailBodyHTMLrichEditControl.Location = new System.Drawing.Point(0, 0);
+            this.eMailBodyHTMLrichEditControl.Name = "eMailBodyHTMLrichEditControl";
+            this.eMailBodyHTMLrichEditControl.Size = new System.Drawing.Size(928, 174);
+            this.eMailBodyHTMLrichEditControl.TabIndex = 2;
+            // 
+            // rptBindingSource
+            // 
+            this.rptBindingSource.DataMember = "RPT";
+            this.rptBindingSource.DataSource = this.genelDataSet;
+            // 
+            // genelDataSet
+            // 
+            this.genelDataSet.DataSetName = "GenelDataSet";
+            this.genelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // ustNotDockPanel
             // 
             this.ustNotDockPanel.Controls.Add(this.dockPanel1_Container);
@@ -211,16 +250,6 @@
             this.ustNotRichEditControl.Size = new System.Drawing.Size(928, 174);
             this.ustNotRichEditControl.TabIndex = 0;
             this.ustNotRichEditControl.DocumentLoaded += new System.EventHandler(this.RichEditControl_DocumentLoaded);
-            // 
-            // rptBindingSource
-            // 
-            this.rptBindingSource.DataMember = "RPT";
-            this.rptBindingSource.DataSource = this.genelDataSet;
-            // 
-            // genelDataSet
-            // 
-            this.genelDataSet.DataSetName = "GenelDataSet";
-            this.genelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // altNotDockPanel
             // 
@@ -688,35 +717,6 @@
             // 
             this.rptTableAdapter.ClearBeforeFill = true;
             // 
-            // eMailBodyHTMLdockPanel
-            // 
-            this.eMailBodyHTMLdockPanel.Controls.Add(this.controlContainer5);
-            this.eMailBodyHTMLdockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.eMailBodyHTMLdockPanel.ID = new System.Guid("36c8b4c1-4d81-48aa-802f-eabe37b87940");
-            this.eMailBodyHTMLdockPanel.Location = new System.Drawing.Point(4, 24);
-            this.eMailBodyHTMLdockPanel.Name = "eMailBodyHTMLdockPanel";
-            this.eMailBodyHTMLdockPanel.OriginalSize = new System.Drawing.Size(200, 200);
-            this.eMailBodyHTMLdockPanel.Size = new System.Drawing.Size(928, 174);
-            this.eMailBodyHTMLdockPanel.Text = "eMailBodyHTML";
-            // 
-            // controlContainer5
-            // 
-            this.controlContainer5.Controls.Add(this.eMailBodyHTMLrichEditControl);
-            this.controlContainer5.Location = new System.Drawing.Point(0, 0);
-            this.controlContainer5.Name = "controlContainer5";
-            this.controlContainer5.Size = new System.Drawing.Size(928, 174);
-            this.controlContainer5.TabIndex = 0;
-            // 
-            // eMailBodyHTMLrichEditControl
-            // 
-            this.eMailBodyHTMLrichEditControl.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
-            this.eMailBodyHTMLrichEditControl.DataBindings.Add(new System.Windows.Forms.Binding("RtfText", this.rptBindingSource, "EMAILBODYHTML", true));
-            this.eMailBodyHTMLrichEditControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.eMailBodyHTMLrichEditControl.Location = new System.Drawing.Point(0, 0);
-            this.eMailBodyHTMLrichEditControl.Name = "eMailBodyHTMLrichEditControl";
-            this.eMailBodyHTMLrichEditControl.Size = new System.Drawing.Size(928, 174);
-            this.eMailBodyHTMLrichEditControl.TabIndex = 2;
-            // 
             // rptXUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -729,10 +729,12 @@
             this.contextMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).EndInit();
             this.panelContainer1.ResumeLayout(false);
-            this.ustNotDockPanel.ResumeLayout(false);
-            this.dockPanel1_Container.ResumeLayout(false);
+            this.eMailBodyHTMLdockPanel.ResumeLayout(false);
+            this.controlContainer5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rptBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genelDataSet)).EndInit();
+            this.ustNotDockPanel.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
             this.altNotDockPanel.ResumeLayout(false);
             this.controlContainer1.ResumeLayout(false);
             this.footerDockPanel.ResumeLayout(false);
@@ -747,8 +749,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.HMrepositoryItemImageComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TFrepositoryItemCheckEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rptGridControl)).EndInit();
-            this.eMailBodyHTMLdockPanel.ResumeLayout(false);
-            this.controlContainer5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
