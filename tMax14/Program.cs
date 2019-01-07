@@ -50,7 +50,7 @@ namespace tMax14
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
+
             //DevExpress.Skins.SkinManager.EnableFormSkins();
             //DevExpress.UserSkins.BonusSkins.Register();
             ///UserLookAndFeel.Default.SetSkinStyle("Office 2013");
@@ -64,7 +64,8 @@ namespace tMax14
             else
                 tMax14.Properties.Settings.Default["ConnectionString"] = "character set=WIN1254;data source=LOCALHOST;initial catalog=tMax14;user id=sysdba;password=masterkey;connectionlifetime=60;connectiontimeout=30";
             */
-
+            
+            //DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new Font("Tahoma", 10);
             MF = new mainForm();
 
             MF.FillTanimlar();

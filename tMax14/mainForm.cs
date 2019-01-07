@@ -55,6 +55,7 @@ namespace tMax14
 
             //smtpTableAdapter.Fill(this.mainDataSet.SMTP);
             //Program.SMTP2 = (MainDataSet.SMTPRow)mainDataSet.SMTP.Rows[0];
+
         }
 
         public MainDataSet.SMTPRow SMTP()
@@ -1183,6 +1184,24 @@ namespace tMax14
                 XtraMessageBox.Show("Yetkili değilsiniz", "Yetkim ile Onayla", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
             return OK;
+        }
+
+        private void globalToolStripDropDownButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fontSizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var pf = DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont.Size;
+            DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new Font("Tahoma", pf + 1);
+
+        }
+
+        private void fontSizeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var pf = DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont.Size;
+            DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new Font("Tahoma", pf - 1);
         }
 
         private void tabbedView_DocumentClosing(object sender, DevExpress.XtraBars.Docking2010.Views.DocumentCancelEventArgs e)

@@ -73,6 +73,7 @@
             this.minimizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.versionToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.frtTableAdapter = new tMax14.MainDataSetTableAdapters.FRTTableAdapter();
@@ -333,6 +334,7 @@
             this.KpiRepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.BBOXTYPrepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.OphVGMrepositoryItemImageComboBox = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.RPTrepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.xgtTableAdapter = new tMax14.MainDataSetTableAdapters.XGTTableAdapter();
             this.ustTableAdapter = new tMax14.MainDataSetTableAdapters.USTTableAdapter();
             this.ftTableAdapter = new tMax14.MainDataSetTableAdapters.FTTableAdapter();
@@ -355,7 +357,7 @@
             this.afbtTableAdapter = new tMax14.MainDataSetTableAdapters.AFBTTableAdapter();
             this.kkesTableAdapter = new tMax14.MainDataSetTableAdapters.KKESTableAdapter();
             this.smtpTableAdapter = new tMax14.MainDataSetTableAdapters.SMTPTableAdapter();
-            this.RPTrepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.fontSizeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.uspBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1)).BeginInit();
@@ -596,9 +598,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.KpiRepositoryItemLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BBOXTYPrepositoryItemLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OphVGMrepositoryItemImageComboBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPTrepositoryItemLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RPTrepositoryItemLookUpEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // mainDataSet
@@ -860,6 +862,7 @@
             this.defaultToolTipController.SetAllowHtmlText(this.statusStrip1, DevExpress.Utils.DefaultBoolean.Default);
             this.statusStrip1.BackColor = System.Drawing.Color.Maroon;
             this.statusStrip1.GripMargin = new System.Windows.Forms.Padding(0);
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.elapsedTimeToolStripStatusLabel,
             this.globalToolStripDropDownButton,
@@ -868,7 +871,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 594);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip1.Size = new System.Drawing.Size(1316, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1177, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 12;
             this.statusStrip1.Text = "statusStrip1";
@@ -877,7 +880,7 @@
             // 
             this.elapsedTimeToolStripStatusLabel.ForeColor = System.Drawing.Color.White;
             this.elapsedTimeToolStripStatusLabel.Name = "elapsedTimeToolStripStatusLabel";
-            this.elapsedTimeToolStripStatusLabel.Size = new System.Drawing.Size(1162, 17);
+            this.elapsedTimeToolStripStatusLabel.Size = new System.Drawing.Size(992, 17);
             this.elapsedTimeToolStripStatusLabel.Spring = true;
             this.elapsedTimeToolStripStatusLabel.Text = "elapsedTime";
             this.elapsedTimeToolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -889,13 +892,16 @@
             this.sizableToolStripMenuItem,
             this.minimizeToolStripMenuItem,
             this.closeToolStripMenuItem,
-            this.refreshToolStripMenuItem});
+            this.refreshToolStripMenuItem,
+            this.fontSizeToolStripMenuItem,
+            this.fontSizeToolStripMenuItem1});
             this.globalToolStripDropDownButton.ForeColor = System.Drawing.Color.White;
             this.globalToolStripDropDownButton.Image = ((System.Drawing.Image)(resources.GetObject("globalToolStripDropDownButton.Image")));
             this.globalToolStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.globalToolStripDropDownButton.Name = "globalToolStripDropDownButton";
             this.globalToolStripDropDownButton.Size = new System.Drawing.Size(54, 20);
             this.globalToolStripDropDownButton.Text = "Global";
+            this.globalToolStripDropDownButton.Click += new System.EventHandler(this.globalToolStripDropDownButton_Click);
             // 
             // sizableToolStripMenuItem
             // 
@@ -903,30 +909,37 @@
             this.sizableToolStripMenuItem.CheckOnClick = true;
             this.sizableToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.sizableToolStripMenuItem.Name = "sizableToolStripMenuItem";
-            this.sizableToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.sizableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sizableToolStripMenuItem.Text = "Sizable";
             this.sizableToolStripMenuItem.Click += new System.EventHandler(this.sizableToolStripMenuItem_Click);
             // 
             // minimizeToolStripMenuItem
             // 
             this.minimizeToolStripMenuItem.Name = "minimizeToolStripMenuItem";
-            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.minimizeToolStripMenuItem.Text = "Minimze";
             this.minimizeToolStripMenuItem.Click += new System.EventHandler(this.minimizeToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
+            // fontSizeToolStripMenuItem
+            // 
+            this.fontSizeToolStripMenuItem.Name = "fontSizeToolStripMenuItem";
+            this.fontSizeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontSizeToolStripMenuItem.Text = "FontSize +";
+            this.fontSizeToolStripMenuItem.Click += new System.EventHandler(this.fontSizeToolStripMenuItem_Click);
             // 
             // userToolStripStatusLabel
             // 
@@ -3847,6 +3860,19 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Müşteri", "M", -1)});
             this.OphVGMrepositoryItemImageComboBox.Name = "OphVGMrepositoryItemImageComboBox";
             // 
+            // RPTrepositoryItemLookUpEdit
+            // 
+            this.RPTrepositoryItemLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.RPTrepositoryItemLookUpEdit.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AD", "AD", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("KOD", "KOD", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RPTID", "RPTID", 20, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far)});
+            this.RPTrepositoryItemLookUpEdit.DataSource = this.rptBindingSource;
+            this.RPTrepositoryItemLookUpEdit.DisplayMember = "AD";
+            this.RPTrepositoryItemLookUpEdit.Name = "RPTrepositoryItemLookUpEdit";
+            this.RPTrepositoryItemLookUpEdit.ValueMember = "RPTID";
+            // 
             // xgtTableAdapter
             // 
             this.xgtTableAdapter.ClearBeforeFill = true;
@@ -3935,25 +3961,19 @@
             // 
             this.smtpTableAdapter.ClearBeforeFill = true;
             // 
-            // RPTrepositoryItemLookUpEdit
+            // fontSizeToolStripMenuItem1
             // 
-            this.RPTrepositoryItemLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.RPTrepositoryItemLookUpEdit.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AD", "AD", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("KOD", "KOD", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RPTID", "RPTID", 20, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far)});
-            this.RPTrepositoryItemLookUpEdit.DataSource = this.rptBindingSource;
-            this.RPTrepositoryItemLookUpEdit.DisplayMember = "AD";
-            this.RPTrepositoryItemLookUpEdit.Name = "RPTrepositoryItemLookUpEdit";
-            this.RPTrepositoryItemLookUpEdit.ValueMember = "RPTID";
+            this.fontSizeToolStripMenuItem1.Name = "fontSizeToolStripMenuItem1";
+            this.fontSizeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.fontSizeToolStripMenuItem1.Text = "FontSize -";
+            this.fontSizeToolStripMenuItem1.Click += new System.EventHandler(this.fontSizeToolStripMenuItem1_Click);
             // 
             // mainForm
             // 
             this.defaultToolTipController.SetAllowHtmlText(this, DevExpress.Utils.DefaultBoolean.Default);
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1316, 616);
+            this.ClientSize = new System.Drawing.Size(1177, 616);
             this.Controls.Add(this.locPopupContainerControl);
             this.Controls.Add(this.menuDockPanel);
             this.Controls.Add(this.statusStrip1);
@@ -4204,9 +4224,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.KpiRepositoryItemLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BBOXTYPrepositoryItemLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OphVGMrepositoryItemImageComboBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPTrepositoryItemLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RPTrepositoryItemLookUpEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4529,5 +4549,7 @@
         public DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit BBOXTYPrepositoryItemLookUpEdit;
         public DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox OphVGMrepositoryItemImageComboBox;
         public DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit RPTrepositoryItemLookUpEdit;
+        private System.Windows.Forms.ToolStripMenuItem fontSizeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fontSizeToolStripMenuItem1;
     }
 }

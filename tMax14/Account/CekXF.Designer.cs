@@ -39,6 +39,7 @@
             this.hareketleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cekAcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cekKapatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colACSID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTUR = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,7 +63,6 @@
             this.accountQueriesTableAdapter = new tMax14.Account.AccountDataSetTableAdapters.AccountQueriesTableAdapter();
             this.kuR_AVBTableAdapter = new tMax14.Account.AccountDataSetTableAdapters.KUR_AVBTableAdapter();
             this.dockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.accountDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acsGridControl)).BeginInit();
@@ -92,6 +92,7 @@
             this.acsGridControl.ContextMenuStrip = this.contextMenuStrip;
             this.acsGridControl.DataSource = this.acsBindingSource;
             this.acsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.acsGridControl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.acsGridControl.Location = new System.Drawing.Point(0, 0);
             this.acsGridControl.MainView = this.acsGridView;
             this.acsGridControl.Name = "acsGridControl";
@@ -114,7 +115,7 @@
             this.cekKapatToolStripMenuItem,
             this.exportToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(182, 158);
+            this.contextMenuStrip.Size = new System.Drawing.Size(182, 136);
             // 
             // muhasebeFisiToolStripMenuItem
             // 
@@ -151,8 +152,16 @@
             this.cekKapatToolStripMenuItem.Text = "Kapat";
             this.cekKapatToolStripMenuItem.Click += new System.EventHandler(this.cekKapatToolStripMenuItem_Click);
             // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.exportToolStripMenuItem.Text = "Export";
+            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            // 
             // acsGridView
             // 
+            this.acsGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.acsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colACSID,
             this.colTUR,
@@ -394,13 +403,6 @@
             "System.Windows.Forms.StatusStrip",
             "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
             "DevExpress.XtraBars.Ribbon.RibbonControl"});
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.exportToolStripMenuItem.Text = "Export";
-            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
             // CekXF
             // 
