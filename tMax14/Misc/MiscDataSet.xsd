@@ -134,7 +134,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FRK_KMPNYTableAdapter" GeneratorDataComponentClassName="FRK_KMPNYTableAdapter" Name="FRK_KMPNY" UserDataComponentName="FRK_KMPNYTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="&quot;FRK_KMPNY&quot;" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="&quot;FRK_KMPNY&quot;" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>"FRK_KMPNY"</CommandText>
@@ -149,6 +149,7 @@
               <Mapping SourceColumn="FRTID" DataSetColumn="FRTID" />
               <Mapping SourceColumn="FRTAD" DataSetColumn="FRTAD" />
               <Mapping SourceColumn="EMAILS" DataSetColumn="EMAILS" />
+              <Mapping SourceColumn="NOM" DataSetColumn="NOM" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -260,7 +261,7 @@
   <xs:element name="MiscDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False" msprop:Generator_DataSetName="MiscDataSet" msprop:Generator_UserDSName="MiscDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="MKT" msprop:Generator_TableClassName="MKTDataTable" msprop:Generator_TableVarName="tableMKT" msprop:Generator_TablePropName="MKT" msprop:Generator_RowDeletingName="MKTRowDeleting" msprop:Generator_RowChangingName="MKTRowChanging" msprop:Generator_RowEvHandlerName="MKTRowChangeEventHandler" msprop:Generator_RowDeletedName="MKTRowDeleted" msprop:Generator_UserTableName="MKT" msprop:Generator_RowChangedName="MKTRowChanged" msprop:Generator_RowEvArgName="MKTRowChangeEvent" msprop:Generator_RowClassName="MKTRow">
+        <xs:element name="MKT" msprop:Generator_TableClassName="MKTDataTable" msprop:Generator_TableVarName="tableMKT" msprop:Generator_RowChangedName="MKTRowChanged" msprop:Generator_TablePropName="MKT" msprop:Generator_RowDeletingName="MKTRowDeleting" msprop:Generator_RowChangingName="MKTRowChanging" msprop:Generator_RowEvHandlerName="MKTRowChangeEventHandler" msprop:Generator_RowDeletedName="MKTRowDeleted" msprop:Generator_RowClassName="MKTRow" msprop:Generator_UserTableName="MKT" msprop:Generator_RowEvArgName="MKTRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MKTID" msprop:Generator_ColumnVarNameInTable="columnMKTID" msprop:Generator_ColumnPropNameInRow="MKTID" msprop:Generator_ColumnPropNameInTable="MKTIDColumn" msprop:Generator_UserColumnName="MKTID" type="xs:int" />
@@ -289,7 +290,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FRT_EMAILS" msprop:Generator_TableClassName="FRT_EMAILSDataTable" msprop:Generator_TableVarName="tableFRT_EMAILS" msprop:Generator_TablePropName="FRT_EMAILS" msprop:Generator_RowDeletingName="FRT_EMAILSRowDeleting" msprop:Generator_RowChangingName="FRT_EMAILSRowChanging" msprop:Generator_RowEvHandlerName="FRT_EMAILSRowChangeEventHandler" msprop:Generator_RowDeletedName="FRT_EMAILSRowDeleted" msprop:Generator_UserTableName="FRT_EMAILS" msprop:Generator_RowChangedName="FRT_EMAILSRowChanged" msprop:Generator_RowEvArgName="FRT_EMAILSRowChangeEvent" msprop:Generator_RowClassName="FRT_EMAILSRow">
+        <xs:element name="FRT_EMAILS" msprop:Generator_TableClassName="FRT_EMAILSDataTable" msprop:Generator_TableVarName="tableFRT_EMAILS" msprop:Generator_RowChangedName="FRT_EMAILSRowChanged" msprop:Generator_TablePropName="FRT_EMAILS" msprop:Generator_RowDeletingName="FRT_EMAILSRowDeleting" msprop:Generator_RowChangingName="FRT_EMAILSRowChanging" msprop:Generator_RowEvHandlerName="FRT_EMAILSRowChangeEventHandler" msprop:Generator_RowDeletedName="FRT_EMAILSRowDeleted" msprop:Generator_RowClassName="FRT_EMAILSRow" msprop:Generator_UserTableName="FRT_EMAILS" msprop:Generator_RowEvArgName="FRT_EMAILSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FRTID" msprop:Generator_ColumnVarNameInTable="columnFRTID" msprop:Generator_ColumnPropNameInRow="FRTID" msprop:Generator_ColumnPropNameInTable="FRTIDColumn" msprop:Generator_UserColumnName="FRTID" type="xs:int" minOccurs="0" />
@@ -310,10 +311,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FRK" msprop:Generator_TableClassName="FRKDataTable" msprop:Generator_TableVarName="tableFRK" msprop:Generator_TablePropName="FRK" msprop:Generator_RowDeletingName="FRKRowDeleting" msprop:Generator_RowChangingName="FRKRowChanging" msprop:Generator_RowEvHandlerName="FRKRowChangeEventHandler" msprop:Generator_RowDeletedName="FRKRowDeleted" msprop:Generator_UserTableName="FRK" msprop:Generator_RowChangedName="FRKRowChanged" msprop:Generator_RowEvArgName="FRKRowChangeEvent" msprop:Generator_RowClassName="FRKRow">
+        <xs:element name="FRK" msprop:Generator_TableClassName="FRKDataTable" msprop:Generator_TableVarName="tableFRK" msprop:Generator_RowChangedName="FRKRowChanged" msprop:Generator_TablePropName="FRK" msprop:Generator_RowDeletingName="FRKRowDeleting" msprop:Generator_RowChangingName="FRKRowChanging" msprop:Generator_RowEvHandlerName="FRKRowChangeEventHandler" msprop:Generator_RowDeletedName="FRKRowDeleted" msprop:Generator_RowClassName="FRKRow" msprop:Generator_UserTableName="FRK" msprop:Generator_RowEvArgName="FRKRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="FRKID" msprop:Generator_ColumnVarNameInTable="columnFRKID" msprop:Generator_ColumnPropNameInRow="FRKID" msprop:Generator_ColumnPropNameInTable="FRKIDColumn" msprop:Generator_UserColumnName="FRKID" type="xs:int" minOccurs="0" />
+              <xs:element name="FRKID" msprop:Generator_ColumnVarNameInTable="columnFRKID" msprop:Generator_ColumnPropNameInRow="FRKID" msprop:Generator_ColumnPropNameInTable="FRKIDColumn" msprop:Generator_UserColumnName="FRKID" type="xs:int" />
               <xs:element name="AD" msprop:Generator_ColumnVarNameInTable="columnAD" msprop:Generator_ColumnPropNameInRow="AD" msprop:Generator_ColumnPropNameInTable="ADColumn" msprop:Generator_UserColumnName="AD" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -361,7 +362,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FRK_KMPNY" msprop:Generator_TableClassName="FRK_KMPNYDataTable" msprop:Generator_TableVarName="tableFRK_KMPNY" msprop:Generator_RowChangedName="FRK_KMPNYRowChanged" msprop:Generator_TablePropName="FRK_KMPNY" msprop:Generator_RowDeletingName="FRK_KMPNYRowDeleting" msprop:Generator_RowChangingName="FRK_KMPNYRowChanging" msprop:Generator_RowEvHandlerName="FRK_KMPNYRowChangeEventHandler" msprop:Generator_RowDeletedName="FRK_KMPNYRowDeleted" msprop:Generator_RowClassName="FRK_KMPNYRow" msprop:Generator_UserTableName="FRK_KMPNY" msprop:Generator_RowEvArgName="FRK_KMPNYRowChangeEvent">
+        <xs:element name="FRK_KMPNY" msprop:Generator_TableClassName="FRK_KMPNYDataTable" msprop:Generator_TableVarName="tableFRK_KMPNY" msprop:Generator_TablePropName="FRK_KMPNY" msprop:Generator_RowDeletingName="FRK_KMPNYRowDeleting" msprop:Generator_RowChangingName="FRK_KMPNYRowChanging" msprop:Generator_RowEvHandlerName="FRK_KMPNYRowChangeEventHandler" msprop:Generator_RowDeletedName="FRK_KMPNYRowDeleted" msprop:Generator_UserTableName="FRK_KMPNY" msprop:Generator_RowChangedName="FRK_KMPNYRowChanged" msprop:Generator_RowEvArgName="FRK_KMPNYRowChangeEvent" msprop:Generator_RowClassName="FRK_KMPNYRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FRTID" msprop:Generator_ColumnVarNameInTable="columnFRTID" msprop:Generator_ColumnPropNameInRow="FRTID" msprop:Generator_ColumnPropNameInTable="FRTIDColumn" msprop:Generator_UserColumnName="FRTID" type="xs:int" minOccurs="0" />
@@ -382,10 +383,11 @@
               <xs:element name="SendMail" msprop:Generator_ColumnVarNameInTable="columnSendMail" msprop:Generator_ColumnPropNameInRow="SendMail" msprop:Generator_ColumnPropNameInTable="SendMailColumn" msprop:Generator_UserColumnName="SendMail" type="xs:boolean" minOccurs="0" />
               <xs:element name="SendStatu" msprop:Generator_ColumnVarNameInTable="columnSendStatu" msprop:Generator_ColumnPropNameInRow="SendStatu" msprop:Generator_ColumnPropNameInTable="SendStatuColumn" msprop:Generator_UserColumnName="SendStatu" type="xs:int" minOccurs="0" />
               <xs:element name="SendMsj" msprop:Generator_ColumnVarNameInTable="columnSendMsj" msprop:Generator_ColumnPropNameInRow="SendMsj" msprop:Generator_ColumnPropNameInTable="SendMsjColumn" msprop:Generator_UserColumnName="SendMsj" type="xs:string" minOccurs="0" />
+              <xs:element name="NOM" msprop:Generator_ColumnVarNameInTable="columnNOM" msprop:Generator_ColumnPropNameInRow="NOM" msprop:Generator_ColumnPropNameInTable="NOMColumn" msprop:Generator_UserColumnName="NOM" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RPT_GET" msprop:Generator_TableClassName="RPT_GETDataTable" msprop:Generator_TableVarName="tableRPT_GET" msprop:Generator_RowChangedName="RPT_GETRowChanged" msprop:Generator_TablePropName="RPT_GET" msprop:Generator_RowDeletingName="RPT_GETRowDeleting" msprop:Generator_RowChangingName="RPT_GETRowChanging" msprop:Generator_RowEvHandlerName="RPT_GETRowChangeEventHandler" msprop:Generator_RowDeletedName="RPT_GETRowDeleted" msprop:Generator_RowClassName="RPT_GETRow" msprop:Generator_UserTableName="RPT_GET" msprop:Generator_RowEvArgName="RPT_GETRowChangeEvent">
+        <xs:element name="RPT_GET" msprop:Generator_TableClassName="RPT_GETDataTable" msprop:Generator_TableVarName="tableRPT_GET" msprop:Generator_TablePropName="RPT_GET" msprop:Generator_RowDeletingName="RPT_GETRowDeleting" msprop:Generator_RowChangingName="RPT_GETRowChanging" msprop:Generator_RowEvHandlerName="RPT_GETRowChangeEventHandler" msprop:Generator_RowDeletedName="RPT_GETRowDeleted" msprop:Generator_UserTableName="RPT_GET" msprop:Generator_RowChangedName="RPT_GETRowChanged" msprop:Generator_RowEvArgName="RPT_GETRowChangeEvent" msprop:Generator_RowClassName="RPT_GETRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="KOD" msprop:Generator_ColumnVarNameInTable="columnKOD" msprop:Generator_ColumnPropNameInRow="KOD" msprop:Generator_ColumnPropNameInTable="KODColumn" msprop:Generator_UserColumnName="KOD" minOccurs="0">
@@ -419,7 +421,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DOC_SEL_DET" msprop:Generator_TableClassName="DOC_SEL_DETDataTable" msprop:Generator_TableVarName="tableDOC_SEL_DET" msprop:Generator_TablePropName="DOC_SEL_DET" msprop:Generator_RowDeletingName="DOC_SEL_DETRowDeleting" msprop:Generator_RowChangingName="DOC_SEL_DETRowChanging" msprop:Generator_RowEvHandlerName="DOC_SEL_DETRowChangeEventHandler" msprop:Generator_RowDeletedName="DOC_SEL_DETRowDeleted" msprop:Generator_UserTableName="DOC_SEL_DET" msprop:Generator_RowChangedName="DOC_SEL_DETRowChanged" msprop:Generator_RowEvArgName="DOC_SEL_DETRowChangeEvent" msprop:Generator_RowClassName="DOC_SEL_DETRow">
+        <xs:element name="DOC_SEL_DET" msprop:Generator_TableClassName="DOC_SEL_DETDataTable" msprop:Generator_TableVarName="tableDOC_SEL_DET" msprop:Generator_RowChangedName="DOC_SEL_DETRowChanged" msprop:Generator_TablePropName="DOC_SEL_DET" msprop:Generator_RowDeletingName="DOC_SEL_DETRowDeleting" msprop:Generator_RowChangingName="DOC_SEL_DETRowChanging" msprop:Generator_RowEvHandlerName="DOC_SEL_DETRowChangeEventHandler" msprop:Generator_RowDeletedName="DOC_SEL_DETRowDeleted" msprop:Generator_RowClassName="DOC_SEL_DETRow" msprop:Generator_UserTableName="DOC_SEL_DET" msprop:Generator_RowEvArgName="DOC_SEL_DETRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DOCID" msprop:Generator_ColumnVarNameInTable="columnDOCID" msprop:Generator_ColumnPropNameInRow="DOCID" msprop:Generator_ColumnPropNameInTable="DOCIDColumn" msprop:Generator_UserColumnName="DOCID" type="xs:int" minOccurs="0" />
@@ -441,7 +443,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FRK_CONTACTS" msprop:Generator_TableClassName="FRK_CONTACTSDataTable" msprop:Generator_TableVarName="tableFRK_CONTACTS" msprop:Generator_RowChangedName="FRK_CONTACTSRowChanged" msprop:Generator_TablePropName="FRK_CONTACTS" msprop:Generator_RowDeletingName="FRK_CONTACTSRowDeleting" msprop:Generator_RowChangingName="FRK_CONTACTSRowChanging" msprop:Generator_RowEvHandlerName="FRK_CONTACTSRowChangeEventHandler" msprop:Generator_RowDeletedName="FRK_CONTACTSRowDeleted" msprop:Generator_RowClassName="FRK_CONTACTSRow" msprop:Generator_UserTableName="FRK_CONTACTS" msprop:Generator_RowEvArgName="FRK_CONTACTSRowChangeEvent">
+        <xs:element name="FRK_CONTACTS" msprop:Generator_TableClassName="FRK_CONTACTSDataTable" msprop:Generator_TableVarName="tableFRK_CONTACTS" msprop:Generator_TablePropName="FRK_CONTACTS" msprop:Generator_RowDeletingName="FRK_CONTACTSRowDeleting" msprop:Generator_RowChangingName="FRK_CONTACTSRowChanging" msprop:Generator_RowEvHandlerName="FRK_CONTACTSRowChangeEventHandler" msprop:Generator_RowDeletedName="FRK_CONTACTSRowDeleted" msprop:Generator_UserTableName="FRK_CONTACTS" msprop:Generator_RowChangedName="FRK_CONTACTSRowChanged" msprop:Generator_RowEvArgName="FRK_CONTACTSRowChangeEvent" msprop:Generator_RowClassName="FRK_CONTACTSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AD" msprop:Generator_ColumnVarNameInTable="columnAD" msprop:Generator_ColumnPropNameInRow="AD" msprop:Generator_ColumnPropNameInTable="ADColumn" msprop:Generator_UserColumnName="AD" minOccurs="0">

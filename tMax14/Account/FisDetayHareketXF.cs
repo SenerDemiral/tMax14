@@ -13,7 +13,8 @@ namespace tMax14.Account
 {
     public partial class FisDetayHareketXF : DevExpress.XtraEditors.XtraForm
     {
-        public int avdID = 0;
+        public string RefTO = "";
+        public int RefID = 0;
 
         public FisDetayHareketXF()
         {
@@ -22,7 +23,8 @@ namespace tMax14.Account
 
         private void FisDetayHareketXF_Load(object sender, EventArgs e)
         {
-            this.avdHrktTableAdapter.Fill(this.accountDataSet.AVD_HRKT, avdID);
+            //Text = $"{RefID:n0} {RefTO} -> FişDetayları";
+            this.avdHrktTableAdapter.Fill(this.accountDataSet.AVD_HRKT, RefTO, RefID);
         }
     }
 }

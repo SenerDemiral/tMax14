@@ -59,7 +59,7 @@ namespace tMax14.Ops
                     if (E == "T")
                     {
                         CN = opsDataSet.OPM_BOS_SEL.Columns[i].ColumnName;
-                        if (CN == "PSTU" || CN == "POD" || CN == "ETA")
+                        if (CN == "PSTU" || CN == "POD" || CN == "ETA" || CN == "TRI")
                             opsDataSet.OPM_BOS_SEL.Columns[i].ReadOnly = false;
                     }
                 }

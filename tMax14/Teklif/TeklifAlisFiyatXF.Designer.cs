@@ -269,6 +269,7 @@
             this.tafGridControl.Tag = "TAF";
             this.tafGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tafGridView});
+            this.tafGridControl.Click += new System.EventHandler(this.tafGridControl_Click);
             this.tafGridControl.Leave += new System.EventHandler(this.tafGridControl_Leave);
             // 
             // contextMenuStrip
@@ -1753,8 +1754,8 @@
             // 
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 265);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.SelectedTabPageIndex = 1;
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup2;
+            this.tabbedControlGroup1.SelectedTabPageIndex = 0;
             this.tabbedControlGroup1.Size = new System.Drawing.Size(1145, 249);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,

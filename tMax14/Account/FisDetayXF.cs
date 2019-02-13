@@ -727,58 +727,6 @@ namespace tMax14.Account
             frm.FRTid = 0;
             frm.info = string.Format("{0} • {1}", view.GetFocusedRowCellValue("HSPNO"), view.GetFocusedRowCellDisplayText("HSPNO"));
             frm.Show();
-
-            //string HspNoS = string.Format("{0}", avdGridView.GetFocusedRowCellValue(colHSPNO));
-            //showHesapHareketleri(HspNoS);
-        }
-
-        private void showHesapHareketleri(string HspNoS)
-        {
-            bool panelYok = true;
-            for (int i = 0; i < hesapHareketDockManager.Panels.Count; i++)
-            {
-                if (hesapHareketDockManager.Panels[i].Name == HspNoS)
-                {
-                    hesapHareketDockManager.Panels[i].Show();
-                    panelYok = false;
-                    break;
-                }
-            }
-
-            if (panelYok)
-            {
-                DockPanel panel = null;
-                if (hesapHareketDockManager.Panels.Count == 0)
-                {
-                    panel = hesapHareketDockManager.AddPanel(DevExpress.XtraBars.Docking.DockingStyle.Bottom);
-                    panel.FloatSize = new Size(1100, 400);
-                }
-                else
-                {
-                    bool cntYok = true;
-                    for (int i = 0; i < hesapHareketDockManager.Panels.Count; i++)
-                    {
-                        if (hesapHareketDockManager.Panels[i].Name == "panelContainer1")
-                        {
-                            panel = hesapHareketDockManager.Panels[i].AddPanel();
-                            cntYok = false;
-                            break;
-                        }
-                    }
-                    if (cntYok)
-                    {
-                        panel = hesapHareketDockManager.Panels[0].AddPanel();
-                        panel.ParentPanel.Tabbed = true;        // panelContainer(DockPanel) otomatik ekleniyor
-                    }
-                }
-                panel.Name = HspNoS;
-                panel.Text = HspNoS;
-                FisDetayHistoryXF frm = new FisDetayHistoryXF();
-                frm.Dock = DockStyle.Fill;
-                frm.iQry = string.Format("HspNo = '{0}'", HspNoS);
-                panel.Controls.Add(frm);
-                panel.Show();
-            }
         }
 
         private void hesapHareketDockManager_ClosingPanel(object sender, DockPanelCancelEventArgs e)
@@ -1016,9 +964,10 @@ namespace tMax14.Account
             if (!view.IsDataRow(view.FocusedRowHandle))
                 return;
 
-            int avdID = (int)view.GetFocusedRowCellValue(colAVDID);
             FisDetayHareketXF frm = new FisDetayHareketXF();
-            frm.avdID = avdID;
+            frm.RefTO = view.GetFocusedRowCellValue(colREFTO).ToString();
+            frm.RefID = (int)view.GetFocusedRowCellValue(colREFID);
+            frm.Text = view.GetFocusedRowCellValue(colREFINFO).ToString();
             frm.ShowDialog();
             //frm.Dispose();
 

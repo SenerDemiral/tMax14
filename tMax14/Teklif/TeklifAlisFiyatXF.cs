@@ -362,6 +362,11 @@ namespace tMax14.Teklif
             Save();
         }
 
+        private void tafGridControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void onaylaMtoolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (tamGridView.FocusedRowHandle == DevExpress.XtraGrid.GridControl.InvalidRowHandle || !tamGridView.IsDataRow(tamGridView.FocusedRowHandle))

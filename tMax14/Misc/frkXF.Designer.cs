@@ -49,6 +49,7 @@
             this.colONYTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEDITABLE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.miscQueriesTableAdapter = new tMax14.Misc.MiscDataSetTableAdapters.MiscQueriesTableAdapter();
+            this.jurnalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.miscDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frkGridControl)).BeginInit();
@@ -88,37 +89,39 @@
             // 
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.attachmentsToolStripMenuItem,
+            this.jurnalToolStripMenuItem,
             this.onaylaToolStripMenuItem,
             this.mailGonderToolStripMenuItem,
             this.reportHistoryToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(151, 92);
+            this.contextMenuStrip.Size = new System.Drawing.Size(181, 136);
+            this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // attachmentsToolStripMenuItem
             // 
             this.attachmentsToolStripMenuItem.Name = "attachmentsToolStripMenuItem";
-            this.attachmentsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.attachmentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.attachmentsToolStripMenuItem.Text = "Attachments";
             this.attachmentsToolStripMenuItem.Click += new System.EventHandler(this.attachmentsToolStripMenuItem_Click);
             // 
             // onaylaToolStripMenuItem
             // 
             this.onaylaToolStripMenuItem.Name = "onaylaToolStripMenuItem";
-            this.onaylaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.onaylaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.onaylaToolStripMenuItem.Text = "Onayla";
             this.onaylaToolStripMenuItem.Click += new System.EventHandler(this.onaylaToolStripMenuItem_Click);
             // 
             // mailGonderToolStripMenuItem
             // 
             this.mailGonderToolStripMenuItem.Name = "mailGonderToolStripMenuItem";
-            this.mailGonderToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.mailGonderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mailGonderToolStripMenuItem.Text = "Mail gonder";
             this.mailGonderToolStripMenuItem.Click += new System.EventHandler(this.mailGonderToolStripMenuItem_Click);
             // 
             // reportHistoryToolStripMenuItem
             // 
             this.reportHistoryToolStripMenuItem.Name = "reportHistoryToolStripMenuItem";
-            this.reportHistoryToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.reportHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reportHistoryToolStripMenuItem.Text = "Report History";
             this.reportHistoryToolStripMenuItem.Click += new System.EventHandler(this.reportHistoryToolStripMenuItem_Click);
             // 
@@ -236,6 +239,13 @@
             this.colEDITABLE.VisibleIndex = 1;
             this.colEDITABLE.Width = 22;
             // 
+            // jurnalToolStripMenuItem
+            // 
+            this.jurnalToolStripMenuItem.Name = "jurnalToolStripMenuItem";
+            this.jurnalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jurnalToolStripMenuItem.Text = "Jurnal";
+            this.jurnalToolStripMenuItem.Click += new System.EventHandler(this.jurnalToolStripMenuItem_Click);
+            // 
             // frkXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,5 +286,6 @@
         private System.Windows.Forms.ToolStripMenuItem mailGonderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportHistoryToolStripMenuItem;
         private DevExpress.XtraGrid.Columns.GridColumn colRPTID;
+        private System.Windows.Forms.ToolStripMenuItem jurnalToolStripMenuItem;
     }
 }

@@ -165,6 +165,7 @@
             this.colFREETIME1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVIA1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFRQf = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAGCRTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.frtOzlDrmMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             this.tstGridControl = new DevExpress.XtraGrid.GridControl();
@@ -955,7 +956,8 @@
             this.colSFYT8E,
             this.colFREETIME1,
             this.colVIA1,
-            this.colFRQf});
+            this.colFRQf,
+            this.colAGCRTRH});
             gridFormatRule1.ApplyToRow = true;
             gridFormatRule1.Column = this.colHMf;
             gridFormatRule1.Name = "Format0";
@@ -1693,6 +1695,14 @@
             this.colFRQf.Visible = true;
             this.colFRQf.VisibleIndex = 53;
             // 
+            // colAGCRTRH
+            // 
+            this.colAGCRTRH.Caption = "aValidty";
+            this.colAGCRTRH.FieldName = "AGCRTRH";
+            this.colAGCRTRH.Name = "colAGCRTRH";
+            this.colAGCRTRH.Visible = true;
+            this.colAGCRTRH.VisibleIndex = 54;
+            // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.frtOzlDrmMemoEdit);
@@ -1751,7 +1761,7 @@
             this.firmaToolStripMenuItem,
             this.bosUpdateToolStripMenuItem});
             this.contextMenuStripTalep.Name = "contextMenuStrip1";
-            this.contextMenuStripTalep.Size = new System.Drawing.Size(195, 312);
+            this.contextMenuStripTalep.Size = new System.Drawing.Size(195, 290);
             // 
             // onaylaToolStripMenuItem
             // 
@@ -2464,6 +2474,7 @@
             this.colCRRIDS.Caption = "CrrIDs";
             this.colCRRIDS.FieldName = "CRRIDS";
             this.colCRRIDS.Name = "colCRRIDS";
+            this.colCRRIDS.ToolTip = "AlisTeklif istenecek Crr(s)";
             this.colCRRIDS.Visible = true;
             this.colCRRIDS.VisibleIndex = 54;
             // 
@@ -2526,8 +2537,8 @@
             // 
             // colEMAIL
             // 
-            this.colEMAIL.Caption = "eMail";
-            this.colEMAIL.FieldName = "EMAIL";
+            this.colEMAIL.Caption = "eMail(s)";
+            this.colEMAIL.FieldName = "EMAILS";
             this.colEMAIL.Name = "colEMAIL";
             this.colEMAIL.Visible = true;
             this.colEMAIL.VisibleIndex = 60;
@@ -2930,5 +2941,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFRTGRP;
         private System.Windows.Forms.ToolStripMenuItem firmaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bosUpdateToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colAGCRTRH;
     }
 }

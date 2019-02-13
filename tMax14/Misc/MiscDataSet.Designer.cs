@@ -1471,6 +1471,8 @@ namespace tMax14.Misc {
             
             private global::System.Data.DataColumn columnSendMsj;
             
+            private global::System.Data.DataColumn columnNOM;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public FRK_KMPNYDataTable() {
@@ -1554,6 +1556,14 @@ namespace tMax14.Misc {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn NOMColumn {
+                get {
+                    return this.columnNOM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1589,7 +1599,7 @@ namespace tMax14.Misc {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FRK_KMPNYRow AddFRK_KMPNYRow(int FRTID, string FRTAD, string EMAILS, bool SendMail, int SendStatu, string SendMsj) {
+            public FRK_KMPNYRow AddFRK_KMPNYRow(int FRTID, string FRTAD, string EMAILS, bool SendMail, int SendStatu, string SendMsj, int NOM) {
                 FRK_KMPNYRow rowFRK_KMPNYRow = ((FRK_KMPNYRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FRTID,
@@ -1597,7 +1607,8 @@ namespace tMax14.Misc {
                         EMAILS,
                         SendMail,
                         SendStatu,
-                        SendMsj};
+                        SendMsj,
+                        NOM};
                 rowFRK_KMPNYRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFRK_KMPNYRow);
                 return rowFRK_KMPNYRow;
@@ -1626,6 +1637,7 @@ namespace tMax14.Misc {
                 this.columnSendMail = base.Columns["SendMail"];
                 this.columnSendStatu = base.Columns["SendStatu"];
                 this.columnSendMsj = base.Columns["SendMsj"];
+                this.columnNOM = base.Columns["NOM"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1643,6 +1655,8 @@ namespace tMax14.Misc {
                 base.Columns.Add(this.columnSendStatu);
                 this.columnSendMsj = new global::System.Data.DataColumn("SendMsj", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSendMsj);
+                this.columnNOM = new global::System.Data.DataColumn("NOM", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOM);
                 this.columnFRTAD.MaxLength = 40;
                 this.columnEMAILS.MaxLength = 2147483647;
             }
@@ -3232,6 +3246,22 @@ namespace tMax14.Misc {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int NOM {
+                get {
+                    try {
+                        return ((int)(this[this.tableFRK_KMPNY.NOMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NOM\' in table \'FRK_KMPNY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFRK_KMPNY.NOMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFRTIDNull() {
                 return this.IsNull(this.tableFRK_KMPNY.FRTIDColumn);
             }
@@ -3300,6 +3330,18 @@ namespace tMax14.Misc {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetSendMsjNull() {
                 this[this.tableFRK_KMPNY.SendMsjColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNOMNull() {
+                return this.IsNull(this.tableFRK_KMPNY.NOMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNOMNull() {
+                this[this.tableFRK_KMPNY.NOMColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4754,6 +4796,7 @@ namespace tMax14.Misc.MiscDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("FRTID", "FRTID");
             tableMapping.ColumnMappings.Add("FRTAD", "FRTAD");
             tableMapping.ColumnMappings.Add("EMAILS", "EMAILS");
+            tableMapping.ColumnMappings.Add("NOM", "NOM");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

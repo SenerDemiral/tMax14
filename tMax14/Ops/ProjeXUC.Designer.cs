@@ -60,6 +60,7 @@
             this.repositoryItemMemoExEdit = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.TURrepositoryItemImageComboBox = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.repositoryItemRichTextEdit = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.opsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prtBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prtGridControl)).BeginInit();
@@ -96,6 +97,7 @@
             this.tableAdapterManager.OPH_BOS_SELTableAdapter = null;
             this.tableAdapterManager.OPH_SELTableAdapter = null;
             this.tableAdapterManager.OPHTableAdapter = null;
+            this.tableAdapterManager.OPM_ACC_ONY_TOPLUTableAdapter = null;
             this.tableAdapterManager.OPM_BOS_SELTableAdapter = null;
             this.tableAdapterManager.OPM_CNTR_LOADTableAdapter = null;
             this.tableAdapterManager.OPM_SELTableAdapter = null;
@@ -142,23 +144,24 @@
             this.jurnalToolStripMenuItem,
             this.bookmarkToolStripMenuItem,
             this.attachmentToolStripMenuItem,
-            this.layoutsToolStripMenuItem});
+            this.layoutsToolStripMenuItem,
+            this.exportToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(176, 114);
+            this.contextMenuStrip.Size = new System.Drawing.Size(181, 158);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // faaliyetlerToolStripMenuItem
             // 
             this.faaliyetlerToolStripMenuItem.Name = "faaliyetlerToolStripMenuItem";
             this.faaliyetlerToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.faaliyetlerToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.faaliyetlerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.faaliyetlerToolStripMenuItem.Text = "Faaliyetler";
             this.faaliyetlerToolStripMenuItem.Click += new System.EventHandler(this.faaliyetlerToolStripMenuItem_Click);
             // 
             // jurnalToolStripMenuItem
             // 
             this.jurnalToolStripMenuItem.Name = "jurnalToolStripMenuItem";
-            this.jurnalToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.jurnalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.jurnalToolStripMenuItem.Text = "Jurnal";
             this.jurnalToolStripMenuItem.Click += new System.EventHandler(this.jurnalToolStripMenuItem_Click);
             // 
@@ -166,7 +169,7 @@
             // 
             this.bookmarkToolStripMenuItem.Name = "bookmarkToolStripMenuItem";
             this.bookmarkToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
-            this.bookmarkToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.bookmarkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookmarkToolStripMenuItem.Text = "Bookmark";
             this.bookmarkToolStripMenuItem.Click += new System.EventHandler(this.bookmarkToolStripMenuItem_Click);
             // 
@@ -174,14 +177,14 @@
             // 
             this.attachmentToolStripMenuItem.Name = "attachmentToolStripMenuItem";
             this.attachmentToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.attachmentToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.attachmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.attachmentToolStripMenuItem.Text = "Attachment";
             this.attachmentToolStripMenuItem.Click += new System.EventHandler(this.attachmentToolStripMenuItem_Click);
             // 
             // layoutsToolStripMenuItem
             // 
             this.layoutsToolStripMenuItem.Name = "layoutsToolStripMenuItem";
-            this.layoutsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.layoutsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.layoutsToolStripMenuItem.Text = "Layouts";
             this.layoutsToolStripMenuItem.Click += new System.EventHandler(this.layoutsToolStripMenuItem_Click);
             // 
@@ -379,6 +382,13 @@
             this.repositoryItemRichTextEdit.Name = "repositoryItemRichTextEdit";
             this.repositoryItemRichTextEdit.ShowCaretInReadOnly = false;
             // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportToolStripMenuItem.Text = "Export";
+            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            // 
             // ProjeXUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,5 +443,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit;
         private DevExpress.XtraGrid.Columns.GridColumn colTKPTRH;
         private System.Windows.Forms.ToolStripMenuItem layoutsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
     }
 }

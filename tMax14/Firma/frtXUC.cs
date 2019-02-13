@@ -387,29 +387,6 @@ namespace tMax14.Firma
             frm.info = string.Format("{0} #{1}", view.GetFocusedRowCellDisplayText(colADN), view.GetFocusedRowCellValue(colFRTID));
             frm.Show();
             
-            /*
-            Account.FisDetayHistoryXF frm = new Account.FisDetayHistoryXF();
-            frm.iQry = "";
-            frm.FRTid = (int)view.GetFocusedRowCellValue(colFRTID);
-            frm.info = string.Format("{0} #{1}", view.GetFocusedRowCellDisplayText(colADN), view.GetFocusedRowCellValue(colFRTID));
-            //frm.info = view.GetFocusedRowCellValue(colHSPAD).ToString() + "  " + view.GetFocusedRowCellDisplayText(colHSPNOS);
-            //frm.Show();
-
-            frm.Dock = DockStyle.Fill;
-            var dd = frm.Size.Height;
-            var panel = dockManager.AddPanel(DevExpress.XtraBars.Docking.DockingStyle.Bottom);
-            panel.Text = view.GetFocusedRowCellDisplayText(colADN);
-            panel.FloatSize = new Size(frm.Size.Width, frm.Size.Height);
-            panel.Controls.Add(frm);
-            var ddd = dockManager.Panels.Count;
-            if (dockManager.Panels.Count > 2)
-            {
-                dockManager.Panels[1].Show();
-                panel.DockAsTab(dockManager.Panels[1], 0);
-                //panel.DockTo(dockManager.Panels[0]);
-                //panel.ParentPanel.Tabbed = true;
-            }
-            */
         }
 
         private void faturaLinkToolStripMenuItem_Click(object sender, EventArgs e)

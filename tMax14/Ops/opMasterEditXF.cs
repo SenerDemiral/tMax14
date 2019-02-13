@@ -32,6 +32,7 @@ namespace tMax14.Ops
             colMOT.ColumnEdit = Program.MF.MOTrepositoryItemLookUpEdit;
             colORG.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;   //locRepositoryItemPopupContainerEdit;
             colDST.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
+            colGUMRUK.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
             colVGLOC.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
             colSHPID.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
             colCNEID.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
@@ -50,6 +51,7 @@ namespace tMax14.Ops
             colPOL.ColumnEdit = Program.MF.locRepositoryItemPopupContainerEdit;
             colPOT.ColumnEdit = Program.MF.locRepositoryItemPopupContainerEdit;
             colPOU.ColumnEdit = Program.MF.locRepositoryItemPopupContainerEdit;
+            colRPL.ColumnEdit = Program.MF.locRepositoryItemPopupContainerEdit;
             colTOC.ColumnEdit = Program.MF.TOCrepositoryItemLookUpEdit;
             colOWNR.ColumnEdit = Program.MF.OWNRrepositoryItemImageComboBox;
             colTOB.ColumnEdit = Program.MF.TOBrepositoryItemLookUpEdit;

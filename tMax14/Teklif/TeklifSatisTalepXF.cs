@@ -82,6 +82,7 @@ namespace tMax14.Teklif
             colRFSTYP.ColumnEdit = Program.MF.TstRfsTypRositoryItemLookUpEdit;
 
             colASKt.ColumnEdit = Program.MF.TFrepositoryItemCheckEdit;
+            colCRRIDS.ColumnEdit = Program.MF.FRTcrrRepositoryItemCheckedComboBoxEdit;
 
             Program.MF.GridControlSettings(tstGridControl);
 

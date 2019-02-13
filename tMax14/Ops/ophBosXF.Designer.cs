@@ -57,13 +57,16 @@
             this.rowRTD = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowAOC = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowKTN = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowACD = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowROS = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.saveSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ophBosSelTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OPH_BOS_SELTableAdapter();
-            this.rowACD = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowRROS = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowBYNMDRM = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             ((System.ComponentModel.ISupportInitialize)(this.vGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ophBosSelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opsDataSet)).BeginInit();
@@ -109,8 +112,11 @@
             this.rowRTD,
             this.rowAOC,
             this.rowKTN,
-            this.rowACD});
-            this.vGridControl1.Size = new System.Drawing.Size(270, 484);
+            this.rowACD,
+            this.rowROS,
+            this.rowRROS,
+            this.rowBYNMDRM});
+            this.vGridControl1.Size = new System.Drawing.Size(260, 503);
             this.vGridControl1.TabIndex = 0;
             // 
             // ophBosSelBindingSource
@@ -278,6 +284,18 @@
             this.rowKTN.Properties.Caption = "KargoTakip";
             this.rowKTN.Properties.FieldName = "KTN";
             // 
+            // rowACD
+            // 
+            this.rowACD.Name = "rowACD";
+            this.rowACD.Properties.Caption = "ACD";
+            this.rowACD.Properties.FieldName = "ACD";
+            // 
+            // rowROS
+            // 
+            this.rowROS.Name = "rowROS";
+            this.rowROS.Properties.Caption = "ROS";
+            this.rowROS.Properties.FieldName = "ROS";
+            // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.saveSimpleButton);
@@ -286,15 +304,15 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(294, 534);
+            this.layoutControl1.Size = new System.Drawing.Size(284, 553);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // saveSimpleButton
             // 
-            this.saveSimpleButton.Location = new System.Drawing.Point(12, 500);
+            this.saveSimpleButton.Location = new System.Drawing.Point(12, 519);
             this.saveSimpleButton.Name = "saveSimpleButton";
-            this.saveSimpleButton.Size = new System.Drawing.Size(270, 22);
+            this.saveSimpleButton.Size = new System.Drawing.Size(260, 22);
             this.saveSimpleButton.StyleController = this.layoutControl1;
             this.saveSimpleButton.TabIndex = 4;
             this.saveSimpleButton.Text = "Kaydet";
@@ -310,7 +328,7 @@
             this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(294, 534);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(284, 553);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -319,7 +337,7 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(274, 488);
+            this.layoutControlItem1.Size = new System.Drawing.Size(264, 507);
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
@@ -328,9 +346,9 @@
             // 
             this.layoutControlItem2.Control = this.saveSimpleButton;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 488);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 507);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(274, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(264, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -338,17 +356,23 @@
             // 
             this.ophBosSelTableAdapter.ClearBeforeFill = true;
             // 
-            // rowACD
+            // rowRROS
             // 
-            this.rowACD.Name = "rowACD";
-            this.rowACD.Properties.Caption = "ACD";
-            this.rowACD.Properties.FieldName = "ACD";
+            this.rowRROS.Name = "rowRROS";
+            this.rowRROS.Properties.Caption = "rROS";
+            this.rowRROS.Properties.FieldName = "RROS";
+            // 
+            // rowBYNMDRM
+            // 
+            this.rowBYNMDRM.Name = "rowBYNMDRM";
+            this.rowBYNMDRM.Properties.Caption = "BynmDrm";
+            this.rowBYNMDRM.Properties.FieldName = "BYNMDRM";
             // 
             // ophBosXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 534);
+            this.ClientSize = new System.Drawing.Size(284, 553);
             this.Controls.Add(this.layoutControl1);
             this.Name = "ophBosXF";
             this.Text = "ophBosXF";
@@ -402,5 +426,8 @@
         private DevExpress.XtraVerticalGrid.Rows.EditorRow rowAOC;
         private DevExpress.XtraVerticalGrid.Rows.EditorRow rowKTN;
         private DevExpress.XtraVerticalGrid.Rows.EditorRow rowACD;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowROS;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowRROS;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowBYNMDRM;
     }
 }

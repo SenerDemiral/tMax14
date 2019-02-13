@@ -52,6 +52,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.miscQueriesTableAdapter = new tMax14.Misc.MiscDataSetTableAdapters.MiscQueriesTableAdapter();
             this.docSelDetTableAdapter = new tMax14.Misc.MiscDataSetTableAdapters.DOC_SEL_DETTableAdapter();
+            this.colNOM = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.miscDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frkKmpnyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frkKmpnyGridControl)).BeginInit();
@@ -122,6 +123,7 @@
             this.colFRTID,
             this.colFRTAD,
             this.colEMAILS,
+            this.colNOM,
             this.colSendMail,
             this.colSendStatu,
             this.colSendMsj});
@@ -141,7 +143,7 @@
             this.colFRTID.OptionsColumn.AllowEdit = false;
             this.colFRTID.OptionsColumn.FixedWidth = true;
             this.colFRTID.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "FRTID", "{0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "FRTID", "{0:n0}")});
             this.colFRTID.Visible = true;
             this.colFRTID.VisibleIndex = 0;
             this.colFRTID.Width = 60;
@@ -154,7 +156,7 @@
             this.colFRTAD.OptionsColumn.AllowEdit = false;
             this.colFRTAD.Visible = true;
             this.colFRTAD.VisibleIndex = 1;
-            this.colFRTAD.Width = 148;
+            this.colFRTAD.Width = 130;
             // 
             // colEMAILS
             // 
@@ -164,7 +166,7 @@
             this.colEMAILS.OptionsColumn.AllowEdit = false;
             this.colEMAILS.Visible = true;
             this.colEMAILS.VisibleIndex = 2;
-            this.colEMAILS.Width = 148;
+            this.colEMAILS.Width = 130;
             // 
             // colSendMail
             // 
@@ -172,7 +174,7 @@
             this.colSendMail.Name = "colSendMail";
             this.colSendMail.OptionsColumn.FixedWidth = true;
             this.colSendMail.Visible = true;
-            this.colSendMail.VisibleIndex = 3;
+            this.colSendMail.VisibleIndex = 4;
             this.colSendMail.Width = 56;
             // 
             // colSendStatu
@@ -183,7 +185,7 @@
             this.colSendStatu.OptionsColumn.AllowEdit = false;
             this.colSendStatu.OptionsColumn.FixedWidth = true;
             this.colSendStatu.Visible = true;
-            this.colSendStatu.VisibleIndex = 4;
+            this.colSendStatu.VisibleIndex = 5;
             this.colSendStatu.Width = 80;
             // 
             // mailStatuRepositoryItemImageComboBox
@@ -204,8 +206,8 @@
             this.colSendMsj.Name = "colSendMsj";
             this.colSendMsj.OptionsColumn.AllowEdit = false;
             this.colSendMsj.Visible = true;
-            this.colSendMsj.VisibleIndex = 5;
-            this.colSendMsj.Width = 257;
+            this.colSendMsj.VisibleIndex = 6;
+            this.colSendMsj.Width = 240;
             // 
             // rptGetTableAdapter
             // 
@@ -268,6 +270,20 @@
             // 
             this.docSelDetTableAdapter.ClearBeforeFill = true;
             // 
+            // colNOM
+            // 
+            this.colNOM.Caption = "#MA";
+            this.colNOM.FieldName = "NOM";
+            this.colNOM.Name = "colNOM";
+            this.colNOM.OptionsColumn.AllowEdit = false;
+            this.colNOM.OptionsColumn.AllowFocus = false;
+            this.colNOM.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NOM", "{0:n0}")});
+            this.colNOM.ToolTip = "NumberOfMailAdres";
+            this.colNOM.Visible = true;
+            this.colNOM.VisibleIndex = 3;
+            this.colNOM.Width = 53;
+            // 
             // frkSendXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,5 +334,6 @@
         private MiscDataSetTableAdapters.DOC_SEL_DETTableAdapter docSelDetTableAdapter;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox mailStatuRepositoryItemImageComboBox;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colNOM;
     }
 }

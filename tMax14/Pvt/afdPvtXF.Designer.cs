@@ -61,9 +61,11 @@
             this.fieldFTRTRHy = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldFTRTRHq = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldFTRTRHm = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.pVT_AFDTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.PVT_AFDTableAdapter();
             this.fieldBPRTNO = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldINSTYP = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.pVT_AFDTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.PVT_AFDTableAdapter();
+            this.fieldKARNENO = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldCNTNOS = new DevExpress.XtraPivotGrid.PivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pVTAFDBindingSource)).BeginInit();
@@ -103,7 +105,9 @@
             this.fieldFTRTRHq,
             this.fieldFTRTRHm,
             this.fieldBPRTNO,
-            this.fieldINSTYP});
+            this.fieldINSTYP,
+            this.fieldKARNENO,
+            this.fieldCNTNOS});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.OptionsDataField.RowHeaderWidth = 131;
@@ -395,10 +399,6 @@
             this.fieldFTRTRHm.Name = "fieldFTRTRHm";
             this.fieldFTRTRHm.UnboundFieldName = "fieldFTRTRHm";
             // 
-            // pVT_AFDTableAdapter
-            // 
-            this.pVT_AFDTableAdapter.ClearBeforeFill = true;
-            // 
             // fieldBPRTNO
             // 
             this.fieldBPRTNO.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
@@ -416,6 +416,28 @@
             this.fieldINSTYP.Caption = "InsTyp";
             this.fieldINSTYP.FieldName = "INSTYP";
             this.fieldINSTYP.Name = "fieldINSTYP";
+            // 
+            // pVT_AFDTableAdapter
+            // 
+            this.pVT_AFDTableAdapter.ClearBeforeFill = true;
+            // 
+            // fieldKARNENO
+            // 
+            this.fieldKARNENO.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
+            | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
+            this.fieldKARNENO.AreaIndex = 25;
+            this.fieldKARNENO.Caption = "KarneNo";
+            this.fieldKARNENO.FieldName = "KARNENO";
+            this.fieldKARNENO.Name = "fieldKARNENO";
+            // 
+            // fieldCNTNOS
+            // 
+            this.fieldCNTNOS.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
+            | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
+            this.fieldCNTNOS.AreaIndex = 26;
+            this.fieldCNTNOS.Caption = "CntNoS";
+            this.fieldCNTNOS.FieldName = "CNTNOS";
+            this.fieldCNTNOS.Name = "fieldCNTNOS";
             // 
             // afdPvtXF
             // 
@@ -471,5 +493,7 @@
         private DevExpress.XtraPivotGrid.PivotGridField fieldFTRTRHm;
         private DevExpress.XtraPivotGrid.PivotGridField fieldBPRTNO;
         private DevExpress.XtraPivotGrid.PivotGridField fieldINSTYP;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldKARNENO;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldCNTNOS;
     }
 }

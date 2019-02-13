@@ -3691,9 +3691,9 @@ namespace tMax14.Teklif {
             
             private global::System.Data.DataColumn columnFRTTUR;
             
-            private global::System.Data.DataColumn columnEMAIL;
-            
             private global::System.Data.DataColumn columnFRTGRP;
+            
+            private global::System.Data.DataColumn columnEMAILS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -4210,17 +4210,17 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EMAILColumn {
+            public global::System.Data.DataColumn FRTGRPColumn {
                 get {
-                    return this.columnEMAIL;
+                    return this.columnFRTGRP;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn FRTGRPColumn {
+            public global::System.Data.DataColumn EMAILSColumn {
                 get {
-                    return this.columnFRTGRP;
+                    return this.columnEMAILS;
                 }
             }
             
@@ -4322,8 +4322,8 @@ namespace tMax14.Teklif {
                         string RFSTYP, 
                         int TKLTRH_TLPTRH, 
                         string FRTTUR, 
-                        string EMAIL, 
-                        string FRTGRP) {
+                        string FRTGRP, 
+                        string EMAILS) {
                 TSTRow rowTSTRow = ((TSTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TSTID,
@@ -4386,8 +4386,8 @@ namespace tMax14.Teklif {
                         RFSTYP,
                         TKLTRH_TLPTRH,
                         FRTTUR,
-                        EMAIL,
-                        FRTGRP};
+                        FRTGRP,
+                        EMAILS};
                 rowTSTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTSTRow);
                 return rowTSTRow;
@@ -4477,8 +4477,8 @@ namespace tMax14.Teklif {
                 this.columnRFSTYP = base.Columns["RFSTYP"];
                 this.columnTKLTRH_TLPTRH = base.Columns["TKLTRH_TLPTRH"];
                 this.columnFRTTUR = base.Columns["FRTTUR"];
-                this.columnEMAIL = base.Columns["EMAIL"];
                 this.columnFRTGRP = base.Columns["FRTGRP"];
+                this.columnEMAILS = base.Columns["EMAILS"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4604,10 +4604,10 @@ namespace tMax14.Teklif {
                 base.Columns.Add(this.columnTKLTRH_TLPTRH);
                 this.columnFRTTUR = new global::System.Data.DataColumn("FRTTUR", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFRTTUR);
-                this.columnEMAIL = new global::System.Data.DataColumn("EMAIL", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEMAIL);
                 this.columnFRTGRP = new global::System.Data.DataColumn("FRTGRP", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFRTGRP);
+                this.columnEMAILS = new global::System.Data.DataColumn("EMAILS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEMAILS);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTSTID}, true));
                 this.columnTSTID.AllowDBNull = false;
@@ -4658,8 +4658,8 @@ namespace tMax14.Teklif {
                 this.columnASK.MaxLength = 1;
                 this.columnRFSTYP.MaxLength = 5;
                 this.columnFRTTUR.MaxLength = 2;
-                this.columnEMAIL.MaxLength = 40;
                 this.columnFRTGRP.MaxLength = 2147483647;
+                this.columnEMAILS.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6607,6 +6607,8 @@ namespace tMax14.Teklif {
             
             private global::System.Data.DataColumn columnFRQ;
             
+            private global::System.Data.DataColumn columnAGCRTRH;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TSFDataTable() {
@@ -7090,6 +7092,14 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn AGCRTRHColumn {
+                get {
+                    return this.columnAGCRTRH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -7181,7 +7191,8 @@ namespace tMax14.Teklif {
                         decimal SFYT8E, 
                         string FREETIME, 
                         string VIA, 
-                        string FRQ) {
+                        string FRQ, 
+                        System.DateTime AGCRTRH) {
                 TSFRow rowTSFRow = ((TSFRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TSFID,
@@ -7239,7 +7250,8 @@ namespace tMax14.Teklif {
                         SFYT8E,
                         FREETIME,
                         VIA,
-                        FRQ};
+                        FRQ,
+                        AGCRTRH};
                 if ((parentTSTRowByTST_TSF != null)) {
                     columnValuesArray[1] = parentTSTRowByTST_TSF[0];
                 }
@@ -7328,6 +7340,7 @@ namespace tMax14.Teklif {
                 this.columnFREETIME = base.Columns["FREETIME"];
                 this.columnVIA = base.Columns["VIA"];
                 this.columnFRQ = base.Columns["FRQ"];
+                this.columnAGCRTRH = base.Columns["AGCRTRH"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7445,6 +7458,8 @@ namespace tMax14.Teklif {
                 base.Columns.Add(this.columnVIA);
                 this.columnFRQ = new global::System.Data.DataColumn("FRQ", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFRQ);
+                this.columnAGCRTRH = new global::System.Data.DataColumn("AGCRTRH", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAGCRTRH);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTSFID}, true));
                 this.columnTSFID.AllowDBNull = false;
@@ -14480,22 +14495,6 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string EMAIL {
-                get {
-                    try {
-                        return ((string)(this[this.tableTST.EMAILColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EMAIL\' in table \'TST\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTST.EMAILColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string FRTGRP {
                 get {
                     try {
@@ -14507,6 +14506,22 @@ namespace tMax14.Teklif {
                 }
                 set {
                     this[this.tableTST.FRTGRPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string EMAILS {
+                get {
+                    try {
+                        return ((string)(this[this.tableTST.EMAILSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EMAILS\' in table \'TST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTST.EMAILSColumn] = value;
                 }
             }
             
@@ -15220,18 +15235,6 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsEMAILNull() {
-                return this.IsNull(this.tableTST.EMAILColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetEMAILNull() {
-                this[this.tableTST.EMAILColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFRTGRPNull() {
                 return this.IsNull(this.tableTST.FRTGRPColumn);
             }
@@ -15240,6 +15243,18 @@ namespace tMax14.Teklif {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFRTGRPNull() {
                 this[this.tableTST.FRTGRPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsEMAILSNull() {
+                return this.IsNull(this.tableTST.EMAILSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetEMAILSNull() {
+                this[this.tableTST.EMAILSColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17868,6 +17883,22 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime AGCRTRH {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTSF.AGCRTRHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AGCRTRH\' in table \'TSF\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTSF.AGCRTRHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TSTRow TSTRow {
                 get {
                     return ((TSTRow)(this.GetParentRow(this.Table.ParentRelations["TST_TSF"])));
@@ -18535,6 +18566,18 @@ namespace tMax14.Teklif {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFRQNull() {
                 this[this.tableTSF.FRQColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsAGCRTRHNull() {
+                return this.IsNull(this.tableTSF.AGCRTRHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetAGCRTRHNull() {
+                this[this.tableTSF.AGCRTRHColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25026,8 +25069,8 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("RFSTYP", "RFSTYP");
             tableMapping.ColumnMappings.Add("TKLTRH_TLPTRH", "TKLTRH_TLPTRH");
             tableMapping.ColumnMappings.Add("FRTTUR", "FRTTUR");
-            tableMapping.ColumnMappings.Add("EMAIL", "EMAIL");
             tableMapping.ColumnMappings.Add("FRTGRP", "FRTGRP");
+            tableMapping.ColumnMappings.Add("EMAILS", "EMAILS");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -25317,10 +25360,10 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.SourceColumn = "ASK";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "EMAIL";
-            param.Size = 40;
+            param.ParameterName = "EMAILS";
+            param.Size = 2147483647;
             param.IsNullable = true;
-            param.SourceColumn = "EMAIL";
+            param.SourceColumn = "EMAILS";
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
@@ -25599,10 +25642,10 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.SourceColumn = "RFSTYP";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "EMAIL";
-            param.Size = 40;
+            param.ParameterName = "EMAILS";
+            param.Size = 2147483647;
             param.IsNullable = true;
-            param.SourceColumn = "EMAIL";
+            param.SourceColumn = "EMAILS";
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
@@ -25765,7 +25808,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
                     string CRRIDS, 
                     string RFSTYP, 
                     string ASK, 
-                    string EMAIL) {
+                    string EMAILS) {
             if ((TSTID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(TSTID.Value));
             }
@@ -26030,11 +26073,11 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[43].Value = ((string)(ASK));
             }
-            if ((EMAIL == null)) {
+            if ((EMAILS == null)) {
                 this.Adapter.InsertCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[44].Value = ((string)(EMAIL));
+                this.Adapter.InsertCommand.Parameters[44].Value = ((string)(EMAILS));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -26101,7 +26144,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
                     string CRRIDS, 
                     string ASK, 
                     string RFSTYP, 
-                    string EMAIL) {
+                    string EMAILS) {
             if ((TSTID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(TSTID.Value));
             }
@@ -26366,11 +26409,11 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(RFSTYP));
             }
-            if ((EMAIL == null)) {
+            if ((EMAILS == null)) {
                 this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(EMAIL));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(EMAILS));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -27293,6 +27336,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("FREETIME", "FREETIME");
             tableMapping.ColumnMappings.Add("VIA", "VIA");
             tableMapping.ColumnMappings.Add("FRQ", "FRQ");
+            tableMapping.ColumnMappings.Add("AGCRTRH", "AGCRTRH");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;

@@ -19,6 +19,7 @@ namespace tMax14.Jurnal
         public string RefTbl = "", AltTbl = "";
         public int RefID = 0, AltID = 0;
         private MainDataSet.SMTPRow SMTP;
+        string layoutName = "Jurnal.jrnXF";
 
         public jrnXF()
         {
@@ -69,6 +70,8 @@ namespace tMax14.Jurnal
             jrnGridView.FormatConditions[0].Expression = string.Format("Contains([BKMS], '{0}')", Program.USRtag);
             jrnGridView.ActiveFilterString = string.Format("[UPD_USR] <> '{0}'", Program.USR);
             jrnGridView.ActiveFilterEnabled = false;
+
+            Program.MF.XGLrestore(layoutName, 0, jrnGridView);
         }
 
         private void initJrnNewRow()
@@ -612,6 +615,16 @@ namespace tMax14.Jurnal
             //link.CreateMarginalFooterArea += link_CreateMarginalFooterArea;
             link.CreateDocument();
             link.ShowPreview();
+
+        }
+
+        private void layoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Genel.xglFX frm = new Genel.xglFX();
+            frm.id = layoutName;
+            frm.origin = jrnGridView;
+            frm.ShowDialog();
+            frm.Dispose();
 
         }
 

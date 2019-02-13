@@ -150,6 +150,7 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.jurnalQueriesTableAdapter = new tMax14.Jurnal.JurnalDataSetTableAdapters.JurnalQueriesTableAdapter();
             this.jrnTableAdapter = new tMax14.Jurnal.JurnalDataSetTableAdapters.JRNTableAdapter();
+            this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jurnalMemoEdit.Properties)).BeginInit();
@@ -284,22 +285,23 @@
             this.toolStripSeparator2,
             this.deleteToolStripMenuItem,
             this.exportToolStripMenuItem,
-            this.previewBodyToolStripMenuItem});
+            this.previewBodyToolStripMenuItem,
+            this.layoutToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(171, 170);
+            this.contextMenuStrip.Size = new System.Drawing.Size(181, 214);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // refKaydaGitToolStripMenuItem
             // 
             this.refKaydaGitToolStripMenuItem.Name = "refKaydaGitToolStripMenuItem";
-            this.refKaydaGitToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.refKaydaGitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.refKaydaGitToolStripMenuItem.Text = "Ref kayda git";
             this.refKaydaGitToolStripMenuItem.Click += new System.EventHandler(this.refKaydaGitToolStripMenuItem_Click);
             // 
             // attachmentsToolStripMenuItem
             // 
             this.attachmentsToolStripMenuItem.Name = "attachmentsToolStripMenuItem";
-            this.attachmentsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.attachmentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.attachmentsToolStripMenuItem.Text = "Attachments";
             this.attachmentsToolStripMenuItem.Click += new System.EventHandler(this.attachmentsToolStripMenuItem_Click);
             // 
@@ -307,38 +309,38 @@
             // 
             this.bookmarkToolStripMenuItem.Name = "bookmarkToolStripMenuItem";
             this.bookmarkToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.bookmarkToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.bookmarkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookmarkToolStripMenuItem.Text = "Bookmark";
             this.bookmarkToolStripMenuItem.Click += new System.EventHandler(this.bookmarkToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(167, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // yeniJurnalToolStripMenuItem
             // 
             this.yeniJurnalToolStripMenuItem.Name = "yeniJurnalToolStripMenuItem";
-            this.yeniJurnalToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.yeniJurnalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.yeniJurnalToolStripMenuItem.Text = "Yeni Jurnal";
             this.yeniJurnalToolStripMenuItem.Click += new System.EventHandler(this.yeniJurnalToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(167, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportToolStripMenuItem.Text = "Export";
             this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
@@ -346,7 +348,7 @@
             // 
             this.previewBodyToolStripMenuItem.CheckOnClick = true;
             this.previewBodyToolStripMenuItem.Name = "previewBodyToolStripMenuItem";
-            this.previewBodyToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.previewBodyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.previewBodyToolStripMenuItem.Text = "Preview Body";
             this.previewBodyToolStripMenuItem.Click += new System.EventHandler(this.previewBodyToolStripMenuItem_Click);
             // 
@@ -1539,6 +1541,13 @@
             // 
             this.jrnTableAdapter.ClearBeforeFill = true;
             // 
+            // layoutToolStripMenuItem
+            // 
+            this.layoutToolStripMenuItem.Name = "layoutToolStripMenuItem";
+            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.layoutToolStripMenuItem.Text = "Layout";
+            this.layoutToolStripMenuItem.Click += new System.EventHandler(this.layoutToolStripMenuItem_Click);
+            // 
             // jrnXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1745,5 +1754,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colALTID;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem previewBodyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem layoutToolStripMenuItem;
     }
 }

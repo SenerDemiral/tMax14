@@ -553,7 +553,7 @@
             this.xrPictureBox2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Image", null, "RPR_VI.LEFTIMAGE")});
             this.xrPictureBox2.Dpi = 100F;
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30F);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 23F);
             this.xrPictureBox2.Name = "xrPictureBox2";
             this.xrPictureBox2.SizeF = new System.Drawing.SizeF(50F, 50F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
@@ -584,10 +584,10 @@
             new DevExpress.XtraReports.UI.XRBinding("Rtf", null, "RPR_VI.FOOTER")});
             this.xrRichText2.Dpi = 100F;
             this.xrRichText2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(248.9583F, 0F);
+            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(400.0005F, 0F);
             this.xrRichText2.Name = "xrRichText2";
             this.xrRichText2.SerializableRtfString = resources.GetString("xrRichText2.SerializableRtfString");
-            this.xrRichText2.SizeF = new System.Drawing.SizeF(478.0417F, 23F);
+            this.xrRichText2.SizeF = new System.Drawing.SizeF(327F, 68F);
             // 
             // reportDataSet
             // 
@@ -730,7 +730,7 @@
             this.xrPictureBox3,
             this.xrRichText2});
             this.PageFooter.Dpi = 100F;
-            this.PageFooter.HeightF = 48F;
+            this.PageFooter.HeightF = 68.00002F;
             this.PageFooter.Name = "PageFooter";
             // 
             // xrPictureBox3
@@ -742,7 +742,7 @@
             this.xrPictureBox3.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
             this.xrPictureBox3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPictureBox3.Name = "xrPictureBox3";
-            this.xrPictureBox3.SizeF = new System.Drawing.SizeF(232F, 48F);
+            this.xrPictureBox3.SizeF = new System.Drawing.SizeF(400.0005F, 68.00002F);
             this.xrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // rprIMGSTableAdapter

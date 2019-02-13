@@ -13,6 +13,7 @@ namespace tMax14.Account
 {
     public partial class HesapBkyXF : DevExpress.XtraEditors.XtraForm
     {
+        // KULLANILMIYOR
         public HesapBkyXF()
         {
             InitializeComponent();

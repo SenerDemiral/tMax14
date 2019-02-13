@@ -47,6 +47,8 @@ namespace tMax14.Firma
             colUYRKc.ColumnEdit = Program.MF.CNTRYrepositoryItemLookUpEdit;
             colROTc.ColumnEdit = Program.MF.ROTrepositoryItemLookUpEdit;
             colMOTc.ColumnEdit = Program.MF.MOTrepositoryItemLookUpEdit;
+            colORGc.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
+            colDSTc.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
 
             frsGridControl.ExternalRepository = Program.MF.mainPersistentRepository;
             colSREPIDs.ColumnEdit = Program.MF.ustRepositoryItemLookUpEdit;

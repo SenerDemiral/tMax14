@@ -65,10 +65,11 @@
             this.fieldINF = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldPOL = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldPOU = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldTAGS = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pvtOpmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pvtDataSet = new tMax14.Pvt.PvtDataSet();
             this.pvtOpmTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.PVT_OPMTableAdapter();
-            this.fieldTAGS = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldCNTNOS = new DevExpress.XtraPivotGrid.PivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pvtOpmBindingSource)).BeginInit();
@@ -113,7 +114,8 @@
             this.fieldINF,
             this.fieldPOL,
             this.fieldPOU,
-            this.fieldTAGS});
+            this.fieldTAGS,
+            this.fieldCNTNOS});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.OptionsDataField.RowHeaderWidth = 179;
@@ -423,6 +425,15 @@
             this.fieldPOU.FieldName = "POU";
             this.fieldPOU.Name = "fieldPOU";
             // 
+            // fieldTAGS
+            // 
+            this.fieldTAGS.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
+            | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
+            this.fieldTAGS.AreaIndex = 29;
+            this.fieldTAGS.Caption = "TAGs";
+            this.fieldTAGS.FieldName = "TAGS";
+            this.fieldTAGS.Name = "fieldTAGS";
+            // 
             // pvtOpmBindingSource
             // 
             this.pvtOpmBindingSource.DataMember = "PVT_OPM";
@@ -437,14 +448,14 @@
             // 
             this.pvtOpmTableAdapter.ClearBeforeFill = true;
             // 
-            // fieldTAGS
+            // fieldCNTNOS
             // 
-            this.fieldTAGS.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
+            this.fieldCNTNOS.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
             | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
-            this.fieldTAGS.AreaIndex = 29;
-            this.fieldTAGS.Caption = "TAGs";
-            this.fieldTAGS.FieldName = "TAGS";
-            this.fieldTAGS.Name = "fieldTAGS";
+            this.fieldCNTNOS.AreaIndex = 30;
+            this.fieldCNTNOS.Caption = "CntNoS";
+            this.fieldCNTNOS.FieldName = "CNTNOS";
+            this.fieldCNTNOS.Name = "fieldCNTNOS";
             // 
             // opmPvtXF
             // 
@@ -505,5 +516,6 @@
         private DevExpress.XtraPivotGrid.PivotGridField fieldPOL;
         private DevExpress.XtraPivotGrid.PivotGridField fieldPOU;
         private DevExpress.XtraPivotGrid.PivotGridField fieldTAGS;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldCNTNOS;
     }
 }

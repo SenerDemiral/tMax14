@@ -174,6 +174,7 @@
               <Mapping SourceColumn="MCNE" DataSetColumn="MCNE" />
               <Mapping SourceColumn="CRRTAGS" DataSetColumn="CRRTAGS" />
               <Mapping SourceColumn="MVM3" DataSetColumn="MVM3" />
+              <Mapping SourceColumn="DTM" DataSetColumn="DTM" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -350,6 +351,8 @@
               <Mapping SourceColumn="DST" DataSetColumn="DST" />
               <Mapping SourceColumn="BPRTNO" DataSetColumn="BPRTNO" />
               <Mapping SourceColumn="INSTYP" DataSetColumn="INSTYP" />
+              <Mapping SourceColumn="KARNENO" DataSetColumn="KARNENO" />
+              <Mapping SourceColumn="CNTNOS" DataSetColumn="CNTNOS" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -512,6 +515,7 @@
               <Mapping SourceColumn="POL" DataSetColumn="POL" />
               <Mapping SourceColumn="POU" DataSetColumn="POU" />
               <Mapping SourceColumn="TAGS" DataSetColumn="TAGS" />
+              <Mapping SourceColumn="CNTNOS" DataSetColumn="CNTNOS" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1295,6 +1299,9 @@
               <Mapping SourceColumn="HPODINF" DataSetColumn="HPODINF" />
               <Mapping SourceColumn="HDTM" DataSetColumn="HDTM" />
               <Mapping SourceColumn="MTPDD2" DataSetColumn="MTPDD2" />
+              <Mapping SourceColumn="HGBUSR" DataSetColumn="HGBUSR" />
+              <Mapping SourceColumn="HGB" DataSetColumn="HGB" />
+              <Mapping SourceColumn="MRTR" DataSetColumn="MRTR" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1892,6 +1899,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="MVM3" msprop:Generator_ColumnVarNameInTable="columnMVM3" msprop:Generator_ColumnPropNameInRow="MVM3" msprop:Generator_ColumnPropNameInTable="MVM3Column" msprop:Generator_UserColumnName="MVM3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DTM" msprop:Generator_ColumnVarNameInTable="columnDTM" msprop:Generator_ColumnPropNameInRow="DTM" msprop:Generator_ColumnPropNameInTable="DTMColumn" msprop:Generator_UserColumnName="DTM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -2248,6 +2262,20 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KARNENO" msprop:Generator_ColumnVarNameInTable="columnKARNENO" msprop:Generator_ColumnPropNameInRow="KARNENO" msprop:Generator_ColumnPropNameInTable="KARNENOColumn" msprop:Generator_UserColumnName="KARNENO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CNTNOS" msprop:Generator_ColumnVarNameInTable="columnCNTNOS" msprop:Generator_ColumnPropNameInRow="CNTNOS" msprop:Generator_ColumnPropNameInTable="CNTNOSColumn" msprop:Generator_UserColumnName="CNTNOS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -2611,6 +2639,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="TAGS" msprop:Generator_ColumnVarNameInTable="columnTAGS" msprop:Generator_ColumnPropNameInRow="TAGS" msprop:Generator_ColumnPropNameInTable="TAGSColumn" msprop:Generator_UserColumnName="TAGS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CNTNOS" msprop:Generator_ColumnVarNameInTable="columnCNTNOS" msprop:Generator_ColumnPropNameInRow="CNTNOS" msprop:Generator_ColumnPropNameInTable="CNTNOSColumn" msprop:Generator_UserColumnName="CNTNOS" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
@@ -4437,6 +4472,15 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="MTPDD2" msprop:Generator_ColumnVarNameInTable="columnMTPDD2" msprop:Generator_ColumnPropNameInRow="MTPDD2" msprop:Generator_ColumnPropNameInTable="MTPDD2Column" msprop:Generator_UserColumnName="MTPDD2" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HGBUSR" msprop:Generator_ColumnVarNameInTable="columnHGBUSR" msprop:Generator_ColumnPropNameInRow="HGBUSR" msprop:Generator_ColumnPropNameInTable="HGBUSRColumn" msprop:Generator_UserColumnName="HGBUSR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HGB" msprop:Generator_ColumnVarNameInTable="columnHGB" msprop:Generator_ColumnPropNameInRow="HGB" msprop:Generator_ColumnPropNameInTable="HGBColumn" msprop:Generator_UserColumnName="HGB" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MRTR" msprop:Generator_ColumnVarNameInTable="columnMRTR" msprop:Generator_ColumnPropNameInRow="MRTR" msprop:Generator_ColumnPropNameInTable="MRTRColumn" msprop:Generator_UserColumnName="MRTR" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

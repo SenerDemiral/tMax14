@@ -66,6 +66,8 @@
             this.rprCMTableAdapter = new tMax14ReportClassLibrary.ReportDataSetTableAdapters.RPR_CMTableAdapter();
             this.DetailReport = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Detail1 = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel29 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
@@ -73,8 +75,6 @@
             this.ReportFooter1 = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
             this.rprIMGSTableAdapter = new tMax14ReportClassLibrary.ReportDataSetTableAdapters.RPR_IMGSTableAdapter();
-            this.xrLabel29 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
@@ -442,7 +442,7 @@
             this.xrPictureBox1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Image", null, "RPR_CM.LEFTIMAGE")});
             this.xrPictureBox1.Dpi = 100F;
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 23.00002F);
             this.xrPictureBox1.Name = "xrPictureBox1";
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(50F, 50F);
             this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
@@ -453,7 +453,7 @@
             this.xrPictureBox3,
             this.xrRichText1});
             this.ReportFooter.Dpi = 100F;
-            this.ReportFooter.HeightF = 48F;
+            this.ReportFooter.HeightF = 68.00002F;
             this.ReportFooter.KeepTogether = true;
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
@@ -467,7 +467,7 @@
             this.xrPictureBox3.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
             this.xrPictureBox3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPictureBox3.Name = "xrPictureBox3";
-            this.xrPictureBox3.SizeF = new System.Drawing.SizeF(232F, 48F);
+            this.xrPictureBox3.SizeF = new System.Drawing.SizeF(438.9996F, 68.00002F);
             this.xrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrRichText1
@@ -477,10 +477,10 @@
             new DevExpress.XtraReports.UI.XRBinding("Rtf", null, "RPR_CM.FOOTER")});
             this.xrRichText1.Dpi = 100F;
             this.xrRichText1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(248.9586F, 0F);
+            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(438.9996F, 0F);
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
-            this.xrRichText1.SizeF = new System.Drawing.SizeF(518.0415F, 23F);
+            this.xrRichText1.SizeF = new System.Drawing.SizeF(328F, 68F);
             this.xrRichText1.StylePriority.UseBorders = false;
             // 
             // reportDataSet
@@ -527,6 +527,40 @@
             this.Detail1.Name = "Detail1";
             this.Detail1.StylePriority.UseBorderColor = false;
             this.Detail1.StylePriority.UseBorders = false;
+            // 
+            // xrLabel30
+            // 
+            this.xrLabel30.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xrLabel30.BorderColor = System.Drawing.Color.Silver;
+            this.xrLabel30.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
+            this.xrLabel30.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel30.CanShrink = true;
+            this.xrLabel30.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "RPR_CM.RPR_CM_RPR_CM_DETAY.HGODINF")});
+            this.xrLabel30.Dpi = 100F;
+            this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(0F, 46.00003F);
+            this.xrLabel30.Multiline = true;
+            this.xrLabel30.Name = "xrLabel30";
+            this.xrLabel30.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel30.SizeF = new System.Drawing.SizeF(766.9996F, 23F);
+            this.xrLabel30.StylePriority.UseBackColor = false;
+            this.xrLabel30.StylePriority.UseBorderColor = false;
+            this.xrLabel30.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel30.StylePriority.UseBorders = false;
+            this.xrLabel30.Text = "xrLabel12";
+            // 
+            // xrLabel29
+            // 
+            this.xrLabel29.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel29.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "RPR_CM.RPR_CM_RPR_CM_DETAY.HSHPCNE")});
+            this.xrLabel29.Dpi = 100F;
+            this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(0.0004927317F, 23.00002F);
+            this.xrLabel29.Multiline = true;
+            this.xrLabel29.Name = "xrLabel29";
+            this.xrLabel29.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel29.SizeF = new System.Drawing.SizeF(597.9164F, 23F);
+            this.xrLabel29.StylePriority.UseBackColor = false;
             // 
             // xrLabel15
             // 
@@ -613,40 +647,6 @@
             // rprIMGSTableAdapter
             // 
             this.rprIMGSTableAdapter.ClearBeforeFill = true;
-            // 
-            // xrLabel29
-            // 
-            this.xrLabel29.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel29.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "RPR_CM.RPR_CM_RPR_CM_DETAY.HSHPCNE")});
-            this.xrLabel29.Dpi = 100F;
-            this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(0.0004927317F, 23.00002F);
-            this.xrLabel29.Multiline = true;
-            this.xrLabel29.Name = "xrLabel29";
-            this.xrLabel29.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel29.SizeF = new System.Drawing.SizeF(597.9164F, 23F);
-            this.xrLabel29.StylePriority.UseBackColor = false;
-            // 
-            // xrLabel30
-            // 
-            this.xrLabel30.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xrLabel30.BorderColor = System.Drawing.Color.Silver;
-            this.xrLabel30.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
-            this.xrLabel30.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel30.CanShrink = true;
-            this.xrLabel30.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "RPR_CM.RPR_CM_RPR_CM_DETAY.HGODINF")});
-            this.xrLabel30.Dpi = 100F;
-            this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(0F, 46.00003F);
-            this.xrLabel30.Multiline = true;
-            this.xrLabel30.Name = "xrLabel30";
-            this.xrLabel30.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel30.SizeF = new System.Drawing.SizeF(766.9996F, 23F);
-            this.xrLabel30.StylePriority.UseBackColor = false;
-            this.xrLabel30.StylePriority.UseBorderColor = false;
-            this.xrLabel30.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel30.StylePriority.UseBorders = false;
-            this.xrLabel30.Text = "xrLabel12";
             // 
             // CargoManifestXR
             // 

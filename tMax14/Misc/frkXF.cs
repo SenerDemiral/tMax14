@@ -54,7 +54,11 @@ namespace tMax14.Misc
 
         private void attachmentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GridView view = frkGridView;
+            var view = frkGridView;
+
+            if (view.FocusedRowHandle == DevExpress.XtraGrid.GridControl.NewItemRowHandle || !view.IsDataRow(view.FocusedRowHandle))
+                return;
+
             if (view.DataRowCount == 0)
                 return;
 
@@ -102,12 +106,46 @@ namespace tMax14.Misc
 
         private void reportHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var view = frkGridView;
+
+            if (view.FocusedRowHandle == DevExpress.XtraGrid.GridControl.NewItemRowHandle || !view.IsDataRow(view.FocusedRowHandle))
+                return;
+
             Genel.rphXF frm = new Genel.rphXF();
 
             frm.iQry = $"INFO = 'FrkID:{frkGridView.GetFocusedRowCellValue(colFRKID)}'";
 
             frm.ShowDialog();
             frm.Dispose();
+        }
+
+        private void contextMenuStrip_Opening(object sender, CancelEventArgs e)
+        {
+            var view = frkGridView;
+            if (view.FocusedRowHandle == DevExpress.XtraGrid.GridControl.NewItemRowHandle || !view.IsDataRow(view.FocusedRowHandle))
+                return;
+
+            var E = view.GetFocusedRowCellValue(colEDITABLE).ToString() == "T" ? true : false;
+            attachmentsToolStripMenuItem.Enabled = E;
+            onaylaToolStripMenuItem.Enabled = E;
+            mailGonderToolStripMenuItem.Enabled = E;
+        }
+
+        private void jurnalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var view = frkGridView;
+
+            if (!view.IsDataRow(view.FocusedRowHandle))
+                return;
+
+            Jurnal.jrnXF frm = new Jurnal.jrnXF();
+
+            frm.RefTbl = "FRK";
+            frm.RefID = (int)view.GetFocusedRowCellValue(colFRKID); ;
+
+            frm.ShowDialog();
+            frm.Dispose();
+
         }
     }
 }

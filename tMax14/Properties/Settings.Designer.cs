@@ -37,8 +37,8 @@ namespace tMax14.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=LOCALHOST;user id=sysdba;password=masterkey;ini" +
-            "tial catalog=tMax14doc;connectionlifetime=30;pooling=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=192.168.1.245;user id=sysdba;password=masterkey" +
+            ";initial catalog=tMax14doc;connectionlifetime=30;pooling=True")]
         public string ConnectionStringDoc {
             get {
                 return ((string)(this["ConnectionStringDoc"]));
@@ -48,8 +48,8 @@ namespace tMax14.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=LOCALHOST;initial catalog=C:\\DATA\\tMax\\TMAX14-1" +
-            "81115.FDB;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=192.168.1.245;initial catalog=tMax14;user id=sy" +
+            "sdba;password=masterkey;pooling=True;connectionlifetime=30")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

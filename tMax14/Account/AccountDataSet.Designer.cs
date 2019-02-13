@@ -19556,10 +19556,6 @@ namespace tMax14.Account {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class AVD_HRKTDataTable : global::System.Data.TypedTableBase<AVD_HRKTRow> {
             
-            private global::System.Data.DataColumn columnREFTO;
-            
-            private global::System.Data.DataColumn columnREFID;
-            
             private global::System.Data.DataColumn columnAVDID;
             
             private global::System.Data.DataColumn columnAVBID;
@@ -19607,22 +19603,6 @@ namespace tMax14.Account {
             protected AVD_HRKTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn REFTOColumn {
-                get {
-                    return this.columnREFTO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn REFIDColumn {
-                get {
-                    return this.columnREFID;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19726,11 +19706,9 @@ namespace tMax14.Account {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public AVD_HRKTRow AddAVD_HRKTRow(string REFTO, int REFID, int AVDID, int AVBID, string SKL, string HSPNO, string BA, decimal DTUT, string DDVZ, System.DateTime TRH) {
+            public AVD_HRKTRow AddAVD_HRKTRow(int AVDID, int AVBID, string SKL, string HSPNO, string BA, decimal DTUT, string DDVZ, System.DateTime TRH) {
                 AVD_HRKTRow rowAVD_HRKTRow = ((AVD_HRKTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        REFTO,
-                        REFID,
                         AVDID,
                         AVBID,
                         SKL,
@@ -19761,8 +19739,6 @@ namespace tMax14.Account {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnREFTO = base.Columns["REFTO"];
-                this.columnREFID = base.Columns["REFID"];
                 this.columnAVDID = base.Columns["AVDID"];
                 this.columnAVBID = base.Columns["AVBID"];
                 this.columnSKL = base.Columns["SKL"];
@@ -19776,10 +19752,6 @@ namespace tMax14.Account {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnREFTO = new global::System.Data.DataColumn("REFTO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnREFTO);
-                this.columnREFID = new global::System.Data.DataColumn("REFID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnREFID);
                 this.columnAVDID = new global::System.Data.DataColumn("AVDID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAVDID);
                 this.columnAVBID = new global::System.Data.DataColumn("AVBID", typeof(int), null, global::System.Data.MappingType.Element);
@@ -19796,7 +19768,6 @@ namespace tMax14.Account {
                 base.Columns.Add(this.columnDDVZ);
                 this.columnTRH = new global::System.Data.DataColumn("TRH", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTRH);
-                this.columnREFTO.MaxLength = 1;
                 this.columnSKL.MaxLength = 1;
                 this.columnHSPNO.MaxLength = 20;
                 this.columnBA.MaxLength = 1;
@@ -37528,38 +37499,6 @@ namespace tMax14.Account {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string REFTO {
-                get {
-                    try {
-                        return ((string)(this[this.tableAVD_HRKT.REFTOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'REFTO\' in table \'AVD_HRKT\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAVD_HRKT.REFTOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int REFID {
-                get {
-                    try {
-                        return ((int)(this[this.tableAVD_HRKT.REFIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'REFID\' in table \'AVD_HRKT\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAVD_HRKT.REFIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int AVDID {
                 get {
                     try {
@@ -37684,30 +37623,6 @@ namespace tMax14.Account {
                 set {
                     this[this.tableAVD_HRKT.TRHColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsREFTONull() {
-                return this.IsNull(this.tableAVD_HRKT.REFTOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetREFTONull() {
-                this[this.tableAVD_HRKT.REFTOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsREFIDNull() {
-                return this.IsNull(this.tableAVD_HRKT.REFIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetREFIDNull() {
-                this[this.tableAVD_HRKT.REFIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -53257,8 +53172,6 @@ namespace tMax14.Account.AccountDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "AVD_HRKT";
-            tableMapping.ColumnMappings.Add("REFTO", "REFTO");
-            tableMapping.ColumnMappings.Add("REFID", "REFID");
             tableMapping.ColumnMappings.Add("AVDID", "AVDID");
             tableMapping.ColumnMappings.Add("AVBID", "AVBID");
             tableMapping.ColumnMappings.Add("SKL", "SKL");
@@ -53286,7 +53199,13 @@ namespace tMax14.Account.AccountDataSetTableAdapters {
             this._commandCollection[0].CommandText = "\"AVD_HRKT\"";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "IAVDID";
+            param.ParameterName = "REFTO";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            this._commandCollection[0].Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "REFID";
             param.DbType = global::System.Data.DbType.Int32;
             param.Size = 4;
             param.IsNullable = true;
@@ -53298,13 +53217,19 @@ namespace tMax14.Account.AccountDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AccountDataSet.AVD_HRKTDataTable dataTable, global::System.Nullable<int> IAVDID) {
+        public virtual int Fill(AccountDataSet.AVD_HRKTDataTable dataTable, string REFTO, global::System.Nullable<int> REFID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((IAVDID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IAVDID.Value));
+            if ((REFTO == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(REFTO));
+            }
+            if ((REFID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(REFID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();

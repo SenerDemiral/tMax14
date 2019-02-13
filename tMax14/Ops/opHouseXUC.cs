@@ -1107,7 +1107,7 @@ namespace tMax14.Ops
         private void layoutsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Genel.xglFX frm = new Genel.xglFX();
-            frm.id = "Ops.opHouseXUC.oph";
+            frm.id = layoutName;
             frm.origin = ophGridView;
             frm.ShowDialog();
             frm.Dispose();

@@ -197,6 +197,8 @@
             this.senaryoRepositoryItemImageComboBox = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.colVGM = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.colKTN = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.colBYNMDRM = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.BynmDrmRepositoryItemImageComboBox = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.AdrRepositoryItemMemoEdit = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.CCCrepositoryItemCheckedComboBoxEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
             this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
@@ -413,8 +415,7 @@
             this.afdoIptalInfoToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.afdoIptalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frlGetTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.FRL_GETTableAdapter();
-            this.colBYNMDRM = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.BynmDrmRepositoryItemImageComboBox = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.colRROS = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
             this.Col1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.Col2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -507,6 +508,7 @@
             this.layoutViewField_colORD = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.layoutViewField_colPEOH = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.layoutViewField_colRROH = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewField_colRROS = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.Group16 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutViewField_colANTRP = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.layoutViewField_colBYNMNO = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
@@ -579,6 +581,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dlvAdrGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dlvAdrGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.senaryoRepositoryItemImageComboBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BynmDrmRepositoryItemImageComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdrRepositoryItemMemoEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCCrepositoryItemCheckedComboBoxEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -679,7 +682,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.item6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
             this.afdoContextMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BynmDrmRepositoryItemImageComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Col1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Col2)).BeginInit();
@@ -772,6 +774,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colORD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colPEOH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colRROH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colRROS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Group16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colANTRP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colBYNMNO)).BeginInit();
@@ -1131,7 +1134,7 @@
             this.ophLayoutView.Appearance.FieldValue.Options.UseTextOptions = true;
             this.ophLayoutView.Appearance.FieldValue.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.ophLayoutView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.ophLayoutView.CardMinSize = new System.Drawing.Size(1010, 666);
+            this.ophLayoutView.CardMinSize = new System.Drawing.Size(1009, 662);
             this.ophLayoutView.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] {
             this.colOPHID,
             this.colREFNO,
@@ -1245,7 +1248,8 @@
             this.colSENARYO,
             this.colVGM,
             this.colKTN,
-            this.colBYNMDRM});
+            this.colBYNMDRM,
+            this.colRROS});
             this.ophLayoutView.FieldCaptionFormat = "  {0} ";
             this.ophLayoutView.GridControl = this.ophGridControl;
             this.ophLayoutView.Name = "ophLayoutView";
@@ -2153,7 +2157,7 @@
             // dlvAdrPopupContainerControl
             // 
             this.dlvAdrPopupContainerControl.Controls.Add(this.dlvAdrGridControl);
-            this.dlvAdrPopupContainerControl.Location = new System.Drawing.Point(385, 212);
+            this.dlvAdrPopupContainerControl.Location = new System.Drawing.Point(77, 375);
             this.dlvAdrPopupContainerControl.Name = "dlvAdrPopupContainerControl";
             this.dlvAdrPopupContainerControl.Size = new System.Drawing.Size(348, 176);
             this.dlvAdrPopupContainerControl.TabIndex = 2;
@@ -2276,6 +2280,25 @@
             this.colKTN.FieldName = "KTN";
             this.colKTN.LayoutViewField = this.layoutViewField_colKTN;
             this.colKTN.Name = "colKTN";
+            // 
+            // colBYNMDRM
+            // 
+            this.colBYNMDRM.Caption = "BynmDrm";
+            this.colBYNMDRM.ColumnEdit = this.BynmDrmRepositoryItemImageComboBox;
+            this.colBYNMDRM.FieldName = "BYNMDRM";
+            this.colBYNMDRM.LayoutViewField = this.layoutViewField_colBYNMDRM;
+            this.colBYNMDRM.Name = "colBYNMDRM";
+            // 
+            // BynmDrmRepositoryItemImageComboBox
+            // 
+            this.BynmDrmRepositoryItemImageComboBox.AutoHeight = false;
+            this.BynmDrmRepositoryItemImageComboBox.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.BynmDrmRepositoryItemImageComboBox.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Açık", "A", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Kırmızı", "K", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("İşlemde", "I", -1)});
+            this.BynmDrmRepositoryItemImageComboBox.Name = "BynmDrmRepositoryItemImageComboBox";
             // 
             // AdrRepositoryItemMemoEdit
             // 
@@ -4493,24 +4516,12 @@
             // 
             this.frlGetTableAdapter.ClearBeforeFill = true;
             // 
-            // colBYNMDRM
+            // colRROS
             // 
-            this.colBYNMDRM.Caption = "BynmDrm";
-            this.colBYNMDRM.ColumnEdit = this.BynmDrmRepositoryItemImageComboBox;
-            this.colBYNMDRM.FieldName = "BYNMDRM";
-            this.colBYNMDRM.LayoutViewField = this.layoutViewField_colBYNMDRM;
-            this.colBYNMDRM.Name = "colBYNMDRM";
-            // 
-            // BynmDrmRepositoryItemImageComboBox
-            // 
-            this.BynmDrmRepositoryItemImageComboBox.AutoHeight = false;
-            this.BynmDrmRepositoryItemImageComboBox.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.BynmDrmRepositoryItemImageComboBox.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Açık", "A", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Kırmızı", "K", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("İşlemde", "I", -1)});
-            this.BynmDrmRepositoryItemImageComboBox.Name = "BynmDrmRepositoryItemImageComboBox";
+            this.colRROS.Caption = "rROS";
+            this.colRROS.FieldName = "RROS";
+            this.colRROS.LayoutViewField = this.layoutViewField_colRROS;
+            this.colRROS.Name = "colRROS";
             // 
             // layoutViewCard1
             // 
@@ -4540,7 +4551,7 @@
             this.Col1.Name = "Col1";
             this.Col1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.AlignWithChildren;
             this.Col1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Col1.Size = new System.Drawing.Size(178, 666);
+            this.Col1.Size = new System.Drawing.Size(178, 662);
             // 
             // Col2
             // 
@@ -4553,7 +4564,7 @@
             this.Col2.Location = new System.Drawing.Point(178, 0);
             this.Col2.Name = "Col2";
             this.Col2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Col2.Size = new System.Drawing.Size(214, 666);
+            this.Col2.Size = new System.Drawing.Size(214, 662);
             // 
             // Col3
             // 
@@ -4564,7 +4575,7 @@
             this.Col3.Location = new System.Drawing.Point(392, 0);
             this.Col3.Name = "Col3";
             this.Col3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Col3.Size = new System.Drawing.Size(210, 666);
+            this.Col3.Size = new System.Drawing.Size(210, 662);
             // 
             // Col4
             // 
@@ -4575,7 +4586,7 @@
             this.Col4.Location = new System.Drawing.Point(602, 0);
             this.Col4.Name = "Col4";
             this.Col4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Col4.Size = new System.Drawing.Size(174, 666);
+            this.Col4.Size = new System.Drawing.Size(174, 662);
             // 
             // Col5
             // 
@@ -4589,7 +4600,7 @@
             this.Col5.Location = new System.Drawing.Point(776, 0);
             this.Col5.Name = "Col5";
             this.Col5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Col5.Size = new System.Drawing.Size(234, 666);
+            this.Col5.Size = new System.Drawing.Size(233, 662);
             // 
             // Group7
             // 
@@ -4632,7 +4643,7 @@
             this.Group8.Location = new System.Drawing.Point(0, 348);
             this.Group8.Name = "Group8";
             this.Group8.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Group8.Size = new System.Drawing.Size(174, 314);
+            this.Group8.Size = new System.Drawing.Size(174, 310);
             this.Group8.Text = "Concerned Parties";
             // 
             // Group1
@@ -4957,7 +4968,7 @@
             this.layoutViewField_colIVHC.MinSize = new System.Drawing.Size(70, 20);
             this.layoutViewField_colIVHC.Name = "layoutViewField_colIVHC";
             this.layoutViewField_colIVHC.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colIVHC.Size = new System.Drawing.Size(168, 30);
+            this.layoutViewField_colIVHC.Size = new System.Drawing.Size(168, 26);
             this.layoutViewField_colIVHC.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colIVHC.TextSize = new System.Drawing.Size(47, 13);
             // 
@@ -5025,7 +5036,7 @@
             this.Group10.Location = new System.Drawing.Point(0, 325);
             this.Group10.Name = "Group10";
             this.Group10.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Group10.Size = new System.Drawing.Size(210, 337);
+            this.Group10.Size = new System.Drawing.Size(210, 333);
             this.Group10.Text = "Onay";
             // 
             // Group12
@@ -5105,7 +5116,7 @@
             this.Item2.CustomizationFormText = "Item2";
             this.Item2.Location = new System.Drawing.Point(0, 242);
             this.Item2.Name = "Item2";
-            this.Item2.Size = new System.Drawing.Size(204, 71);
+            this.Item2.Size = new System.Drawing.Size(204, 67);
             this.Item2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // Group2
@@ -5416,11 +5427,12 @@
             this.layoutViewField_colEOHRD,
             this.layoutViewField_colORD,
             this.layoutViewField_colPEOH,
-            this.layoutViewField_colRROH});
+            this.layoutViewField_colRROH,
+            this.layoutViewField_colRROS});
             this.Group14.Location = new System.Drawing.Point(0, 0);
             this.Group14.Name = "Group14";
             this.Group14.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Group14.Size = new System.Drawing.Size(206, 662);
+            this.Group14.Size = new System.Drawing.Size(206, 658);
             this.Group14.Text = "Dates";
             // 
             // layoutViewField_colWBRD
@@ -5595,7 +5607,7 @@
             // layoutViewField_colRTD
             // 
             this.layoutViewField_colRTD.EditorPreferredWidth = 147;
-            this.layoutViewField_colRTD.Location = new System.Drawing.Point(0, 340);
+            this.layoutViewField_colRTD.Location = new System.Drawing.Point(0, 360);
             this.layoutViewField_colRTD.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colRTD.MinSize = new System.Drawing.Size(200, 20);
             this.layoutViewField_colRTD.Name = "layoutViewField_colRTD";
@@ -5608,7 +5620,7 @@
             // layoutViewField_colPOD
             // 
             this.layoutViewField_colPOD.EditorPreferredWidth = 147;
-            this.layoutViewField_colPOD.Location = new System.Drawing.Point(0, 360);
+            this.layoutViewField_colPOD.Location = new System.Drawing.Point(0, 380);
             this.layoutViewField_colPOD.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colPOD.MinSize = new System.Drawing.Size(200, 20);
             this.layoutViewField_colPOD.Name = "layoutViewField_colPOD";
@@ -5621,7 +5633,7 @@
             // layoutViewField_colPODINF
             // 
             this.layoutViewField_colPODINF.EditorPreferredWidth = 147;
-            this.layoutViewField_colPODINF.Location = new System.Drawing.Point(0, 380);
+            this.layoutViewField_colPODINF.Location = new System.Drawing.Point(0, 400);
             this.layoutViewField_colPODINF.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colPODINF.MinSize = new System.Drawing.Size(200, 20);
             this.layoutViewField_colPODINF.Name = "layoutViewField_colPODINF";
@@ -5635,15 +5647,15 @@
             // 
             this.Item1.AllowHotTrack = false;
             this.Item1.CustomizationFormText = "Item1";
-            this.Item1.Location = new System.Drawing.Point(0, 440);
+            this.Item1.Location = new System.Drawing.Point(0, 460);
             this.Item1.Name = "Item1";
-            this.Item1.Size = new System.Drawing.Size(200, 198);
+            this.Item1.Size = new System.Drawing.Size(200, 174);
             this.Item1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutViewField_colACD
             // 
             this.layoutViewField_colACD.EditorPreferredWidth = 147;
-            this.layoutViewField_colACD.Location = new System.Drawing.Point(0, 400);
+            this.layoutViewField_colACD.Location = new System.Drawing.Point(0, 420);
             this.layoutViewField_colACD.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colACD.MinSize = new System.Drawing.Size(200, 20);
             this.layoutViewField_colACD.Name = "layoutViewField_colACD";
@@ -5656,7 +5668,7 @@
             // layoutViewField_colCCT
             // 
             this.layoutViewField_colCCT.EditorPreferredWidth = 147;
-            this.layoutViewField_colCCT.Location = new System.Drawing.Point(0, 420);
+            this.layoutViewField_colCCT.Location = new System.Drawing.Point(0, 440);
             this.layoutViewField_colCCT.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colCCT.MinSize = new System.Drawing.Size(200, 20);
             this.layoutViewField_colCCT.Name = "layoutViewField_colCCT";
@@ -5718,6 +5730,15 @@
             this.layoutViewField_colRROH.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colRROH.TextSize = new System.Drawing.Size(48, 13);
             // 
+            // layoutViewField_colRROS
+            // 
+            this.layoutViewField_colRROS.EditorPreferredWidth = 147;
+            this.layoutViewField_colRROS.Location = new System.Drawing.Point(0, 340);
+            this.layoutViewField_colRROS.Name = "layoutViewField_colRROS";
+            this.layoutViewField_colRROS.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutViewField_colRROS.Size = new System.Drawing.Size(200, 20);
+            this.layoutViewField_colRROS.TextSize = new System.Drawing.Size(48, 13);
+            // 
             // Group16
             // 
             this.Group16.CustomizationFormText = "Customs";
@@ -5749,7 +5770,7 @@
             this.Group16.Location = new System.Drawing.Point(0, 0);
             this.Group16.Name = "Group16";
             this.Group16.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Group16.Size = new System.Drawing.Size(170, 662);
+            this.Group16.Size = new System.Drawing.Size(170, 658);
             this.Group16.Text = "Customs";
             // 
             // layoutViewField_colANTRP
@@ -5878,7 +5899,7 @@
             this.emptySpaceItem2.CustomizationFormText = "Empty Space Item";
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 459);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(164, 179);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(164, 175);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutViewField_colRCPADR
@@ -6031,7 +6052,7 @@
             this.Group3.Location = new System.Drawing.Point(0, 0);
             this.Group3.Name = "Group3";
             this.Group3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Group3.Size = new System.Drawing.Size(230, 84);
+            this.Group3.Size = new System.Drawing.Size(229, 84);
             this.Group3.Text = "ShipmentHold";
             // 
             // Group11
@@ -6044,7 +6065,7 @@
             this.Group11.Location = new System.Drawing.Point(0, 248);
             this.Group11.Name = "Group11";
             this.Group11.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Group11.Size = new System.Drawing.Size(230, 84);
+            this.Group11.Size = new System.Drawing.Size(229, 84);
             // 
             // Group17
             // 
@@ -6054,7 +6075,7 @@
             this.Group17.Location = new System.Drawing.Point(0, 332);
             this.Group17.Name = "Group17";
             this.Group17.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Group17.Size = new System.Drawing.Size(230, 330);
+            this.Group17.Size = new System.Drawing.Size(229, 326);
             this.Group17.Text = "Özel Durum";
             // 
             // Group4
@@ -6071,173 +6092,173 @@
             this.Group4.Location = new System.Drawing.Point(0, 84);
             this.Group4.Name = "Group4";
             this.Group4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Group4.Size = new System.Drawing.Size(230, 164);
+            this.Group4.Size = new System.Drawing.Size(229, 164);
             // 
             // layoutViewField_colHSINF
             // 
-            this.layoutViewField_colHSINF.EditorPreferredWidth = 139;
+            this.layoutViewField_colHSINF.EditorPreferredWidth = 138;
             this.layoutViewField_colHSINF.Location = new System.Drawing.Point(0, 40);
             this.layoutViewField_colHSINF.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colHSINF.MinSize = new System.Drawing.Size(223, 20);
             this.layoutViewField_colHSINF.Name = "layoutViewField_colHSINF";
             this.layoutViewField_colHSINF.OptionsToolTip.ToolTip = "Hold Shipment Info";
             this.layoutViewField_colHSINF.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colHSINF.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colHSINF.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colHSINF.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colHSINF.TextSize = new System.Drawing.Size(80, 13);
             // 
             // layoutViewField_colHSD
             // 
-            this.layoutViewField_colHSD.EditorPreferredWidth = 139;
+            this.layoutViewField_colHSD.EditorPreferredWidth = 138;
             this.layoutViewField_colHSD.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colHSD.MaxSize = new System.Drawing.Size(250, 20);
             this.layoutViewField_colHSD.MinSize = new System.Drawing.Size(200, 20);
             this.layoutViewField_colHSD.Name = "layoutViewField_colHSD";
             this.layoutViewField_colHSD.OptionsToolTip.ToolTip = "Hold Shipment Date";
             this.layoutViewField_colHSD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colHSD.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colHSD.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colHSD.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colHSD.TextSize = new System.Drawing.Size(80, 13);
             // 
             // layoutViewField_colHSRFID
             // 
-            this.layoutViewField_colHSRFID.EditorPreferredWidth = 139;
+            this.layoutViewField_colHSRFID.EditorPreferredWidth = 138;
             this.layoutViewField_colHSRFID.Location = new System.Drawing.Point(0, 20);
             this.layoutViewField_colHSRFID.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colHSRFID.MinSize = new System.Drawing.Size(223, 20);
             this.layoutViewField_colHSRFID.Name = "layoutViewField_colHSRFID";
             this.layoutViewField_colHSRFID.OptionsToolTip.ToolTip = "Hold Shipment Received From";
             this.layoutViewField_colHSRFID.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colHSRFID.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colHSRFID.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colHSRFID.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colHSRFID.TextSize = new System.Drawing.Size(80, 13);
             // 
             // layoutViewField_colTAGS
             // 
-            this.layoutViewField_colTAGS.EditorPreferredWidth = 170;
+            this.layoutViewField_colTAGS.EditorPreferredWidth = 169;
             this.layoutViewField_colTAGS.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colTAGS.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colTAGS.MinSize = new System.Drawing.Size(82, 20);
             this.layoutViewField_colTAGS.Name = "layoutViewField_colTAGS";
             this.layoutViewField_colTAGS.OptionsToolTip.ToolTip = "TAGs/Etiketler";
             this.layoutViewField_colTAGS.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colTAGS.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colTAGS.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colTAGS.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colTAGS.TextSize = new System.Drawing.Size(49, 13);
             // 
             // layoutViewField_colBKMS
             // 
-            this.layoutViewField_colBKMS.EditorPreferredWidth = 170;
+            this.layoutViewField_colBKMS.EditorPreferredWidth = 169;
             this.layoutViewField_colBKMS.Location = new System.Drawing.Point(0, 20);
             this.layoutViewField_colBKMS.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colBKMS.MinSize = new System.Drawing.Size(82, 20);
             this.layoutViewField_colBKMS.Name = "layoutViewField_colBKMS";
             this.layoutViewField_colBKMS.OptionsToolTip.ToolTip = "User Bookmarks";
             this.layoutViewField_colBKMS.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colBKMS.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colBKMS.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colBKMS.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colBKMS.TextSize = new System.Drawing.Size(49, 13);
             // 
             // layoutViewField_colSENARYO
             // 
-            this.layoutViewField_colSENARYO.EditorPreferredWidth = 170;
+            this.layoutViewField_colSENARYO.EditorPreferredWidth = 169;
             this.layoutViewField_colSENARYO.Location = new System.Drawing.Point(0, 40);
             this.layoutViewField_colSENARYO.Name = "layoutViewField_colSENARYO";
             this.layoutViewField_colSENARYO.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colSENARYO.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colSENARYO.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colSENARYO.TextSize = new System.Drawing.Size(49, 13);
             // 
             // layoutViewField_colOzlDrm
             // 
-            this.layoutViewField_colOzlDrm.EditorPreferredWidth = 224;
+            this.layoutViewField_colOzlDrm.EditorPreferredWidth = 223;
             this.layoutViewField_colOzlDrm.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colOzlDrm.Name = "layoutViewField_colOzlDrm";
             this.layoutViewField_colOzlDrm.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colOzlDrm.Size = new System.Drawing.Size(224, 306);
+            this.layoutViewField_colOzlDrm.Size = new System.Drawing.Size(223, 302);
             this.layoutViewField_colOzlDrm.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutViewField_colOzlDrm.TextSize = new System.Drawing.Size(0, 0);
             this.layoutViewField_colOzlDrm.TextVisible = false;
             // 
             // layoutViewField_colDRBD
             // 
-            this.layoutViewField_colDRBD.EditorPreferredWidth = 66;
+            this.layoutViewField_colDRBD.EditorPreferredWidth = 65;
             this.layoutViewField_colDRBD.Location = new System.Drawing.Point(0, 20);
             this.layoutViewField_colDRBD.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colDRBD.MinSize = new System.Drawing.Size(171, 20);
             this.layoutViewField_colDRBD.Name = "layoutViewField_colDRBD";
             this.layoutViewField_colDRBD.OptionsToolTip.ToolTip = "Doc Release to Broker Date";
             this.layoutViewField_colDRBD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colDRBD.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colDRBD.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colDRBD.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colDRBD.TextSize = new System.Drawing.Size(153, 13);
             // 
             // layoutViewField_colDRCD
             // 
-            this.layoutViewField_colDRCD.EditorPreferredWidth = 66;
+            this.layoutViewField_colDRCD.EditorPreferredWidth = 65;
             this.layoutViewField_colDRCD.Location = new System.Drawing.Point(0, 40);
             this.layoutViewField_colDRCD.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colDRCD.MinSize = new System.Drawing.Size(171, 20);
             this.layoutViewField_colDRCD.Name = "layoutViewField_colDRCD";
             this.layoutViewField_colDRCD.OptionsToolTip.ToolTip = "Doc Release to Carrier Date";
             this.layoutViewField_colDRCD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colDRCD.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colDRCD.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colDRCD.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colDRCD.TextSize = new System.Drawing.Size(153, 13);
             // 
             // layoutViewField_colLORD
             // 
-            this.layoutViewField_colLORD.EditorPreferredWidth = 66;
+            this.layoutViewField_colLORD.EditorPreferredWidth = 65;
             this.layoutViewField_colLORD.Location = new System.Drawing.Point(0, 60);
             this.layoutViewField_colLORD.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colLORD.MinSize = new System.Drawing.Size(171, 20);
             this.layoutViewField_colLORD.Name = "layoutViewField_colLORD";
             this.layoutViewField_colLORD.OptionsToolTip.ToolTip = "Loading Order Receipt Date";
             this.layoutViewField_colLORD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colLORD.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colLORD.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colLORD.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colLORD.TextSize = new System.Drawing.Size(153, 13);
             // 
             // layoutViewField_colCACD
             // 
-            this.layoutViewField_colCACD.EditorPreferredWidth = 66;
+            this.layoutViewField_colCACD.EditorPreferredWidth = 65;
             this.layoutViewField_colCACD.Location = new System.Drawing.Point(0, 80);
             this.layoutViewField_colCACD.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colCACD.MinSize = new System.Drawing.Size(167, 20);
             this.layoutViewField_colCACD.Name = "layoutViewField_colCACD";
             this.layoutViewField_colCACD.OptionsToolTip.ToolTip = "Collection Arrangement Completed Date";
             this.layoutViewField_colCACD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colCACD.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colCACD.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colCACD.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colCACD.TextSize = new System.Drawing.Size(153, 13);
             // 
             // layoutViewField_colDDT
             // 
-            this.layoutViewField_colDDT.EditorPreferredWidth = 66;
+            this.layoutViewField_colDDT.EditorPreferredWidth = 65;
             this.layoutViewField_colDDT.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colDDT.MaxSize = new System.Drawing.Size(0, 20);
             this.layoutViewField_colDDT.MinSize = new System.Drawing.Size(182, 20);
             this.layoutViewField_colDDT.Name = "layoutViewField_colDDT";
             this.layoutViewField_colDDT.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colDDT.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colDDT.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colDDT.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutViewField_colDDT.TextSize = new System.Drawing.Size(153, 13);
             // 
             // layoutViewField_colVGM
             // 
-            this.layoutViewField_colVGM.EditorPreferredWidth = 66;
+            this.layoutViewField_colVGM.EditorPreferredWidth = 65;
             this.layoutViewField_colVGM.Location = new System.Drawing.Point(0, 100);
             this.layoutViewField_colVGM.Name = "layoutViewField_colVGM";
             this.layoutViewField_colVGM.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colVGM.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colVGM.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colVGM.TextSize = new System.Drawing.Size(153, 13);
             // 
             // layoutViewField_colKTN
             // 
-            this.layoutViewField_colKTN.EditorPreferredWidth = 66;
+            this.layoutViewField_colKTN.EditorPreferredWidth = 65;
             this.layoutViewField_colKTN.Location = new System.Drawing.Point(0, 120);
             this.layoutViewField_colKTN.Name = "layoutViewField_colKTN";
             this.layoutViewField_colKTN.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutViewField_colKTN.Size = new System.Drawing.Size(224, 20);
+            this.layoutViewField_colKTN.Size = new System.Drawing.Size(223, 20);
             this.layoutViewField_colKTN.TextSize = new System.Drawing.Size(153, 13);
             // 
             // opHouseEditXF
@@ -6284,6 +6305,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dlvAdrGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dlvAdrGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.senaryoRepositoryItemImageComboBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BynmDrmRepositoryItemImageComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdrRepositoryItemMemoEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCCrepositoryItemCheckedComboBoxEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -6385,7 +6407,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
             this.afdoContextMenuStrip.ResumeLayout(false);
             this.afdoContextMenuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BynmDrmRepositoryItemImageComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Col1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Col2)).EndInit();
@@ -6478,6 +6499,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colORD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colPEOH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colRROH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colRROS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Group16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colANTRP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colBYNMNO)).EndInit();
@@ -6909,6 +6931,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox senaryoRepositoryItemImageComboBox;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn colVGM;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn colKTN;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colBYNMDRM;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox BynmDrmRepositoryItemImageComboBox;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colOPHID;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colREFNO;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colOPMID;
@@ -7021,9 +7045,9 @@
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSENARYO;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colVGM;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colKTN;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn colBYNMDRM;
-        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox BynmDrmRepositoryItemImageComboBox;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colBYNMDRM;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colRROS;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colRROS;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
         private DevExpress.XtraLayout.LayoutControlGroup Col1;
         private DevExpress.XtraLayout.LayoutControlGroup Group7;

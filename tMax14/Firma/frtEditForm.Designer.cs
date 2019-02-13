@@ -346,6 +346,8 @@
             this.colADNl = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colADRESl = new DevExpress.XtraGrid.Columns.GridColumn();
             this.frlTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FRLTableAdapter();
+            this.colORGc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDSTc = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.firmaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frtEditBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frcBindingSource)).BeginInit();
@@ -3200,7 +3202,9 @@
             this.colFACEBOOKc,
             this.colADRESc,
             this.colROTc,
-            this.colMOTc});
+            this.colMOTc,
+            this.colORGc,
+            this.colDSTc});
             this.frcGridView.GridControl = this.frcGridControl;
             this.frcGridView.Name = "frcGridView";
             this.frcGridView.OptionsView.ShowGroupPanel = false;
@@ -3663,6 +3667,22 @@
             // frlTableAdapter
             // 
             this.frlTableAdapter.ClearBeforeFill = true;
+            // 
+            // colORGc
+            // 
+            this.colORGc.Caption = "Org";
+            this.colORGc.FieldName = "ORG";
+            this.colORGc.Name = "colORGc";
+            this.colORGc.Visible = true;
+            this.colORGc.VisibleIndex = 18;
+            // 
+            // colDSTc
+            // 
+            this.colDSTc.Caption = "Dst";
+            this.colDSTc.FieldName = "DST";
+            this.colDSTc.Name = "colDSTc";
+            this.colDSTc.Visible = true;
+            this.colDSTc.VisibleIndex = 19;
             // 
             // frtEditForm
             // 
@@ -4152,5 +4172,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup Group4;
         private DevExpress.XtraLayout.LayoutControlGroup Group5;
         private System.Windows.Forms.ToolStripMenuItem duplicateToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colORGc;
+        private DevExpress.XtraGrid.Columns.GridColumn colDSTc;
     }
 }

@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pvtDataSet = new tMax14.Pvt.PvtDataSet();
-            this.pvtKpiHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pvtKpiHBindingSource = new System.Windows.Forms.BindingSource();
             this.pvtKpiHHTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.PVT_KPI_HTableAdapter();
             this.tableAdapterManager = new tMax14.Pvt.PvtDataSetTableAdapters.TableAdapterManager();
             this.pvtKpiHGridControl = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStripGrid = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStripGrid = new System.Windows.Forms.ContextMenuStrip();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -196,9 +195,10 @@
             this.colMLCD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHPODINF = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHDTM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMTPDD2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
-            this.contextMenuStripPivot = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStripPivot = new System.Windows.Forms.ContextMenuStrip();
             this.toolStripMenuItemPvtExport = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemPvtLayout = new System.Windows.Forms.ToolStripMenuItem();
             this.fieldHID1 = new DevExpress.XtraPivotGrid.PivotGridField();
@@ -319,7 +319,9 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.colMTPDD2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHGB = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHGBUSR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMRTR = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pvtDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvtKpiHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvtKpiHGridControl)).BeginInit();
@@ -554,7 +556,10 @@
             this.colMLCD,
             this.colHPODINF,
             this.colHDTM,
-            this.colMTPDD2});
+            this.colMTPDD2,
+            this.colHGB,
+            this.colHGBUSR,
+            this.colMRTR});
             this.gridView1.GridControl = this.pvtKpiHGridControl;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Average, "HPOD_HAOH", this.colHPOD_HAOH, "(HPOD_HAOH: AVG={0:0.##})"),
@@ -1985,6 +1990,14 @@
             this.colHDTM.Visible = true;
             this.colHDTM.VisibleIndex = 157;
             // 
+            // colMTPDD2
+            // 
+            this.colMTPDD2.Caption = "mTPDD2";
+            this.colMTPDD2.FieldName = "MTPDD2";
+            this.colMTPDD2.Name = "colMTPDD2";
+            this.colMTPDD2.Visible = true;
+            this.colMTPDD2.VisibleIndex = 158;
+            // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.pivotGridControl1);
@@ -3035,13 +3048,28 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // colMTPDD2
+            // colHGB
             // 
-            this.colMTPDD2.Caption = "mTPDD2";
-            this.colMTPDD2.FieldName = "MTPDD2";
-            this.colMTPDD2.Name = "colMTPDD2";
-            this.colMTPDD2.Visible = true;
-            this.colMTPDD2.VisibleIndex = 158;
+            this.colHGB.FieldName = "HGB";
+            this.colHGB.Name = "colHGB";
+            this.colHGB.Visible = true;
+            this.colHGB.VisibleIndex = 159;
+            // 
+            // colHGBUSR
+            // 
+            this.colHGBUSR.Caption = "GBusr";
+            this.colHGBUSR.FieldName = "HGBUSR";
+            this.colHGBUSR.Name = "colHGBUSR";
+            this.colHGBUSR.Visible = true;
+            this.colHGBUSR.VisibleIndex = 160;
+            // 
+            // colMRTR
+            // 
+            this.colMRTR.Caption = "mRTR";
+            this.colMRTR.FieldName = "MRTR";
+            this.colMRTR.Name = "colMRTR";
+            this.colMRTR.Visible = true;
+            this.colMRTR.VisibleIndex = 161;
             // 
             // kpiHouseXF
             // 
@@ -3364,5 +3392,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colHPODINF;
         private DevExpress.XtraGrid.Columns.GridColumn colHDTM;
         private DevExpress.XtraGrid.Columns.GridColumn colMTPDD2;
+        private DevExpress.XtraGrid.Columns.GridColumn colHGB;
+        private DevExpress.XtraGrid.Columns.GridColumn colHGBUSR;
+        private DevExpress.XtraGrid.Columns.GridColumn colMRTR;
     }
 }

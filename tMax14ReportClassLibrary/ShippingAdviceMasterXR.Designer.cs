@@ -396,7 +396,7 @@
             this.xrPictureBox2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Image", null, "RPR_SAM.LEFTIMAGE")});
             this.xrPictureBox2.Dpi = 100F;
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30F);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(1.042223F, 23F);
             this.xrPictureBox2.Name = "xrPictureBox2";
             this.xrPictureBox2.SizeF = new System.Drawing.SizeF(50F, 50F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
@@ -417,7 +417,7 @@
             this.xrPictureBox3,
             this.xrRichText1});
             this.ReportFooter.Dpi = 100F;
-            this.ReportFooter.HeightF = 48F;
+            this.ReportFooter.HeightF = 68.00002F;
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
             // 
@@ -428,9 +428,9 @@
             new DevExpress.XtraReports.UI.XRBinding("Image", null, "RPR_IMGS.IMG3")});
             this.xrPictureBox3.Dpi = 100F;
             this.xrPictureBox3.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
-            this.xrPictureBox3.LocationFloat = new DevExpress.Utils.PointFloat(1.042175F, 0F);
+            this.xrPictureBox3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPictureBox3.Name = "xrPictureBox3";
-            this.xrPictureBox3.SizeF = new System.Drawing.SizeF(232F, 48F);
+            this.xrPictureBox3.SizeF = new System.Drawing.SizeF(400.0001F, 68.00002F);
             this.xrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrRichText1
@@ -439,10 +439,10 @@
             new DevExpress.XtraReports.UI.XRBinding("Rtf", null, "RPR_SAM.FOOTER")});
             this.xrRichText1.Dpi = 100F;
             this.xrRichText1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(250F, 0F);
+            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(400F, 0F);
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
-            this.xrRichText1.SizeF = new System.Drawing.SizeF(477.0001F, 23F);
+            this.xrRichText1.SizeF = new System.Drawing.SizeF(327F, 68F);
             // 
             // rprIMGSTableAdapter
             // 

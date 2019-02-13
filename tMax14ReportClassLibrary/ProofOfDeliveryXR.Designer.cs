@@ -515,7 +515,7 @@
             // xrLine1
             // 
             this.xrLine1.Dpi = 100F;
-            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(2.384186E-05F, 73F);
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(2.384186E-05F, 60.00001F);
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(607F, 8F);
             // 
@@ -547,7 +547,7 @@
             this.xrPictureBox1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Image", null, "RPR_POD.LEFTIMAGE")});
             this.xrPictureBox1.Dpi = 100F;
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(2.384186E-05F, 10.00001F);
             this.xrPictureBox1.Name = "xrPictureBox1";
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(50F, 50F);
             this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;

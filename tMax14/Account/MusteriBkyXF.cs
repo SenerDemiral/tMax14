@@ -13,6 +13,7 @@ namespace tMax14.Account
 {
     public partial class MusteriBkyXF : DevExpress.XtraEditors.XtraForm
     {
+        // KULLANILMIYOR
         public MusteriBkyXF()
         {
             InitializeComponent();

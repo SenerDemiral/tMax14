@@ -69,34 +69,6 @@ namespace tMax14.Account
             frm.FRTid = 0;
             frm.info = string.Format("{0} • {1}", view.GetFocusedRowCellDisplayText(colHSPNO), view.GetFocusedRowCellDisplayText(colHSPAD));
             frm.Show();
-
-            
-            //string HspNo = view.GetFocusedRowCellValue(colHSPNO).ToString();
-            //FisDetayHistoryXF frm = new FisDetayHistoryXF();
-            //frm.iQry = string.Format("HspNo = '{0}'", view.GetFocusedRowCellValue(colHSPNO));
-            //frm.info = view.GetFocusedRowCellValue(colHSPAD).ToString() + "  " + view.GetFocusedRowCellValue(colHSPNO).ToString();
-            //!!!frm.Show();
-
-            /*
-            FisDetayHistoryXF frm = new FisDetayHistoryXF();
-            frm.iQry = string.Format("HspNo = '{0}'", view.GetFocusedRowCellValue(colHSPNO));
-            //frm.info = view.GetFocusedRowCellValue(colHSPAD).ToString() + "  " + view.GetFocusedRowCellDisplayText(colHSPNOS);
-            //frm.Show();
-
-            frm.Dock = DockStyle.Fill;
-            var dd = frm.Size.Height;
-            var panel = dockManager.AddPanel(DevExpress.XtraBars.Docking.DockingStyle.Bottom);
-            panel.Text = view.GetFocusedRowCellDisplayText(colHSPAD) + "  " + view.GetFocusedRowCellDisplayText(colHSPNO);
-            panel.FloatSize = new Size(frm.Size.Width, frm.Size.Height);
-            panel.Controls.Add(frm);
-            var ddd = dockManager.Panels.Count;
-            if (dockManager.Panels.Count > 1)      // Ilki kendisi
-            {
-                dockManager.Panels[0].Show();
-                panel.DockAsTab(dockManager.Panels[0], 0);
-                dockManager.RootPanels[0].ActiveChildIndex = 0;
-            }
-            */
         }
 
         private void ahpGridControl_Click(object sender, EventArgs e)
@@ -142,12 +114,6 @@ namespace tMax14.Account
         private void muavinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var view = ahpGridView;
-            //string HspNo = view.GetFocusedRowCellValue(colHSPNO).ToString();
-            //FisDetayHistoryXF frm = new FisDetayHistoryXF();
-            //frm.iQry = string.Format("HspNo = '{0}'", view.GetFocusedRowCellValue(colHSPNO));
-            //frm.info = view.GetFocusedRowCellValue(colHSPAD).ToString() + "  " + view.GetFocusedRowCellValue(colHSPNO).ToString();
-            //!!!frm.Show();
-
 
             Muavin frm = new Muavin();
             frm.HspNo = (string)view.GetFocusedRowCellValue(colHSPNO);

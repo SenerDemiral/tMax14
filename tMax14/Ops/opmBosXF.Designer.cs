@@ -97,6 +97,7 @@
             // 
             // vGridControl1
             // 
+            this.vGridControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.vGridControl1.DataSource = this.opmBosSelBindingSource;
             this.vGridControl1.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView;
             this.vGridControl1.Location = new System.Drawing.Point(12, 28);
