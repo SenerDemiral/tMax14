@@ -247,6 +247,8 @@
             this.colTKLTRH_TLPTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFRTTUR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEMAIL = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FRCeMailsRepositoryItemCheckedComboBoxEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
+            this.fRCEMAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterItem1 = new DevExpress.XtraLayout.SplitterItem();
@@ -262,6 +264,7 @@
             this.qsDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.rprTklfTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.RPR_TKLFTableAdapter();
+            this.fRC_EMAILSTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.FRC_EMAILSTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tafGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsfGridControl)).BeginInit();
             this.contextMenuStripTeklif.SuspendLayout();
@@ -278,6 +281,8 @@
             this.contextMenuStripTalep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tstGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rvsNoRepositoryItemImageComboBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FRCeMailsRepositoryItemCheckedComboBoxEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRCEMAILSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).BeginInit();
@@ -1735,7 +1740,8 @@
             this.tstGridControl.MainView = this.tstGridView;
             this.tstGridControl.Name = "tstGridControl";
             this.tstGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.rvsNoRepositoryItemImageComboBox});
+            this.rvsNoRepositoryItemImageComboBox,
+            this.FRCeMailsRepositoryItemCheckedComboBoxEdit});
             this.tstGridControl.ShowOnlyPredefinedDetails = true;
             this.tstGridControl.Size = new System.Drawing.Size(1023, 297);
             this.tstGridControl.TabIndex = 4;
@@ -1928,7 +1934,9 @@
             this.tstGridView.OptionsFilter.UseNewCustomFilterDialog = true;
             this.tstGridView.OptionsView.ColumnAutoWidth = false;
             this.tstGridView.OptionsView.ShowFooter = true;
+            this.tstGridView.CustomRowCellEditForEditing += new DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventHandler(this.tstGridView_CustomRowCellEditForEditing);
             this.tstGridView.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.tstGridView_InitNewRow);
+            this.tstGridView.ShownEditor += new System.EventHandler(this.tstGridView_ShownEditor);
             this.tstGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.tstGridView_FocusedRowChanged);
             this.tstGridView.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.tstGridView_CustomColumnDisplayText);
             // 
@@ -2543,6 +2551,21 @@
             this.colEMAIL.Visible = true;
             this.colEMAIL.VisibleIndex = 60;
             // 
+            // FRCeMailsRepositoryItemCheckedComboBoxEdit
+            // 
+            this.FRCeMailsRepositoryItemCheckedComboBoxEdit.AutoHeight = false;
+            this.FRCeMailsRepositoryItemCheckedComboBoxEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.FRCeMailsRepositoryItemCheckedComboBoxEdit.DataSource = this.fRCEMAILSBindingSource;
+            this.FRCeMailsRepositoryItemCheckedComboBoxEdit.DisplayMember = "AD";
+            this.FRCeMailsRepositoryItemCheckedComboBoxEdit.Name = "FRCeMailsRepositoryItemCheckedComboBoxEdit";
+            this.FRCeMailsRepositoryItemCheckedComboBoxEdit.ValueMember = "EMAIL";
+            // 
+            // fRCEMAILSBindingSource
+            // 
+            this.fRCEMAILSBindingSource.DataMember = "FRC_EMAILS";
+            this.fRCEMAILSBindingSource.DataSource = this.teklifDataSet;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -2670,6 +2693,10 @@
             // 
             this.rprTklfTableAdapter.ClearBeforeFill = true;
             // 
+            // fRC_EMAILSTableAdapter
+            // 
+            this.fRC_EMAILSTableAdapter.ClearBeforeFill = true;
+            // 
             // TeklifSatisTalepXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2697,6 +2724,8 @@
             this.contextMenuStripTalep.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tstGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rvsNoRepositoryItemImageComboBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FRCeMailsRepositoryItemCheckedComboBoxEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRCEMAILSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).EndInit();
@@ -2942,5 +2971,8 @@
         private System.Windows.Forms.ToolStripMenuItem firmaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bosUpdateToolStripMenuItem;
         private DevExpress.XtraGrid.Columns.GridColumn colAGCRTRH;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit FRCeMailsRepositoryItemCheckedComboBoxEdit;
+        private System.Windows.Forms.BindingSource fRCEMAILSBindingSource;
+        private TeklifDataSetTableAdapters.FRC_EMAILSTableAdapter fRC_EMAILSTableAdapter;
     }
 }

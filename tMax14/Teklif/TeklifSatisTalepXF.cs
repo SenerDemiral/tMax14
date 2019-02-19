@@ -1034,6 +1034,32 @@ private void Form1_Load(object sender, EventArgs e) {
 
         }
 
+        private void tstGridView_ShownEditor(object sender, EventArgs e)
+        {
+            GridView View = sender as GridView;
+            /*
+            if (View.FocusedColumn == colEMAIL)
+            {
+                // adding the current date  
+                //View.EditingValue = DateTime.Today;
+                // obtaining the active editor
+                fRC_EMAILSTableAdapter.Fill(teklifDataSet.FRC_EMAILS, -1);
+                CheckedComboBoxEdit editor = View.ActiveEditor as CheckedComboBoxEdit;
+                // invoking the editor's popup window  
+                editor.ShowPopup();
+            }*/
+        }
+
+        private void tstGridView_CustomRowCellEditForEditing(object sender, CustomRowCellEditEventArgs e)
+        {
+            if (e.Column.FieldName == "EMAILS")
+            {
+                int frtID = (int)tstGridView.GetRowCellValue(e.RowHandle, colFRTIDt);
+                fRC_EMAILSTableAdapter.Fill(teklifDataSet.FRC_EMAILS, frtID);
+                e.RepositoryItem = FRCeMailsRepositoryItemCheckedComboBoxEdit;
+            }
+        }
+
         private void eCSRateRequestEMailToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var view = tstGridView;

@@ -50,6 +50,8 @@ namespace tMax14.Teklif {
         
         private TST_BOS_SELDataTable tableTST_BOS_SEL;
         
+        private FRC_EMAILSDataTable tableFRC_EMAILS;
+        
         private global::System.Data.DataRelation relationTAF_TAC;
         
         private global::System.Data.DataRelation relationTST_TSF;
@@ -122,6 +124,9 @@ namespace tMax14.Teklif {
                 }
                 if ((ds.Tables["TST_BOS_SEL"] != null)) {
                     base.Tables.Add(new TST_BOS_SELDataTable(ds.Tables["TST_BOS_SEL"]));
+                }
+                if ((ds.Tables["FRC_EMAILS"] != null)) {
+                    base.Tables.Add(new FRC_EMAILSDataTable(ds.Tables["FRC_EMAILS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -273,6 +278,16 @@ namespace tMax14.Teklif {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public FRC_EMAILSDataTable FRC_EMAILS {
+            get {
+                return this.tableFRC_EMAILS;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -376,6 +391,9 @@ namespace tMax14.Teklif {
                 }
                 if ((ds.Tables["TST_BOS_SEL"] != null)) {
                     base.Tables.Add(new TST_BOS_SELDataTable(ds.Tables["TST_BOS_SEL"]));
+                }
+                if ((ds.Tables["FRC_EMAILS"] != null)) {
+                    base.Tables.Add(new FRC_EMAILSDataTable(ds.Tables["FRC_EMAILS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -488,6 +506,12 @@ namespace tMax14.Teklif {
                     this.tableTST_BOS_SEL.InitVars();
                 }
             }
+            this.tableFRC_EMAILS = ((FRC_EMAILSDataTable)(base.Tables["FRC_EMAILS"]));
+            if ((initTable == true)) {
+                if ((this.tableFRC_EMAILS != null)) {
+                    this.tableFRC_EMAILS.InitVars();
+                }
+            }
             this.relationTAF_TAC = this.Relations["TAF_TAC"];
             this.relationTST_TSF = this.Relations["TST_TSF"];
             this.relationTSF_TAF = this.Relations["TSF_TAF"];
@@ -527,6 +551,8 @@ namespace tMax14.Teklif {
             base.Tables.Add(this.tableTAM);
             this.tableTST_BOS_SEL = new TST_BOS_SELDataTable();
             base.Tables.Add(this.tableTST_BOS_SEL);
+            this.tableFRC_EMAILS = new FRC_EMAILSDataTable();
+            base.Tables.Add(this.tableFRC_EMAILS);
             this.relationTAF_TAC = new global::System.Data.DataRelation("TAF_TAC", new global::System.Data.DataColumn[] {
                         this.tableTAF.CRRIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTAC.FRTIDColumn}, false);
@@ -616,6 +642,12 @@ namespace tMax14.Teklif {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeTST_BOS_SEL() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeFRC_EMAILS() {
             return false;
         }
         
@@ -713,6 +745,9 @@ namespace tMax14.Teklif {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void TST_BOS_SELRowChangeEventHandler(object sender, TST_BOS_SELRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void FRC_EMAILSRowChangeEventHandler(object sender, FRC_EMAILSRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -808,8 +843,6 @@ namespace tMax14.Teklif {
             
             private global::System.Data.DataColumn columnMALBDLDVZ;
             
-            private global::System.Data.DataColumn columnINFO;
-            
             private global::System.Data.DataColumn columnONYUSR;
             
             private global::System.Data.DataColumn columnONYYTK;
@@ -833,6 +866,8 @@ namespace tMax14.Teklif {
             private global::System.Data.DataColumn columnKDY;
             
             private global::System.Data.DataColumn columnFYT8;
+            
+            private global::System.Data.DataColumn columnINFO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -1221,14 +1256,6 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn INFOColumn {
-                get {
-                    return this.columnINFO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ONYUSRColumn {
                 get {
                     return this.columnONYUSR;
@@ -1325,6 +1352,14 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn INFOColumn {
+                get {
+                    return this.columnINFO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1405,7 +1440,6 @@ namespace tMax14.Teklif {
                         string INSR, 
                         decimal MALBDL, 
                         string MALBDLDVZ, 
-                        string INFO, 
                         string ONYUSR, 
                         string ONYYTK, 
                         System.DateTime ONYTRH, 
@@ -1417,7 +1451,8 @@ namespace tMax14.Teklif {
                         string EDITABLE, 
                         string VISIBLE, 
                         int KDY, 
-                        decimal FYT8) {
+                        decimal FYT8, 
+                        string INFO) {
                 TAFRow rowTAFRow = ((TAFRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1464,7 +1499,6 @@ namespace tMax14.Teklif {
                         INSR,
                         MALBDL,
                         MALBDLDVZ,
-                        INFO,
                         ONYUSR,
                         ONYYTK,
                         ONYTRH,
@@ -1476,7 +1510,8 @@ namespace tMax14.Teklif {
                         EDITABLE,
                         VISIBLE,
                         KDY,
-                        FYT8};
+                        FYT8,
+                        INFO};
                 if ((parentTSFRowByTSF_TAF != null)) {
                     columnValuesArray[0] = parentTSFRowByTSF_TAF[16];
                 }
@@ -1553,7 +1588,6 @@ namespace tMax14.Teklif {
                 this.columnINSR = base.Columns["INSR"];
                 this.columnMALBDL = base.Columns["MALBDL"];
                 this.columnMALBDLDVZ = base.Columns["MALBDLDVZ"];
-                this.columnINFO = base.Columns["INFO"];
                 this.columnONYUSR = base.Columns["ONYUSR"];
                 this.columnONYYTK = base.Columns["ONYYTK"];
                 this.columnONYTRH = base.Columns["ONYTRH"];
@@ -1566,6 +1600,7 @@ namespace tMax14.Teklif {
                 this.columnVISIBLE = base.Columns["VISIBLE"];
                 this.columnKDY = base.Columns["KDY"];
                 this.columnFYT8 = base.Columns["FYT8"];
+                this.columnINFO = base.Columns["INFO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1659,8 +1694,6 @@ namespace tMax14.Teklif {
                 base.Columns.Add(this.columnMALBDL);
                 this.columnMALBDLDVZ = new global::System.Data.DataColumn("MALBDLDVZ", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMALBDLDVZ);
-                this.columnINFO = new global::System.Data.DataColumn("INFO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnINFO);
                 this.columnONYUSR = new global::System.Data.DataColumn("ONYUSR", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnONYUSR);
                 this.columnONYYTK = new global::System.Data.DataColumn("ONYYTK", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1685,6 +1718,8 @@ namespace tMax14.Teklif {
                 base.Columns.Add(this.columnKDY);
                 this.columnFYT8 = new global::System.Data.DataColumn("FYT8", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFYT8);
+                this.columnINFO = new global::System.Data.DataColumn("INFO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINFO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTAFID}, true));
                 this.columnTAFID.AllowDBNull = false;
@@ -1717,7 +1752,6 @@ namespace tMax14.Teklif {
                 this.columnTMDDLVRY.MaxLength = 1;
                 this.columnINSR.MaxLength = 1;
                 this.columnMALBDLDVZ.MaxLength = 3;
-                this.columnINFO.MaxLength = 250;
                 this.columnONYUSR.MaxLength = 4;
                 this.columnONYYTK.MaxLength = 4;
                 this.columnBKMS.MaxLength = 2147483647;
@@ -1727,6 +1761,7 @@ namespace tMax14.Teklif {
                 this.columnPRVTUSRS.MaxLength = 2147483647;
                 this.columnEDITABLE.MaxLength = 1;
                 this.columnVISIBLE.MaxLength = 1;
+                this.columnINFO.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10140,6 +10175,269 @@ namespace tMax14.Teklif {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class FRC_EMAILSDataTable : global::System.Data.TypedTableBase<FRC_EMAILSRow> {
+            
+            private global::System.Data.DataColumn columnAD;
+            
+            private global::System.Data.DataColumn columnEMAIL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FRC_EMAILSDataTable() {
+                this.TableName = "FRC_EMAILS";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal FRC_EMAILSDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected FRC_EMAILSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ADColumn {
+                get {
+                    return this.columnAD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EMAILColumn {
+                get {
+                    return this.columnEMAIL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FRC_EMAILSRow this[int index] {
+                get {
+                    return ((FRC_EMAILSRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event FRC_EMAILSRowChangeEventHandler FRC_EMAILSRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event FRC_EMAILSRowChangeEventHandler FRC_EMAILSRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event FRC_EMAILSRowChangeEventHandler FRC_EMAILSRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event FRC_EMAILSRowChangeEventHandler FRC_EMAILSRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddFRC_EMAILSRow(FRC_EMAILSRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FRC_EMAILSRow AddFRC_EMAILSRow(string AD, string EMAIL) {
+                FRC_EMAILSRow rowFRC_EMAILSRow = ((FRC_EMAILSRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        AD,
+                        EMAIL};
+                rowFRC_EMAILSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFRC_EMAILSRow);
+                return rowFRC_EMAILSRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                FRC_EMAILSDataTable cln = ((FRC_EMAILSDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new FRC_EMAILSDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnAD = base.Columns["AD"];
+                this.columnEMAIL = base.Columns["EMAIL"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnAD = new global::System.Data.DataColumn("AD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAD);
+                this.columnEMAIL = new global::System.Data.DataColumn("EMAIL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEMAIL);
+                this.columnAD.MaxLength = 40;
+                this.columnEMAIL.MaxLength = 80;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FRC_EMAILSRow NewFRC_EMAILSRow() {
+                return ((FRC_EMAILSRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new FRC_EMAILSRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(FRC_EMAILSRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.FRC_EMAILSRowChanged != null)) {
+                    this.FRC_EMAILSRowChanged(this, new FRC_EMAILSRowChangeEvent(((FRC_EMAILSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.FRC_EMAILSRowChanging != null)) {
+                    this.FRC_EMAILSRowChanging(this, new FRC_EMAILSRowChangeEvent(((FRC_EMAILSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.FRC_EMAILSRowDeleted != null)) {
+                    this.FRC_EMAILSRowDeleted(this, new FRC_EMAILSRowChangeEvent(((FRC_EMAILSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.FRC_EMAILSRowDeleting != null)) {
+                    this.FRC_EMAILSRowDeleting(this, new FRC_EMAILSRowChangeEvent(((FRC_EMAILSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveFRC_EMAILSRow(FRC_EMAILSRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TeklifDataSet ds = new TeklifDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "FRC_EMAILSDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class TAFRow : global::System.Data.DataRow {
@@ -10854,22 +11152,6 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string INFO {
-                get {
-                    try {
-                        return ((string)(this[this.tableTAF.INFOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'INFO\' in table \'TAF\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTAF.INFOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string ONYUSR {
                 get {
                     try {
@@ -11057,6 +11339,22 @@ namespace tMax14.Teklif {
                 }
                 set {
                     this[this.tableTAF.FYT8Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string INFO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTAF.INFOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INFO\' in table \'TAF\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTAF.INFOColumn] = value;
                 }
             }
             
@@ -11589,18 +11887,6 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsINFONull() {
-                return this.IsNull(this.tableTAF.INFOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetINFONull() {
-                this[this.tableTAF.INFOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsONYUSRNull() {
                 return this.IsNull(this.tableTAF.ONYUSRColumn);
             }
@@ -11741,6 +12027,18 @@ namespace tMax14.Teklif {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFYT8Null() {
                 this[this.tableTAF.FYT8Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsINFONull() {
+                return this.IsNull(this.tableTAF.INFOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetINFONull() {
+                this[this.tableTAF.INFOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21520,6 +21818,77 @@ namespace tMax14.Teklif {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class FRC_EMAILSRow : global::System.Data.DataRow {
+            
+            private FRC_EMAILSDataTable tableFRC_EMAILS;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal FRC_EMAILSRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableFRC_EMAILS = ((FRC_EMAILSDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string AD {
+                get {
+                    try {
+                        return ((string)(this[this.tableFRC_EMAILS.ADColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AD\' in table \'FRC_EMAILS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFRC_EMAILS.ADColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string EMAIL {
+                get {
+                    try {
+                        return ((string)(this[this.tableFRC_EMAILS.EMAILColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EMAIL\' in table \'FRC_EMAILS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFRC_EMAILS.EMAILColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsADNull() {
+                return this.IsNull(this.tableFRC_EMAILS.ADColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetADNull() {
+                this[this.tableFRC_EMAILS.ADColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsEMAILNull() {
+                return this.IsNull(this.tableFRC_EMAILS.EMAILColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetEMAILNull() {
+                this[this.tableFRC_EMAILS.EMAILColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -21960,6 +22329,40 @@ namespace tMax14.Teklif {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class FRC_EMAILSRowChangeEvent : global::System.EventArgs {
+            
+            private FRC_EMAILSRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FRC_EMAILSRowChangeEvent(FRC_EMAILSRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FRC_EMAILSRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace tMax14.Teklif.TeklifDataSetTableAdapters {
@@ -22102,7 +22505,6 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("INSR", "INSR");
             tableMapping.ColumnMappings.Add("MALBDL", "MALBDL");
             tableMapping.ColumnMappings.Add("MALBDLDVZ", "MALBDLDVZ");
-            tableMapping.ColumnMappings.Add("INFO", "INFO");
             tableMapping.ColumnMappings.Add("ONYUSR", "ONYUSR");
             tableMapping.ColumnMappings.Add("ONYYTK", "ONYYTK");
             tableMapping.ColumnMappings.Add("ONYTRH", "ONYTRH");
@@ -22115,6 +22517,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("VISIBLE", "VISIBLE");
             tableMapping.ColumnMappings.Add("KDY", "KDY");
             tableMapping.ColumnMappings.Add("FYT8", "FYT8");
+            tableMapping.ColumnMappings.Add("INFO", "INFO");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -22433,7 +22836,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "INFO";
-            param.Size = 250;
+            param.Size = 2147483647;
             param.IsNullable = true;
             param.SourceColumn = "INFO";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -22767,7 +23170,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "INFO";
-            param.Size = 250;
+            param.Size = 2147483647;
             param.IsNullable = true;
             param.SourceColumn = "INFO";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -30064,6 +30467,148 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class FRC_EMAILSTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::FirebirdSql.Data.FirebirdClient.FbDataAdapter _adapter;
+        
+        private global::FirebirdSql.Data.FirebirdClient.FbConnection _connection;
+        
+        private global::FirebirdSql.Data.FirebirdClient.FbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public FRC_EMAILSTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private global::FirebirdSql.Data.FirebirdClient.FbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::FirebirdSql.Data.FirebirdClient.FbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::FirebirdSql.Data.FirebirdClient.FbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::FirebirdSql.Data.FirebirdClient.FbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "FRC_EMAILS";
+            tableMapping.ColumnMappings.Add("AD", "AD");
+            tableMapping.ColumnMappings.Add("EMAIL", "EMAIL");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
+            this._connection.ConnectionString = global::tMax14.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::FirebirdSql.Data.FirebirdClient.FbCommand[1];
+            this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "\"FRC_EMAILS\"";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "FRTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            this._commandCollection[0].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(TeklifDataSet.FRC_EMAILSDataTable dataTable, global::System.Nullable<int> FRTID) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FRTID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(FRTID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
     }
     

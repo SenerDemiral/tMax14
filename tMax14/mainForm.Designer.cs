@@ -74,6 +74,7 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontSizeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.userToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.versionToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.frtTableAdapter = new tMax14.MainDataSetTableAdapters.FRTTableAdapter();
@@ -357,7 +358,6 @@
             this.afbtTableAdapter = new tMax14.MainDataSetTableAdapters.AFBTTableAdapter();
             this.kkesTableAdapter = new tMax14.MainDataSetTableAdapters.KKESTableAdapter();
             this.smtpTableAdapter = new tMax14.MainDataSetTableAdapters.SMTPTableAdapter();
-            this.fontSizeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.uspBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1)).BeginInit();
@@ -880,7 +880,7 @@
             // 
             this.elapsedTimeToolStripStatusLabel.ForeColor = System.Drawing.Color.White;
             this.elapsedTimeToolStripStatusLabel.Name = "elapsedTimeToolStripStatusLabel";
-            this.elapsedTimeToolStripStatusLabel.Size = new System.Drawing.Size(992, 17);
+            this.elapsedTimeToolStripStatusLabel.Size = new System.Drawing.Size(1023, 17);
             this.elapsedTimeToolStripStatusLabel.Spring = true;
             this.elapsedTimeToolStripStatusLabel.Text = "elapsedTime";
             this.elapsedTimeToolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -909,37 +909,44 @@
             this.sizableToolStripMenuItem.CheckOnClick = true;
             this.sizableToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.sizableToolStripMenuItem.Name = "sizableToolStripMenuItem";
-            this.sizableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sizableToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.sizableToolStripMenuItem.Text = "Sizable";
             this.sizableToolStripMenuItem.Click += new System.EventHandler(this.sizableToolStripMenuItem_Click);
             // 
             // minimizeToolStripMenuItem
             // 
             this.minimizeToolStripMenuItem.Name = "minimizeToolStripMenuItem";
-            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.minimizeToolStripMenuItem.Text = "Minimze";
             this.minimizeToolStripMenuItem.Click += new System.EventHandler(this.minimizeToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // fontSizeToolStripMenuItem
             // 
             this.fontSizeToolStripMenuItem.Name = "fontSizeToolStripMenuItem";
-            this.fontSizeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontSizeToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.fontSizeToolStripMenuItem.Text = "FontSize +";
             this.fontSizeToolStripMenuItem.Click += new System.EventHandler(this.fontSizeToolStripMenuItem_Click);
+            // 
+            // fontSizeToolStripMenuItem1
+            // 
+            this.fontSizeToolStripMenuItem1.Name = "fontSizeToolStripMenuItem1";
+            this.fontSizeToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
+            this.fontSizeToolStripMenuItem1.Text = "FontSize -";
+            this.fontSizeToolStripMenuItem1.Click += new System.EventHandler(this.fontSizeToolStripMenuItem1_Click);
             // 
             // userToolStripStatusLabel
             // 
@@ -3960,13 +3967,6 @@
             // smtpTableAdapter
             // 
             this.smtpTableAdapter.ClearBeforeFill = true;
-            // 
-            // fontSizeToolStripMenuItem1
-            // 
-            this.fontSizeToolStripMenuItem1.Name = "fontSizeToolStripMenuItem1";
-            this.fontSizeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.fontSizeToolStripMenuItem1.Text = "FontSize -";
-            this.fontSizeToolStripMenuItem1.Click += new System.EventHandler(this.fontSizeToolStripMenuItem1_Click);
             // 
             // mainForm
             // 
