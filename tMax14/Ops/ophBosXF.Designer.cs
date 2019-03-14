@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.vGridControl1 = new DevExpress.XtraVerticalGrid.VGridControl();
-            this.ophBosSelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ophBosSelBindingSource = new System.Windows.Forms.BindingSource();
             this.opsDataSet = new tMax14.Ops.OpsDataSet();
             this.rowOPHID = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowREFNO = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
@@ -59,14 +58,15 @@
             this.rowKTN = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowACD = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowROS = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowRROS = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowBYNMDRM = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.saveSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ophBosSelTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OPH_BOS_SELTableAdapter();
-            this.rowRROS = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowBYNMDRM = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowEXPR = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             ((System.ComponentModel.ISupportInitialize)(this.vGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ophBosSelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opsDataSet)).BeginInit();
@@ -115,7 +115,8 @@
             this.rowACD,
             this.rowROS,
             this.rowRROS,
-            this.rowBYNMDRM});
+            this.rowBYNMDRM,
+            this.rowEXPR});
             this.vGridControl1.Size = new System.Drawing.Size(260, 503);
             this.vGridControl1.TabIndex = 0;
             // 
@@ -296,6 +297,18 @@
             this.rowROS.Properties.Caption = "ROS";
             this.rowROS.Properties.FieldName = "ROS";
             // 
+            // rowRROS
+            // 
+            this.rowRROS.Name = "rowRROS";
+            this.rowRROS.Properties.Caption = "rROS";
+            this.rowRROS.Properties.FieldName = "RROS";
+            // 
+            // rowBYNMDRM
+            // 
+            this.rowBYNMDRM.Name = "rowBYNMDRM";
+            this.rowBYNMDRM.Properties.Caption = "BynmDrm";
+            this.rowBYNMDRM.Properties.FieldName = "BYNMDRM";
+            // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.saveSimpleButton);
@@ -356,17 +369,11 @@
             // 
             this.ophBosSelTableAdapter.ClearBeforeFill = true;
             // 
-            // rowRROS
+            // rowEXPR
             // 
-            this.rowRROS.Name = "rowRROS";
-            this.rowRROS.Properties.Caption = "rROS";
-            this.rowRROS.Properties.FieldName = "RROS";
-            // 
-            // rowBYNMDRM
-            // 
-            this.rowBYNMDRM.Name = "rowBYNMDRM";
-            this.rowBYNMDRM.Properties.Caption = "BynmDrm";
-            this.rowBYNMDRM.Properties.FieldName = "BYNMDRM";
+            this.rowEXPR.Name = "rowEXPR";
+            this.rowEXPR.Properties.Caption = "Expr";
+            this.rowEXPR.Properties.FieldName = "EXPR";
             // 
             // ophBosXF
             // 
@@ -429,5 +436,6 @@
         private DevExpress.XtraVerticalGrid.Rows.EditorRow rowROS;
         private DevExpress.XtraVerticalGrid.Rows.EditorRow rowRROS;
         private DevExpress.XtraVerticalGrid.Rows.EditorRow rowBYNMDRM;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowEXPR;
     }
 }

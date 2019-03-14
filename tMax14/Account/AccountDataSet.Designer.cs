@@ -12746,6 +12746,14 @@ namespace tMax14.Account {
             
             private global::System.Data.DataColumn columnH5;
             
+            private global::System.Data.DataColumn columnDVRBRC;
+            
+            private global::System.Data.DataColumn columnDVRALC;
+            
+            private global::System.Data.DataColumn columnDVRBRCKLN;
+            
+            private global::System.Data.DataColumn columnDVRALCKLN;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ACC_MIZANDataTable() {
@@ -12885,6 +12893,38 @@ namespace tMax14.Account {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DVRBRCColumn {
+                get {
+                    return this.columnDVRBRC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DVRALCColumn {
+                get {
+                    return this.columnDVRALC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DVRBRCKLNColumn {
+                get {
+                    return this.columnDVRBRCKLN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DVRALCKLNColumn {
+                get {
+                    return this.columnDVRALCKLN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -12920,7 +12960,24 @@ namespace tMax14.Account {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ACC_MIZANRow AddACC_MIZANRow(string HSPNO, string HSPAD, decimal BRC, decimal ALC, decimal BRCKLN, decimal ALCKLN, string KLNTUR, int LVL, string H1, string H2, string H3, string H4, string H5) {
+            public ACC_MIZANRow AddACC_MIZANRow(
+                        string HSPNO, 
+                        string HSPAD, 
+                        decimal BRC, 
+                        decimal ALC, 
+                        decimal BRCKLN, 
+                        decimal ALCKLN, 
+                        string KLNTUR, 
+                        int LVL, 
+                        string H1, 
+                        string H2, 
+                        string H3, 
+                        string H4, 
+                        string H5, 
+                        decimal DVRBRC, 
+                        decimal DVRALC, 
+                        decimal DVRBRCKLN, 
+                        decimal DVRALCKLN) {
                 ACC_MIZANRow rowACC_MIZANRow = ((ACC_MIZANRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         HSPNO,
@@ -12935,7 +12992,11 @@ namespace tMax14.Account {
                         H2,
                         H3,
                         H4,
-                        H5};
+                        H5,
+                        DVRBRC,
+                        DVRALC,
+                        DVRBRCKLN,
+                        DVRALCKLN};
                 rowACC_MIZANRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowACC_MIZANRow);
                 return rowACC_MIZANRow;
@@ -12971,6 +13032,10 @@ namespace tMax14.Account {
                 this.columnH3 = base.Columns["H3"];
                 this.columnH4 = base.Columns["H4"];
                 this.columnH5 = base.Columns["H5"];
+                this.columnDVRBRC = base.Columns["DVRBRC"];
+                this.columnDVRALC = base.Columns["DVRALC"];
+                this.columnDVRBRCKLN = base.Columns["DVRBRCKLN"];
+                this.columnDVRALCKLN = base.Columns["DVRALCKLN"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13002,6 +13067,14 @@ namespace tMax14.Account {
                 base.Columns.Add(this.columnH4);
                 this.columnH5 = new global::System.Data.DataColumn("H5", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnH5);
+                this.columnDVRBRC = new global::System.Data.DataColumn("DVRBRC", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDVRBRC);
+                this.columnDVRALC = new global::System.Data.DataColumn("DVRALC", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDVRALC);
+                this.columnDVRBRCKLN = new global::System.Data.DataColumn("DVRBRCKLN", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDVRBRCKLN);
+                this.columnDVRALCKLN = new global::System.Data.DataColumn("DVRALCKLN", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDVRALCKLN);
                 this.columnHSPNO.MaxLength = 20;
                 this.columnHSPAD.MaxLength = 80;
                 this.columnKLNTUR.MaxLength = 1;
@@ -31261,6 +31334,70 @@ namespace tMax14.Account {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal DVRBRC {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableACC_MIZAN.DVRBRCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DVRBRC\' in table \'ACC_MIZAN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACC_MIZAN.DVRBRCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal DVRALC {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableACC_MIZAN.DVRALCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DVRALC\' in table \'ACC_MIZAN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACC_MIZAN.DVRALCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal DVRBRCKLN {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableACC_MIZAN.DVRBRCKLNColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DVRBRCKLN\' in table \'ACC_MIZAN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACC_MIZAN.DVRBRCKLNColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal DVRALCKLN {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableACC_MIZAN.DVRALCKLNColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DVRALCKLN\' in table \'ACC_MIZAN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableACC_MIZAN.DVRALCKLNColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsHSPNONull() {
                 return this.IsNull(this.tableACC_MIZAN.HSPNOColumn);
             }
@@ -31413,6 +31550,54 @@ namespace tMax14.Account {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetH5Null() {
                 this[this.tableACC_MIZAN.H5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDVRBRCNull() {
+                return this.IsNull(this.tableACC_MIZAN.DVRBRCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDVRBRCNull() {
+                this[this.tableACC_MIZAN.DVRBRCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDVRALCNull() {
+                return this.IsNull(this.tableACC_MIZAN.DVRALCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDVRALCNull() {
+                this[this.tableACC_MIZAN.DVRALCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDVRBRCKLNNull() {
+                return this.IsNull(this.tableACC_MIZAN.DVRBRCKLNColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDVRBRCKLNNull() {
+                this[this.tableACC_MIZAN.DVRBRCKLNColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDVRALCKLNNull() {
+                return this.IsNull(this.tableACC_MIZAN.DVRALCKLNColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDVRALCKLNNull() {
+                this[this.tableACC_MIZAN.DVRALCKLNColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -48552,6 +48737,10 @@ namespace tMax14.Account.AccountDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("H3", "H3");
             tableMapping.ColumnMappings.Add("H4", "H4");
             tableMapping.ColumnMappings.Add("H5", "H5");
+            tableMapping.ColumnMappings.Add("DVRBRC", "DVRBRC");
+            tableMapping.ColumnMappings.Add("DVRALC", "DVRALC");
+            tableMapping.ColumnMappings.Add("DVRBRCKLN", "DVRBRCKLN");
+            tableMapping.ColumnMappings.Add("DVRALCKLN", "DVRALCKLN");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

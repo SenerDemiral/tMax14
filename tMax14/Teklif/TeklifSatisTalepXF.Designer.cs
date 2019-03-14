@@ -183,6 +183,7 @@
             this.eCSRateRequestEMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.firmaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bosUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alisTeklifIstegiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tstGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTSTIDt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEditable = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -231,22 +232,23 @@
             this.colSLSUSRt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNOTSt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colACCIDt = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFRSID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colORGZIP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDSTZIP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCUSLOCID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCUSZIP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colADR = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVOLUME = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTOPS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCRRIDS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMORGULKS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMDSTULKS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRFSTYP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFRSIDt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colORGZIPt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDSTZIPt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCUSLOCIDt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCUSZIPt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colADRt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVOLUMEt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTOPSt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCRRIDSt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMORGULKSt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMDSTULKSt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRFSTYPt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colASKt = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTKLTRH_TLPTRH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFRTTUR = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEMAIL = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTKLTRH_TLPTRHt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFRTTURt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEMAILt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFREETIMEt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.FRCeMailsRepositoryItemCheckedComboBoxEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
             this.fRCEMAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -265,6 +267,7 @@
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.rprTklfTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.RPR_TKLFTableAdapter();
             this.fRC_EMAILSTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.FRC_EMAILSTableAdapter();
+            this.rprAtiTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.RPR_ATITableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tafGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsfGridControl)).BeginInit();
             this.contextMenuStripTeklif.SuspendLayout();
@@ -1748,6 +1751,7 @@
             this.tstGridControl.Tag = "TST";
             this.tstGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tstGridView});
+            this.tstGridControl.Click += new System.EventHandler(this.tstGridControl_Click);
             this.tstGridControl.Leave += new System.EventHandler(this.tstGridControl_Leave);
             // 
             // contextMenuStripTalep
@@ -1765,9 +1769,10 @@
             this.exportToolStripMenuItem,
             this.eCSRateRequestEMailToolStripMenuItem,
             this.firmaToolStripMenuItem,
-            this.bosUpdateToolStripMenuItem});
+            this.bosUpdateToolStripMenuItem,
+            this.alisTeklifIstegiToolStripMenuItem});
             this.contextMenuStripTalep.Name = "contextMenuStrip1";
-            this.contextMenuStripTalep.Size = new System.Drawing.Size(195, 290);
+            this.contextMenuStripTalep.Size = new System.Drawing.Size(195, 312);
             // 
             // onaylaToolStripMenuItem
             // 
@@ -1862,6 +1867,13 @@
             this.bosUpdateToolStripMenuItem.Text = "SlsUsr Update Not";
             this.bosUpdateToolStripMenuItem.Click += new System.EventHandler(this.bosUpdateToolStripMenuItem_Click);
             // 
+            // alisTeklifIstegiToolStripMenuItem
+            // 
+            this.alisTeklifIstegiToolStripMenuItem.Name = "alisTeklifIstegiToolStripMenuItem";
+            this.alisTeklifIstegiToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.alisTeklifIstegiToolStripMenuItem.Text = "Alis Teklif Istegi";
+            this.alisTeklifIstegiToolStripMenuItem.Click += new System.EventHandler(this.alisTeklifIstegiToolStripMenuItem_Click);
+            // 
             // tstGridView
             // 
             this.tstGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -1911,22 +1923,23 @@
             this.colSLSUSRt,
             this.colNOTSt,
             this.colACCIDt,
-            this.colFRSID,
-            this.colORGZIP,
-            this.colDSTZIP,
-            this.colCUSLOCID,
-            this.colCUSZIP,
-            this.colADR,
-            this.colVOLUME,
-            this.colTOPS,
-            this.colCRRIDS,
-            this.colMORGULKS,
-            this.colMDSTULKS,
-            this.colRFSTYP,
+            this.colFRSIDt,
+            this.colORGZIPt,
+            this.colDSTZIPt,
+            this.colCUSLOCIDt,
+            this.colCUSZIPt,
+            this.colADRt,
+            this.colVOLUMEt,
+            this.colTOPSt,
+            this.colCRRIDSt,
+            this.colMORGULKSt,
+            this.colMDSTULKSt,
+            this.colRFSTYPt,
             this.colASKt,
-            this.colTKLTRH_TLPTRH,
-            this.colFRTTUR,
-            this.colEMAIL});
+            this.colTKLTRH_TLPTRHt,
+            this.colFRTTURt,
+            this.colEMAILt,
+            this.colFREETIMEt});
             this.tstGridView.GridControl = this.tstGridControl;
             this.tstGridView.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "TSTID", null, "")});
@@ -2413,106 +2426,106 @@
             this.colACCIDt.Visible = true;
             this.colACCIDt.VisibleIndex = 45;
             // 
-            // colFRSID
+            // colFRSIDt
             // 
-            this.colFRSID.Caption = "FrsID";
-            this.colFRSID.FieldName = "FRSID";
-            this.colFRSID.Name = "colFRSID";
-            this.colFRSID.OptionsColumn.ReadOnly = true;
-            this.colFRSID.Visible = true;
-            this.colFRSID.VisibleIndex = 46;
+            this.colFRSIDt.Caption = "FrsID";
+            this.colFRSIDt.FieldName = "FRSID";
+            this.colFRSIDt.Name = "colFRSIDt";
+            this.colFRSIDt.OptionsColumn.ReadOnly = true;
+            this.colFRSIDt.Visible = true;
+            this.colFRSIDt.VisibleIndex = 46;
             // 
-            // colORGZIP
+            // colORGZIPt
             // 
-            this.colORGZIP.Caption = "OrgZip";
-            this.colORGZIP.FieldName = "ORGZIP";
-            this.colORGZIP.Name = "colORGZIP";
-            this.colORGZIP.Visible = true;
-            this.colORGZIP.VisibleIndex = 47;
+            this.colORGZIPt.Caption = "OrgZip";
+            this.colORGZIPt.FieldName = "ORGZIP";
+            this.colORGZIPt.Name = "colORGZIPt";
+            this.colORGZIPt.Visible = true;
+            this.colORGZIPt.VisibleIndex = 47;
             // 
-            // colDSTZIP
+            // colDSTZIPt
             // 
-            this.colDSTZIP.Caption = "DstZip";
-            this.colDSTZIP.FieldName = "DSTZIP";
-            this.colDSTZIP.Name = "colDSTZIP";
-            this.colDSTZIP.Visible = true;
-            this.colDSTZIP.VisibleIndex = 48;
+            this.colDSTZIPt.Caption = "DstZip";
+            this.colDSTZIPt.FieldName = "DSTZIP";
+            this.colDSTZIPt.Name = "colDSTZIPt";
+            this.colDSTZIPt.Visible = true;
+            this.colDSTZIPt.VisibleIndex = 48;
             // 
-            // colCUSLOCID
+            // colCUSLOCIDt
             // 
-            this.colCUSLOCID.Caption = "CusLoc";
-            this.colCUSLOCID.FieldName = "CUSLOCID";
-            this.colCUSLOCID.Name = "colCUSLOCID";
-            this.colCUSLOCID.Visible = true;
-            this.colCUSLOCID.VisibleIndex = 49;
+            this.colCUSLOCIDt.Caption = "CusLoc";
+            this.colCUSLOCIDt.FieldName = "CUSLOCID";
+            this.colCUSLOCIDt.Name = "colCUSLOCIDt";
+            this.colCUSLOCIDt.Visible = true;
+            this.colCUSLOCIDt.VisibleIndex = 49;
             // 
-            // colCUSZIP
+            // colCUSZIPt
             // 
-            this.colCUSZIP.Caption = "CusZip";
-            this.colCUSZIP.FieldName = "CUSZIP";
-            this.colCUSZIP.Name = "colCUSZIP";
-            this.colCUSZIP.Visible = true;
-            this.colCUSZIP.VisibleIndex = 50;
+            this.colCUSZIPt.Caption = "CusZip";
+            this.colCUSZIPt.FieldName = "CUSZIP";
+            this.colCUSZIPt.Name = "colCUSZIPt";
+            this.colCUSZIPt.Visible = true;
+            this.colCUSZIPt.VisibleIndex = 50;
             // 
-            // colADR
+            // colADRt
             // 
-            this.colADR.FieldName = "ADR";
-            this.colADR.Name = "colADR";
-            this.colADR.Visible = true;
-            this.colADR.VisibleIndex = 51;
+            this.colADRt.FieldName = "ADR";
+            this.colADRt.Name = "colADRt";
+            this.colADRt.Visible = true;
+            this.colADRt.VisibleIndex = 51;
             // 
-            // colVOLUME
+            // colVOLUMEt
             // 
-            this.colVOLUME.Caption = "Volume";
-            this.colVOLUME.FieldName = "VOLUME";
-            this.colVOLUME.Name = "colVOLUME";
-            this.colVOLUME.Visible = true;
-            this.colVOLUME.VisibleIndex = 52;
+            this.colVOLUMEt.Caption = "Volume";
+            this.colVOLUMEt.FieldName = "VOLUME";
+            this.colVOLUMEt.Name = "colVOLUMEt";
+            this.colVOLUMEt.Visible = true;
+            this.colVOLUMEt.VisibleIndex = 52;
             // 
-            // colTOPS
+            // colTOPSt
             // 
-            this.colTOPS.Caption = "TOPs";
-            this.colTOPS.FieldName = "TOPS";
-            this.colTOPS.Name = "colTOPS";
-            this.colTOPS.Visible = true;
-            this.colTOPS.VisibleIndex = 53;
+            this.colTOPSt.Caption = "TOPs";
+            this.colTOPSt.FieldName = "TOPS";
+            this.colTOPSt.Name = "colTOPSt";
+            this.colTOPSt.Visible = true;
+            this.colTOPSt.VisibleIndex = 53;
             // 
-            // colCRRIDS
+            // colCRRIDSt
             // 
-            this.colCRRIDS.Caption = "CrrIDs";
-            this.colCRRIDS.FieldName = "CRRIDS";
-            this.colCRRIDS.Name = "colCRRIDS";
-            this.colCRRIDS.ToolTip = "AlisTeklif istenecek Crr(s)";
-            this.colCRRIDS.Visible = true;
-            this.colCRRIDS.VisibleIndex = 54;
+            this.colCRRIDSt.Caption = "CrrIDs";
+            this.colCRRIDSt.FieldName = "CRRIDS";
+            this.colCRRIDSt.Name = "colCRRIDSt";
+            this.colCRRIDSt.ToolTip = "AlisTeklif istenecek Crr(s)";
+            this.colCRRIDSt.Visible = true;
+            this.colCRRIDSt.VisibleIndex = 54;
             // 
-            // colMORGULKS
+            // colMORGULKSt
             // 
-            this.colMORGULKS.Caption = "mOrgUlk";
-            this.colMORGULKS.FieldName = "MORGULKS";
-            this.colMORGULKS.Name = "colMORGULKS";
-            this.colMORGULKS.OptionsColumn.AllowEdit = false;
-            this.colMORGULKS.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colMORGULKS.Visible = true;
-            this.colMORGULKS.VisibleIndex = 55;
+            this.colMORGULKSt.Caption = "mOrgUlk";
+            this.colMORGULKSt.FieldName = "MORGULKS";
+            this.colMORGULKSt.Name = "colMORGULKSt";
+            this.colMORGULKSt.OptionsColumn.AllowEdit = false;
+            this.colMORGULKSt.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colMORGULKSt.Visible = true;
+            this.colMORGULKSt.VisibleIndex = 55;
             // 
-            // colMDSTULKS
+            // colMDSTULKSt
             // 
-            this.colMDSTULKS.Caption = "mDstUlk";
-            this.colMDSTULKS.FieldName = "MDSTULKS";
-            this.colMDSTULKS.Name = "colMDSTULKS";
-            this.colMDSTULKS.OptionsColumn.AllowEdit = false;
-            this.colMDSTULKS.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colMDSTULKS.Visible = true;
-            this.colMDSTULKS.VisibleIndex = 56;
+            this.colMDSTULKSt.Caption = "mDstUlk";
+            this.colMDSTULKSt.FieldName = "MDSTULKS";
+            this.colMDSTULKSt.Name = "colMDSTULKSt";
+            this.colMDSTULKSt.OptionsColumn.AllowEdit = false;
+            this.colMDSTULKSt.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colMDSTULKSt.Visible = true;
+            this.colMDSTULKSt.VisibleIndex = 56;
             // 
-            // colRFSTYP
+            // colRFSTYPt
             // 
-            this.colRFSTYP.Caption = "Refused";
-            this.colRFSTYP.FieldName = "RFSTYP";
-            this.colRFSTYP.Name = "colRFSTYP";
-            this.colRFSTYP.Visible = true;
-            this.colRFSTYP.VisibleIndex = 57;
+            this.colRFSTYPt.Caption = "Refused";
+            this.colRFSTYPt.FieldName = "RFSTYP";
+            this.colRFSTYPt.Name = "colRFSTYPt";
+            this.colRFSTYPt.Visible = true;
+            this.colRFSTYPt.VisibleIndex = 57;
             // 
             // colASKt
             // 
@@ -2522,34 +2535,42 @@
             this.colASKt.Visible = true;
             this.colASKt.VisibleIndex = 58;
             // 
-            // colTKLTRH_TLPTRH
+            // colTKLTRH_TLPTRHt
             // 
-            this.colTKLTRH_TLPTRH.Caption = "Tkl-TlpTrh";
-            this.colTKLTRH_TLPTRH.FieldName = "TKLTRH_TLPTRH";
-            this.colTKLTRH_TLPTRH.Name = "colTKLTRH_TLPTRH";
-            this.colTKLTRH_TLPTRH.OptionsColumn.AllowEdit = false;
-            this.colTKLTRH_TLPTRH.OptionsColumn.AllowFocus = false;
-            this.colTKLTRH_TLPTRH.Visible = true;
-            this.colTKLTRH_TLPTRH.VisibleIndex = 59;
+            this.colTKLTRH_TLPTRHt.Caption = "Tkl-TlpTrh";
+            this.colTKLTRH_TLPTRHt.FieldName = "TKLTRH_TLPTRH";
+            this.colTKLTRH_TLPTRHt.Name = "colTKLTRH_TLPTRHt";
+            this.colTKLTRH_TLPTRHt.OptionsColumn.AllowEdit = false;
+            this.colTKLTRH_TLPTRHt.OptionsColumn.AllowFocus = false;
+            this.colTKLTRH_TLPTRHt.Visible = true;
+            this.colTKLTRH_TLPTRHt.VisibleIndex = 59;
             // 
-            // colFRTTUR
+            // colFRTTURt
             // 
-            this.colFRTTUR.Caption = "fTür";
-            this.colFRTTUR.FieldName = "FRTTUR";
-            this.colFRTTUR.Name = "colFRTTUR";
-            this.colFRTTUR.OptionsColumn.AllowEdit = false;
-            this.colFRTTUR.OptionsColumn.AllowFocus = false;
-            this.colFRTTUR.Visible = true;
-            this.colFRTTUR.VisibleIndex = 10;
-            this.colFRTTUR.Width = 40;
+            this.colFRTTURt.Caption = "fTür";
+            this.colFRTTURt.FieldName = "FRTTUR";
+            this.colFRTTURt.Name = "colFRTTURt";
+            this.colFRTTURt.OptionsColumn.AllowEdit = false;
+            this.colFRTTURt.OptionsColumn.AllowFocus = false;
+            this.colFRTTURt.Visible = true;
+            this.colFRTTURt.VisibleIndex = 10;
+            this.colFRTTURt.Width = 40;
             // 
-            // colEMAIL
+            // colEMAILt
             // 
-            this.colEMAIL.Caption = "eMail(s)";
-            this.colEMAIL.FieldName = "EMAILS";
-            this.colEMAIL.Name = "colEMAIL";
-            this.colEMAIL.Visible = true;
-            this.colEMAIL.VisibleIndex = 60;
+            this.colEMAILt.Caption = "eMail(s)";
+            this.colEMAILt.FieldName = "EMAILS";
+            this.colEMAILt.Name = "colEMAILt";
+            this.colEMAILt.Visible = true;
+            this.colEMAILt.VisibleIndex = 60;
+            // 
+            // colFREETIMEt
+            // 
+            this.colFREETIMEt.Caption = "FreeTimeReq";
+            this.colFREETIMEt.FieldName = "FREETIME";
+            this.colFREETIMEt.Name = "colFREETIMEt";
+            this.colFREETIMEt.Visible = true;
+            this.colFREETIMEt.VisibleIndex = 61;
             // 
             // FRCeMailsRepositoryItemCheckedComboBoxEdit
             // 
@@ -2696,6 +2717,10 @@
             // fRC_EMAILSTableAdapter
             // 
             this.fRC_EMAILSTableAdapter.ClearBeforeFill = true;
+            // 
+            // rprAtiTableAdapter
+            // 
+            this.rprAtiTableAdapter.ClearBeforeFill = true;
             // 
             // TeklifSatisTalepXF
             // 
@@ -2949,24 +2974,24 @@
         private System.Windows.Forms.ToolStripMenuItem unSetPrintToolStripMenuItem;
         private DevExpress.XtraGrid.Columns.GridColumn colNMO;
         private DevExpress.XtraGrid.Columns.GridColumn colNMD;
-        private DevExpress.XtraGrid.Columns.GridColumn colFRSID;
-        private DevExpress.XtraGrid.Columns.GridColumn colORGZIP;
-        private DevExpress.XtraGrid.Columns.GridColumn colDSTZIP;
-        private DevExpress.XtraGrid.Columns.GridColumn colCUSLOCID;
-        private DevExpress.XtraGrid.Columns.GridColumn colCUSZIP;
-        private DevExpress.XtraGrid.Columns.GridColumn colADR;
-        private DevExpress.XtraGrid.Columns.GridColumn colVOLUME;
-        private DevExpress.XtraGrid.Columns.GridColumn colTOPS;
-        private DevExpress.XtraGrid.Columns.GridColumn colCRRIDS;
+        private DevExpress.XtraGrid.Columns.GridColumn colFRSIDt;
+        private DevExpress.XtraGrid.Columns.GridColumn colORGZIPt;
+        private DevExpress.XtraGrid.Columns.GridColumn colDSTZIPt;
+        private DevExpress.XtraGrid.Columns.GridColumn colCUSLOCIDt;
+        private DevExpress.XtraGrid.Columns.GridColumn colCUSZIPt;
+        private DevExpress.XtraGrid.Columns.GridColumn colADRt;
+        private DevExpress.XtraGrid.Columns.GridColumn colVOLUMEt;
+        private DevExpress.XtraGrid.Columns.GridColumn colTOPSt;
+        private DevExpress.XtraGrid.Columns.GridColumn colCRRIDSt;
         private System.Windows.Forms.ToolStripMenuItem eCSRateRequestEMailToolStripMenuItem;
-        private DevExpress.XtraGrid.Columns.GridColumn colMORGULKS;
-        private DevExpress.XtraGrid.Columns.GridColumn colMDSTULKS;
-        private DevExpress.XtraGrid.Columns.GridColumn colRFSTYP;
+        private DevExpress.XtraGrid.Columns.GridColumn colMORGULKSt;
+        private DevExpress.XtraGrid.Columns.GridColumn colMDSTULKSt;
+        private DevExpress.XtraGrid.Columns.GridColumn colRFSTYPt;
         private DevExpress.XtraGrid.Columns.GridColumn colFRTULK;
         private DevExpress.XtraGrid.Columns.GridColumn colASKt;
-        private DevExpress.XtraGrid.Columns.GridColumn colTKLTRH_TLPTRH;
-        private DevExpress.XtraGrid.Columns.GridColumn colFRTTUR;
-        private DevExpress.XtraGrid.Columns.GridColumn colEMAIL;
+        private DevExpress.XtraGrid.Columns.GridColumn colTKLTRH_TLPTRHt;
+        private DevExpress.XtraGrid.Columns.GridColumn colFRTTURt;
+        private DevExpress.XtraGrid.Columns.GridColumn colEMAILt;
         private DevExpress.XtraGrid.Columns.GridColumn colFRTGRP;
         private System.Windows.Forms.ToolStripMenuItem firmaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bosUpdateToolStripMenuItem;
@@ -2974,5 +2999,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit FRCeMailsRepositoryItemCheckedComboBoxEdit;
         private System.Windows.Forms.BindingSource fRCEMAILSBindingSource;
         private TeklifDataSetTableAdapters.FRC_EMAILSTableAdapter fRC_EMAILSTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colFREETIMEt;
+        private System.Windows.Forms.ToolStripMenuItem alisTeklifIstegiToolStripMenuItem;
+        private TeklifDataSetTableAdapters.RPR_ATITableAdapter rprAtiTableAdapter;
     }
 }

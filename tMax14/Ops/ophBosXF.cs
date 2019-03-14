@@ -34,6 +34,7 @@ namespace tMax14.Ops
 
             rowRTD.Properties.RowEdit = Program.MF.TSrepositoryItemDateEdit;
             rowAOC.Properties.RowEdit = Program.MF.TSrepositoryItemDateEdit;
+            rowEXPR.Properties.RowEdit = Program.MF.TFrepositoryItemCheckEdit;
         }
 
         private void ophBosXF_Load(object sender, EventArgs e)

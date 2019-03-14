@@ -18,7 +18,7 @@ namespace tMax14.Firma
             InitializeComponent();
 
             fafGridControl.ExternalRepository = Program.MF.mainPersistentRepository;
-            colHM1.ColumnEdit = Program.MF.hmRepositoryItemImageComboBox;
+            //colHMT1.ColumnEdit = Program.MF.hmRepositoryItemImageComboBox;    Teklif eklendi 
             colTOB1.ColumnEdit = Program.MF.TOBrepositoryItemLookUpEdit;
             colROT1.ColumnEdit = Program.MF.ROTrepositoryItemLookUpEdit;
             colMOT1.ColumnEdit = Program.MF.MOTrepositoryItemLookUpEdit;
@@ -78,7 +78,7 @@ namespace tMax14.Firma
 
         private void OpsFrtRepositoryItemImageComboBox_CloseUp(object sender, DevExpress.XtraEditors.Controls.CloseUpEventArgs e)
         {
-            if (gridView1.GetFocusedRowCellValue(colHM1).ToString() == "M" && e.Value.ToString().StartsWith("h"))
+            if (gridView1.GetFocusedRowCellValue(colHMT1).ToString() == "M" && e.Value.ToString().StartsWith("h"))
                 e.AcceptValue = false;
         }
 

@@ -1470,6 +1470,10 @@
               <Mapping SourceColumn="H3" DataSetColumn="H3" />
               <Mapping SourceColumn="H4" DataSetColumn="H4" />
               <Mapping SourceColumn="H5" DataSetColumn="H5" />
+              <Mapping SourceColumn="DVRBRC" DataSetColumn="DVRBRC" />
+              <Mapping SourceColumn="DVRALC" DataSetColumn="DVRALC" />
+              <Mapping SourceColumn="DVRBRCKLN" DataSetColumn="DVRBRCKLN" />
+              <Mapping SourceColumn="DVRALCKLN" DataSetColumn="DVRALCKLN" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -2685,7 +2689,7 @@
   <xs:element name="AccountDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False" msprop:Generator_DataSetName="AccountDataSet" msprop:Generator_UserDSName="AccountDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DVZ_SEL" msprop:Generator_TableClassName="DVZ_SELDataTable" msprop:Generator_TableVarName="tableDVZ_SEL" msprop:Generator_RowChangedName="DVZ_SELRowChanged" msprop:Generator_TablePropName="DVZ_SEL" msprop:Generator_RowDeletingName="DVZ_SELRowDeleting" msprop:Generator_RowChangingName="DVZ_SELRowChanging" msprop:Generator_RowEvHandlerName="DVZ_SELRowChangeEventHandler" msprop:Generator_RowDeletedName="DVZ_SELRowDeleted" msprop:Generator_RowClassName="DVZ_SELRow" msprop:Generator_UserTableName="DVZ_SEL" msprop:Generator_RowEvArgName="DVZ_SELRowChangeEvent">
+        <xs:element name="DVZ_SEL" msprop:Generator_TableClassName="DVZ_SELDataTable" msprop:Generator_TableVarName="tableDVZ_SEL" msprop:Generator_TablePropName="DVZ_SEL" msprop:Generator_RowDeletingName="DVZ_SELRowDeleting" msprop:Generator_RowChangingName="DVZ_SELRowChanging" msprop:Generator_RowEvHandlerName="DVZ_SELRowChangeEventHandler" msprop:Generator_RowDeletedName="DVZ_SELRowDeleted" msprop:Generator_UserTableName="DVZ_SEL" msprop:Generator_RowChangedName="DVZ_SELRowChanged" msprop:Generator_RowEvArgName="DVZ_SELRowChangeEvent" msprop:Generator_RowClassName="DVZ_SELRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DVZ" msprop:Generator_ColumnVarNameInTable="columnDVZ" msprop:Generator_ColumnPropNameInRow="DVZ" msprop:Generator_ColumnPropNameInTable="DVZColumn" msprop:Generator_UserColumnName="DVZ" minOccurs="0">
@@ -2703,7 +2707,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AVD" msprop:Generator_TableClassName="AVDDataTable" msprop:Generator_TableVarName="tableAVD" msprop:Generator_TablePropName="AVD" msprop:Generator_RowDeletingName="AVDRowDeleting" msprop:Generator_RowChangingName="AVDRowChanging" msprop:Generator_RowEvHandlerName="AVDRowChangeEventHandler" msprop:Generator_RowDeletedName="AVDRowDeleted" msprop:Generator_UserTableName="AVD" msprop:Generator_RowChangedName="AVDRowChanged" msprop:Generator_RowEvArgName="AVDRowChangeEvent" msprop:Generator_RowClassName="AVDRow">
+        <xs:element name="AVD" msprop:Generator_TableClassName="AVDDataTable" msprop:Generator_TableVarName="tableAVD" msprop:Generator_RowChangedName="AVDRowChanged" msprop:Generator_TablePropName="AVD" msprop:Generator_RowDeletingName="AVDRowDeleting" msprop:Generator_RowChangingName="AVDRowChanging" msprop:Generator_RowEvHandlerName="AVDRowChangeEventHandler" msprop:Generator_RowDeletedName="AVDRowDeleted" msprop:Generator_RowClassName="AVDRow" msprop:Generator_UserTableName="AVD" msprop:Generator_RowEvArgName="AVDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AVDID" msprop:Generator_ColumnVarNameInTable="columnAVDID" msprop:Generator_ColumnPropNameInRow="AVDID" msprop:Generator_ColumnPropNameInTable="AVDIDColumn" msprop:Generator_UserColumnName="AVDID" type="xs:int" />
@@ -2783,7 +2787,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="KUR_AVB" msprop:Generator_TableClassName="KUR_AVBDataTable" msprop:Generator_TableVarName="tableKUR_AVB" msprop:Generator_RowChangedName="KUR_AVBRowChanged" msprop:Generator_TablePropName="KUR_AVB" msprop:Generator_RowDeletingName="KUR_AVBRowDeleting" msprop:Generator_RowChangingName="KUR_AVBRowChanging" msprop:Generator_RowEvHandlerName="KUR_AVBRowChangeEventHandler" msprop:Generator_RowDeletedName="KUR_AVBRowDeleted" msprop:Generator_RowClassName="KUR_AVBRow" msprop:Generator_UserTableName="KUR_AVB" msprop:Generator_RowEvArgName="KUR_AVBRowChangeEvent">
+        <xs:element name="KUR_AVB" msprop:Generator_TableClassName="KUR_AVBDataTable" msprop:Generator_TableVarName="tableKUR_AVB" msprop:Generator_TablePropName="KUR_AVB" msprop:Generator_RowDeletingName="KUR_AVBRowDeleting" msprop:Generator_RowChangingName="KUR_AVBRowChanging" msprop:Generator_RowEvHandlerName="KUR_AVBRowChangeEventHandler" msprop:Generator_RowDeletedName="KUR_AVBRowDeleted" msprop:Generator_UserTableName="KUR_AVB" msprop:Generator_RowChangedName="KUR_AVBRowChanged" msprop:Generator_RowEvArgName="KUR_AVBRowChangeEvent" msprop:Generator_RowClassName="KUR_AVBRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="BKUR" msprop:Generator_ColumnVarNameInTable="columnBKUR" msprop:Generator_ColumnPropNameInRow="BKUR" msprop:Generator_ColumnPropNameInTable="BKURColumn" msprop:Generator_UserColumnName="BKUR" type="xs:float" minOccurs="0" />
@@ -2791,7 +2795,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AVDK" msprop:Generator_TableClassName="AVDKDataTable" msprop:Generator_TableVarName="tableAVDK" msprop:Generator_RowChangedName="AVDKRowChanged" msprop:Generator_TablePropName="AVDK" msprop:Generator_RowDeletingName="AVDKRowDeleting" msprop:Generator_RowChangingName="AVDKRowChanging" msprop:Generator_RowEvHandlerName="AVDKRowChangeEventHandler" msprop:Generator_RowDeletedName="AVDKRowDeleted" msprop:Generator_RowClassName="AVDKRow" msprop:Generator_UserTableName="AVDK" msprop:Generator_RowEvArgName="AVDKRowChangeEvent">
+        <xs:element name="AVDK" msprop:Generator_TableClassName="AVDKDataTable" msprop:Generator_TableVarName="tableAVDK" msprop:Generator_TablePropName="AVDK" msprop:Generator_RowDeletingName="AVDKRowDeleting" msprop:Generator_RowChangingName="AVDKRowChanging" msprop:Generator_RowEvHandlerName="AVDKRowChangeEventHandler" msprop:Generator_RowDeletedName="AVDKRowDeleted" msprop:Generator_UserTableName="AVDK" msprop:Generator_RowChangedName="AVDKRowChanged" msprop:Generator_RowEvArgName="AVDKRowChangeEvent" msprop:Generator_RowClassName="AVDKRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HSPNO" msprop:Generator_ColumnVarNameInTable="columnHSPNO" msprop:Generator_ColumnPropNameInRow="HSPNO" msprop:Generator_ColumnPropNameInTable="HSPNOColumn" msprop:Generator_UserColumnName="HSPNO" minOccurs="0">
@@ -2868,7 +2872,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ACS" msprop:Generator_TableClassName="ACSDataTable" msprop:Generator_TableVarName="tableACS" msprop:Generator_TablePropName="ACS" msprop:Generator_RowDeletingName="ACSRowDeleting" msprop:Generator_RowChangingName="ACSRowChanging" msprop:Generator_RowEvHandlerName="ACSRowChangeEventHandler" msprop:Generator_RowDeletedName="ACSRowDeleted" msprop:Generator_UserTableName="ACS" msprop:Generator_RowChangedName="ACSRowChanged" msprop:Generator_RowEvArgName="ACSRowChangeEvent" msprop:Generator_RowClassName="ACSRow">
+        <xs:element name="ACS" msprop:Generator_TableClassName="ACSDataTable" msprop:Generator_TableVarName="tableACS" msprop:Generator_RowChangedName="ACSRowChanged" msprop:Generator_TablePropName="ACS" msprop:Generator_RowDeletingName="ACSRowDeleting" msprop:Generator_RowChangingName="ACSRowChanging" msprop:Generator_RowEvHandlerName="ACSRowChangeEventHandler" msprop:Generator_RowDeletedName="ACSRowDeleted" msprop:Generator_RowClassName="ACSRow" msprop:Generator_UserTableName="ACS" msprop:Generator_RowEvArgName="ACSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ACSID" msprop:Generator_ColumnVarNameInTable="columnACSID" msprop:Generator_ColumnPropNameInRow="ACSID" msprop:Generator_ColumnPropNameInTable="ACSIDColumn" msprop:Generator_UserColumnName="ACSID" type="xs:int" />
@@ -2951,7 +2955,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AHT" msprop:Generator_TableClassName="AHTDataTable" msprop:Generator_TableVarName="tableAHT" msprop:Generator_TablePropName="AHT" msprop:Generator_RowDeletingName="AHTRowDeleting" msprop:Generator_RowChangingName="AHTRowChanging" msprop:Generator_RowEvHandlerName="AHTRowChangeEventHandler" msprop:Generator_RowDeletedName="AHTRowDeleted" msprop:Generator_UserTableName="AHT" msprop:Generator_RowChangedName="AHTRowChanged" msprop:Generator_RowEvArgName="AHTRowChangeEvent" msprop:Generator_RowClassName="AHTRow">
+        <xs:element name="AHT" msprop:Generator_TableClassName="AHTDataTable" msprop:Generator_TableVarName="tableAHT" msprop:Generator_RowChangedName="AHTRowChanged" msprop:Generator_TablePropName="AHT" msprop:Generator_RowDeletingName="AHTRowDeleting" msprop:Generator_RowChangingName="AHTRowChanging" msprop:Generator_RowEvHandlerName="AHTRowChangeEventHandler" msprop:Generator_RowDeletedName="AHTRowDeleted" msprop:Generator_RowClassName="AHTRow" msprop:Generator_UserTableName="AHT" msprop:Generator_RowEvArgName="AHTRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AHTID" msprop:Generator_ColumnVarNameInTable="columnAHTID" msprop:Generator_ColumnPropNameInRow="AHTID" msprop:Generator_ColumnPropNameInTable="AHTIDColumn" msprop:Generator_UserColumnName="AHTID" type="xs:int" />
@@ -3218,7 +3222,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AFBL" msprop:Generator_TableClassName="AFBLDataTable" msprop:Generator_TableVarName="tableAFBL" msprop:Generator_TablePropName="AFBL" msprop:Generator_RowDeletingName="AFBLRowDeleting" msprop:Generator_RowChangingName="AFBLRowChanging" msprop:Generator_RowEvHandlerName="AFBLRowChangeEventHandler" msprop:Generator_RowDeletedName="AFBLRowDeleted" msprop:Generator_UserTableName="AFBL" msprop:Generator_RowChangedName="AFBLRowChanged" msprop:Generator_RowEvArgName="AFBLRowChangeEvent" msprop:Generator_RowClassName="AFBLRow">
+        <xs:element name="AFBL" msprop:Generator_TableClassName="AFBLDataTable" msprop:Generator_TableVarName="tableAFBL" msprop:Generator_RowChangedName="AFBLRowChanged" msprop:Generator_TablePropName="AFBL" msprop:Generator_RowDeletingName="AFBLRowDeleting" msprop:Generator_RowChangingName="AFBLRowChanging" msprop:Generator_RowEvHandlerName="AFBLRowChangeEventHandler" msprop:Generator_RowDeletedName="AFBLRowDeleted" msprop:Generator_RowClassName="AFBLRow" msprop:Generator_UserTableName="AFBL" msprop:Generator_RowEvArgName="AFBLRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AFBID" msprop:Generator_ColumnVarNameInTable="columnAFBID" msprop:Generator_ColumnPropNameInRow="AFBID" msprop:Generator_ColumnPropNameInTable="AFBIDColumn" msprop:Generator_UserColumnName="AFBID" type="xs:int" />
@@ -3403,7 +3407,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AVBE" msprop:Generator_TableClassName="AVBEDataTable" msprop:Generator_TableVarName="tableAVBE" msprop:Generator_TablePropName="AVBE" msprop:Generator_RowDeletingName="AVBERowDeleting" msprop:Generator_RowChangingName="AVBERowChanging" msprop:Generator_RowEvHandlerName="AVBERowChangeEventHandler" msprop:Generator_RowDeletedName="AVBERowDeleted" msprop:Generator_UserTableName="AVBE" msprop:Generator_RowChangedName="AVBERowChanged" msprop:Generator_RowEvArgName="AVBERowChangeEvent" msprop:Generator_RowClassName="AVBERow">
+        <xs:element name="AVBE" msprop:Generator_TableClassName="AVBEDataTable" msprop:Generator_TableVarName="tableAVBE" msprop:Generator_RowChangedName="AVBERowChanged" msprop:Generator_TablePropName="AVBE" msprop:Generator_RowDeletingName="AVBERowDeleting" msprop:Generator_RowChangingName="AVBERowChanging" msprop:Generator_RowEvHandlerName="AVBERowChangeEventHandler" msprop:Generator_RowDeletedName="AVBERowDeleted" msprop:Generator_RowClassName="AVBERow" msprop:Generator_UserTableName="AVBE" msprop:Generator_RowEvArgName="AVBERowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AVBID" msprop:Generator_ColumnVarNameInTable="columnAVBID" msprop:Generator_ColumnPropNameInRow="AVBID" msprop:Generator_ColumnPropNameInTable="AVBIDColumn" msprop:Generator_UserColumnName="AVBID" type="xs:int" />
@@ -3492,7 +3496,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DVK" msprop:Generator_TableClassName="DVKDataTable" msprop:Generator_TableVarName="tableDVK" msprop:Generator_RowChangedName="DVKRowChanged" msprop:Generator_TablePropName="DVK" msprop:Generator_RowDeletingName="DVKRowDeleting" msprop:Generator_RowChangingName="DVKRowChanging" msprop:Generator_RowEvHandlerName="DVKRowChangeEventHandler" msprop:Generator_RowDeletedName="DVKRowDeleted" msprop:Generator_RowClassName="DVKRow" msprop:Generator_UserTableName="DVK" msprop:Generator_RowEvArgName="DVKRowChangeEvent">
+        <xs:element name="DVK" msprop:Generator_TableClassName="DVKDataTable" msprop:Generator_TableVarName="tableDVK" msprop:Generator_TablePropName="DVK" msprop:Generator_RowDeletingName="DVKRowDeleting" msprop:Generator_RowChangingName="DVKRowChanging" msprop:Generator_RowEvHandlerName="DVKRowChangeEventHandler" msprop:Generator_RowDeletedName="DVKRowDeleted" msprop:Generator_UserTableName="DVK" msprop:Generator_RowChangedName="DVKRowChanged" msprop:Generator_RowEvArgName="DVKRowChangeEvent" msprop:Generator_RowClassName="DVKRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DVZ" msprop:Generator_ColumnVarNameInTable="columnDVZ" msprop:Generator_ColumnPropNameInRow="DVZ" msprop:Generator_ColumnPropNameInTable="DVZColumn" msprop:Generator_UserColumnName="DVZ">
@@ -3525,7 +3529,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AFDD" msprop:Generator_TableClassName="AFDDDataTable" msprop:Generator_TableVarName="tableAFDD" msprop:Generator_TablePropName="AFDD" msprop:Generator_RowDeletingName="AFDDRowDeleting" msprop:Generator_RowChangingName="AFDDRowChanging" msprop:Generator_RowEvHandlerName="AFDDRowChangeEventHandler" msprop:Generator_RowDeletedName="AFDDRowDeleted" msprop:Generator_UserTableName="AFDD" msprop:Generator_RowChangedName="AFDDRowChanged" msprop:Generator_RowEvArgName="AFDDRowChangeEvent" msprop:Generator_RowClassName="AFDDRow">
+        <xs:element name="AFDD" msprop:Generator_TableClassName="AFDDDataTable" msprop:Generator_TableVarName="tableAFDD" msprop:Generator_RowChangedName="AFDDRowChanged" msprop:Generator_TablePropName="AFDD" msprop:Generator_RowDeletingName="AFDDRowDeleting" msprop:Generator_RowChangingName="AFDDRowChanging" msprop:Generator_RowEvHandlerName="AFDDRowChangeEventHandler" msprop:Generator_RowDeletedName="AFDDRowDeleted" msprop:Generator_RowClassName="AFDDRow" msprop:Generator_UserTableName="AFDD" msprop:Generator_RowEvArgName="AFDDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AFDID" msprop:Generator_ColumnVarNameInTable="columnAFDID" msprop:Generator_ColumnPropNameInRow="AFDID" msprop:Generator_ColumnPropNameInTable="AFDIDColumn" msprop:Generator_UserColumnName="AFDID" type="xs:int" />
@@ -3547,7 +3551,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AVDD" msprop:Generator_TableClassName="AVDDDataTable" msprop:Generator_TableVarName="tableAVDD" msprop:Generator_TablePropName="AVDD" msprop:Generator_RowDeletingName="AVDDRowDeleting" msprop:Generator_RowChangingName="AVDDRowChanging" msprop:Generator_RowEvHandlerName="AVDDRowChangeEventHandler" msprop:Generator_RowDeletedName="AVDDRowDeleted" msprop:Generator_UserTableName="AVDD" msprop:Generator_RowChangedName="AVDDRowChanged" msprop:Generator_RowEvArgName="AVDDRowChangeEvent" msprop:Generator_RowClassName="AVDDRow">
+        <xs:element name="AVDD" msprop:Generator_TableClassName="AVDDDataTable" msprop:Generator_TableVarName="tableAVDD" msprop:Generator_RowChangedName="AVDDRowChanged" msprop:Generator_TablePropName="AVDD" msprop:Generator_RowDeletingName="AVDDRowDeleting" msprop:Generator_RowChangingName="AVDDRowChanging" msprop:Generator_RowEvHandlerName="AVDDRowChangeEventHandler" msprop:Generator_RowDeletedName="AVDDRowDeleted" msprop:Generator_RowClassName="AVDDRow" msprop:Generator_UserTableName="AVDD" msprop:Generator_RowEvArgName="AVDDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AVDID" msprop:Generator_ColumnVarNameInTable="columnAVDID" msprop:Generator_ColumnPropNameInRow="AVDID" msprop:Generator_ColumnPropNameInTable="AVDIDColumn" msprop:Generator_UserColumnName="AVDID" type="xs:int" minOccurs="0" />
@@ -3569,7 +3573,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AHPA" msprop:Generator_TableClassName="AHPADataTable" msprop:Generator_TableVarName="tableAHPA" msprop:Generator_RowChangedName="AHPARowChanged" msprop:Generator_TablePropName="AHPA" msprop:Generator_RowDeletingName="AHPARowDeleting" msprop:Generator_RowChangingName="AHPARowChanging" msprop:Generator_RowEvHandlerName="AHPARowChangeEventHandler" msprop:Generator_RowDeletedName="AHPARowDeleted" msprop:Generator_RowClassName="AHPARow" msprop:Generator_UserTableName="AHPA" msprop:Generator_RowEvArgName="AHPARowChangeEvent">
+        <xs:element name="AHPA" msprop:Generator_TableClassName="AHPADataTable" msprop:Generator_TableVarName="tableAHPA" msprop:Generator_TablePropName="AHPA" msprop:Generator_RowDeletingName="AHPARowDeleting" msprop:Generator_RowChangingName="AHPARowChanging" msprop:Generator_RowEvHandlerName="AHPARowChangeEventHandler" msprop:Generator_RowDeletedName="AHPARowDeleted" msprop:Generator_UserTableName="AHPA" msprop:Generator_RowChangedName="AHPARowChanged" msprop:Generator_RowEvArgName="AHPARowChangeEvent" msprop:Generator_RowClassName="AHPARow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HSPNO" msprop:Generator_ColumnVarNameInTable="columnHSPNO" msprop:Generator_ColumnPropNameInRow="HSPNO" msprop:Generator_ColumnPropNameInTable="HSPNOColumn" msprop:Generator_UserColumnName="HSPNO">
@@ -3596,7 +3600,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ADA" msprop:Generator_TableClassName="ADADataTable" msprop:Generator_TableVarName="tableADA" msprop:Generator_RowChangedName="ADARowChanged" msprop:Generator_TablePropName="ADA" msprop:Generator_RowDeletingName="ADARowDeleting" msprop:Generator_RowChangingName="ADARowChanging" msprop:Generator_RowEvHandlerName="ADARowChangeEventHandler" msprop:Generator_RowDeletedName="ADARowDeleted" msprop:Generator_RowClassName="ADARow" msprop:Generator_UserTableName="ADA" msprop:Generator_RowEvArgName="ADARowChangeEvent">
+        <xs:element name="ADA" msprop:Generator_TableClassName="ADADataTable" msprop:Generator_TableVarName="tableADA" msprop:Generator_TablePropName="ADA" msprop:Generator_RowDeletingName="ADARowDeleting" msprop:Generator_RowChangingName="ADARowChanging" msprop:Generator_RowEvHandlerName="ADARowChangeEventHandler" msprop:Generator_RowDeletedName="ADARowDeleted" msprop:Generator_UserTableName="ADA" msprop:Generator_RowChangedName="ADARowChanged" msprop:Generator_RowEvArgName="ADARowChangeEvent" msprop:Generator_RowClassName="ADARow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ADAID" msprop:Generator_ColumnVarNameInTable="columnADAID" msprop:Generator_ColumnPropNameInRow="ADAID" msprop:Generator_ColumnPropNameInTable="ADAIDColumn" msprop:Generator_UserColumnName="ADAID">
@@ -3617,7 +3621,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ADAT" msprop:Generator_TableClassName="ADATDataTable" msprop:Generator_TableVarName="tableADAT" msprop:Generator_RowChangedName="ADATRowChanged" msprop:Generator_TablePropName="ADAT" msprop:Generator_RowDeletingName="ADATRowDeleting" msprop:Generator_RowChangingName="ADATRowChanging" msprop:Generator_RowEvHandlerName="ADATRowChangeEventHandler" msprop:Generator_RowDeletedName="ADATRowDeleted" msprop:Generator_RowClassName="ADATRow" msprop:Generator_UserTableName="ADAT" msprop:Generator_RowEvArgName="ADATRowChangeEvent">
+        <xs:element name="ADAT" msprop:Generator_TableClassName="ADATDataTable" msprop:Generator_TableVarName="tableADAT" msprop:Generator_TablePropName="ADAT" msprop:Generator_RowDeletingName="ADATRowDeleting" msprop:Generator_RowChangingName="ADATRowChanging" msprop:Generator_RowEvHandlerName="ADATRowChangeEventHandler" msprop:Generator_RowDeletedName="ADATRowDeleted" msprop:Generator_UserTableName="ADAT" msprop:Generator_RowChangedName="ADATRowChanged" msprop:Generator_RowEvArgName="ADATRowChangeEvent" msprop:Generator_RowClassName="ADATRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ADAID" msprop:Generator_ColumnVarNameInTable="columnADAID" msprop:Generator_ColumnPropNameInRow="ADAID" msprop:Generator_ColumnPropNameInTable="ADAIDColumn" msprop:Generator_UserColumnName="ADAID">
@@ -3644,7 +3648,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AHP" msprop:Generator_TableClassName="AHPDataTable" msprop:Generator_TableVarName="tableAHP" msprop:Generator_RowChangedName="AHPRowChanged" msprop:Generator_TablePropName="AHP" msprop:Generator_RowDeletingName="AHPRowDeleting" msprop:Generator_RowChangingName="AHPRowChanging" msprop:Generator_RowEvHandlerName="AHPRowChangeEventHandler" msprop:Generator_RowDeletedName="AHPRowDeleted" msprop:Generator_RowClassName="AHPRow" msprop:Generator_UserTableName="AHP" msprop:Generator_RowEvArgName="AHPRowChangeEvent">
+        <xs:element name="AHP" msprop:Generator_TableClassName="AHPDataTable" msprop:Generator_TableVarName="tableAHP" msprop:Generator_TablePropName="AHP" msprop:Generator_RowDeletingName="AHPRowDeleting" msprop:Generator_RowChangingName="AHPRowChanging" msprop:Generator_RowEvHandlerName="AHPRowChangeEventHandler" msprop:Generator_RowDeletedName="AHPRowDeleted" msprop:Generator_UserTableName="AHP" msprop:Generator_RowChangedName="AHPRowChanged" msprop:Generator_RowEvArgName="AHPRowChangeEvent" msprop:Generator_RowClassName="AHPRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HSPNO" msprop:Generator_ColumnVarNameInTable="columnHSPNO" msprop:Generator_ColumnPropNameInRow="HSPNO" msprop:Generator_ColumnPropNameInTable="HSPNOColumn" msprop:Generator_UserColumnName="HSPNO">
@@ -3813,7 +3817,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ACC_FRT_DVZ_BKY" msprop:Generator_TableClassName="ACC_FRT_DVZ_BKYDataTable" msprop:Generator_TableVarName="tableACC_FRT_DVZ_BKY" msprop:Generator_RowChangedName="ACC_FRT_DVZ_BKYRowChanged" msprop:Generator_TablePropName="ACC_FRT_DVZ_BKY" msprop:Generator_RowDeletingName="ACC_FRT_DVZ_BKYRowDeleting" msprop:Generator_RowChangingName="ACC_FRT_DVZ_BKYRowChanging" msprop:Generator_RowEvHandlerName="ACC_FRT_DVZ_BKYRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_FRT_DVZ_BKYRowDeleted" msprop:Generator_RowClassName="ACC_FRT_DVZ_BKYRow" msprop:Generator_UserTableName="ACC_FRT_DVZ_BKY" msprop:Generator_RowEvArgName="ACC_FRT_DVZ_BKYRowChangeEvent">
+        <xs:element name="ACC_FRT_DVZ_BKY" msprop:Generator_TableClassName="ACC_FRT_DVZ_BKYDataTable" msprop:Generator_TableVarName="tableACC_FRT_DVZ_BKY" msprop:Generator_TablePropName="ACC_FRT_DVZ_BKY" msprop:Generator_RowDeletingName="ACC_FRT_DVZ_BKYRowDeleting" msprop:Generator_RowChangingName="ACC_FRT_DVZ_BKYRowChanging" msprop:Generator_RowEvHandlerName="ACC_FRT_DVZ_BKYRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_FRT_DVZ_BKYRowDeleted" msprop:Generator_UserTableName="ACC_FRT_DVZ_BKY" msprop:Generator_RowChangedName="ACC_FRT_DVZ_BKYRowChanged" msprop:Generator_RowEvArgName="ACC_FRT_DVZ_BKYRowChangeEvent" msprop:Generator_RowClassName="ACC_FRT_DVZ_BKYRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FRTID" msprop:Generator_ColumnVarNameInTable="columnFRTID" msprop:Generator_ColumnPropNameInRow="FRTID" msprop:Generator_ColumnPropNameInTable="FRTIDColumn" msprop:Generator_UserColumnName="FRTID" type="xs:int" minOccurs="0" />
@@ -3831,7 +3835,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ACC_BKY_ALL" msprop:Generator_TableClassName="ACC_BKY_ALLDataTable" msprop:Generator_TableVarName="tableACC_BKY_ALL" msprop:Generator_RowChangedName="ACC_BKY_ALLRowChanged" msprop:Generator_TablePropName="ACC_BKY_ALL" msprop:Generator_RowDeletingName="ACC_BKY_ALLRowDeleting" msprop:Generator_RowChangingName="ACC_BKY_ALLRowChanging" msprop:Generator_RowEvHandlerName="ACC_BKY_ALLRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_BKY_ALLRowDeleted" msprop:Generator_RowClassName="ACC_BKY_ALLRow" msprop:Generator_UserTableName="ACC_BKY_ALL" msprop:Generator_RowEvArgName="ACC_BKY_ALLRowChangeEvent">
+        <xs:element name="ACC_BKY_ALL" msprop:Generator_TableClassName="ACC_BKY_ALLDataTable" msprop:Generator_TableVarName="tableACC_BKY_ALL" msprop:Generator_TablePropName="ACC_BKY_ALL" msprop:Generator_RowDeletingName="ACC_BKY_ALLRowDeleting" msprop:Generator_RowChangingName="ACC_BKY_ALLRowChanging" msprop:Generator_RowEvHandlerName="ACC_BKY_ALLRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_BKY_ALLRowDeleted" msprop:Generator_UserTableName="ACC_BKY_ALL" msprop:Generator_RowChangedName="ACC_BKY_ALLRowChanged" msprop:Generator_RowEvArgName="ACC_BKY_ALLRowChangeEvent" msprop:Generator_RowClassName="ACC_BKY_ALLRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HSPNO" msprop:Generator_ColumnVarNameInTable="columnHSPNO" msprop:Generator_ColumnPropNameInRow="HSPNO" msprop:Generator_ColumnPropNameInTable="HSPNOColumn" msprop:Generator_UserColumnName="HSPNO" minOccurs="0">
@@ -3862,7 +3866,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ACC_BKY" msprop:Generator_TableClassName="ACC_BKYDataTable" msprop:Generator_TableVarName="tableACC_BKY" msprop:Generator_TablePropName="ACC_BKY" msprop:Generator_RowDeletingName="ACC_BKYRowDeleting" msprop:Generator_RowChangingName="ACC_BKYRowChanging" msprop:Generator_RowEvHandlerName="ACC_BKYRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_BKYRowDeleted" msprop:Generator_UserTableName="ACC_BKY" msprop:Generator_RowChangedName="ACC_BKYRowChanged" msprop:Generator_RowEvArgName="ACC_BKYRowChangeEvent" msprop:Generator_RowClassName="ACC_BKYRow">
+        <xs:element name="ACC_BKY" msprop:Generator_TableClassName="ACC_BKYDataTable" msprop:Generator_TableVarName="tableACC_BKY" msprop:Generator_RowChangedName="ACC_BKYRowChanged" msprop:Generator_TablePropName="ACC_BKY" msprop:Generator_RowDeletingName="ACC_BKYRowDeleting" msprop:Generator_RowChangingName="ACC_BKYRowChanging" msprop:Generator_RowEvHandlerName="ACC_BKYRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_BKYRowDeleted" msprop:Generator_RowClassName="ACC_BKYRow" msprop:Generator_UserTableName="ACC_BKY" msprop:Generator_RowEvArgName="ACC_BKYRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HSPAD" msprop:Generator_ColumnVarNameInTable="columnHSPAD" msprop:Generator_ColumnPropNameInRow="HSPAD" msprop:Generator_ColumnPropNameInTable="HSPADColumn" msprop:Generator_UserColumnName="HSPAD" minOccurs="0">
@@ -3907,7 +3911,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RPR_TOPLUFATURA" msprop:Generator_TableClassName="RPR_TOPLUFATURADataTable" msprop:Generator_TableVarName="tableRPR_TOPLUFATURA" msprop:Generator_RowChangedName="RPR_TOPLUFATURARowChanged" msprop:Generator_TablePropName="RPR_TOPLUFATURA" msprop:Generator_RowDeletingName="RPR_TOPLUFATURARowDeleting" msprop:Generator_RowChangingName="RPR_TOPLUFATURARowChanging" msprop:Generator_RowEvHandlerName="RPR_TOPLUFATURARowChangeEventHandler" msprop:Generator_RowDeletedName="RPR_TOPLUFATURARowDeleted" msprop:Generator_RowClassName="RPR_TOPLUFATURARow" msprop:Generator_UserTableName="RPR_TOPLUFATURA" msprop:Generator_RowEvArgName="RPR_TOPLUFATURARowChangeEvent">
+        <xs:element name="RPR_TOPLUFATURA" msprop:Generator_TableClassName="RPR_TOPLUFATURADataTable" msprop:Generator_TableVarName="tableRPR_TOPLUFATURA" msprop:Generator_TablePropName="RPR_TOPLUFATURA" msprop:Generator_RowDeletingName="RPR_TOPLUFATURARowDeleting" msprop:Generator_RowChangingName="RPR_TOPLUFATURARowChanging" msprop:Generator_RowEvHandlerName="RPR_TOPLUFATURARowChangeEventHandler" msprop:Generator_RowDeletedName="RPR_TOPLUFATURARowDeleted" msprop:Generator_UserTableName="RPR_TOPLUFATURA" msprop:Generator_RowChangedName="RPR_TOPLUFATURARowChanged" msprop:Generator_RowEvArgName="RPR_TOPLUFATURARowChangeEvent" msprop:Generator_RowClassName="RPR_TOPLUFATURARow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AFBID" msprop:Generator_ColumnVarNameInTable="columnAFBID" msprop:Generator_ColumnPropNameInRow="AFBID" msprop:Generator_ColumnPropNameInTable="AFBIDColumn" msprop:Generator_UserColumnName="AFBID" type="xs:int" minOccurs="0" />
@@ -3994,7 +3998,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AHB" msprop:Generator_TableClassName="AHBDataTable" msprop:Generator_TableVarName="tableAHB" msprop:Generator_RowChangedName="AHBRowChanged" msprop:Generator_TablePropName="AHB" msprop:Generator_RowDeletingName="AHBRowDeleting" msprop:Generator_RowChangingName="AHBRowChanging" msprop:Generator_RowEvHandlerName="AHBRowChangeEventHandler" msprop:Generator_RowDeletedName="AHBRowDeleted" msprop:Generator_RowClassName="AHBRow" msprop:Generator_UserTableName="AHB" msprop:Generator_RowEvArgName="AHBRowChangeEvent">
+        <xs:element name="AHB" msprop:Generator_TableClassName="AHBDataTable" msprop:Generator_TableVarName="tableAHB" msprop:Generator_TablePropName="AHB" msprop:Generator_RowDeletingName="AHBRowDeleting" msprop:Generator_RowChangingName="AHBRowChanging" msprop:Generator_RowEvHandlerName="AHBRowChangeEventHandler" msprop:Generator_RowDeletedName="AHBRowDeleted" msprop:Generator_UserTableName="AHB" msprop:Generator_RowChangedName="AHBRowChanged" msprop:Generator_RowEvArgName="AHBRowChangeEvent" msprop:Generator_RowClassName="AHBRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AHTID" msprop:Generator_ColumnVarNameInTable="columnAHTID" msprop:Generator_ColumnPropNameInRow="AHTID" msprop:Generator_ColumnPropNameInTable="AHTIDColumn" msprop:Generator_UserColumnName="AHTID" type="xs:int" />
@@ -4022,7 +4026,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AFDL" msprop:Generator_TableClassName="AFDLDataTable" msprop:Generator_TableVarName="tableAFDL" msprop:Generator_TablePropName="AFDL" msprop:Generator_RowDeletingName="AFDLRowDeleting" msprop:Generator_RowChangingName="AFDLRowChanging" msprop:Generator_RowEvHandlerName="AFDLRowChangeEventHandler" msprop:Generator_RowDeletedName="AFDLRowDeleted" msprop:Generator_UserTableName="AFDL" msprop:Generator_RowChangedName="AFDLRowChanged" msprop:Generator_RowEvArgName="AFDLRowChangeEvent" msprop:Generator_RowClassName="AFDLRow">
+        <xs:element name="AFDL" msprop:Generator_TableClassName="AFDLDataTable" msprop:Generator_TableVarName="tableAFDL" msprop:Generator_RowChangedName="AFDLRowChanged" msprop:Generator_TablePropName="AFDL" msprop:Generator_RowDeletingName="AFDLRowDeleting" msprop:Generator_RowChangingName="AFDLRowChanging" msprop:Generator_RowEvHandlerName="AFDLRowChangeEventHandler" msprop:Generator_RowDeletedName="AFDLRowDeleted" msprop:Generator_RowClassName="AFDLRow" msprop:Generator_UserTableName="AFDL" msprop:Generator_RowEvArgName="AFDLRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AFDID" msprop:Generator_ColumnVarNameInTable="columnAFDID" msprop:Generator_ColumnPropNameInRow="AFDID" msprop:Generator_ColumnPropNameInTable="AFDIDColumn" msprop:Generator_UserColumnName="AFDID" type="xs:int" />
@@ -4208,7 +4212,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AFD" msprop:Generator_TableClassName="AFDDataTable" msprop:Generator_TableVarName="tableAFD" msprop:Generator_TablePropName="AFD" msprop:Generator_RowDeletingName="AFDRowDeleting" msprop:Generator_RowChangingName="AFDRowChanging" msprop:Generator_RowEvHandlerName="AFDRowChangeEventHandler" msprop:Generator_RowDeletedName="AFDRowDeleted" msprop:Generator_UserTableName="AFD" msprop:Generator_RowChangedName="AFDRowChanged" msprop:Generator_RowEvArgName="AFDRowChangeEvent" msprop:Generator_RowClassName="AFDRow">
+        <xs:element name="AFD" msprop:Generator_TableClassName="AFDDataTable" msprop:Generator_TableVarName="tableAFD" msprop:Generator_RowChangedName="AFDRowChanged" msprop:Generator_TablePropName="AFD" msprop:Generator_RowDeletingName="AFDRowDeleting" msprop:Generator_RowChangingName="AFDRowChanging" msprop:Generator_RowEvHandlerName="AFDRowChangeEventHandler" msprop:Generator_RowDeletedName="AFDRowDeleted" msprop:Generator_RowClassName="AFDRow" msprop:Generator_UserTableName="AFD" msprop:Generator_RowEvArgName="AFDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AFDID" msprop:Generator_ColumnVarNameInTable="columnAFDID" msprop:Generator_ColumnPropNameInRow="AFDID" msprop:Generator_ColumnPropNameInTable="AFDIDColumn" msprop:Generator_UserColumnName="AFDID" type="xs:int" />
@@ -4313,7 +4317,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ACC_MIZAN" msprop:Generator_TableClassName="ACC_MIZANDataTable" msprop:Generator_TableVarName="tableACC_MIZAN" msprop:Generator_TablePropName="ACC_MIZAN" msprop:Generator_RowDeletingName="ACC_MIZANRowDeleting" msprop:Generator_RowChangingName="ACC_MIZANRowChanging" msprop:Generator_RowEvHandlerName="ACC_MIZANRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_MIZANRowDeleted" msprop:Generator_UserTableName="ACC_MIZAN" msprop:Generator_RowChangedName="ACC_MIZANRowChanged" msprop:Generator_RowEvArgName="ACC_MIZANRowChangeEvent" msprop:Generator_RowClassName="ACC_MIZANRow">
+        <xs:element name="ACC_MIZAN" msprop:Generator_TableClassName="ACC_MIZANDataTable" msprop:Generator_TableVarName="tableACC_MIZAN" msprop:Generator_RowChangedName="ACC_MIZANRowChanged" msprop:Generator_TablePropName="ACC_MIZAN" msprop:Generator_RowDeletingName="ACC_MIZANRowDeleting" msprop:Generator_RowChangingName="ACC_MIZANRowChanging" msprop:Generator_RowEvHandlerName="ACC_MIZANRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_MIZANRowDeleted" msprop:Generator_RowClassName="ACC_MIZANRow" msprop:Generator_UserTableName="ACC_MIZAN" msprop:Generator_RowEvArgName="ACC_MIZANRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HSPNO" msprop:Generator_ColumnVarNameInTable="columnHSPNO" msprop:Generator_ColumnPropNameInRow="HSPNO" msprop:Generator_ColumnPropNameInTable="HSPNOColumn" msprop:Generator_UserColumnName="HSPNO" minOccurs="0">
@@ -4377,10 +4381,14 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="DVRBRC" msprop:Generator_ColumnVarNameInTable="columnDVRBRC" msprop:Generator_ColumnPropNameInRow="DVRBRC" msprop:Generator_ColumnPropNameInTable="DVRBRCColumn" msprop:Generator_UserColumnName="DVRBRC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DVRALC" msprop:Generator_ColumnVarNameInTable="columnDVRALC" msprop:Generator_ColumnPropNameInRow="DVRALC" msprop:Generator_ColumnPropNameInTable="DVRALCColumn" msprop:Generator_UserColumnName="DVRALC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DVRBRCKLN" msprop:Generator_ColumnVarNameInTable="columnDVRBRCKLN" msprop:Generator_ColumnPropNameInRow="DVRBRCKLN" msprop:Generator_ColumnPropNameInTable="DVRBRCKLNColumn" msprop:Generator_UserColumnName="DVRBRCKLN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DVRALCKLN" msprop:Generator_ColumnVarNameInTable="columnDVRALCKLN" msprop:Generator_ColumnPropNameInRow="DVRALCKLN" msprop:Generator_ColumnPropNameInTable="DVRALCKLNColumn" msprop:Generator_UserColumnName="DVRALCKLN" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AVB" msprop:Generator_TableClassName="AVBDataTable" msprop:Generator_TableVarName="tableAVB" msprop:Generator_RowChangedName="AVBRowChanged" msprop:Generator_TablePropName="AVB" msprop:Generator_RowDeletingName="AVBRowDeleting" msprop:Generator_RowChangingName="AVBRowChanging" msprop:Generator_RowEvHandlerName="AVBRowChangeEventHandler" msprop:Generator_RowDeletedName="AVBRowDeleted" msprop:Generator_RowClassName="AVBRow" msprop:Generator_UserTableName="AVB" msprop:Generator_RowEvArgName="AVBRowChangeEvent">
+        <xs:element name="AVB" msprop:Generator_TableClassName="AVBDataTable" msprop:Generator_TableVarName="tableAVB" msprop:Generator_TablePropName="AVB" msprop:Generator_RowDeletingName="AVBRowDeleting" msprop:Generator_RowChangingName="AVBRowChanging" msprop:Generator_RowEvHandlerName="AVBRowChangeEventHandler" msprop:Generator_RowDeletedName="AVBRowDeleted" msprop:Generator_UserTableName="AVB" msprop:Generator_RowChangedName="AVBRowChanged" msprop:Generator_RowEvArgName="AVBRowChangeEvent" msprop:Generator_RowClassName="AVBRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AVBID" msprop:Generator_ColumnVarNameInTable="columnAVBID" msprop:Generator_ColumnPropNameInRow="AVBID" msprop:Generator_ColumnPropNameInTable="AVBIDColumn" msprop:Generator_UserColumnName="AVBID" type="xs:int" />
@@ -4478,7 +4486,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ACC_MUAVIN" msprop:Generator_TableClassName="ACC_MUAVINDataTable" msprop:Generator_TableVarName="tableACC_MUAVIN" msprop:Generator_RowChangedName="ACC_MUAVINRowChanged" msprop:Generator_TablePropName="ACC_MUAVIN" msprop:Generator_RowDeletingName="ACC_MUAVINRowDeleting" msprop:Generator_RowChangingName="ACC_MUAVINRowChanging" msprop:Generator_RowEvHandlerName="ACC_MUAVINRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_MUAVINRowDeleted" msprop:Generator_RowClassName="ACC_MUAVINRow" msprop:Generator_UserTableName="ACC_MUAVIN" msprop:Generator_RowEvArgName="ACC_MUAVINRowChangeEvent">
+        <xs:element name="ACC_MUAVIN" msprop:Generator_TableClassName="ACC_MUAVINDataTable" msprop:Generator_TableVarName="tableACC_MUAVIN" msprop:Generator_TablePropName="ACC_MUAVIN" msprop:Generator_RowDeletingName="ACC_MUAVINRowDeleting" msprop:Generator_RowChangingName="ACC_MUAVINRowChanging" msprop:Generator_RowEvHandlerName="ACC_MUAVINRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_MUAVINRowDeleted" msprop:Generator_UserTableName="ACC_MUAVIN" msprop:Generator_RowChangedName="ACC_MUAVINRowChanged" msprop:Generator_RowEvArgName="ACC_MUAVINRowChangeEvent" msprop:Generator_RowClassName="ACC_MUAVINRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AVDID" msprop:Generator_ColumnVarNameInTable="columnAVDID" msprop:Generator_ColumnPropNameInRow="AVDID" msprop:Generator_ColumnPropNameInTable="AVDIDColumn" msprop:Generator_UserColumnName="AVDID" type="xs:int" minOccurs="0" />
@@ -4531,7 +4539,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ACC_MUSTERI_BKY" msprop:Generator_TableClassName="ACC_MUSTERI_BKYDataTable" msprop:Generator_TableVarName="tableACC_MUSTERI_BKY" msprop:Generator_RowChangedName="ACC_MUSTERI_BKYRowChanged" msprop:Generator_TablePropName="ACC_MUSTERI_BKY" msprop:Generator_RowDeletingName="ACC_MUSTERI_BKYRowDeleting" msprop:Generator_RowChangingName="ACC_MUSTERI_BKYRowChanging" msprop:Generator_RowEvHandlerName="ACC_MUSTERI_BKYRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_MUSTERI_BKYRowDeleted" msprop:Generator_RowClassName="ACC_MUSTERI_BKYRow" msprop:Generator_UserTableName="ACC_MUSTERI_BKY" msprop:Generator_RowEvArgName="ACC_MUSTERI_BKYRowChangeEvent">
+        <xs:element name="ACC_MUSTERI_BKY" msprop:Generator_TableClassName="ACC_MUSTERI_BKYDataTable" msprop:Generator_TableVarName="tableACC_MUSTERI_BKY" msprop:Generator_TablePropName="ACC_MUSTERI_BKY" msprop:Generator_RowDeletingName="ACC_MUSTERI_BKYRowDeleting" msprop:Generator_RowChangingName="ACC_MUSTERI_BKYRowChanging" msprop:Generator_RowEvHandlerName="ACC_MUSTERI_BKYRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_MUSTERI_BKYRowDeleted" msprop:Generator_UserTableName="ACC_MUSTERI_BKY" msprop:Generator_RowChangedName="ACC_MUSTERI_BKYRowChanged" msprop:Generator_RowEvArgName="ACC_MUSTERI_BKYRowChangeEvent" msprop:Generator_RowClassName="ACC_MUSTERI_BKYRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="YID" msprop:Generator_ColumnVarNameInTable="columnYID" msprop:Generator_ColumnPropNameInRow="YID" msprop:Generator_ColumnPropNameInTable="YIDColumn" msprop:Generator_UserColumnName="YID" minOccurs="0">
@@ -4649,7 +4657,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ACC_HSPNO_BKY" msprop:Generator_TableClassName="ACC_HSPNO_BKYDataTable" msprop:Generator_TableVarName="tableACC_HSPNO_BKY" msprop:Generator_RowChangedName="ACC_HSPNO_BKYRowChanged" msprop:Generator_TablePropName="ACC_HSPNO_BKY" msprop:Generator_RowDeletingName="ACC_HSPNO_BKYRowDeleting" msprop:Generator_RowChangingName="ACC_HSPNO_BKYRowChanging" msprop:Generator_RowEvHandlerName="ACC_HSPNO_BKYRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_HSPNO_BKYRowDeleted" msprop:Generator_RowClassName="ACC_HSPNO_BKYRow" msprop:Generator_UserTableName="ACC_HSPNO_BKY" msprop:Generator_RowEvArgName="ACC_HSPNO_BKYRowChangeEvent">
+        <xs:element name="ACC_HSPNO_BKY" msprop:Generator_TableClassName="ACC_HSPNO_BKYDataTable" msprop:Generator_TableVarName="tableACC_HSPNO_BKY" msprop:Generator_TablePropName="ACC_HSPNO_BKY" msprop:Generator_RowDeletingName="ACC_HSPNO_BKYRowDeleting" msprop:Generator_RowChangingName="ACC_HSPNO_BKYRowChanging" msprop:Generator_RowEvHandlerName="ACC_HSPNO_BKYRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_HSPNO_BKYRowDeleted" msprop:Generator_UserTableName="ACC_HSPNO_BKY" msprop:Generator_RowChangedName="ACC_HSPNO_BKYRowChanged" msprop:Generator_RowEvArgName="ACC_HSPNO_BKYRowChangeEvent" msprop:Generator_RowClassName="ACC_HSPNO_BKYRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DVZ" msprop:Generator_ColumnVarNameInTable="columnDVZ" msprop:Generator_ColumnPropNameInRow="DVZ" msprop:Generator_ColumnPropNameInTable="DVZColumn" msprop:Generator_UserColumnName="DVZ" minOccurs="0">
@@ -4684,7 +4692,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ADB" msprop:Generator_TableClassName="ADBDataTable" msprop:Generator_TableVarName="tableADB" msprop:Generator_RowChangedName="ADBRowChanged" msprop:Generator_TablePropName="ADB" msprop:Generator_RowDeletingName="ADBRowDeleting" msprop:Generator_RowChangingName="ADBRowChanging" msprop:Generator_RowEvHandlerName="ADBRowChangeEventHandler" msprop:Generator_RowDeletedName="ADBRowDeleted" msprop:Generator_RowClassName="ADBRow" msprop:Generator_UserTableName="ADB" msprop:Generator_RowEvArgName="ADBRowChangeEvent">
+        <xs:element name="ADB" msprop:Generator_TableClassName="ADBDataTable" msprop:Generator_TableVarName="tableADB" msprop:Generator_TablePropName="ADB" msprop:Generator_RowDeletingName="ADBRowDeleting" msprop:Generator_RowChangingName="ADBRowChanging" msprop:Generator_RowEvHandlerName="ADBRowChangeEventHandler" msprop:Generator_RowDeletedName="ADBRowDeleted" msprop:Generator_UserTableName="ADB" msprop:Generator_RowChangedName="ADBRowChanged" msprop:Generator_RowEvArgName="ADBRowChangeEvent" msprop:Generator_RowClassName="ADBRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ADBID" msprop:Generator_ColumnVarNameInTable="columnADBID" msprop:Generator_ColumnPropNameInRow="ADBID" msprop:Generator_ColumnPropNameInTable="ADBIDColumn" msprop:Generator_UserColumnName="ADBID" type="xs:int" />
@@ -4776,7 +4784,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ADB_COMP" msprop:Generator_TableClassName="ADB_COMPDataTable" msprop:Generator_TableVarName="tableADB_COMP" msprop:Generator_TablePropName="ADB_COMP" msprop:Generator_RowDeletingName="ADB_COMPRowDeleting" msprop:Generator_RowChangingName="ADB_COMPRowChanging" msprop:Generator_RowEvHandlerName="ADB_COMPRowChangeEventHandler" msprop:Generator_RowDeletedName="ADB_COMPRowDeleted" msprop:Generator_UserTableName="ADB_COMP" msprop:Generator_RowChangedName="ADB_COMPRowChanged" msprop:Generator_RowEvArgName="ADB_COMPRowChangeEvent" msprop:Generator_RowClassName="ADB_COMPRow">
+        <xs:element name="ADB_COMP" msprop:Generator_TableClassName="ADB_COMPDataTable" msprop:Generator_TableVarName="tableADB_COMP" msprop:Generator_RowChangedName="ADB_COMPRowChanged" msprop:Generator_TablePropName="ADB_COMP" msprop:Generator_RowDeletingName="ADB_COMPRowDeleting" msprop:Generator_RowChangingName="ADB_COMPRowChanging" msprop:Generator_RowEvHandlerName="ADB_COMPRowChangeEventHandler" msprop:Generator_RowDeletedName="ADB_COMPRowDeleted" msprop:Generator_RowClassName="ADB_COMPRow" msprop:Generator_UserTableName="ADB_COMP" msprop:Generator_RowEvArgName="ADB_COMPRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="BRCTUT" msprop:Generator_ColumnVarNameInTable="columnBRCTUT" msprop:Generator_ColumnPropNameInRow="BRCTUT" msprop:Generator_ColumnPropNameInTable="BRCTUTColumn" msprop:Generator_UserColumnName="BRCTUT" type="xs:decimal" minOccurs="0" />
@@ -4800,7 +4808,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ACC_ASL_KLN" msprop:Generator_TableClassName="ACC_ASL_KLNDataTable" msprop:Generator_TableVarName="tableACC_ASL_KLN" msprop:Generator_RowChangedName="ACC_ASL_KLNRowChanged" msprop:Generator_TablePropName="ACC_ASL_KLN" msprop:Generator_RowDeletingName="ACC_ASL_KLNRowDeleting" msprop:Generator_RowChangingName="ACC_ASL_KLNRowChanging" msprop:Generator_RowEvHandlerName="ACC_ASL_KLNRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_ASL_KLNRowDeleted" msprop:Generator_RowClassName="ACC_ASL_KLNRow" msprop:Generator_UserTableName="ACC_ASL_KLN" msprop:Generator_RowEvArgName="ACC_ASL_KLNRowChangeEvent">
+        <xs:element name="ACC_ASL_KLN" msprop:Generator_TableClassName="ACC_ASL_KLNDataTable" msprop:Generator_TableVarName="tableACC_ASL_KLN" msprop:Generator_TablePropName="ACC_ASL_KLN" msprop:Generator_RowDeletingName="ACC_ASL_KLNRowDeleting" msprop:Generator_RowChangingName="ACC_ASL_KLNRowChanging" msprop:Generator_RowEvHandlerName="ACC_ASL_KLNRowChangeEventHandler" msprop:Generator_RowDeletedName="ACC_ASL_KLNRowDeleted" msprop:Generator_UserTableName="ACC_ASL_KLN" msprop:Generator_RowChangedName="ACC_ASL_KLNRowChanged" msprop:Generator_RowEvArgName="ACC_ASL_KLNRowChangeEvent" msprop:Generator_RowClassName="ACC_ASL_KLNRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DVZ" msprop:Generator_ColumnVarNameInTable="columnDVZ" msprop:Generator_ColumnPropNameInRow="DVZ" msprop:Generator_ColumnPropNameInTable="DVZColumn" msprop:Generator_UserColumnName="DVZ" minOccurs="0">
@@ -4821,7 +4829,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AVD_KALANLAR_HELPER" msprop:Generator_TableClassName="AVD_KALANLAR_HELPERDataTable" msprop:Generator_TableVarName="tableAVD_KALANLAR_HELPER" msprop:Generator_TablePropName="AVD_KALANLAR_HELPER" msprop:Generator_RowDeletingName="AVD_KALANLAR_HELPERRowDeleting" msprop:Generator_RowChangingName="AVD_KALANLAR_HELPERRowChanging" msprop:Generator_RowEvHandlerName="AVD_KALANLAR_HELPERRowChangeEventHandler" msprop:Generator_RowDeletedName="AVD_KALANLAR_HELPERRowDeleted" msprop:Generator_UserTableName="AVD_KALANLAR_HELPER" msprop:Generator_RowChangedName="AVD_KALANLAR_HELPERRowChanged" msprop:Generator_RowEvArgName="AVD_KALANLAR_HELPERRowChangeEvent" msprop:Generator_RowClassName="AVD_KALANLAR_HELPERRow">
+        <xs:element name="AVD_KALANLAR_HELPER" msprop:Generator_TableClassName="AVD_KALANLAR_HELPERDataTable" msprop:Generator_TableVarName="tableAVD_KALANLAR_HELPER" msprop:Generator_RowChangedName="AVD_KALANLAR_HELPERRowChanged" msprop:Generator_TablePropName="AVD_KALANLAR_HELPER" msprop:Generator_RowDeletingName="AVD_KALANLAR_HELPERRowDeleting" msprop:Generator_RowChangingName="AVD_KALANLAR_HELPERRowChanging" msprop:Generator_RowEvHandlerName="AVD_KALANLAR_HELPERRowChangeEventHandler" msprop:Generator_RowDeletedName="AVD_KALANLAR_HELPERRowDeleted" msprop:Generator_RowClassName="AVD_KALANLAR_HELPERRow" msprop:Generator_UserTableName="AVD_KALANLAR_HELPER" msprop:Generator_RowEvArgName="AVD_KALANLAR_HELPERRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DVZ" msprop:Generator_ColumnVarNameInTable="columnDVZ" msprop:Generator_ColumnPropNameInRow="DVZ" msprop:Generator_ColumnPropNameInTable="DVZColumn" msprop:Generator_UserColumnName="DVZ">
@@ -4838,7 +4846,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ARB" msprop:Generator_TableClassName="ARBDataTable" msprop:Generator_TableVarName="tableARB" msprop:Generator_TablePropName="ARB" msprop:Generator_RowDeletingName="ARBRowDeleting" msprop:Generator_RowChangingName="ARBRowChanging" msprop:Generator_RowEvHandlerName="ARBRowChangeEventHandler" msprop:Generator_RowDeletedName="ARBRowDeleted" msprop:Generator_UserTableName="ARB" msprop:Generator_RowChangedName="ARBRowChanged" msprop:Generator_RowEvArgName="ARBRowChangeEvent" msprop:Generator_RowClassName="ARBRow">
+        <xs:element name="ARB" msprop:Generator_TableClassName="ARBDataTable" msprop:Generator_TableVarName="tableARB" msprop:Generator_RowChangedName="ARBRowChanged" msprop:Generator_TablePropName="ARB" msprop:Generator_RowDeletingName="ARBRowDeleting" msprop:Generator_RowChangingName="ARBRowChanging" msprop:Generator_RowEvHandlerName="ARBRowChangeEventHandler" msprop:Generator_RowDeletedName="ARBRowDeleted" msprop:Generator_RowClassName="ARBRow" msprop:Generator_UserTableName="ARB" msprop:Generator_RowEvArgName="ARBRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ARBID" msprop:Generator_ColumnVarNameInTable="columnARBID" msprop:Generator_ColumnPropNameInRow="ARBID" msprop:Generator_ColumnPropNameInTable="ARBIDColumn" msprop:Generator_UserColumnName="ARBID" type="xs:int" />
@@ -4917,7 +4925,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ARD" msprop:Generator_TableClassName="ARDDataTable" msprop:Generator_TableVarName="tableARD" msprop:Generator_TablePropName="ARD" msprop:Generator_RowDeletingName="ARDRowDeleting" msprop:Generator_RowChangingName="ARDRowChanging" msprop:Generator_RowEvHandlerName="ARDRowChangeEventHandler" msprop:Generator_RowDeletedName="ARDRowDeleted" msprop:Generator_UserTableName="ARD" msprop:Generator_RowChangedName="ARDRowChanged" msprop:Generator_RowEvArgName="ARDRowChangeEvent" msprop:Generator_RowClassName="ARDRow">
+        <xs:element name="ARD" msprop:Generator_TableClassName="ARDDataTable" msprop:Generator_TableVarName="tableARD" msprop:Generator_RowChangedName="ARDRowChanged" msprop:Generator_TablePropName="ARD" msprop:Generator_RowDeletingName="ARDRowDeleting" msprop:Generator_RowChangingName="ARDRowChanging" msprop:Generator_RowEvHandlerName="ARDRowChangeEventHandler" msprop:Generator_RowDeletedName="ARDRowDeleted" msprop:Generator_RowClassName="ARDRow" msprop:Generator_UserTableName="ARD" msprop:Generator_RowEvArgName="ARDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ARDID" msprop:Generator_ColumnVarNameInTable="columnARDID" msprop:Generator_ColumnPropNameInRow="ARDID" msprop:Generator_ColumnPropNameInTable="ARDIDColumn" msprop:Generator_UserColumnName="ARDID" type="xs:int" />
@@ -4935,7 +4943,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AHPX" msprop:Generator_TableClassName="AHPXDataTable" msprop:Generator_TableVarName="tableAHPX" msprop:Generator_TablePropName="AHPX" msprop:Generator_RowDeletingName="AHPXRowDeleting" msprop:Generator_RowChangingName="AHPXRowChanging" msprop:Generator_RowEvHandlerName="AHPXRowChangeEventHandler" msprop:Generator_RowDeletedName="AHPXRowDeleted" msprop:Generator_UserTableName="AHPX" msprop:Generator_RowChangedName="AHPXRowChanged" msprop:Generator_RowEvArgName="AHPXRowChangeEvent" msprop:Generator_RowClassName="AHPXRow">
+        <xs:element name="AHPX" msprop:Generator_TableClassName="AHPXDataTable" msprop:Generator_TableVarName="tableAHPX" msprop:Generator_RowChangedName="AHPXRowChanged" msprop:Generator_TablePropName="AHPX" msprop:Generator_RowDeletingName="AHPXRowDeleting" msprop:Generator_RowChangingName="AHPXRowChanging" msprop:Generator_RowEvHandlerName="AHPXRowChangeEventHandler" msprop:Generator_RowDeletedName="AHPXRowDeleted" msprop:Generator_RowClassName="AHPXRow" msprop:Generator_UserTableName="AHPX" msprop:Generator_RowEvArgName="AHPXRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="XHSPNO" msprop:Generator_ColumnVarNameInTable="columnXHSPNO" msprop:Generator_ColumnPropNameInRow="XHSPNO" msprop:Generator_ColumnPropNameInTable="XHSPNOColumn" msprop:Generator_UserColumnName="XHSPNO">
@@ -4956,7 +4964,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AVB_KAPAMA_KAPA_SEL" msprop:Generator_TableClassName="AVB_KAPAMA_KAPA_SELDataTable" msprop:Generator_TableVarName="tableAVB_KAPAMA_KAPA_SEL" msprop:Generator_TablePropName="AVB_KAPAMA_KAPA_SEL" msprop:Generator_RowDeletingName="AVB_KAPAMA_KAPA_SELRowDeleting" msprop:Generator_RowChangingName="AVB_KAPAMA_KAPA_SELRowChanging" msprop:Generator_RowEvHandlerName="AVB_KAPAMA_KAPA_SELRowChangeEventHandler" msprop:Generator_RowDeletedName="AVB_KAPAMA_KAPA_SELRowDeleted" msprop:Generator_UserTableName="AVB_KAPAMA_KAPA_SEL" msprop:Generator_RowChangedName="AVB_KAPAMA_KAPA_SELRowChanged" msprop:Generator_RowEvArgName="AVB_KAPAMA_KAPA_SELRowChangeEvent" msprop:Generator_RowClassName="AVB_KAPAMA_KAPA_SELRow">
+        <xs:element name="AVB_KAPAMA_KAPA_SEL" msprop:Generator_TableClassName="AVB_KAPAMA_KAPA_SELDataTable" msprop:Generator_TableVarName="tableAVB_KAPAMA_KAPA_SEL" msprop:Generator_RowChangedName="AVB_KAPAMA_KAPA_SELRowChanged" msprop:Generator_TablePropName="AVB_KAPAMA_KAPA_SEL" msprop:Generator_RowDeletingName="AVB_KAPAMA_KAPA_SELRowDeleting" msprop:Generator_RowChangingName="AVB_KAPAMA_KAPA_SELRowChanging" msprop:Generator_RowEvHandlerName="AVB_KAPAMA_KAPA_SELRowChangeEventHandler" msprop:Generator_RowDeletedName="AVB_KAPAMA_KAPA_SELRowDeleted" msprop:Generator_RowClassName="AVB_KAPAMA_KAPA_SELRow" msprop:Generator_UserTableName="AVB_KAPAMA_KAPA_SEL" msprop:Generator_RowEvArgName="AVB_KAPAMA_KAPA_SELRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MAVBID" msprop:Generator_ColumnVarNameInTable="columnMAVBID" msprop:Generator_ColumnPropNameInRow="MAVBID" msprop:Generator_ColumnPropNameInTable="MAVBIDColumn" msprop:Generator_UserColumnName="MAVBID" type="xs:int" minOccurs="0" />
@@ -5014,7 +5022,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AFB" msprop:Generator_TableClassName="AFBDataTable" msprop:Generator_TableVarName="tableAFB" msprop:Generator_RowChangedName="AFBRowChanged" msprop:Generator_TablePropName="AFB" msprop:Generator_RowDeletingName="AFBRowDeleting" msprop:Generator_RowChangingName="AFBRowChanging" msprop:Generator_RowEvHandlerName="AFBRowChangeEventHandler" msprop:Generator_RowDeletedName="AFBRowDeleted" msprop:Generator_RowClassName="AFBRow" msprop:Generator_UserTableName="AFB" msprop:Generator_RowEvArgName="AFBRowChangeEvent">
+        <xs:element name="AFB" msprop:Generator_TableClassName="AFBDataTable" msprop:Generator_TableVarName="tableAFB" msprop:Generator_TablePropName="AFB" msprop:Generator_RowDeletingName="AFBRowDeleting" msprop:Generator_RowChangingName="AFBRowChanging" msprop:Generator_RowEvHandlerName="AFBRowChangeEventHandler" msprop:Generator_RowDeletedName="AFBRowDeleted" msprop:Generator_UserTableName="AFB" msprop:Generator_RowChangedName="AFBRowChanged" msprop:Generator_RowEvArgName="AFBRowChangeEvent" msprop:Generator_RowClassName="AFBRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AFBID" msprop:Generator_ColumnVarNameInTable="columnAFBID" msprop:Generator_ColumnPropNameInRow="AFBID" msprop:Generator_ColumnPropNameInTable="AFBIDColumn" msprop:Generator_UserColumnName="AFBID" type="xs:int" />
@@ -5224,7 +5232,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AVD_HRKT" msprop:Generator_TableClassName="AVD_HRKTDataTable" msprop:Generator_TableVarName="tableAVD_HRKT" msprop:Generator_RowChangedName="AVD_HRKTRowChanged" msprop:Generator_TablePropName="AVD_HRKT" msprop:Generator_RowDeletingName="AVD_HRKTRowDeleting" msprop:Generator_RowChangingName="AVD_HRKTRowChanging" msprop:Generator_RowEvHandlerName="AVD_HRKTRowChangeEventHandler" msprop:Generator_RowDeletedName="AVD_HRKTRowDeleted" msprop:Generator_RowClassName="AVD_HRKTRow" msprop:Generator_UserTableName="AVD_HRKT" msprop:Generator_RowEvArgName="AVD_HRKTRowChangeEvent">
+        <xs:element name="AVD_HRKT" msprop:Generator_TableClassName="AVD_HRKTDataTable" msprop:Generator_TableVarName="tableAVD_HRKT" msprop:Generator_TablePropName="AVD_HRKT" msprop:Generator_RowDeletingName="AVD_HRKTRowDeleting" msprop:Generator_RowChangingName="AVD_HRKTRowChanging" msprop:Generator_RowEvHandlerName="AVD_HRKTRowChangeEventHandler" msprop:Generator_RowDeletedName="AVD_HRKTRowDeleted" msprop:Generator_UserTableName="AVD_HRKT" msprop:Generator_RowChangedName="AVD_HRKTRowChanged" msprop:Generator_RowEvArgName="AVD_HRKTRowChangeEvent" msprop:Generator_RowClassName="AVD_HRKTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AVDID" msprop:Generator_ColumnVarNameInTable="columnAVDID" msprop:Generator_ColumnPropNameInRow="AVDID" msprop:Generator_ColumnPropNameInTable="AVDIDColumn" msprop:Generator_UserColumnName="AVDID" type="xs:int" minOccurs="0" />
@@ -5262,7 +5270,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CBB" msprop:Generator_TableClassName="CBBDataTable" msprop:Generator_TableVarName="tableCBB" msprop:Generator_TablePropName="CBB" msprop:Generator_RowDeletingName="CBBRowDeleting" msprop:Generator_RowChangingName="CBBRowChanging" msprop:Generator_RowEvHandlerName="CBBRowChangeEventHandler" msprop:Generator_RowDeletedName="CBBRowDeleted" msprop:Generator_UserTableName="CBB" msprop:Generator_RowChangedName="CBBRowChanged" msprop:Generator_RowEvArgName="CBBRowChangeEvent" msprop:Generator_RowClassName="CBBRow">
+        <xs:element name="CBB" msprop:Generator_TableClassName="CBBDataTable" msprop:Generator_TableVarName="tableCBB" msprop:Generator_RowChangedName="CBBRowChanged" msprop:Generator_TablePropName="CBB" msprop:Generator_RowDeletingName="CBBRowDeleting" msprop:Generator_RowChangingName="CBBRowChanging" msprop:Generator_RowEvHandlerName="CBBRowChangeEventHandler" msprop:Generator_RowDeletedName="CBBRowDeleted" msprop:Generator_RowClassName="CBBRow" msprop:Generator_UserTableName="CBB" msprop:Generator_RowEvArgName="CBBRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CBBID" msprop:Generator_ColumnVarNameInTable="columnCBBID" msprop:Generator_ColumnPropNameInRow="CBBID" msprop:Generator_ColumnPropNameInTable="CBBIDColumn" msprop:Generator_UserColumnName="CBBID" type="xs:int" />
@@ -5315,7 +5323,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CBD" msprop:Generator_TableClassName="CBDDataTable" msprop:Generator_TableVarName="tableCBD" msprop:Generator_TablePropName="CBD" msprop:Generator_RowDeletingName="CBDRowDeleting" msprop:Generator_RowChangingName="CBDRowChanging" msprop:Generator_RowEvHandlerName="CBDRowChangeEventHandler" msprop:Generator_RowDeletedName="CBDRowDeleted" msprop:Generator_UserTableName="CBD" msprop:Generator_RowChangedName="CBDRowChanged" msprop:Generator_RowEvArgName="CBDRowChangeEvent" msprop:Generator_RowClassName="CBDRow">
+        <xs:element name="CBD" msprop:Generator_TableClassName="CBDDataTable" msprop:Generator_TableVarName="tableCBD" msprop:Generator_RowChangedName="CBDRowChanged" msprop:Generator_TablePropName="CBD" msprop:Generator_RowDeletingName="CBDRowDeleting" msprop:Generator_RowChangingName="CBDRowChanging" msprop:Generator_RowEvHandlerName="CBDRowChangeEventHandler" msprop:Generator_RowDeletedName="CBDRowDeleted" msprop:Generator_RowClassName="CBDRow" msprop:Generator_UserTableName="CBD" msprop:Generator_RowEvArgName="CBDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CBDID" msprop:Generator_ColumnVarNameInTable="columnCBDID" msprop:Generator_ColumnPropNameInRow="CBDID" msprop:Generator_ColumnPropNameInTable="CBDIDColumn" msprop:Generator_UserColumnName="CBDID" type="xs:long" />
@@ -5387,7 +5395,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CBB_BNK_INFO" msprop:Generator_TableClassName="CBB_BNK_INFODataTable" msprop:Generator_TableVarName="tableCBB_BNK_INFO" msprop:Generator_RowChangedName="CBB_BNK_INFORowChanged" msprop:Generator_TablePropName="CBB_BNK_INFO" msprop:Generator_RowDeletingName="CBB_BNK_INFORowDeleting" msprop:Generator_RowChangingName="CBB_BNK_INFORowChanging" msprop:Generator_RowEvHandlerName="CBB_BNK_INFORowChangeEventHandler" msprop:Generator_RowDeletedName="CBB_BNK_INFORowDeleted" msprop:Generator_RowClassName="CBB_BNK_INFORow" msprop:Generator_UserTableName="CBB_BNK_INFO" msprop:Generator_RowEvArgName="CBB_BNK_INFORowChangeEvent">
+        <xs:element name="CBB_BNK_INFO" msprop:Generator_TableClassName="CBB_BNK_INFODataTable" msprop:Generator_TableVarName="tableCBB_BNK_INFO" msprop:Generator_TablePropName="CBB_BNK_INFO" msprop:Generator_RowDeletingName="CBB_BNK_INFORowDeleting" msprop:Generator_RowChangingName="CBB_BNK_INFORowChanging" msprop:Generator_RowEvHandlerName="CBB_BNK_INFORowChangeEventHandler" msprop:Generator_RowDeletedName="CBB_BNK_INFORowDeleted" msprop:Generator_UserTableName="CBB_BNK_INFO" msprop:Generator_RowChangedName="CBB_BNK_INFORowChanged" msprop:Generator_RowEvArgName="CBB_BNK_INFORowChangeEvent" msprop:Generator_RowClassName="CBB_BNK_INFORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="STUSERID" msprop:Generator_ColumnVarNameInTable="columnSTUSERID" msprop:Generator_ColumnPropNameInRow="STUSERID" msprop:Generator_ColumnPropNameInTable="STUSERIDColumn" msprop:Generator_UserColumnName="STUSERID" minOccurs="0">
@@ -5442,7 +5450,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AVD_HST" msprop:Generator_TableClassName="AVD_HSTDataTable" msprop:Generator_TableVarName="tableAVD_HST" msprop:Generator_TablePropName="AVD_HST" msprop:Generator_RowDeletingName="AVD_HSTRowDeleting" msprop:Generator_RowChangingName="AVD_HSTRowChanging" msprop:Generator_RowEvHandlerName="AVD_HSTRowChangeEventHandler" msprop:Generator_RowDeletedName="AVD_HSTRowDeleted" msprop:Generator_UserTableName="AVD_HST" msprop:Generator_RowChangedName="AVD_HSTRowChanged" msprop:Generator_RowEvArgName="AVD_HSTRowChangeEvent" msprop:Generator_RowClassName="AVD_HSTRow">
+        <xs:element name="AVD_HST" msprop:Generator_TableClassName="AVD_HSTDataTable" msprop:Generator_TableVarName="tableAVD_HST" msprop:Generator_RowChangedName="AVD_HSTRowChanged" msprop:Generator_TablePropName="AVD_HST" msprop:Generator_RowDeletingName="AVD_HSTRowDeleting" msprop:Generator_RowChangingName="AVD_HSTRowChanging" msprop:Generator_RowEvHandlerName="AVD_HSTRowChangeEventHandler" msprop:Generator_RowDeletedName="AVD_HSTRowDeleted" msprop:Generator_RowClassName="AVD_HSTRow" msprop:Generator_UserTableName="AVD_HST" msprop:Generator_RowEvArgName="AVD_HSTRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AVDID" msprop:Generator_ColumnVarNameInTable="columnAVDID" msprop:Generator_ColumnPropNameInRow="AVDID" msprop:Generator_ColumnPropNameInTable="AVDIDColumn" msprop:Generator_UserColumnName="AVDID" type="xs:int" minOccurs="0" />
@@ -5624,14 +5632,14 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="AVD_AVDD" msdata:parent="AVD" msdata:child="AVDD" msdata:parentkey="AVDID" msdata:childkey="AVDID" msprop:Generator_UserChildTable="AVDD" msprop:Generator_ChildPropName="GetAVDDRows" msprop:Generator_UserRelationName="AVD_AVDD" msprop:Generator_ParentPropName="AVDRow" msprop:Generator_RelationVarName="relationAVD_AVDD" msprop:Generator_UserParentTable="AVD" />
-      <msdata:Relationship name="ADAT_ADA" msdata:parent="ADAT" msdata:child="ADA" msdata:parentkey="ADAID" msdata:childkey="ADAID" msprop:Generator_UserChildTable="ADA" msprop:Generator_ChildPropName="GetADARows" msprop:Generator_UserRelationName="ADAT_ADA" msprop:Generator_ParentPropName="ADATRow" msprop:Generator_RelationVarName="relationADAT_ADA" msprop:Generator_UserParentTable="ADAT" />
-      <msdata:Relationship name="AHP_AHPA" msdata:parent="AHP" msdata:child="AHPA" msdata:parentkey="HSPNO" msdata:childkey="HSPNO" msprop:Generator_UserChildTable="AHPA" msprop:Generator_ChildPropName="GetAHPARows" msprop:Generator_UserRelationName="AHP_AHPA" msprop:Generator_ParentPropName="AHPRow" msprop:Generator_RelationVarName="relationAHP_AHPA" msprop:Generator_UserParentTable="AHP" />
-      <msdata:Relationship name="AHT_AHB" msdata:parent="AHT" msdata:child="AHB" msdata:parentkey="AHTID" msdata:childkey="AHTID" msprop:Generator_UserChildTable="AHB" msprop:Generator_ChildPropName="GetAHBRows" msprop:Generator_UserRelationName="AHT_AHB" msprop:Generator_RelationVarName="relationAHT_AHB" msprop:Generator_UserParentTable="AHT" msprop:Generator_ParentPropName="AHTRow" />
-      <msdata:Relationship name="AFBL_AFDL" msdata:parent="AFBL" msdata:child="AFDL" msdata:parentkey="AFBID" msdata:childkey="AFBID" msprop:Generator_UserChildTable="AFDL" msprop:Generator_ChildPropName="GetAFDLRows" msprop:Generator_UserRelationName="AFBL_AFDL" msprop:Generator_ParentPropName="AFBLRow" msprop:Generator_RelationVarName="relationAFBL_AFDL" msprop:Generator_UserParentTable="AFBL" />
-      <msdata:Relationship name="AFD_AFDD" msdata:parent="AFD" msdata:child="AFDD" msdata:parentkey="AFDID" msdata:childkey="AFDID" msprop:Generator_UserChildTable="AFDD" msprop:Generator_ChildPropName="GetAFDDRows" msprop:Generator_UserRelationName="AFD_AFDD" msprop:Generator_ParentPropName="AFDRow" msprop:Generator_RelationVarName="relationAFD_AFDD" msprop:Generator_UserParentTable="AFD" />
-      <msdata:Relationship name="AVB_AVD" msdata:parent="AVB" msdata:child="AVD" msdata:parentkey="AVBID" msdata:childkey="AVBID" msprop:Generator_UserChildTable="AVD" msprop:Generator_ChildPropName="GetAVDRows" msprop:Generator_UserRelationName="AVB_AVD" msprop:Generator_ParentPropName="AVBRow" msprop:Generator_RelationVarName="relationAVB_AVD" msprop:Generator_UserParentTable="AVB" />
-      <msdata:Relationship name="ARB_ARD" msdata:parent="ARB" msdata:child="ARD" msdata:parentkey="ARBID" msdata:childkey="ARBID" msprop:Generator_UserChildTable="ARD" msprop:Generator_ChildPropName="GetARDRows" msprop:Generator_UserRelationName="ARB_ARD" msprop:Generator_RelationVarName="relationARB_ARD" msprop:Generator_UserParentTable="ARB" msprop:Generator_ParentPropName="ARBRow" />
+      <msdata:Relationship name="AVD_AVDD" msdata:parent="AVD" msdata:child="AVDD" msdata:parentkey="AVDID" msdata:childkey="AVDID" msprop:Generator_UserChildTable="AVDD" msprop:Generator_ChildPropName="GetAVDDRows" msprop:Generator_UserRelationName="AVD_AVDD" msprop:Generator_RelationVarName="relationAVD_AVDD" msprop:Generator_UserParentTable="AVD" msprop:Generator_ParentPropName="AVDRow" />
+      <msdata:Relationship name="ADAT_ADA" msdata:parent="ADAT" msdata:child="ADA" msdata:parentkey="ADAID" msdata:childkey="ADAID" msprop:Generator_UserChildTable="ADA" msprop:Generator_ChildPropName="GetADARows" msprop:Generator_UserRelationName="ADAT_ADA" msprop:Generator_RelationVarName="relationADAT_ADA" msprop:Generator_UserParentTable="ADAT" msprop:Generator_ParentPropName="ADATRow" />
+      <msdata:Relationship name="AHP_AHPA" msdata:parent="AHP" msdata:child="AHPA" msdata:parentkey="HSPNO" msdata:childkey="HSPNO" msprop:Generator_UserChildTable="AHPA" msprop:Generator_ChildPropName="GetAHPARows" msprop:Generator_UserRelationName="AHP_AHPA" msprop:Generator_RelationVarName="relationAHP_AHPA" msprop:Generator_UserParentTable="AHP" msprop:Generator_ParentPropName="AHPRow" />
+      <msdata:Relationship name="AHT_AHB" msdata:parent="AHT" msdata:child="AHB" msdata:parentkey="AHTID" msdata:childkey="AHTID" msprop:Generator_UserChildTable="AHB" msprop:Generator_ChildPropName="GetAHBRows" msprop:Generator_UserRelationName="AHT_AHB" msprop:Generator_ParentPropName="AHTRow" msprop:Generator_RelationVarName="relationAHT_AHB" msprop:Generator_UserParentTable="AHT" />
+      <msdata:Relationship name="AFBL_AFDL" msdata:parent="AFBL" msdata:child="AFDL" msdata:parentkey="AFBID" msdata:childkey="AFBID" msprop:Generator_UserChildTable="AFDL" msprop:Generator_ChildPropName="GetAFDLRows" msprop:Generator_UserRelationName="AFBL_AFDL" msprop:Generator_RelationVarName="relationAFBL_AFDL" msprop:Generator_UserParentTable="AFBL" msprop:Generator_ParentPropName="AFBLRow" />
+      <msdata:Relationship name="AFD_AFDD" msdata:parent="AFD" msdata:child="AFDD" msdata:parentkey="AFDID" msdata:childkey="AFDID" msprop:Generator_UserChildTable="AFDD" msprop:Generator_ChildPropName="GetAFDDRows" msprop:Generator_UserRelationName="AFD_AFDD" msprop:Generator_RelationVarName="relationAFD_AFDD" msprop:Generator_UserParentTable="AFD" msprop:Generator_ParentPropName="AFDRow" />
+      <msdata:Relationship name="AVB_AVD" msdata:parent="AVB" msdata:child="AVD" msdata:parentkey="AVBID" msdata:childkey="AVBID" msprop:Generator_UserChildTable="AVD" msprop:Generator_ChildPropName="GetAVDRows" msprop:Generator_UserRelationName="AVB_AVD" msprop:Generator_RelationVarName="relationAVB_AVD" msprop:Generator_UserParentTable="AVB" msprop:Generator_ParentPropName="AVBRow" />
+      <msdata:Relationship name="ARB_ARD" msdata:parent="ARB" msdata:child="ARD" msdata:parentkey="ARBID" msdata:childkey="ARBID" msprop:Generator_UserChildTable="ARD" msprop:Generator_ChildPropName="GetARDRows" msprop:Generator_UserRelationName="ARB_ARD" msprop:Generator_ParentPropName="ARBRow" msprop:Generator_RelationVarName="relationARB_ARD" msprop:Generator_UserParentTable="ARB" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

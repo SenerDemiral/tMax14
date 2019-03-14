@@ -16,6 +16,7 @@ namespace tMax14.Doc
         public string RefTbl = "", AltTbl = "";
         public int RefID = 0, AltID = 0;
         public string RefInfo;
+        public bool Editable = true;
 
         string docDir = @"C:\SOS\DOCs";
 
@@ -41,6 +42,9 @@ namespace tMax14.Doc
 
         private void DocXF_Load(object sender, EventArgs e)
         {
+            docGridView.OptionsBehavior.Editable = Editable;
+            yeniToolStripMenuItem.Enabled = Editable;
+
             Qry.qsDocXF frm = new Qry.qsDocXF();
             frm.DOC = docDataSet.DOC;
             frm.Dock = DockStyle.Fill;

@@ -3513,7 +3513,8 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Tarife", "T", -1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Genel", "G", -1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Spot", "S", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Kontrat", "K", -1)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Kontrat", "K", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Ihale", "I", -1)});
             this.TklfTypRepositoryItemImageComboBox.Name = "TklfTypRepositoryItemImageComboBox";
             // 
             // MemoExtRepositoryItemMemoExEdit
@@ -3540,7 +3541,8 @@
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("T", "Tarife"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("G", "Genel"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("S", "Spot"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("K", "Kontrat")});
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("K", "Kontrat"),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("I", "Ihale")});
             this.TklfTypRepositoryItemCheckedComboBoxEdit.Name = "TklfTypRepositoryItemCheckedComboBoxEdit";
             // 
             // TklfStuRepositoryItemImageComboBox

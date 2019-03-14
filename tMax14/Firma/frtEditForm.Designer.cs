@@ -314,6 +314,8 @@
             this.colADRESc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colROTc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMOTc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colORGc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDSTc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.firmaQueriesTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FirmaQueriesTableAdapter();
             this.frocTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FROCTableAdapter();
             this.fraTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FRATableAdapter();
@@ -346,8 +348,6 @@
             this.colADNl = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colADRESl = new DevExpress.XtraGrid.Columns.GridColumn();
             this.frlTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FRLTableAdapter();
-            this.colORGc = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDSTc = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.firmaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frtEditBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frcBindingSource)).BeginInit();
@@ -678,6 +678,7 @@
             this.frtLayoutView.TemplateCard = this.layoutViewCard1;
             this.frtLayoutView.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.frtLayoutView_InitNewRow);
             this.frtLayoutView.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.frtLayoutView_CellValueChanging);
+            this.frtLayoutView.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.frtLayoutView_ValidateRow);
             // 
             // colFRTID
             // 
@@ -3385,6 +3386,22 @@
             this.colMOTc.Visible = true;
             this.colMOTc.VisibleIndex = 12;
             // 
+            // colORGc
+            // 
+            this.colORGc.Caption = "Org";
+            this.colORGc.FieldName = "ORG";
+            this.colORGc.Name = "colORGc";
+            this.colORGc.Visible = true;
+            this.colORGc.VisibleIndex = 18;
+            // 
+            // colDSTc
+            // 
+            this.colDSTc.Caption = "Dst";
+            this.colDSTc.FieldName = "DST";
+            this.colDSTc.Name = "colDSTc";
+            this.colDSTc.Visible = true;
+            this.colDSTc.VisibleIndex = 19;
+            // 
             // frocTableAdapter
             // 
             this.frocTableAdapter.ClearBeforeFill = true;
@@ -3667,22 +3684,6 @@
             // frlTableAdapter
             // 
             this.frlTableAdapter.ClearBeforeFill = true;
-            // 
-            // colORGc
-            // 
-            this.colORGc.Caption = "Org";
-            this.colORGc.FieldName = "ORG";
-            this.colORGc.Name = "colORGc";
-            this.colORGc.Visible = true;
-            this.colORGc.VisibleIndex = 18;
-            // 
-            // colDSTc
-            // 
-            this.colDSTc.Caption = "Dst";
-            this.colDSTc.FieldName = "DST";
-            this.colDSTc.Name = "colDSTc";
-            this.colDSTc.Visible = true;
-            this.colDSTc.VisibleIndex = 19;
             // 
             // frtEditForm
             // 

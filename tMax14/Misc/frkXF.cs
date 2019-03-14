@@ -8,6 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid;
 
 namespace tMax14.Misc
 {
@@ -20,6 +21,7 @@ namespace tMax14.Misc
             Program.MF.GridControlSettings(frkGridControl);
             frkGridControl.ExternalRepository = Program.MF.mainPersistentRepository;
             colRPTID.ColumnEdit = Program.MF.RPTrepositoryItemCheckedComboBoxEdit;
+            colEDITABLE.ColumnEdit = Program.MF.TFrepositoryItemCheckEdit;
         }
 
         public void Save()
@@ -50,6 +52,7 @@ namespace tMax14.Misc
 
             view.SetFocusedRowCellValue(colFRKID, PK);
             view.SetFocusedRowCellValue(colTRH, DateTime.Today);
+            view.SetFocusedRowCellValue(colEDITABLE, "T");
         }
 
         private void attachmentsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,6 +71,8 @@ namespace tMax14.Misc
             frm.RefTbl = "FRK";
             frm.RefID = refId;
             frm.RefInfo = view.GetFocusedRowCellDisplayText(colAD);
+            frm.Editable = view.GetFocusedRowCellValue(colEDITABLE).ToString() == "T" ? true : false;
+
             frm.ShowDialog();
             frm.Dispose();
         }
@@ -128,7 +133,7 @@ namespace tMax14.Misc
             var E = view.GetFocusedRowCellValue(colEDITABLE).ToString() == "T" ? true : false;
             attachmentsToolStripMenuItem.Enabled = E;
             onaylaToolStripMenuItem.Enabled = E;
-            mailGonderToolStripMenuItem.Enabled = E;
+            //mailGonderToolStripMenuItem.Enabled = E;
         }
 
         private void jurnalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,6 +150,23 @@ namespace tMax14.Misc
 
             frm.ShowDialog();
             frm.Dispose();
+
+        }
+
+        private void frkGridView_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            GridView view = sender as GridView;
+
+            if (view.FocusedRowHandle == GridControl.NewItemRowHandle || view.GetDataRow(view.FocusedRowHandle).RowState == DataRowState.Added)
+                e.Cancel = false;
+            else
+            {
+                string E = view.GetFocusedRowCellValue(colEDITABLE).ToString();
+                if (E == "T")
+                {
+                    e.Cancel = true;
+                }
+            }
 
         }
     }

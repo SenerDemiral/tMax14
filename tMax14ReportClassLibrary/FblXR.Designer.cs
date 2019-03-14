@@ -419,6 +419,7 @@
             this.xrPictureBox4.LocationFloat = new DevExpress.Utils.PointFloat(1108.021F, 60.99999F);
             this.xrPictureBox4.Name = "xrPictureBox4";
             this.xrPictureBox4.SizeF = new System.Drawing.SizeF(174.625F, 123.5106F);
+            this.xrPictureBox4.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
             // 
             // xrLabel29
             // 
@@ -1116,6 +1117,7 @@
             this.DesignerOptions.ShowExportWarnings = false;
             this.DesignerOptions.ShowPrintingWarnings = false;
             this.Dpi = 254F;
+            this.ExportOptions.Pdf.ConvertImagesToJpeg = false;
             this.ExportOptions.Pdf.ImageQuality = DevExpress.XtraPrinting.PdfJpegImageQuality.Medium;
             this.ExportOptions.Pdf.NeverEmbeddedFonts = "Tahoma";
             this.Font = new System.Drawing.Font("Tahoma", 9.75F);
@@ -1130,7 +1132,8 @@
             this.antetsiz,
             this.ISO});
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
-            this.Version = "15.1";
+            this.SnapGridSize = 25F;
+            this.Version = "16.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

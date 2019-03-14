@@ -151,7 +151,9 @@ namespace tMax14.Firma
 
         private DialogResult SaveAll()
         {
-            this.Validate();
+            if (!this.Validate())
+                return System.Windows.Forms.DialogResult.Cancel;
+
             this.frtEditBindingSource.EndEdit();
 
             DialogResult dr = System.Windows.Forms.DialogResult.Yes;
@@ -436,6 +438,174 @@ namespace tMax14.Firma
             firmaQueriesTableAdapter.FRC_DUP((int)frcGridView.GetFocusedRowCellValue(colFRCIDc));
 
             frcTableAdapter.FillByFRT(firmaDataSet.FRC, FRTid);
+        }
+
+        private void frtLayoutView_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            StringBuilder errMsj = new StringBuilder();
+            string fld = "", fld2 = "";
+
+            if (frtLayoutView.GetFocusedRowCellValue(colAD) == DBNull.Value || string.IsNullOrWhiteSpace(frtLayoutView.GetFocusedRowCellDisplayText(colAD)))
+                errMsj.AppendLine("Ad");
+            if (string.IsNullOrWhiteSpace(frtLayoutView.GetFocusedRowCellDisplayText(colADN)))
+                errMsj.AppendLine("Nick");
+            if (string.IsNullOrWhiteSpace(frtLayoutView.GetFocusedRowCellDisplayText(colTUR)))
+                errMsj.AppendLine("Tür");
+
+            if (frtLayoutView.GetFocusedRowCellValue(colSRCID) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colSRCTYP) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colSRCTYP).ToString();
+                    if (fld == "REF" || fld == "ROF" || fld == "SLF" || fld == "SLT")
+                        errMsj.AppendLine("MKT.Source");
+                }
+            }
+            // Tur=Exporter/Importer ve LocID=TR ise Faaliyet bos olamaz.
+            if (frtLayoutView.GetFocusedRowCellValue(colFLY) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+                    fld2 = frtLayoutView.GetFocusedRowCellValue(colLOCID).ToString().Substring(0,2);
+
+                    if (fld == "ME" && fld2 == "TR")
+                        errMsj.AppendLine("MKT.Faliyet");
+                }
+            }
+            if (frtLayoutView.GetFocusedRowCellValue(colLNAID) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+
+                    if (fld == "CS")
+                        errMsj.AppendLine("Carrier.LineAgent");
+                }
+            }
+
+            if (frtLayoutView.GetFocusedRowCellValue(colIATA) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+
+                    if (fld == "CA")
+                        errMsj.AppendLine("Carrier.IATA");
+                }
+            }
+            if (frtLayoutView.GetFocusedRowCellValue(colCASS) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+
+                    if (fld == "CA")
+                        errMsj.AppendLine("Carrier.CASS");
+                }
+            }
+            if (frtLayoutView.GetFocusedRowCellValue(colL2) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+
+                    if (fld == "CA")
+                        errMsj.AppendLine("Carrier.L2");
+                }
+            }
+            if (frtLayoutView.GetFocusedRowCellValue(colL3) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+
+                    if (fld == "CA")
+                        errMsj.AppendLine("Carrier.L3");
+                }
+            }
+            if (frtLayoutView.GetFocusedRowCellValue(colN3) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+
+                    if (fld == "CA")
+                        errMsj.AppendLine("Carrier.N3");
+                }
+            }
+            if (frtLayoutView.GetFocusedRowCellValue(colAIRLINEPIMA) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+
+                    if (fld == "CA")
+                        errMsj.AppendLine("Carrier.AirlinePIMA");
+                }
+            }
+            if (frtLayoutView.GetFocusedRowCellValue(colBAYRAK) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+
+                    if (fld == "CA")
+                        errMsj.AppendLine("Carrier.Bayrak");
+                }
+            }
+            if (frtLayoutView.GetFocusedRowCellValue(colAMBAR) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+
+                    if (fld == "CA")
+                        errMsj.AppendLine("Carrier.Ambar");
+                }
+            }
+            if (frtLayoutView.GetFocusedRowCellValue(colIMPAMBAR) == DBNull.Value)
+            {
+                if (frtLayoutView.GetFocusedRowCellValue(colTUR) != DBNull.Value)
+                {
+                    fld = frtLayoutView.GetFocusedRowCellValue(colTUR).ToString();
+
+                    if (fld == "CA")
+                        errMsj.AppendLine("Carrier.ImpAmbar");
+                }
+            }
+
+            e.ErrorText = errMsj.ToString();
+            if (!string.IsNullOrEmpty(e.ErrorText))
+                e.Valid = false;
+            else
+            {
+                string aa = ToASCII(frtLayoutView.GetFocusedRowCellDisplayText(colADN));
+                frtLayoutView.SetFocusedRowCellValue(colADN, aa.ToUpper());
+
+                aa = ToASCII(frtLayoutView.GetFocusedRowCellDisplayText(colAD));
+                frtLayoutView.SetFocusedRowCellValue(colAD, aa.ToUpper());
+            }
+        }
+
+
+        private string ToASCII(string unicodeString)
+        {
+            Encoding ascii = Encoding.ASCII;
+            Encoding unicode = Encoding.Unicode;
+
+            // Convert the string into a byte array.
+            byte[] unicodeBytes = unicode.GetBytes(unicodeString);
+
+            // Perform the conversion from one encoding to the other.
+            byte[] asciiBytes = Encoding.Convert(unicode, ascii, unicodeBytes);
+
+            // Convert the new byte[] into a char[] and then into a string.
+            char[] asciiChars = new char[ascii.GetCharCount(asciiBytes, 0, asciiBytes.Length)];
+            ascii.GetChars(asciiBytes, 0, asciiBytes.Length, asciiChars, 0);
+            string asciiString = new string(asciiChars);
+
+            return asciiString;
         }
     }
 }

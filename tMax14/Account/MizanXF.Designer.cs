@@ -49,6 +49,10 @@
             this.colH3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colH4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colH5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDVRBRC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDVRALC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDVRBRCKLN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDVRALCKLN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.SklAslCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.fillSimpleButton = new DevExpress.XtraEditors.SimpleButton();
@@ -136,7 +140,11 @@
             this.colH2,
             this.colH3,
             this.colH4,
-            this.colH5});
+            this.colH5,
+            this.colDVRBRC,
+            this.colDVRALC,
+            this.colDVRBRCKLN,
+            this.colDVRALCKLN});
             this.accMizanGridView.GridControl = this.accMizanGridControl;
             this.accMizanGridView.Name = "accMizanGridView";
             this.accMizanGridView.OptionsView.ShowAutoFilterRow = true;
@@ -169,7 +177,7 @@
             this.colBRC.FieldName = "BRC";
             this.colBRC.Name = "colBRC";
             this.colBRC.Visible = true;
-            this.colBRC.VisibleIndex = 2;
+            this.colBRC.VisibleIndex = 3;
             this.colBRC.Width = 90;
             // 
             // colALC
@@ -182,7 +190,7 @@
             this.colALC.FieldName = "ALC";
             this.colALC.Name = "colALC";
             this.colALC.Visible = true;
-            this.colALC.VisibleIndex = 3;
+            this.colALC.VisibleIndex = 4;
             this.colALC.Width = 90;
             // 
             // colBRCKLN
@@ -195,7 +203,7 @@
             this.colBRCKLN.FieldName = "BRCKLN";
             this.colBRCKLN.Name = "colBRCKLN";
             this.colBRCKLN.Visible = true;
-            this.colBRCKLN.VisibleIndex = 4;
+            this.colBRCKLN.VisibleIndex = 5;
             this.colBRCKLN.Width = 90;
             // 
             // colALCKLN
@@ -208,7 +216,7 @@
             this.colALCKLN.FieldName = "ALCKLN";
             this.colALCKLN.Name = "colALCKLN";
             this.colALCKLN.Visible = true;
-            this.colALCKLN.VisibleIndex = 5;
+            this.colALCKLN.VisibleIndex = 6;
             this.colALCKLN.Width = 95;
             // 
             // colKLNTUR
@@ -221,7 +229,7 @@
             this.colKLNTUR.OptionsColumn.FixedWidth = true;
             this.colKLNTUR.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colKLNTUR.Visible = true;
-            this.colKLNTUR.VisibleIndex = 6;
+            this.colKLNTUR.VisibleIndex = 2;
             this.colKLNTUR.Width = 40;
             // 
             // colLVL
@@ -236,7 +244,7 @@
             this.colLVL.OptionsColumn.FixedWidth = true;
             this.colLVL.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colLVL.Visible = true;
-            this.colLVL.VisibleIndex = 7;
+            this.colLVL.VisibleIndex = 11;
             this.colLVL.Width = 30;
             // 
             // colH1
@@ -250,7 +258,7 @@
             this.colH1.OptionsColumn.FixedWidth = true;
             this.colH1.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colH1.Visible = true;
-            this.colH1.VisibleIndex = 8;
+            this.colH1.VisibleIndex = 12;
             this.colH1.Width = 34;
             // 
             // colH2
@@ -264,7 +272,7 @@
             this.colH2.OptionsColumn.FixedWidth = true;
             this.colH2.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colH2.Visible = true;
-            this.colH2.VisibleIndex = 9;
+            this.colH2.VisibleIndex = 13;
             this.colH2.Width = 34;
             // 
             // colH3
@@ -278,7 +286,7 @@
             this.colH3.OptionsColumn.FixedWidth = true;
             this.colH3.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colH3.Visible = true;
-            this.colH3.VisibleIndex = 10;
+            this.colH3.VisibleIndex = 14;
             this.colH3.Width = 34;
             // 
             // colH4
@@ -292,7 +300,7 @@
             this.colH4.OptionsColumn.FixedWidth = true;
             this.colH4.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colH4.Visible = true;
-            this.colH4.VisibleIndex = 11;
+            this.colH4.VisibleIndex = 15;
             this.colH4.Width = 34;
             // 
             // colH5
@@ -306,8 +314,56 @@
             this.colH5.OptionsColumn.FixedWidth = true;
             this.colH5.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colH5.Visible = true;
-            this.colH5.VisibleIndex = 12;
+            this.colH5.VisibleIndex = 16;
             this.colH5.Width = 34;
+            // 
+            // colDVRBRC
+            // 
+            this.colDVRBRC.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDVRBRC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDVRBRC.Caption = "DvrBrç";
+            this.colDVRBRC.DisplayFormat.FormatString = "n";
+            this.colDVRBRC.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colDVRBRC.FieldName = "DVRBRC";
+            this.colDVRBRC.Name = "colDVRBRC";
+            this.colDVRBRC.Visible = true;
+            this.colDVRBRC.VisibleIndex = 7;
+            // 
+            // colDVRALC
+            // 
+            this.colDVRALC.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDVRALC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDVRALC.Caption = "DvrAlc";
+            this.colDVRALC.DisplayFormat.FormatString = "n";
+            this.colDVRALC.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colDVRALC.FieldName = "DVRALC";
+            this.colDVRALC.Name = "colDVRALC";
+            this.colDVRALC.Visible = true;
+            this.colDVRALC.VisibleIndex = 8;
+            // 
+            // colDVRBRCKLN
+            // 
+            this.colDVRBRCKLN.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDVRBRCKLN.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDVRBRCKLN.Caption = "DvrBrçBky";
+            this.colDVRBRCKLN.DisplayFormat.FormatString = "n";
+            this.colDVRBRCKLN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colDVRBRCKLN.FieldName = "DVRBRCKLN";
+            this.colDVRBRCKLN.Name = "colDVRBRCKLN";
+            this.colDVRBRCKLN.Visible = true;
+            this.colDVRBRCKLN.VisibleIndex = 9;
+            // 
+            // colDVRALCKLN
+            // 
+            this.colDVRALCKLN.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDVRALCKLN.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDVRALCKLN.Caption = "DvrAlcBky";
+            this.colDVRALCKLN.DisplayFormat.FormatString = "n";
+            this.colDVRALCKLN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colDVRALCKLN.FieldName = "DVRALCKLN";
+            this.colDVRALCKLN.Name = "colDVRALCKLN";
+            this.colDVRALCKLN.Visible = true;
+            this.colDVRALCKLN.VisibleIndex = 10;
             // 
             // layoutControl1
             // 
@@ -509,5 +565,9 @@
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private DevExpress.XtraEditors.CheckEdit SklAslCheckEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraGrid.Columns.GridColumn colDVRBRC;
+        private DevExpress.XtraGrid.Columns.GridColumn colDVRALC;
+        private DevExpress.XtraGrid.Columns.GridColumn colDVRBRCKLN;
+        private DevExpress.XtraGrid.Columns.GridColumn colDVRALCKLN;
     }
 }

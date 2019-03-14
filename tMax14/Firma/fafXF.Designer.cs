@@ -77,7 +77,7 @@
             this.duplicateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFAFID1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHM1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHMT1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTOB1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colROT1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMOT1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -105,6 +105,7 @@
             this.fAFTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FAFTableAdapter();
             this.fAF_SEL_TESTTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FAF_SEL_TESTTableAdapter();
             this.firmaQueriesTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FirmaQueriesTableAdapter();
+            this.HMTrepositoryItemImageComboBox = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
@@ -131,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HMTrepositoryItemImageComboBox)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -152,9 +154,7 @@
             // 
             // memoEdit2
             // 
-            this.memoEdit2.EditValue = "Kullanılabilen alanlar: \r\nMaster: [MORG], [MDST], [MCRR], [MSHP], [MACC], [MTAGS]" +
-    ", [MTOPS]\r\nHouse: [HORG], [HDST], [HCNE], [HDCN], [HACC], [HNOP], [HCHW], [HSENA" +
-    "RYO], [HTAGS]";
+            this.memoEdit2.EditValue = resources.GetString("memoEdit2.EditValue");
             this.memoEdit2.Location = new System.Drawing.Point(24, 546);
             this.memoEdit2.Name = "memoEdit2";
             this.memoEdit2.Properties.ReadOnly = true;
@@ -510,7 +510,8 @@
             this.fafGridControl.MainView = this.gridView1;
             this.fafGridControl.Name = "fafGridControl";
             this.fafGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.OpsFrtRepositoryItemImageComboBox});
+            this.OpsFrtRepositoryItemImageComboBox,
+            this.HMTrepositoryItemImageComboBox});
             this.fafGridControl.Size = new System.Drawing.Size(876, 379);
             this.fafGridControl.TabIndex = 2;
             this.fafGridControl.Tag = "FAF";
@@ -535,7 +536,7 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colFAFID1,
-            this.colHM1,
+            this.colHMT1,
             this.colTOB1,
             this.colROT1,
             this.colMOT1,
@@ -565,14 +566,17 @@
             this.colFAFID1.VisibleIndex = 0;
             this.colFAFID1.Width = 50;
             // 
-            // colHM1
+            // colHMT1
             // 
-            this.colHM1.FieldName = "HM";
-            this.colHM1.Name = "colHM1";
-            this.colHM1.OptionsColumn.FixedWidth = true;
-            this.colHM1.Visible = true;
-            this.colHM1.VisibleIndex = 1;
-            this.colHM1.Width = 43;
+            this.colHMT1.Caption = "HMT";
+            this.colHMT1.ColumnEdit = this.HMTrepositoryItemImageComboBox;
+            this.colHMT1.FieldName = "HM";
+            this.colHMT1.Name = "colHMT1";
+            this.colHMT1.OptionsColumn.FixedWidth = true;
+            this.colHMT1.ToolTip = "House/Master/Teklif";
+            this.colHMT1.Visible = true;
+            this.colHMT1.VisibleIndex = 1;
+            this.colHMT1.Width = 43;
             // 
             // colTOB1
             // 
@@ -822,6 +826,17 @@
             // 
             this.fAF_SEL_TESTTableAdapter.ClearBeforeFill = true;
             // 
+            // HMTrepositoryItemImageComboBox
+            // 
+            this.HMTrepositoryItemImageComboBox.AutoHeight = false;
+            this.HMTrepositoryItemImageComboBox.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.HMTrepositoryItemImageComboBox.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("House", null, -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Master", "M", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Teklif", "T", -1)});
+            this.HMTrepositoryItemImageComboBox.Name = "HMTrepositoryItemImageComboBox";
+            // 
             // fafXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -859,6 +874,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HMTrepositoryItemImageComboBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -916,7 +932,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colINFO2;
         private DevExpress.XtraGrid.Columns.GridColumn colKURAL2;
         private DevExpress.XtraGrid.Columns.GridColumn colFAFID1;
-        private DevExpress.XtraGrid.Columns.GridColumn colHM1;
+        private DevExpress.XtraGrid.Columns.GridColumn colHMT1;
         private DevExpress.XtraGrid.Columns.GridColumn colTOB1;
         private DevExpress.XtraGrid.Columns.GridColumn colROT1;
         private DevExpress.XtraGrid.Columns.GridColumn colMOT1;
@@ -940,5 +956,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox OpsFrtRepositoryItemImageComboBox;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem duplicateToolStripMenuItem;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox HMTrepositoryItemImageComboBox;
     }
 }

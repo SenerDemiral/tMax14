@@ -2442,7 +2442,8 @@
             this.antetli,
             this.ISO});
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
-            this.Version = "15.1";
+            this.SnapGridSize = 25F;
+            this.Version = "16.1";
             ((System.ComponentModel.ISupportInitialize)(this.reportDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

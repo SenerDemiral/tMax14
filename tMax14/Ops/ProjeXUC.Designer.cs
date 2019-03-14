@@ -40,8 +40,10 @@
             this.bookmarkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attachmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prtGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colPRTID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEDITABLE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTUR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDRM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAD = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,10 +59,13 @@
             this.colTAGS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTKPTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOZLDRM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colONYUSR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colONYYTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colONYTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoExEdit = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.TURrepositoryItemImageComboBox = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.repositoryItemRichTextEdit = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.onaylaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.opsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prtBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prtGridControl)).BeginInit();
@@ -145,9 +150,10 @@
             this.bookmarkToolStripMenuItem,
             this.attachmentToolStripMenuItem,
             this.layoutsToolStripMenuItem,
-            this.exportToolStripMenuItem});
+            this.exportToolStripMenuItem,
+            this.onaylaToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(181, 158);
+            this.contextMenuStrip.Size = new System.Drawing.Size(181, 180);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // faaliyetlerToolStripMenuItem
@@ -188,12 +194,20 @@
             this.layoutsToolStripMenuItem.Text = "Layouts";
             this.layoutsToolStripMenuItem.Click += new System.EventHandler(this.layoutsToolStripMenuItem_Click);
             // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportToolStripMenuItem.Text = "Export";
+            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            // 
             // prtGridView
             // 
             this.prtGridView.Appearance.TopNewRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.prtGridView.Appearance.TopNewRow.Options.UseBackColor = true;
             this.prtGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colPRTID,
+            this.colEDITABLE,
             this.colTUR,
             this.colDRM,
             this.colAD,
@@ -207,9 +221,13 @@
             this.colBKMS,
             this.colTAGS,
             this.colTKPTRH,
-            this.colOZLDRM});
+            this.colOZLDRM,
+            this.colONYUSR,
+            this.colONYYTK,
+            this.colONYTRH});
             this.prtGridView.GridControl = this.prtGridControl;
             this.prtGridView.Name = "prtGridView";
+            this.prtGridView.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.prtGridView_ShowingEditor);
             this.prtGridView.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.prtGridView_InitNewRow);
             // 
             // colPRTID
@@ -221,6 +239,17 @@
             this.colPRTID.VisibleIndex = 0;
             this.colPRTID.Width = 50;
             // 
+            // colEDITABLE
+            // 
+            this.colEDITABLE.Caption = "E";
+            this.colEDITABLE.FieldName = "EDITABLE";
+            this.colEDITABLE.Name = "colEDITABLE";
+            this.colEDITABLE.OptionsColumn.AllowEdit = false;
+            this.colEDITABLE.OptionsColumn.AllowFocus = false;
+            this.colEDITABLE.ToolTip = "Editable";
+            this.colEDITABLE.Visible = true;
+            this.colEDITABLE.VisibleIndex = 1;
+            // 
             // colTUR
             // 
             this.colTUR.Caption = "Tür";
@@ -228,7 +257,7 @@
             this.colTUR.Name = "colTUR";
             this.colTUR.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colTUR.Visible = true;
-            this.colTUR.VisibleIndex = 1;
+            this.colTUR.VisibleIndex = 2;
             this.colTUR.Width = 55;
             // 
             // colDRM
@@ -239,7 +268,7 @@
             this.colDRM.OptionsColumn.FixedWidth = true;
             this.colDRM.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colDRM.Visible = true;
-            this.colDRM.VisibleIndex = 2;
+            this.colDRM.VisibleIndex = 3;
             this.colDRM.Width = 50;
             // 
             // colAD
@@ -248,7 +277,7 @@
             this.colAD.FieldName = "AD";
             this.colAD.Name = "colAD";
             this.colAD.Visible = true;
-            this.colAD.VisibleIndex = 3;
+            this.colAD.VisibleIndex = 4;
             this.colAD.Width = 55;
             // 
             // colAMAC
@@ -259,7 +288,7 @@
             this.colAMAC.Name = "colAMAC";
             this.colAMAC.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colAMAC.Visible = true;
-            this.colAMAC.VisibleIndex = 4;
+            this.colAMAC.VisibleIndex = 5;
             this.colAMAC.Width = 55;
             // 
             // repositoryItemMemoEdit
@@ -274,7 +303,7 @@
             this.colYONETICI.FieldName = "YONETICI";
             this.colYONETICI.Name = "colYONETICI";
             this.colYONETICI.Visible = true;
-            this.colYONETICI.VisibleIndex = 5;
+            this.colYONETICI.VisibleIndex = 6;
             this.colYONETICI.Width = 55;
             // 
             // colSORUMLU
@@ -283,7 +312,7 @@
             this.colSORUMLU.FieldName = "SORUMLU";
             this.colSORUMLU.Name = "colSORUMLU";
             this.colSORUMLU.Visible = true;
-            this.colSORUMLU.VisibleIndex = 6;
+            this.colSORUMLU.VisibleIndex = 7;
             this.colSORUMLU.Width = 55;
             // 
             // colACIKLAMA
@@ -292,7 +321,7 @@
             this.colACIKLAMA.FieldName = "ACIKLAMA";
             this.colACIKLAMA.Name = "colACIKLAMA";
             this.colACIKLAMA.Visible = true;
-            this.colACIKLAMA.VisibleIndex = 7;
+            this.colACIKLAMA.VisibleIndex = 8;
             this.colACIKLAMA.Width = 55;
             // 
             // colATS
@@ -301,7 +330,7 @@
             this.colATS.Name = "colATS";
             this.colATS.ToolTip = "Gerçek Başlangıç";
             this.colATS.Visible = true;
-            this.colATS.VisibleIndex = 8;
+            this.colATS.VisibleIndex = 9;
             this.colATS.Width = 55;
             // 
             // colETF
@@ -310,7 +339,7 @@
             this.colETF.Name = "colETF";
             this.colETF.ToolTip = "Hedef Bitiş";
             this.colETF.Visible = true;
-            this.colETF.VisibleIndex = 9;
+            this.colETF.VisibleIndex = 10;
             this.colETF.Width = 55;
             // 
             // colATF
@@ -319,7 +348,7 @@
             this.colATF.Name = "colATF";
             this.colATF.ToolTip = "Gerçek Bitiş";
             this.colATF.Visible = true;
-            this.colATF.VisibleIndex = 10;
+            this.colATF.VisibleIndex = 11;
             this.colATF.Width = 55;
             // 
             // colBKMS
@@ -328,7 +357,7 @@
             this.colBKMS.FieldName = "BKMS";
             this.colBKMS.Name = "colBKMS";
             this.colBKMS.Visible = true;
-            this.colBKMS.VisibleIndex = 11;
+            this.colBKMS.VisibleIndex = 12;
             this.colBKMS.Width = 55;
             // 
             // colTAGS
@@ -337,7 +366,7 @@
             this.colTAGS.FieldName = "TAGS";
             this.colTAGS.Name = "colTAGS";
             this.colTAGS.Visible = true;
-            this.colTAGS.VisibleIndex = 12;
+            this.colTAGS.VisibleIndex = 13;
             this.colTAGS.Width = 55;
             // 
             // colTKPTRH
@@ -348,7 +377,7 @@
             this.colTKPTRH.FieldName = "TKPTRH";
             this.colTKPTRH.Name = "colTKPTRH";
             this.colTKPTRH.Visible = true;
-            this.colTKPTRH.VisibleIndex = 13;
+            this.colTKPTRH.VisibleIndex = 14;
             // 
             // colOZLDRM
             // 
@@ -356,6 +385,38 @@
             this.colOZLDRM.FieldName = "OZLDRM";
             this.colOZLDRM.Name = "colOZLDRM";
             this.colOZLDRM.Width = 82;
+            // 
+            // colONYUSR
+            // 
+            this.colONYUSR.Caption = "oUsr";
+            this.colONYUSR.FieldName = "ONYUSR";
+            this.colONYUSR.Name = "colONYUSR";
+            this.colONYUSR.OptionsColumn.AllowEdit = false;
+            this.colONYUSR.OptionsColumn.AllowFocus = false;
+            this.colONYUSR.Visible = true;
+            this.colONYUSR.VisibleIndex = 15;
+            // 
+            // colONYYTK
+            // 
+            this.colONYYTK.Caption = "oYtk";
+            this.colONYYTK.FieldName = "ONYYTK";
+            this.colONYYTK.Name = "colONYYTK";
+            this.colONYYTK.OptionsColumn.AllowEdit = false;
+            this.colONYYTK.OptionsColumn.AllowFocus = false;
+            this.colONYYTK.Visible = true;
+            this.colONYYTK.VisibleIndex = 16;
+            // 
+            // colONYTRH
+            // 
+            this.colONYTRH.Caption = "oTrh";
+            this.colONYTRH.DisplayFormat.FormatString = "dd.MM.yy HH:mm";
+            this.colONYTRH.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colONYTRH.FieldName = "ONYTRH";
+            this.colONYTRH.Name = "colONYTRH";
+            this.colONYTRH.OptionsColumn.AllowEdit = false;
+            this.colONYTRH.OptionsColumn.AllowFocus = false;
+            this.colONYTRH.Visible = true;
+            this.colONYTRH.VisibleIndex = 17;
             // 
             // repositoryItemMemoExEdit
             // 
@@ -382,12 +443,12 @@
             this.repositoryItemRichTextEdit.Name = "repositoryItemRichTextEdit";
             this.repositoryItemRichTextEdit.ShowCaretInReadOnly = false;
             // 
-            // exportToolStripMenuItem
+            // onaylaToolStripMenuItem
             // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exportToolStripMenuItem.Text = "Export";
-            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            this.onaylaToolStripMenuItem.Name = "onaylaToolStripMenuItem";
+            this.onaylaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.onaylaToolStripMenuItem.Text = "Onayla";
+            this.onaylaToolStripMenuItem.Click += new System.EventHandler(this.onaylaToolStripMenuItem_Click);
             // 
             // ProjeXUC
             // 
@@ -444,5 +505,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTKPTRH;
         private System.Windows.Forms.ToolStripMenuItem layoutsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colEDITABLE;
+        private DevExpress.XtraGrid.Columns.GridColumn colONYUSR;
+        private DevExpress.XtraGrid.Columns.GridColumn colONYYTK;
+        private DevExpress.XtraGrid.Columns.GridColumn colONYTRH;
+        private System.Windows.Forms.ToolStripMenuItem onaylaToolStripMenuItem;
     }
 }

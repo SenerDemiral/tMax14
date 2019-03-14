@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using DevExpress.XtraPrinting;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace tMax14.Ops
 {
@@ -32,7 +33,7 @@ namespace tMax14.Ops
 
         private void ProjeXUC_Load(object sender, EventArgs e)
         {
-            prtTableAdapter.Fill(opsDataSet.PRT);
+            prtTableAdapter.Fill(opsDataSet.PRT, "PRTID > 0", Program.USR);
 
             prtGridControl.ExternalRepository = Program.MF.mainPersistentRepository;
             colDRM.ColumnEdit = Program.MF.prtDrmRepositoryItemLookUpEdit;
@@ -42,6 +43,7 @@ namespace tMax14.Ops
             colSORUMLU.ColumnEdit = Program.MF.USRrepositoryItemCheckedComboBoxEdit;
             //colAMAC.ColumnEdit = Program.MF.MemoExtRepositoryItemMemoExEdit;
             //colACIKLAMA.ColumnEdit = Program.MF.MemoExtRepositoryItemMemoExEdit;
+            colEDITABLE.ColumnEdit = Program.MF.TFrepositoryItemCheckEdit;
 
             Program.MF.GridControlSettings(prtGridControl);
 
@@ -99,8 +101,10 @@ namespace tMax14.Ops
         private void faaliyetlerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int PK = (int)prtGridView.GetFocusedRowCellValue(colPRTID);
+
             ProjeFaliyetXF frm = new ProjeFaliyetXF();
             frm.PrtID = PK;
+            frm.Editable = prtGridView.GetFocusedRowCellValue(colEDITABLE).ToString() == "T" ? true : false;
             frm.ShowDialog();
             frm.Dispose();
 
@@ -126,7 +130,7 @@ namespace tMax14.Ops
             //Save BKMS
             int PK = (int)prtGridView.GetFocusedRowCellValue(colPRTID);
             Program.MF.mainQueriesTableAdapter.BKMS_UPD("PRT", PK, BKMS);
-            this.prtTableAdapter.FillByPRT(opsDataSet.PRT, PK);
+            this.prtTableAdapter.Fill(opsDataSet.PRT, $"PRTID = {PK}", Program.USR);
 
         }
 
@@ -192,6 +196,42 @@ namespace tMax14.Ops
 
             link.CreateDocument();
             link.ShowPreview();
+
+        }
+
+        private void prtGridView_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            GridView view = sender as GridView;
+
+            if (view.FocusedRowHandle == GridControl.NewItemRowHandle ||
+                view.GetDataRow(view.FocusedRowHandle).RowState == DataRowState.Added)
+                e.Cancel = false;
+            else
+            {
+                string E = view.GetFocusedRowCellValue(colEDITABLE).ToString();
+                if (E == "T")
+                {
+                    e.Cancel = true;
+                }
+            }
+
+        }
+
+        private void onaylaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var view = prtGridView;
+
+            if (view.FocusedRowHandle == DevExpress.XtraGrid.GridControl.NewItemRowHandle || !view.IsDataRow(view.FocusedRowHandle))
+                return;
+
+            int PK = (int)view.GetFocusedRowCellValue(colPRTID);
+            Genel.onayXF frm = new Genel.onayXF();
+            frm.curYTK = view.GetFocusedRowCellDisplayText(colONYYTK);
+            frm.Tbl = "PRT";
+            frm.TblPK = PK;
+            frm.ShowDialog();
+            frm.Dispose();
+            this.prtTableAdapter.Fill(opsDataSet.PRT, $"PRTID = {PK}", Program.USR);
 
         }
     }

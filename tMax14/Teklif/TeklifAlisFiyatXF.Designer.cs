@@ -85,7 +85,7 @@
             this.colFREETIME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVIA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colINFO = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemMemoExEdit250 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
+            this.repositoryItemMemoExEdit = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.colONYUSR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colONYYTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colONYTRH = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -177,10 +177,10 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterItem1 = new DevExpress.XtraLayout.SplitterItem();
@@ -196,7 +196,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TYPrepositoryItemImageComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FYTrepositoryItemTextEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TFrepositoryItemCheckEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit250)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
             this.hideContainerLeft.SuspendLayout();
             this.qsDockPanel.SuspendLayout();
@@ -217,10 +217,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).BeginInit();
@@ -262,7 +262,7 @@
             this.STUrepositoryItemImageComboBox,
             this.TFrepositoryItemCheckEdit,
             this.FYTrepositoryItemTextEdit,
-            this.repositoryItemMemoExEdit250});
+            this.repositoryItemMemoExEdit});
             this.tafGridControl.ShowOnlyPredefinedDetails = true;
             this.tafGridControl.Size = new System.Drawing.Size(1141, 256);
             this.tafGridControl.TabIndex = 0;
@@ -829,20 +829,19 @@
             // colINFO
             // 
             this.colINFO.Caption = "Info";
-            this.colINFO.ColumnEdit = this.repositoryItemMemoExEdit250;
+            this.colINFO.ColumnEdit = this.repositoryItemMemoExEdit;
             this.colINFO.FieldName = "INFO";
             this.colINFO.Name = "colINFO";
             this.colINFO.Visible = true;
             this.colINFO.VisibleIndex = 43;
             this.colINFO.Width = 46;
             // 
-            // repositoryItemMemoExEdit250
+            // repositoryItemMemoExEdit
             // 
-            this.repositoryItemMemoExEdit250.AutoHeight = false;
-            this.repositoryItemMemoExEdit250.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.repositoryItemMemoExEdit.AutoHeight = false;
+            this.repositoryItemMemoExEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemMemoExEdit250.MaxLength = 250;
-            this.repositoryItemMemoExEdit250.Name = "repositoryItemMemoExEdit250";
+            this.repositoryItemMemoExEdit.Name = "repositoryItemMemoExEdit";
             // 
             // colONYUSR
             // 
@@ -1762,25 +1761,6 @@
             this.layoutControlGroup3,
             this.layoutControlGroup4});
             // 
-            // layoutControlGroup3
-            // 
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem3});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1121, 203);
-            this.layoutControlGroup3.Text = "Genel Charges";
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.tagGridControl;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1121, 203);
-            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
-            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -1800,6 +1780,25 @@
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1121, 203);
+            this.layoutControlGroup3.Text = "Genel Charges";
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.tagGridControl;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(1121, 203);
+            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlGroup4
             // 
@@ -1858,7 +1857,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TYPrepositoryItemImageComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FYTrepositoryItemTextEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TFrepositoryItemCheckEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit250)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).EndInit();
             this.hideContainerLeft.ResumeLayout(false);
             this.qsDockPanel.ResumeLayout(false);
@@ -1879,10 +1878,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).EndInit();
@@ -2025,7 +2024,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colKDYc;
         private DevExpress.XtraGrid.Columns.GridColumn colFYT8;
         private DevExpress.XtraGrid.Columns.GridColumn colTOBg;
-        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit250;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
         private System.Windows.Forms.BindingSource tamBindingSource;
         private TeklifDataSetTableAdapters.TAMTableAdapter tamTableAdapter;

@@ -363,7 +363,7 @@ namespace tMax14
                 nor += uytTableAdapter.Fill(this.mainDataSet.UYT);
                 nor += uuyTableAdapter.Fill(this.mainDataSet.UUY);
                 nor += ahtTableAdapter.Fill(this.mainDataSet.AHT);
-                nor += prtSelTableAdapter.Fill(this.mainDataSet.PRT_SEL);
+                //nor += prtSelTableAdapter.Fill(this.mainDataSet.PRT_SEL);
                 nor += dvtTableAdapter.Fill(this.mainDataSet.DVT);
                 nor += opstTableAdapter.Fill(this.mainDataSet.OPST);
                 nor += ahpTableAdapter.Fill(this.mainDataSet.AHP);

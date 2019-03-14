@@ -35,6 +35,7 @@
             this.frkGridControl = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.attachmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jurnalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onaylaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mailGonderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +50,6 @@
             this.colONYTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEDITABLE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.miscQueriesTableAdapter = new tMax14.Misc.MiscDataSetTableAdapters.MiscQueriesTableAdapter();
-            this.jurnalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.miscDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frkGridControl)).BeginInit();
@@ -94,34 +94,41 @@
             this.mailGonderToolStripMenuItem,
             this.reportHistoryToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(181, 136);
+            this.contextMenuStrip.Size = new System.Drawing.Size(151, 114);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // attachmentsToolStripMenuItem
             // 
             this.attachmentsToolStripMenuItem.Name = "attachmentsToolStripMenuItem";
-            this.attachmentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.attachmentsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.attachmentsToolStripMenuItem.Text = "Attachments";
             this.attachmentsToolStripMenuItem.Click += new System.EventHandler(this.attachmentsToolStripMenuItem_Click);
+            // 
+            // jurnalToolStripMenuItem
+            // 
+            this.jurnalToolStripMenuItem.Name = "jurnalToolStripMenuItem";
+            this.jurnalToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.jurnalToolStripMenuItem.Text = "Jurnal";
+            this.jurnalToolStripMenuItem.Click += new System.EventHandler(this.jurnalToolStripMenuItem_Click);
             // 
             // onaylaToolStripMenuItem
             // 
             this.onaylaToolStripMenuItem.Name = "onaylaToolStripMenuItem";
-            this.onaylaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.onaylaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.onaylaToolStripMenuItem.Text = "Onayla";
             this.onaylaToolStripMenuItem.Click += new System.EventHandler(this.onaylaToolStripMenuItem_Click);
             // 
             // mailGonderToolStripMenuItem
             // 
             this.mailGonderToolStripMenuItem.Name = "mailGonderToolStripMenuItem";
-            this.mailGonderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mailGonderToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.mailGonderToolStripMenuItem.Text = "Mail gonder";
             this.mailGonderToolStripMenuItem.Click += new System.EventHandler(this.mailGonderToolStripMenuItem_Click);
             // 
             // reportHistoryToolStripMenuItem
             // 
             this.reportHistoryToolStripMenuItem.Name = "reportHistoryToolStripMenuItem";
-            this.reportHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportHistoryToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.reportHistoryToolStripMenuItem.Text = "Report History";
             this.reportHistoryToolStripMenuItem.Click += new System.EventHandler(this.reportHistoryToolStripMenuItem_Click);
             // 
@@ -129,16 +136,17 @@
             // 
             this.frkGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colFRKID,
+            this.colEDITABLE,
             this.colAD,
             this.colTRH,
             this.colFQRY,
             this.colRPTID,
             this.colONYUSR,
             this.colONYYTK,
-            this.colONYTRH,
-            this.colEDITABLE});
+            this.colONYTRH});
             this.frkGridView.GridControl = this.frkGridControl;
             this.frkGridView.Name = "frkGridView";
+            this.frkGridView.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.frkGridView_ShowingEditor);
             this.frkGridView.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.frkGridView_InitNewRow);
             // 
             // colFRKID
@@ -198,6 +206,7 @@
             this.colONYUSR.FieldName = "ONYUSR";
             this.colONYUSR.Name = "colONYUSR";
             this.colONYUSR.OptionsColumn.AllowEdit = false;
+            this.colONYUSR.OptionsColumn.AllowFocus = false;
             this.colONYUSR.OptionsColumn.FixedWidth = true;
             this.colONYUSR.Visible = true;
             this.colONYUSR.VisibleIndex = 6;
@@ -209,6 +218,7 @@
             this.colONYYTK.FieldName = "ONYYTK";
             this.colONYYTK.Name = "colONYYTK";
             this.colONYYTK.OptionsColumn.AllowEdit = false;
+            this.colONYYTK.OptionsColumn.AllowFocus = false;
             this.colONYYTK.OptionsColumn.FixedWidth = true;
             this.colONYYTK.Visible = true;
             this.colONYYTK.VisibleIndex = 7;
@@ -222,6 +232,7 @@
             this.colONYTRH.FieldName = "ONYTRH";
             this.colONYTRH.Name = "colONYTRH";
             this.colONYTRH.OptionsColumn.AllowEdit = false;
+            this.colONYTRH.OptionsColumn.AllowFocus = false;
             this.colONYTRH.OptionsColumn.FixedWidth = true;
             this.colONYTRH.Visible = true;
             this.colONYTRH.VisibleIndex = 8;
@@ -234,17 +245,12 @@
             this.colEDITABLE.Caption = "E";
             this.colEDITABLE.FieldName = "EDITABLE";
             this.colEDITABLE.Name = "colEDITABLE";
+            this.colEDITABLE.OptionsColumn.AllowEdit = false;
+            this.colEDITABLE.OptionsColumn.AllowFocus = false;
             this.colEDITABLE.OptionsColumn.FixedWidth = true;
             this.colEDITABLE.Visible = true;
             this.colEDITABLE.VisibleIndex = 1;
             this.colEDITABLE.Width = 22;
-            // 
-            // jurnalToolStripMenuItem
-            // 
-            this.jurnalToolStripMenuItem.Name = "jurnalToolStripMenuItem";
-            this.jurnalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.jurnalToolStripMenuItem.Text = "Jurnal";
-            this.jurnalToolStripMenuItem.Click += new System.EventHandler(this.jurnalToolStripMenuItem_Click);
             // 
             // frkXF
             // 

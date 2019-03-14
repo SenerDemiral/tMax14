@@ -14,6 +14,7 @@ namespace tMax14.Ops
     public partial class ProjeFaliyetXF : DevExpress.XtraEditors.XtraForm
     {
         public int PrtID = 0;
+        public bool Editable = false;
         string layoutName = "OPS.ProjeFaliyetXF";
 
         public ProjeFaliyetXF()
@@ -35,6 +36,8 @@ namespace tMax14.Ops
             //colDETAY.ColumnEdit = Program.MF.MemoExtRepositoryItemMemoExEdit;
 
             Program.MF.GridControlSettings(prfGridControl);
+
+            prfGridView.OptionsBehavior.Editable = Editable;
 
         }
 

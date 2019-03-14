@@ -75,14 +75,14 @@ namespace tMax14.Teklif
             colVisible.ColumnEdit = Program.MF.TFrepositoryItemCheckEdit;
             colALLIN.ColumnEdit = Program.MF.TFrepositoryItemCheckEdit;
 
-            colCUSLOCID.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
-            colADR.ColumnEdit = Program.MF.TFrepositoryItemCheckEdit;
-            colTOPS.ColumnEdit = Program.MF.TOPrepositoryItemCheckedComboBoxEdit;
-            colCRRIDS.ColumnEdit = Program.MF.FRTcrrRepositoryItemCheckedComboBoxEdit;
-            colRFSTYP.ColumnEdit = Program.MF.TstRfsTypRositoryItemLookUpEdit;
+            colCUSLOCIDt.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
+            colADRt.ColumnEdit = Program.MF.TFrepositoryItemCheckEdit;
+            colTOPSt.ColumnEdit = Program.MF.TOPrepositoryItemCheckedComboBoxEdit;
+            colCRRIDSt.ColumnEdit = Program.MF.FRTcrrRepositoryItemCheckedComboBoxEdit;
+            colRFSTYPt.ColumnEdit = Program.MF.TstRfsTypRositoryItemLookUpEdit;
 
             colASKt.ColumnEdit = Program.MF.TFrepositoryItemCheckEdit;
-            colCRRIDS.ColumnEdit = Program.MF.FRTcrrRepositoryItemCheckedComboBoxEdit;
+            colCRRIDSt.ColumnEdit = Program.MF.FRTcrrRepositoryItemCheckedComboBoxEdit;
 
             Program.MF.GridControlSettings(tstGridControl);
 
@@ -1057,6 +1057,34 @@ private void Form1_Load(object sender, EventArgs e) {
                 int frtID = (int)tstGridView.GetRowCellValue(e.RowHandle, colFRTIDt);
                 fRC_EMAILSTableAdapter.Fill(teklifDataSet.FRC_EMAILS, frtID);
                 e.RepositoryItem = FRCeMailsRepositoryItemCheckedComboBoxEdit;
+            }
+        }
+
+        private void tstGridControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void alisTeklifIstegiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int PK = (int)tstGridView.GetFocusedRowCellValue(colTSTIDt);
+            
+            rprAtiTableAdapter.Fill(teklifDataSet.RPR_ATI, PK);
+
+            string eMails = teklifDataSet.RPR_ATI.Rows[0]["EMAILS"].ToString();
+            string eMailSubject = teklifDataSet.RPR_ATI.Rows[0]["EMAILSUBJECT"].ToString();
+            string eMailBody = teklifDataSet.RPR_ATI.Rows[0]["EMAILBODY"].ToString();
+
+            if (string.IsNullOrWhiteSpace(eMails))
+            {
+                XtraMessageBox.Show("eMail adresi bulunamadı", "ATI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            if (XtraMessageBox.Show(string.Format("Mail gonderilecekler: {0}", eMails), "ATI", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                //rpti.put("ATI", "TST", PK, Program.USR, "F", "eMail");
+                MailClass.MailReportTask(rpti, "ATI", null, eMails, eMailSubject, eMailBody, "");  // NoAttachment
             }
         }
 
