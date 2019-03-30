@@ -3035,6 +3035,8 @@ namespace tMax14.Pvt {
             
             private global::System.Data.DataColumn columnDTM;
             
+            private global::System.Data.DataColumn columnPOR;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public OPH_PVTDataTable() {
@@ -3518,6 +3520,14 @@ namespace tMax14.Pvt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PORColumn {
+                get {
+                    return this.columnPOR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3609,7 +3619,8 @@ namespace tMax14.Pvt {
                         string MCNE, 
                         string CRRTAGS, 
                         decimal MVM3, 
-                        string DTM) {
+                        string DTM, 
+                        string POR) {
                 OPH_PVTRow rowOPH_PVTRow = ((OPH_PVTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OPHID,
@@ -3667,7 +3678,8 @@ namespace tMax14.Pvt {
                         MCNE,
                         CRRTAGS,
                         MVM3,
-                        DTM};
+                        DTM,
+                        POR};
                 rowOPH_PVTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOPH_PVTRow);
                 return rowOPH_PVTRow;
@@ -3746,6 +3758,7 @@ namespace tMax14.Pvt {
                 this.columnCRRTAGS = base.Columns["CRRTAGS"];
                 this.columnMVM3 = base.Columns["MVM3"];
                 this.columnDTM = base.Columns["DTM"];
+                this.columnPOR = base.Columns["POR"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3863,6 +3876,8 @@ namespace tMax14.Pvt {
                 base.Columns.Add(this.columnMVM3);
                 this.columnDTM = new global::System.Data.DataColumn("DTM", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDTM);
+                this.columnPOR = new global::System.Data.DataColumn("POR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPOR);
                 this.columnNSTU.MaxLength = 2;
                 this.columnPSTU.MaxLength = 2;
                 this.columnOWNR.MaxLength = 1;
@@ -3893,6 +3908,7 @@ namespace tMax14.Pvt {
                 this.columnMCNE.MaxLength = 40;
                 this.columnCRRTAGS.MaxLength = 2147483647;
                 this.columnDTM.MaxLength = 5;
+                this.columnPOR.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -24048,6 +24064,22 @@ namespace tMax14.Pvt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string POR {
+                get {
+                    try {
+                        return ((string)(this[this.tableOPH_PVT.PORColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'POR\' in table \'OPH_PVT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOPH_PVT.PORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsOPHIDNull() {
                 return this.IsNull(this.tableOPH_PVT.OPHIDColumn);
             }
@@ -24716,6 +24748,18 @@ namespace tMax14.Pvt {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDTMNull() {
                 this[this.tableOPH_PVT.DTMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPORNull() {
+                return this.IsNull(this.tableOPH_PVT.PORColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPORNull() {
+                this[this.tableOPH_PVT.PORColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -46328,6 +46372,7 @@ namespace tMax14.Pvt.PvtDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("CRRTAGS", "CRRTAGS");
             tableMapping.ColumnMappings.Add("MVM3", "MVM3");
             tableMapping.ColumnMappings.Add("DTM", "DTM");
+            tableMapping.ColumnMappings.Add("POR", "POR");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

@@ -33,19 +33,21 @@
             this.tstBosSelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tstBosSelTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.TST_BOS_SELTableAdapter();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.kaydetSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.vGridControl1 = new DevExpress.XtraVerticalGrid.VGridControl();
             this.rowTSTID = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowNOTS = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.kaydetSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.rowINFO = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowRFSTYP = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             ((System.ComponentModel.ISupportInitialize)(this.teklifDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tstBosSelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vGridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
@@ -76,21 +78,18 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // layoutControlGroup1
+            // kaydetSimpleButton
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(229, 216);
-            this.layoutControlGroup1.TextVisible = false;
+            this.kaydetSimpleButton.Location = new System.Drawing.Point(12, 182);
+            this.kaydetSimpleButton.Name = "kaydetSimpleButton";
+            this.kaydetSimpleButton.Size = new System.Drawing.Size(205, 22);
+            this.kaydetSimpleButton.StyleController = this.layoutControl1;
+            this.kaydetSimpleButton.TabIndex = 4;
+            this.kaydetSimpleButton.Text = "Kaydet";
+            this.kaydetSimpleButton.Click += new System.EventHandler(this.kaydetSimpleButton_Click);
             // 
             // vGridControl1
             // 
-            this.vGridControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.vGridControl1.DataSource = this.tstBosSelBindingSource;
             this.vGridControl1.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView;
             this.vGridControl1.Location = new System.Drawing.Point(12, 12);
@@ -99,7 +98,9 @@
             this.vGridControl1.RowHeaderWidth = 67;
             this.vGridControl1.Rows.AddRange(new DevExpress.XtraVerticalGrid.Rows.BaseRow[] {
             this.rowTSTID,
-            this.rowNOTS});
+            this.rowNOTS,
+            this.rowINFO,
+            this.rowRFSTYP});
             this.vGridControl1.Size = new System.Drawing.Size(205, 166);
             this.vGridControl1.TabIndex = 1;
             // 
@@ -116,6 +117,18 @@
             this.rowNOTS.Properties.Caption = "Not";
             this.rowNOTS.Properties.FieldName = "NOTS";
             // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(229, 216);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.vGridControl1;
@@ -125,16 +138,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // kaydetSimpleButton
-            // 
-            this.kaydetSimpleButton.Location = new System.Drawing.Point(12, 182);
-            this.kaydetSimpleButton.Name = "kaydetSimpleButton";
-            this.kaydetSimpleButton.Size = new System.Drawing.Size(205, 22);
-            this.kaydetSimpleButton.StyleController = this.layoutControl1;
-            this.kaydetSimpleButton.TabIndex = 4;
-            this.kaydetSimpleButton.Text = "Kaydet";
-            this.kaydetSimpleButton.Click += new System.EventHandler(this.kaydetSimpleButton_Click);
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.kaydetSimpleButton;
@@ -143,6 +146,18 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(209, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // rowINFO
+            // 
+            this.rowINFO.Name = "rowINFO";
+            this.rowINFO.Properties.Caption = "Info";
+            this.rowINFO.Properties.FieldName = "INFO";
+            // 
+            // rowRFSTYP
+            // 
+            this.rowRFSTYP.Name = "rowRFSTYP";
+            this.rowRFSTYP.Properties.Caption = "Refused";
+            this.rowRFSTYP.Properties.FieldName = "RFSTYP";
             // 
             // TstBosXF
             // 
@@ -157,8 +172,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tstBosSelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vGridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
@@ -178,5 +193,7 @@
         private DevExpress.XtraEditors.SimpleButton kaydetSimpleButton;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowINFO;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowRFSTYP;
     }
 }

@@ -38,5 +38,10 @@ namespace tMax14.Pvt
             frm.ShowDialog();
             frm.Dispose();
         }
+
+        private void pivotGridControl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

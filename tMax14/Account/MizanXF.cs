@@ -25,7 +25,7 @@ namespace tMax14.Account
         {
             try
             {
-                this.accMizanTableAdapter.Fill(this.accountDataSet.ACC_MIZAN, dateEdit1.DateTime, dateEdit2.DateTime, SklAslCheckEdit.EditValue.ToString());
+                this.accMizanTableAdapter.Fill(this.accountDataSet.ACC_MIZAN, dateEdit1.DateTime, dateEdit2.DateTime, SklAslCheckEdit.EditValue.ToString(), DvrCheckEdit.EditValue.ToString());
             }
             catch (System.Exception ex)
             {

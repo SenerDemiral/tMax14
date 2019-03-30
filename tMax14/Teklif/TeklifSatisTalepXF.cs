@@ -1069,7 +1069,7 @@ private void Form1_Load(object sender, EventArgs e) {
         {
             int PK = (int)tstGridView.GetFocusedRowCellValue(colTSTIDt);
             
-            rprAtiTableAdapter.Fill(teklifDataSet.RPR_ATI, PK);
+            rprAtiTableAdapter.Fill(teklifDataSet.RPR_ATI, PK, Program.USR);
 
             string eMails = teklifDataSet.RPR_ATI.Rows[0]["EMAILS"].ToString();
             string eMailSubject = teklifDataSet.RPR_ATI.Rows[0]["EMAILSUBJECT"].ToString();
@@ -1081,7 +1081,7 @@ private void Form1_Load(object sender, EventArgs e) {
                 return;
             }
 
-            if (XtraMessageBox.Show(string.Format("Mail gonderilecekler: {0}", eMails), "ATI", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            if (XtraMessageBox.Show($"Mail gönderilecekler: {eMails}", "ATI", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
                 //rpti.put("ATI", "TST", PK, Program.USR, "F", "eMail");
                 MailClass.MailReportTask(rpti, "ATI", null, eMails, eMailSubject, eMailBody, "");  // NoAttachment

@@ -9961,6 +9961,10 @@ namespace tMax14.Teklif {
             
             private global::System.Data.DataColumn columnNOTS;
             
+            private global::System.Data.DataColumn columnINFO;
+            
+            private global::System.Data.DataColumn columnRFSTYP;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TST_BOS_SELDataTable() {
@@ -10020,6 +10024,22 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn INFOColumn {
+                get {
+                    return this.columnINFO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn RFSTYPColumn {
+                get {
+                    return this.columnRFSTYP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10055,12 +10075,14 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TST_BOS_SELRow AddTST_BOS_SELRow(int TSTID, string EDITABLE, string NOTS) {
+            public TST_BOS_SELRow AddTST_BOS_SELRow(int TSTID, string EDITABLE, string NOTS, string INFO, string RFSTYP) {
                 TST_BOS_SELRow rowTST_BOS_SELRow = ((TST_BOS_SELRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TSTID,
                         EDITABLE,
-                        NOTS};
+                        NOTS,
+                        INFO,
+                        RFSTYP};
                 rowTST_BOS_SELRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTST_BOS_SELRow);
                 return rowTST_BOS_SELRow;
@@ -10086,6 +10108,8 @@ namespace tMax14.Teklif {
                 this.columnTSTID = base.Columns["TSTID"];
                 this.columnEDITABLE = base.Columns["EDITABLE"];
                 this.columnNOTS = base.Columns["NOTS"];
+                this.columnINFO = base.Columns["INFO"];
+                this.columnRFSTYP = base.Columns["RFSTYP"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10097,8 +10121,14 @@ namespace tMax14.Teklif {
                 base.Columns.Add(this.columnEDITABLE);
                 this.columnNOTS = new global::System.Data.DataColumn("NOTS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNOTS);
+                this.columnINFO = new global::System.Data.DataColumn("INFO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINFO);
+                this.columnRFSTYP = new global::System.Data.DataColumn("RFSTYP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRFSTYP);
                 this.columnEDITABLE.MaxLength = 1;
                 this.columnNOTS.MaxLength = 100;
+                this.columnINFO.MaxLength = 2147483647;
+                this.columnRFSTYP.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22139,6 +22169,38 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string INFO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTST_BOS_SEL.INFOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INFO\' in table \'TST_BOS_SEL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTST_BOS_SEL.INFOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string RFSTYP {
+                get {
+                    try {
+                        return ((string)(this[this.tableTST_BOS_SEL.RFSTYPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RFSTYP\' in table \'TST_BOS_SEL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTST_BOS_SEL.RFSTYPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsTSTIDNull() {
                 return this.IsNull(this.tableTST_BOS_SEL.TSTIDColumn);
             }
@@ -22171,6 +22233,30 @@ namespace tMax14.Teklif {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNOTSNull() {
                 this[this.tableTST_BOS_SEL.NOTSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsINFONull() {
+                return this.IsNull(this.tableTST_BOS_SEL.INFOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetINFONull() {
+                this[this.tableTST_BOS_SEL.INFOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsRFSTYPNull() {
+                return this.IsNull(this.tableTST_BOS_SEL.RFSTYPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetRFSTYPNull() {
+                this[this.tableTST_BOS_SEL.RFSTYPColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -30849,6 +30935,8 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TSTID", "TSTID");
             tableMapping.ColumnMappings.Add("EDITABLE", "EDITABLE");
             tableMapping.ColumnMappings.Add("NOTS", "NOTS");
+            tableMapping.ColumnMappings.Add("INFO", "INFO");
+            tableMapping.ColumnMappings.Add("RFSTYP", "RFSTYP");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
@@ -30866,6 +30954,18 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.Size = 100;
             param.IsNullable = true;
             param.SourceColumn = "NOTS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "INFO";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "INFO";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "RFSTYP";
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "RFSTYP";
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
@@ -30957,7 +31057,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> TSTID, string NOTS) {
+        public virtual int Update(global::System.Nullable<int> TSTID, string NOTS, string INFO, string RFSTYP) {
             if ((TSTID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(TSTID.Value));
             }
@@ -30969,6 +31069,18 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(NOTS));
+            }
+            if ((INFO == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(INFO));
+            }
+            if ((RFSTYP == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(RFSTYP));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -31250,19 +31362,31 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = null;
             this._commandCollection[0].Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "USR";
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            this._commandCollection[0].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TeklifDataSet.RPR_ATIDataTable dataTable, global::System.Nullable<int> TSTID) {
+        public virtual int Fill(TeklifDataSet.RPR_ATIDataTable dataTable, global::System.Nullable<int> TSTID, string USR) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((TSTID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(TSTID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((USR == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(USR));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();

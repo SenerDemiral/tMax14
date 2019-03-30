@@ -19,13 +19,14 @@ namespace tMax14.Firma
         {
             InitializeComponent();
 
-            fRCAGridControl.ExternalRepository = Program.MF.mainPersistentRepository;
+            frcaGridControl.ExternalRepository = Program.MF.mainPersistentRepository;
             colFRTID.ColumnEdit = Program.MF.FRTrepositoryItemGridLookUpEdit;
             colLOCID.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
             colROT.ColumnEdit = Program.MF.ROTrepositoryItemLookUpEdit;
             colMOT.ColumnEdit = Program.MF.MOTrepositoryItemLookUpEdit;
+            colEDITABLE.ColumnEdit = Program.MF.TFrepositoryItemCheckEdit;
 
-            Program.MF.GridControlSettings(fRCAGridControl);
+            Program.MF.GridControlSettings(frcaGridControl);
         }
 
         public void Save()
@@ -56,6 +57,25 @@ namespace tMax14.Firma
             if (FrtID != 0)
                 view.SetFocusedRowCellValue(colFRTID, FrtID);
             view.SetFocusedRowCellValue(colPRIORITY, "1");
+        }
+
+        private void onaylaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Save();
+
+            if (gridView1.FocusedRowHandle == DevExpress.XtraGrid.GridControl.InvalidRowHandle || !gridView1.IsDataRow(gridView1.FocusedRowHandle))
+                return;
+
+            int PK = (int)gridView1.GetFocusedRowCellValue(colFRCAID);
+            Genel.onayXF frm = new Genel.onayXF();
+            frm.curYTK = gridView1.GetFocusedRowCellDisplayText(colONYYTK);
+            frm.Tbl = "FRCA";
+            frm.TblPK = PK;
+            frm.ShowDialog();
+            frm.Dispose();
+
+            //this.tstTableAdapter.ClearBeforeFill = false;
+            //this.tstTableAdapter.Fill(this.teklifDataSet.TST, string.Format("TSTid = {0}", PK), Program.USR);
         }
     }
 }

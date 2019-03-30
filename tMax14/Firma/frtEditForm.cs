@@ -293,7 +293,7 @@ namespace tMax14.Firma
             frtLayoutView.SetFocusedRowCellValue(colSRCTYP, "OPS");
             frtLayoutView.SetFocusedRowCellValue(colVDEGUN, 0);
             frtLayoutView.SetFocusedRowCellValue(colODMSKL, "N");   //Nakit
-
+            frtLayoutView.SetFocusedRowCellValue(colINSUSR, Program.USR);
         }
 
         private void yeniContactToolStripMenuItem_Click(object sender, EventArgs e)

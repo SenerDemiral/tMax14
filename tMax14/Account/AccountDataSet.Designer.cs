@@ -48779,13 +48779,19 @@ namespace tMax14.Account.AccountDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = null;
             this._commandCollection[0].Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "DVR";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            this._commandCollection[0].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AccountDataSet.ACC_MIZANDataTable dataTable, global::System.Nullable<global::System.DateTime> TRH1, global::System.Nullable<global::System.DateTime> TRH2, string SKLASL) {
+        public virtual int Fill(AccountDataSet.ACC_MIZANDataTable dataTable, global::System.Nullable<global::System.DateTime> TRH1, global::System.Nullable<global::System.DateTime> TRH2, string SKLASL, string DVR) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((TRH1.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(TRH1.Value));
@@ -48804,6 +48810,12 @@ namespace tMax14.Account.AccountDataSetTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(SKLASL));
+            }
+            if ((DVR == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(DVR));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();

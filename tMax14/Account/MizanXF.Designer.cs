@@ -54,6 +54,7 @@
             this.colDVRBRCKLN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDVRALCKLN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.DvrCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.SklAslCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.fillSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
@@ -64,6 +65,7 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.accountDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accMizanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accMizanGridControl)).BeginInit();
@@ -71,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.accMizanGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DvrCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SklAslCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
@@ -82,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // accountDataSet
@@ -243,8 +247,6 @@
             this.colLVL.Name = "colLVL";
             this.colLVL.OptionsColumn.FixedWidth = true;
             this.colLVL.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
-            this.colLVL.Visible = true;
-            this.colLVL.VisibleIndex = 11;
             this.colLVL.Width = 30;
             // 
             // colH1
@@ -257,8 +259,6 @@
             this.colH1.Name = "colH1";
             this.colH1.OptionsColumn.FixedWidth = true;
             this.colH1.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
-            this.colH1.Visible = true;
-            this.colH1.VisibleIndex = 12;
             this.colH1.Width = 34;
             // 
             // colH2
@@ -271,8 +271,6 @@
             this.colH2.Name = "colH2";
             this.colH2.OptionsColumn.FixedWidth = true;
             this.colH2.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
-            this.colH2.Visible = true;
-            this.colH2.VisibleIndex = 13;
             this.colH2.Width = 34;
             // 
             // colH3
@@ -285,8 +283,6 @@
             this.colH3.Name = "colH3";
             this.colH3.OptionsColumn.FixedWidth = true;
             this.colH3.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
-            this.colH3.Visible = true;
-            this.colH3.VisibleIndex = 14;
             this.colH3.Width = 34;
             // 
             // colH4
@@ -299,8 +295,6 @@
             this.colH4.Name = "colH4";
             this.colH4.OptionsColumn.FixedWidth = true;
             this.colH4.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
-            this.colH4.Visible = true;
-            this.colH4.VisibleIndex = 15;
             this.colH4.Width = 34;
             // 
             // colH5
@@ -313,8 +307,6 @@
             this.colH5.Name = "colH5";
             this.colH5.OptionsColumn.FixedWidth = true;
             this.colH5.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
-            this.colH5.Visible = true;
-            this.colH5.VisibleIndex = 16;
             this.colH5.Width = 34;
             // 
             // colDVRBRC
@@ -326,8 +318,6 @@
             this.colDVRBRC.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colDVRBRC.FieldName = "DVRBRC";
             this.colDVRBRC.Name = "colDVRBRC";
-            this.colDVRBRC.Visible = true;
-            this.colDVRBRC.VisibleIndex = 7;
             // 
             // colDVRALC
             // 
@@ -338,8 +328,6 @@
             this.colDVRALC.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colDVRALC.FieldName = "DVRALC";
             this.colDVRALC.Name = "colDVRALC";
-            this.colDVRALC.Visible = true;
-            this.colDVRALC.VisibleIndex = 8;
             // 
             // colDVRBRCKLN
             // 
@@ -350,8 +338,6 @@
             this.colDVRBRCKLN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colDVRBRCKLN.FieldName = "DVRBRCKLN";
             this.colDVRBRCKLN.Name = "colDVRBRCKLN";
-            this.colDVRBRCKLN.Visible = true;
-            this.colDVRBRCKLN.VisibleIndex = 9;
             // 
             // colDVRALCKLN
             // 
@@ -362,11 +348,10 @@
             this.colDVRALCKLN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colDVRALCKLN.FieldName = "DVRALCKLN";
             this.colDVRALCKLN.Name = "colDVRALCKLN";
-            this.colDVRALCKLN.Visible = true;
-            this.colDVRALCKLN.VisibleIndex = 10;
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.DvrCheckEdit);
             this.layoutControl1.Controls.Add(this.SklAslCheckEdit);
             this.layoutControl1.Controls.Add(this.fillSimpleButton);
             this.layoutControl1.Controls.Add(this.dateEdit2);
@@ -375,10 +360,22 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(775, 140, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(970, 338);
             this.layoutControl1.TabIndex = 3;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // DvrCheckEdit
+            // 
+            this.DvrCheckEdit.Location = new System.Drawing.Point(422, 12);
+            this.DvrCheckEdit.Name = "DvrCheckEdit";
+            this.DvrCheckEdit.Properties.Caption = "Devir";
+            this.DvrCheckEdit.Properties.DisplayValueChecked = "T";
+            this.DvrCheckEdit.Properties.DisplayValueUnchecked = "F";
+            this.DvrCheckEdit.Size = new System.Drawing.Size(67, 19);
+            this.DvrCheckEdit.StyleController = this.layoutControl1;
+            this.DvrCheckEdit.TabIndex = 8;
             // 
             // SklAslCheckEdit
             // 
@@ -390,15 +387,15 @@
             this.SklAslCheckEdit.Properties.DisplayValueUnchecked = "F";
             this.SklAslCheckEdit.Properties.ValueChecked = "T";
             this.SklAslCheckEdit.Properties.ValueUnchecked = "F";
-            this.SklAslCheckEdit.Size = new System.Drawing.Size(111, 19);
+            this.SklAslCheckEdit.Size = new System.Drawing.Size(134, 19);
             this.SklAslCheckEdit.StyleController = this.layoutControl1;
             this.SklAslCheckEdit.TabIndex = 7;
             // 
             // fillSimpleButton
             // 
-            this.fillSimpleButton.Location = new System.Drawing.Point(399, 12);
+            this.fillSimpleButton.Location = new System.Drawing.Point(493, 12);
             this.fillSimpleButton.Name = "fillSimpleButton";
-            this.fillSimpleButton.Size = new System.Drawing.Size(559, 22);
+            this.fillSimpleButton.Size = new System.Drawing.Size(465, 22);
             this.fillSimpleButton.StyleController = this.layoutControl1;
             this.fillSimpleButton.TabIndex = 6;
             this.fillSimpleButton.Text = "FILL";
@@ -440,9 +437,10 @@
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(970, 338);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -487,9 +485,9 @@
             // 
             this.layoutControlItem4.Control = this.fillSimpleButton;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(387, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(481, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(563, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(469, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -497,10 +495,25 @@
             // 
             this.layoutControlItem5.Control = this.SklAslCheckEdit;
             this.layoutControlItem5.Location = new System.Drawing.Point(272, 0);
+            this.layoutControlItem5.MaxSize = new System.Drawing.Size(138, 0);
+            this.layoutControlItem5.MinSize = new System.Drawing.Size(138, 23);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(115, 26);
+            this.layoutControlItem5.Size = new System.Drawing.Size(138, 26);
+            this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.DvrCheckEdit;
+            this.layoutControlItem6.Location = new System.Drawing.Point(410, 0);
+            this.layoutControlItem6.MaxSize = new System.Drawing.Size(71, 23);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(71, 23);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(71, 26);
+            this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // MizanXF
             // 
@@ -517,6 +530,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.accMizanGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DvrCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SklAslCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
@@ -528,6 +542,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -569,5 +584,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDVRALC;
         private DevExpress.XtraGrid.Columns.GridColumn colDVRBRCKLN;
         private DevExpress.XtraGrid.Columns.GridColumn colDVRALCKLN;
+        private DevExpress.XtraEditors.CheckEdit DvrCheckEdit;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }

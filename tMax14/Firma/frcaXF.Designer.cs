@@ -32,10 +32,13 @@
             this.firmaDataSet = new tMax14.Firma.FirmaDataSet();
             this.frcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frcaTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FRCATableAdapter();
-            this.fRCAGridControl = new DevExpress.XtraGrid.GridControl();
+            this.frcaGridControl = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.onaylaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFRCAID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFRTID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEDITABLE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLOCID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colROT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMOT = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,11 +48,17 @@
             this.repositoryItemImageComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.colHIZMET = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colILGI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFIRSAT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHACIM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colINFO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colONYUSR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colONYYTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colONYTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.firmaQueriesTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FirmaQueriesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.firmaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frcaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fRCAGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frcaGridControl)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PriorityRepositoryItemImageComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).BeginInit();
@@ -69,27 +78,43 @@
             // 
             this.frcaTableAdapter.ClearBeforeFill = true;
             // 
-            // fRCAGridControl
+            // frcaGridControl
             // 
-            this.fRCAGridControl.DataSource = this.frcaBindingSource;
-            this.fRCAGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fRCAGridControl.Location = new System.Drawing.Point(0, 0);
-            this.fRCAGridControl.MainView = this.gridView1;
-            this.fRCAGridControl.Name = "fRCAGridControl";
-            this.fRCAGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.frcaGridControl.ContextMenuStrip = this.contextMenuStrip1;
+            this.frcaGridControl.DataSource = this.frcaBindingSource;
+            this.frcaGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.frcaGridControl.Location = new System.Drawing.Point(0, 0);
+            this.frcaGridControl.MainView = this.gridView1;
+            this.frcaGridControl.Name = "frcaGridControl";
+            this.frcaGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.PriorityRepositoryItemImageComboBox,
             this.repositoryItemImageComboBox1});
-            this.fRCAGridControl.Size = new System.Drawing.Size(833, 318);
-            this.fRCAGridControl.TabIndex = 1;
-            this.fRCAGridControl.Tag = "FRCA";
-            this.fRCAGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.frcaGridControl.Size = new System.Drawing.Size(942, 318);
+            this.frcaGridControl.TabIndex = 1;
+            this.frcaGridControl.Tag = "FRCA";
+            this.frcaGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.onaylaToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(112, 26);
+            // 
+            // onaylaToolStripMenuItem
+            // 
+            this.onaylaToolStripMenuItem.Name = "onaylaToolStripMenuItem";
+            this.onaylaToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.onaylaToolStripMenuItem.Text = "Onayla";
+            this.onaylaToolStripMenuItem.Click += new System.EventHandler(this.onaylaToolStripMenuItem_Click);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colFRCAID,
             this.colFRTID,
+            this.colEDITABLE,
             this.colLOCID,
             this.colROT,
             this.colMOT,
@@ -97,8 +122,13 @@
             this.colFIYAT,
             this.colHIZMET,
             this.colILGI,
-            this.colINFO});
-            this.gridView1.GridControl = this.fRCAGridControl;
+            this.colFIRSAT,
+            this.colHACIM,
+            this.colINFO,
+            this.colONYUSR,
+            this.colONYYTK,
+            this.colONYTRH});
+            this.gridView1.GridControl = this.frcaGridControl;
             this.gridView1.Name = "gridView1";
             this.gridView1.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridView1_InitNewRow);
             // 
@@ -110,16 +140,27 @@
             this.colFRCAID.OptionsColumn.AllowFocus = false;
             this.colFRCAID.Visible = true;
             this.colFRCAID.VisibleIndex = 0;
-            this.colFRCAID.Width = 48;
+            this.colFRCAID.Width = 59;
             // 
             // colFRTID
             // 
             this.colFRTID.FieldName = "FRTID";
             this.colFRTID.Name = "colFRTID";
+            this.colFRTID.OptionsColumn.AllowEdit = false;
+            this.colFRTID.OptionsColumn.AllowFocus = false;
             this.colFRTID.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
-            this.colFRTID.Visible = true;
-            this.colFRTID.VisibleIndex = 1;
-            this.colFRTID.Width = 48;
+            this.colFRTID.Width = 31;
+            // 
+            // colEDITABLE
+            // 
+            this.colEDITABLE.Caption = "E";
+            this.colEDITABLE.FieldName = "EDITABLE";
+            this.colEDITABLE.Name = "colEDITABLE";
+            this.colEDITABLE.OptionsColumn.AllowEdit = false;
+            this.colEDITABLE.OptionsColumn.AllowFocus = false;
+            this.colEDITABLE.Visible = true;
+            this.colEDITABLE.VisibleIndex = 1;
+            this.colEDITABLE.Width = 27;
             // 
             // colLOCID
             // 
@@ -129,7 +170,7 @@
             this.colLOCID.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colLOCID.Visible = true;
             this.colLOCID.VisibleIndex = 2;
-            this.colLOCID.Width = 95;
+            this.colLOCID.Width = 63;
             // 
             // colROT
             // 
@@ -223,27 +264,81 @@
             this.colILGI.VisibleIndex = 8;
             this.colILGI.Width = 50;
             // 
+            // colFIRSAT
+            // 
+            this.colFIRSAT.Caption = "Fırsat";
+            this.colFIRSAT.ColumnEdit = this.repositoryItemImageComboBox1;
+            this.colFIRSAT.FieldName = "FIRSAT";
+            this.colFIRSAT.Name = "colFIRSAT";
+            this.colFIRSAT.Visible = true;
+            this.colFIRSAT.VisibleIndex = 9;
+            this.colFIRSAT.Width = 48;
+            // 
+            // colHACIM
+            // 
+            this.colHACIM.Caption = "Hacim";
+            this.colHACIM.ColumnEdit = this.repositoryItemImageComboBox1;
+            this.colHACIM.FieldName = "HACIM";
+            this.colHACIM.Name = "colHACIM";
+            this.colHACIM.Visible = true;
+            this.colHACIM.VisibleIndex = 10;
+            this.colHACIM.Width = 55;
+            // 
             // colINFO
             // 
             this.colINFO.Caption = "Info";
             this.colINFO.FieldName = "INFO";
             this.colINFO.Name = "colINFO";
             this.colINFO.Visible = true;
-            this.colINFO.VisibleIndex = 9;
-            this.colINFO.Width = 344;
+            this.colINFO.VisibleIndex = 11;
+            this.colINFO.Width = 231;
+            // 
+            // colONYUSR
+            // 
+            this.colONYUSR.Caption = "OnyUsr";
+            this.colONYUSR.FieldName = "ONYUSR";
+            this.colONYUSR.Name = "colONYUSR";
+            this.colONYUSR.OptionsColumn.AllowEdit = false;
+            this.colONYUSR.OptionsColumn.AllowFocus = false;
+            this.colONYUSR.Visible = true;
+            this.colONYUSR.VisibleIndex = 12;
+            this.colONYUSR.Width = 48;
+            // 
+            // colONYYTK
+            // 
+            this.colONYYTK.Caption = "OnyYtk";
+            this.colONYYTK.FieldName = "ONYYTK";
+            this.colONYYTK.Name = "colONYYTK";
+            this.colONYYTK.OptionsColumn.AllowEdit = false;
+            this.colONYYTK.OptionsColumn.AllowFocus = false;
+            this.colONYYTK.Visible = true;
+            this.colONYYTK.VisibleIndex = 13;
+            this.colONYYTK.Width = 48;
+            // 
+            // colONYTRH
+            // 
+            this.colONYTRH.Caption = "OnyTrh";
+            this.colONYTRH.FieldName = "ONYTRH";
+            this.colONYTRH.Name = "colONYTRH";
+            this.colONYTRH.OptionsColumn.AllowEdit = false;
+            this.colONYTRH.OptionsColumn.AllowFocus = false;
+            this.colONYTRH.Visible = true;
+            this.colONYTRH.VisibleIndex = 14;
+            this.colONYTRH.Width = 65;
             // 
             // frcaXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 318);
-            this.Controls.Add(this.fRCAGridControl);
+            this.ClientSize = new System.Drawing.Size(942, 318);
+            this.Controls.Add(this.frcaGridControl);
             this.Name = "frcaXF";
             this.Text = "frcaXF";
             this.Load += new System.EventHandler(this.frcaXF_Load);
             ((System.ComponentModel.ISupportInitialize)(this.firmaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frcaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fRCAGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frcaGridControl)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PriorityRepositoryItemImageComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).EndInit();
@@ -256,7 +351,7 @@
         private FirmaDataSet firmaDataSet;
         private System.Windows.Forms.BindingSource frcaBindingSource;
         private FirmaDataSetTableAdapters.FRCATableAdapter frcaTableAdapter;
-        private DevExpress.XtraGrid.GridControl fRCAGridControl;
+        private DevExpress.XtraGrid.GridControl frcaGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colFRCAID;
         private DevExpress.XtraGrid.Columns.GridColumn colFRTID;
@@ -271,5 +366,13 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemImageComboBox1;
         private DevExpress.XtraGrid.Columns.GridColumn colHIZMET;
         private DevExpress.XtraGrid.Columns.GridColumn colILGI;
+        private DevExpress.XtraGrid.Columns.GridColumn colONYUSR;
+        private DevExpress.XtraGrid.Columns.GridColumn colONYYTK;
+        private DevExpress.XtraGrid.Columns.GridColumn colONYTRH;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem onaylaToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colEDITABLE;
+        private DevExpress.XtraGrid.Columns.GridColumn colFIRSAT;
+        private DevExpress.XtraGrid.Columns.GridColumn colHACIM;
     }
 }

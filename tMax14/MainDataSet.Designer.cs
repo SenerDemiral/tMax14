@@ -1143,7 +1143,7 @@ namespace tMax14 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitExpressions() {
             this.FRT.AdNidColumn.Expression = "ADN+\' • \'+FRTID";
-            this.FRT.CrrAdColumn.Expression = "SUBSTRING(TUR, 2, 1)+\'-\'+ADN+\' • \'+FRTID";
+            this.FRT.CrrAdColumn.Expression = "ADN+\' • \'+FRTID";
             this.LOC.AdLocColumn.Expression = "Ad+\'  °  \'+LOCID";
             this.LOC_LU_TREE.AdLocColumn.Expression = "AD + \' • \'+ LOCID";
             this.AHP.HspNoAdColumn.Expression = "HSPNO+\' • \'+HSPAD";
@@ -1844,7 +1844,7 @@ namespace tMax14 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitExpressions() {
                 this.AdNidColumn.Expression = "ADN+\' • \'+FRTID";
-                this.CrrAdColumn.Expression = "SUBSTRING(TUR, 2, 1)+\'-\'+ADN+\' • \'+FRTID";
+                this.CrrAdColumn.Expression = "ADN+\' • \'+FRTID";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

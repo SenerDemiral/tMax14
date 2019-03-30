@@ -2937,6 +2937,8 @@ namespace tMax14.Firma {
             
             private global::System.Data.DataColumn columnSRVULK;
             
+            private global::System.Data.DataColumn columnINSUSR;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public FRTeditDataTable() {
@@ -3724,6 +3726,14 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn INSUSRColumn {
+                get {
+                    return this.columnINSUSR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3853,7 +3863,8 @@ namespace tMax14.Firma {
                         string TRXADRES, 
                         string ICDIS, 
                         string IMPAMBAR, 
-                        string SRVULK) {
+                        string SRVULK, 
+                        string INSUSR) {
                 FRTeditRow rowFRTeditRow = ((FRTeditRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FRTID,
@@ -3949,7 +3960,8 @@ namespace tMax14.Firma {
                         TRXADRES,
                         ICDIS,
                         IMPAMBAR,
-                        SRVULK};
+                        SRVULK,
+                        INSUSR};
                 if ((parentFRTeditRowByFK_FRT_HDQ != null)) {
                     columnValuesArray[28] = parentFRTeditRowByFK_FRT_HDQ[0];
                 }
@@ -4076,6 +4088,7 @@ namespace tMax14.Firma {
                 this.columnICDIS = base.Columns["ICDIS"];
                 this.columnIMPAMBAR = base.Columns["IMPAMBAR"];
                 this.columnSRVULK = base.Columns["SRVULK"];
+                this.columnINSUSR = base.Columns["INSUSR"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4269,6 +4282,8 @@ namespace tMax14.Firma {
                 base.Columns.Add(this.columnIMPAMBAR);
                 this.columnSRVULK = new global::System.Data.DataColumn("SRVULK", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSRVULK);
+                this.columnINSUSR = new global::System.Data.DataColumn("INSUSR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINSUSR);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnFRTID}, true));
                 this.columnFRTID.AllowDBNull = false;
@@ -4365,6 +4380,7 @@ namespace tMax14.Firma {
                 this.columnICDIS.MaxLength = 1;
                 this.columnIMPAMBAR.MaxLength = 40;
                 this.columnSRVULK.MaxLength = 2147483647;
+                this.columnINSUSR.MaxLength = 4;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9677,6 +9693,10 @@ namespace tMax14.Firma {
             
             private global::System.Data.DataColumn columnEDITABLE;
             
+            private global::System.Data.DataColumn columnFIRSAT;
+            
+            private global::System.Data.DataColumn columnHACIM;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public FRCADataTable() {
@@ -9824,6 +9844,22 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FIRSATColumn {
+                get {
+                    return this.columnFIRSAT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn HACIMColumn {
+                get {
+                    return this.columnHACIM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -9859,7 +9895,23 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FRCARow AddFRCARow(int FRCAID, int FRTID, string LOCID, string ROT, string MOT, string PRIORITY, string FIYAT, string HIZMET, string ILGI, string INFO, string ONYUSR, string ONYYTK, System.DateTime ONYTRH, string EDITABLE) {
+            public FRCARow AddFRCARow(
+                        int FRCAID, 
+                        int FRTID, 
+                        string LOCID, 
+                        string ROT, 
+                        string MOT, 
+                        string PRIORITY, 
+                        string FIYAT, 
+                        string HIZMET, 
+                        string ILGI, 
+                        string INFO, 
+                        string ONYUSR, 
+                        string ONYYTK, 
+                        System.DateTime ONYTRH, 
+                        string EDITABLE, 
+                        string FIRSAT, 
+                        string HACIM) {
                 FRCARow rowFRCARow = ((FRCARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FRCAID,
@@ -9875,7 +9927,9 @@ namespace tMax14.Firma {
                         ONYUSR,
                         ONYYTK,
                         ONYTRH,
-                        EDITABLE};
+                        EDITABLE,
+                        FIRSAT,
+                        HACIM};
                 rowFRCARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFRCARow);
                 return rowFRCARow;
@@ -9919,6 +9973,8 @@ namespace tMax14.Firma {
                 this.columnONYYTK = base.Columns["ONYYTK"];
                 this.columnONYTRH = base.Columns["ONYTRH"];
                 this.columnEDITABLE = base.Columns["EDITABLE"];
+                this.columnFIRSAT = base.Columns["FIRSAT"];
+                this.columnHACIM = base.Columns["HACIM"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9952,6 +10008,10 @@ namespace tMax14.Firma {
                 base.Columns.Add(this.columnONYTRH);
                 this.columnEDITABLE = new global::System.Data.DataColumn("EDITABLE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEDITABLE);
+                this.columnFIRSAT = new global::System.Data.DataColumn("FIRSAT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFIRSAT);
+                this.columnHACIM = new global::System.Data.DataColumn("HACIM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHACIM);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnFRCAID}, true));
                 this.columnFRCAID.AllowDBNull = false;
@@ -9967,6 +10027,8 @@ namespace tMax14.Firma {
                 this.columnONYUSR.MaxLength = 4;
                 this.columnONYYTK.MaxLength = 4;
                 this.columnEDITABLE.MaxLength = 1;
+                this.columnFIRSAT.MaxLength = 1;
+                this.columnHACIM.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14439,6 +14501,22 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string INSUSR {
+                get {
+                    try {
+                        return ((string)(this[this.tableFRTedit.INSUSRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INSUSR\' in table \'FRTedit\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFRTedit.INSUSRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public FRTeditRow FRTeditRowParent {
                 get {
                     return ((FRTeditRow)(this.GetParentRow(this.Table.ParentRelations["FK_FRT_HDQ"])));
@@ -15562,6 +15640,18 @@ namespace tMax14.Firma {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetSRVULKNull() {
                 this[this.tableFRTedit.SRVULKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsINSUSRNull() {
+                return this.IsNull(this.tableFRTedit.INSUSRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetINSUSRNull() {
+                this[this.tableFRTedit.INSUSRColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20053,6 +20143,38 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FIRSAT {
+                get {
+                    try {
+                        return ((string)(this[this.tableFRCA.FIRSATColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FIRSAT\' in table \'FRCA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFRCA.FIRSATColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string HACIM {
+                get {
+                    try {
+                        return ((string)(this[this.tableFRCA.HACIMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HACIM\' in table \'FRCA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFRCA.HACIMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFRTIDNull() {
                 return this.IsNull(this.tableFRCA.FRTIDColumn);
             }
@@ -20205,6 +20327,30 @@ namespace tMax14.Firma {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetEDITABLENull() {
                 this[this.tableFRCA.EDITABLEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFIRSATNull() {
+                return this.IsNull(this.tableFRCA.FIRSATColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFIRSATNull() {
+                this[this.tableFRCA.FIRSATColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsHACIMNull() {
+                return this.IsNull(this.tableFRCA.HACIMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetHACIMNull() {
+                this[this.tableFRCA.HACIMColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -23191,6 +23337,7 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ICDIS", "ICDIS");
             tableMapping.ColumnMappings.Add("IMPAMBAR", "IMPAMBAR");
             tableMapping.ColumnMappings.Add("SRVULK", "SRVULK");
+            tableMapping.ColumnMappings.Add("INSUSR", "INSUSR");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -23216,17 +23363,17 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
                 "\"PI11AMTFKD\", \"PI11SMTFKD\", \"YTRF\", \"ORG_FRTID\", \"SONOBTRH\", \"SIL\", \"OZLDRMA\", \"" +
                 "ISPRMAGN\", \"BANKS\", \"DUNS\", \"KKBCS\", \"KKBST\", \"BLSTU\", \"BLTRH\", \"BLINF\", \"SKK\", " +
                 "\"IBAN\", \"MRKOFC\", \"PWD\", \"OFCNO\", \"ADRESIL\", \"ADRESILCE\", \"ADRESULKE\", \"EXTRE\", " +
-                "\"MTBKT\", \"FTRSKL\", \"PKOD\", \"TRXAD\", \"TRXADRES\", \"IMPAMBAR\", \"SRVULK\") VALUES (@F" +
-                "RTID, @TUR, @ADN, @AD, @ADRES, @DRM, @DVZ, @LOCID, @LM_USR, @LM_TS, @AD9, @GRP, " +
-                "@ILS, @FLY, @XTBLB, @XTTXT, @BKMS, @TAGS, @TEL, @FAX, @EMAIL, @WEB, @L2, @L3, @N" +
-                "3, @CASS, @IATA, @HDQ, @HDQID, @CBRID, @LNAID, @SRCID, @SRCTYP, @PAYTFID, @INVTO" +
-                "ID, @EORINO, @KRLYIL, @BAYRAK, @AMBAR, @LUADR, @DLVADR, @AIRLINEPIMA, @EFTR, @VR" +
-                "GD, @VRGN, @TSCD, @TSCN, @HSPNO12, @HSPNO32, @LMTTUT, @ODMSKL, @SPRTUSR, @PRMID," +
-                " @INFO, @OZLDRM, @INSTRH, @UPDTRH, @PI11CTRF, @PI11AMTRF, @PI11SMTRF, @VDEGUN, @" +
-                "PI11AMTFKD, @PI11SMTFKD, @YTRF, @ORG_FRTID, @SONOBTRH, @SIL, @OZLDRMA, @ISPRMAGN" +
-                ", @BANKS, @DUNS, @KKBCS, @KKBST, @BLSTU, @BLTRH, @BLINF, @SKK, @IBAN, @MRKOFC, @" +
-                "PWD, @OFCNO, @ADRESIL, @ADRESILCE, @ADRESULKE, @EXTRE, @MTBKT, @FTRSKL, @PKOD, @" +
-                "TRXAD, @TRXADRES, @IMPAMBAR, @SRVULK)";
+                "\"MTBKT\", \"FTRSKL\", \"PKOD\", \"TRXAD\", \"TRXADRES\", \"IMPAMBAR\", \"SRVULK\", \"INSUSR\") " +
+                "VALUES (@FRTID, @TUR, @ADN, @AD, @ADRES, @DRM, @DVZ, @LOCID, @LM_USR, @LM_TS, @A" +
+                "D9, @GRP, @ILS, @FLY, @XTBLB, @XTTXT, @BKMS, @TAGS, @TEL, @FAX, @EMAIL, @WEB, @L" +
+                "2, @L3, @N3, @CASS, @IATA, @HDQ, @HDQID, @CBRID, @LNAID, @SRCID, @SRCTYP, @PAYTF" +
+                "ID, @INVTOID, @EORINO, @KRLYIL, @BAYRAK, @AMBAR, @LUADR, @DLVADR, @AIRLINEPIMA, " +
+                "@EFTR, @VRGD, @VRGN, @TSCD, @TSCN, @HSPNO12, @HSPNO32, @LMTTUT, @ODMSKL, @SPRTUS" +
+                "R, @PRMID, @INFO, @OZLDRM, @INSTRH, @UPDTRH, @PI11CTRF, @PI11AMTRF, @PI11SMTRF, " +
+                "@VDEGUN, @PI11AMTFKD, @PI11SMTFKD, @YTRF, @ORG_FRTID, @SONOBTRH, @SIL, @OZLDRMA," +
+                " @ISPRMAGN, @BANKS, @DUNS, @KKBCS, @KKBST, @BLSTU, @BLTRH, @BLINF, @SKK, @IBAN, " +
+                "@MRKOFC, @PWD, @OFCNO, @ADRESIL, @ADRESILCE, @ADRESULKE, @EXTRE, @MTBKT, @FTRSKL" +
+                ", @PKOD, @TRXAD, @TRXADRES, @IMPAMBAR, @SRVULK, @INSUSR)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@FRTID";
@@ -23804,6 +23951,12 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "SRVULK";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@INSUSR";
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "INSUSR";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE \"FRT\" SET \"FRTID\" = @FRTID, \"TUR\" = @TUR, \"ADN\" = @ADN, \"AD\" = @AD, \"ADRES" +
@@ -23827,7 +23980,8 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
                 "OFC\" = @MRKOFC, \"PWD\" = @PWD, \"OFCNO\" = @OFCNO, \"ADRESIL\" = @ADRESIL, \"ADRESILCE" +
                 "\" = @ADRESILCE, \"ADRESULKE\" = @ADRESULKE, \"EXTRE\" = @EXTRE, \"MTBKT\" = @MTBKT, \"F" +
                 "TRSKL\" = @FTRSKL, \"PKOD\" = @PKOD, \"TRXAD\" = @TRXAD, \"TRXADRES\" = @TRXADRES, \"IMP" +
-                "AMBAR\" = @IMPAMBAR, \"SRVULK\" = @SRVULK WHERE ((\"FRTID\" = @Original_FRTID))";
+                "AMBAR\" = @IMPAMBAR, \"SRVULK\" = @SRVULK, \"INSUSR\" = @INSUSR WHERE ((\"FRTID\" = @Or" +
+                "iginal_FRTID))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@FRTID";
@@ -24404,6 +24558,12 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             param.Size = 2147483647;
             param.IsNullable = true;
             param.SourceColumn = "SRVULK";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@INSUSR";
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "INSUSR";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_FRTID";
@@ -27705,6 +27865,8 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ONYYTK", "ONYYTK");
             tableMapping.ColumnMappings.Add("ONYTRH", "ONYTRH");
             tableMapping.ColumnMappings.Add("EDITABLE", "EDITABLE");
+            tableMapping.ColumnMappings.Add("FIRSAT", "FIRSAT");
+            tableMapping.ColumnMappings.Add("HACIM", "HACIM");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -27778,6 +27940,18 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             param.SourceColumn = "ILGI";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "FIRSAT";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "FIRSAT";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "HACIM";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "HACIM";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "INFO";
             param.Size = 2147483647;
             param.IsNullable = true;
@@ -27842,6 +28016,18 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             param.Size = 1;
             param.IsNullable = true;
             param.SourceColumn = "ILGI";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "FIRSAT";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "FIRSAT";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "HACIM";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "HACIM";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "INFO";

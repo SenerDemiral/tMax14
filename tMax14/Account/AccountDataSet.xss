@@ -29,7 +29,7 @@
     <Shape ID="DesignTable:AHB" ZOrder="39" X="-6" Y="51" Height="69" Width="166" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="92" SplitterPosition="22" />
     <Shape ID="DesignTable:AFDL" ZOrder="9" X="403" Y="66" Height="113" Width="178" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="254" SplitterPosition="24" />
     <Shape ID="DesignTable:AFD" ZOrder="16" X="234" Y="295" Height="75" Width="169" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="254" SplitterPosition="24" />
-    <Shape ID="DesignTable:ACC_MIZAN" ZOrder="1" X="1149" Y="305" Height="75" Width="215" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="254" SplitterPosition="24" />
+    <Shape ID="DesignTable:ACC_MIZAN" ZOrder="1" X="1149" Y="305" Height="305" Width="215" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="254" />
     <Shape ID="DesignTable:AVB" ZOrder="6" X="833" Y="-33" Height="75" Width="169" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="254" SplitterPosition="24" />
     <Shape ID="DesignTable:ACC_MUAVIN" ZOrder="2" X="1185" Y="404" Height="69" Width="220" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="228" SplitterPosition="22" />
     <Shape ID="DesignTable:ACC_MUSTERI_BKY" ZOrder="34" X="1119" Y="543" Height="69" Width="255" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="228" SplitterPosition="22" />
