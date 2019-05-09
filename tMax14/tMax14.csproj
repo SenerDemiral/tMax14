@@ -27,8 +27,8 @@
     <ProductName>tMax14</ProductName>
     <PublisherName>Şener DEMİRAL</PublisherName>
     <SuiteName>tMax14</SuiteName>
-    <MinimumRequiredVersion>1.6.0.483</MinimumRequiredVersion>
-    <ApplicationRevision>484</ApplicationRevision>
+    <MinimumRequiredVersion>1.6.0.485</MinimumRequiredVersion>
+    <ApplicationRevision>486</ApplicationRevision>
     <ApplicationVersion>1.6.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -486,6 +486,12 @@
     </Compile>
     <Compile Include="Account\FaturaKapaXF.Designer.cs">
       <DependentUpon>FaturaKapaXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FaturaKurFarkiInsXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FaturaKurFarkiInsXF.Designer.cs">
+      <DependentUpon>FaturaKurFarkiInsXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Account\FaturaLink2XF.cs">
       <SubType>Form</SubType>
@@ -1675,6 +1681,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Account\FaturaKapaXF.resx">
       <DependentUpon>FaturaKapaXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FaturaKurFarkiInsXF.resx">
+      <DependentUpon>FaturaKurFarkiInsXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Account\FaturaLink2XF.resx">
       <DependentUpon>FaturaLink2XF.cs</DependentUpon>

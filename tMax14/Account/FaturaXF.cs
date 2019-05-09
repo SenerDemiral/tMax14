@@ -29,6 +29,7 @@ namespace tMax14.Account
     public partial class FaturaXF : DevExpress.XtraEditors.XtraForm
     {
         public int AFBid = 0,
+                   RefAfbID = 0,
                    FRTid = 0, //Deneme
                    OPid = 0;
         string layoutName = "Account.FaturaXF";
@@ -44,6 +45,8 @@ namespace tMax14.Account
 
             if (AFBid != 0)
                 sb.Append(string.Format("AFBid = {0}", AFBid));
+            else if (RefAfbID != 0)
+                sb.Append(string.Format("RefAfbID = {0}", RefAfbID));
             else if (FRTid != 0)
                 sb.Append(string.Format("FRTid = {0}", FRTid));
             else if (OPid != 0)
@@ -999,6 +1002,66 @@ namespace tMax14.Account
                 printTool.ShowPreviewDialog();
             }
 
+        }
+
+        private void kurFarkiFaturaEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var view = afbGridView;
+
+            // AFB_INS_KURFARKI (curAfbID, topKurFarkiTL, FtrTrh, FtrNo, Usr)
+            // Tur BS/AS disinda olamaz.
+            if (!view.IsDataRow(view.FocusedRowHandle))
+                return;
+
+
+            // Simdilik aktif degil
+            //if (!Program.MF.EntryCheck("AFB.FaturaKurFarkiInsXF", false))
+            //    return;
+
+            string tur = afbGridView.GetFocusedRowCellValue(colTUR).ToString();
+            if (tur == "BS" || tur == "AA")
+            {
+                int afbID = (int)view.GetFocusedRowCellValue(colAFBID);
+                FaturaKurFarkiInsXF frm = new FaturaKurFarkiInsXF();
+                frm.refAfbID = afbID;
+                frm.ShowDialog();
+
+                FaturaXF ftr = new FaturaXF();
+                ftr.AFBid = frm.newAfbID;
+                ftr.ShowDialog();
+                ftr.Dispose();
+            }
+
+        }
+
+        private void refFaturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var view = afbGridView;
+
+            if (!view.IsDataRow(view.FocusedRowHandle))
+                return;
+
+            if (view.GetFocusedRowCellValue(colREFAFBID) != DBNull.Value)
+            {
+                FaturaXF ftr = new FaturaXF();
+                ftr.AFBid = (int)view.GetFocusedRowCellValue(colREFAFBID);
+                ftr.ShowDialog();
+                ftr.Dispose();
+            }
+
+        }
+
+        private void kurFarkiFaturasiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var view = afbGridView;
+
+            if (!view.IsDataRow(view.FocusedRowHandle))
+                return;
+
+            FaturaXF ftr = new FaturaXF();
+            ftr.RefAfbID = (int)view.GetFocusedRowCellValue(colAFBID);
+            ftr.ShowDialog();
+            ftr.Dispose();
         }
 
         private void tAGUpdateToolStripMenuItem_Click(object sender, EventArgs e)

@@ -18735,6 +18735,10 @@ namespace tMax14.Account {
             
             private global::System.Data.DataColumn columnODMGUN;
             
+            private global::System.Data.DataColumn columnFRTTUR;
+            
+            private global::System.Data.DataColumn columnREFAFBID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public AFBDataTable() {
@@ -19154,6 +19158,22 @@ namespace tMax14.Account {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FRTTURColumn {
+                get {
+                    return this.columnFRTTUR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn REFAFBIDColumn {
+                get {
+                    return this.columnREFAFBID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -19237,7 +19257,9 @@ namespace tMax14.Account {
                         string KPIUSR, 
                         System.DateTime KPITRH, 
                         int VDEGUN, 
-                        int ODMGUN) {
+                        int ODMGUN, 
+                        string FRTTUR, 
+                        int REFAFBID) {
                 AFBRow rowAFBRow = ((AFBRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         AFBID,
@@ -19287,7 +19309,9 @@ namespace tMax14.Account {
                         KPIUSR,
                         KPITRH,
                         VDEGUN,
-                        ODMGUN};
+                        ODMGUN,
+                        FRTTUR,
+                        REFAFBID};
                 rowAFBRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAFBRow);
                 return rowAFBRow;
@@ -19365,6 +19389,8 @@ namespace tMax14.Account {
                 this.columnKPITRH = base.Columns["KPITRH"];
                 this.columnVDEGUN = base.Columns["VDEGUN"];
                 this.columnODMGUN = base.Columns["ODMGUN"];
+                this.columnFRTTUR = base.Columns["FRTTUR"];
+                this.columnREFAFBID = base.Columns["REFAFBID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19466,6 +19492,10 @@ namespace tMax14.Account {
                 base.Columns.Add(this.columnVDEGUN);
                 this.columnODMGUN = new global::System.Data.DataColumn("ODMGUN", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnODMGUN);
+                this.columnFRTTUR = new global::System.Data.DataColumn("FRTTUR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFRTTUR);
+                this.columnREFAFBID = new global::System.Data.DataColumn("REFAFBID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREFAFBID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnAFBID}, true));
                 this.columnAFBID.AllowDBNull = false;
@@ -19496,6 +19526,7 @@ namespace tMax14.Account {
                 this.columnEDITABLE.MaxLength = 1;
                 this.columnKPI.MaxLength = 10;
                 this.columnKPIUSR.MaxLength = 20;
+                this.columnFRTTUR.MaxLength = 2;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -37105,6 +37136,38 @@ namespace tMax14.Account {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FRTTUR {
+                get {
+                    try {
+                        return ((string)(this[this.tableAFB.FRTTURColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FRTTUR\' in table \'AFB\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAFB.FRTTURColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int REFAFBID {
+                get {
+                    try {
+                        return ((int)(this[this.tableAFB.REFAFBIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REFAFBID\' in table \'AFB\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAFB.REFAFBIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsARSIVNull() {
                 return this.IsNull(this.tableAFB.ARSIVColumn);
             }
@@ -37665,6 +37728,30 @@ namespace tMax14.Account {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetODMGUNNull() {
                 this[this.tableAFB.ODMGUNColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFRTTURNull() {
+                return this.IsNull(this.tableAFB.FRTTURColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFRTTURNull() {
+                this[this.tableAFB.FRTTURColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsREFAFBIDNull() {
+                return this.IsNull(this.tableAFB.REFAFBIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetREFAFBIDNull() {
+                this[this.tableAFB.REFAFBIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -52638,6 +52725,8 @@ namespace tMax14.Account.AccountDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("KPITRH", "KPITRH");
             tableMapping.ColumnMappings.Add("VDEGUN", "VDEGUN");
             tableMapping.ColumnMappings.Add("ODMGUN", "ODMGUN");
+            tableMapping.ColumnMappings.Add("FRTTUR", "FRTTUR");
+            tableMapping.ColumnMappings.Add("REFAFBID", "REFAFBID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -54182,7 +54271,7 @@ namespace tMax14.Account.AccountDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[31];
+            this._commandCollection = new global::System.Data.IDbCommand[32];
             this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::tMax14.Properties.Settings.Default.ConnectionString);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).CommandText = "\"GET_PK\"";
@@ -54707,6 +54796,43 @@ namespace tMax14.Account.AccountDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[30])).Parameters.Add(param);
+            this._commandCollection[31] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::tMax14.Properties.Settings.Default.ConnectionString);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).CommandText = "\"AFB_INS_KURFARKI\"";
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "OAFBID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "TOPKURFARKITL";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "FTRTRH";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "FTRNO";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "USR";
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -55895,6 +56021,64 @@ namespace tMax14.Account.AccountDataSetTableAdapters {
             }
             else {
                 command.Parameters[2].Value = ((string)(NEWDDVZ));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object AFB_INS_KURFARKI(global::System.Nullable<int> OAFBID, global::System.Nullable<decimal> TOPKURFARKITL, global::System.Nullable<global::System.DateTime> FTRTRH, string FTRNO, string USR) {
+            global::FirebirdSql.Data.FirebirdClient.FbCommand command = ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this.CommandCollection[31]));
+            if ((OAFBID.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(OAFBID.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((TOPKURFARKITL.HasValue == true)) {
+                command.Parameters[1].Value = ((decimal)(TOPKURFARKITL.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((FTRTRH.HasValue == true)) {
+                command.Parameters[2].Value = ((System.DateTime)(FTRTRH.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((FTRNO == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(FTRNO));
+            }
+            if ((USR == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(USR));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

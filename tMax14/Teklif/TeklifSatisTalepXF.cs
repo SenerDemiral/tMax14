@@ -1025,8 +1025,9 @@ private void Form1_Load(object sender, EventArgs e) {
 
         private void bosUpdateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!Program.MF.EntryCheck("Teklif.TstBosXF", isSilent: false))
-                return;
+            // 02.05.19 da asagidaki kaldirildi
+            //if (!Program.MF.EntryCheck("Teklif.TstBosXF", isSilent: false))
+            //    return;
 
             TstBosXF frm = new TstBosXF();
             frm.tstID = (int)tstGridView.GetFocusedRowCellValue(colTSTIDt);

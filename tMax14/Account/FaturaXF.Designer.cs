@@ -71,10 +71,14 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.markenFaturaListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tAGUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kurFarkiFaturaEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refFaturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kurFarkiFaturasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afbBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.afbGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colAFBID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFRTID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFRTTUR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHSPNO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEFTR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TFrepositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -125,6 +129,7 @@
             this.colINSTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUPDUSR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUPDTRH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colREFAFBID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.accountQueriesTableAdapter = new tMax14.Account.AccountDataSetTableAdapters.AccountQueriesTableAdapter();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -164,7 +169,7 @@
             this.compBA.UnboundExpression = "Substring([TUR], 0, 1)";
             this.compBA.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.compBA.Visible = true;
-            this.compBA.VisibleIndex = 15;
+            this.compBA.VisibleIndex = 16;
             this.compBA.Width = 30;
             // 
             // accountDataSet
@@ -216,16 +221,19 @@
             this.exportToETAToolStripMenuItem,
             this.toolStripSeparator5,
             this.markenFaturaListesiToolStripMenuItem,
-            this.tAGUpdateToolStripMenuItem});
+            this.tAGUpdateToolStripMenuItem,
+            this.kurFarkiFaturaEkleToolStripMenuItem,
+            this.refFaturaToolStripMenuItem,
+            this.kurFarkiFaturasiToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(209, 446);
+            this.contextMenuStrip.Size = new System.Drawing.Size(271, 512);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // faturaDetaylariToolStripMenuItem
             // 
             this.faturaDetaylariToolStripMenuItem.Name = "faturaDetaylariToolStripMenuItem";
             this.faturaDetaylariToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.faturaDetaylariToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.faturaDetaylariToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.faturaDetaylariToolStripMenuItem.Text = "Fatura detayları";
             this.faturaDetaylariToolStripMenuItem.Click += new System.EventHandler(this.faturaDetaylariToolStripMenuItem_Click);
             // 
@@ -233,7 +241,7 @@
             // 
             this.opsToolStripMenuItem.Name = "opsToolStripMenuItem";
             this.opsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.opsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.opsToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.opsToolStripMenuItem.Text = "Ops";
             this.opsToolStripMenuItem.Click += new System.EventHandler(this.opsToolStripMenuItem_Click);
             // 
@@ -241,7 +249,7 @@
             // 
             this.firmaToolStripMenuItem.Name = "firmaToolStripMenuItem";
             this.firmaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.firmaToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.firmaToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.firmaToolStripMenuItem.Text = "Firma";
             this.firmaToolStripMenuItem.Click += new System.EventHandler(this.firmaToolStripMenuItem_Click);
             // 
@@ -249,7 +257,7 @@
             // 
             this.muhasebeFisiToolStripMenuItem.Name = "muhasebeFisiToolStripMenuItem";
             this.muhasebeFisiToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.muhasebeFisiToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.muhasebeFisiToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.muhasebeFisiToolStripMenuItem.Text = "Muhasebe fişi";
             this.muhasebeFisiToolStripMenuItem.Click += new System.EventHandler(this.muhasebeFisiToolStripMenuItem_Click);
             // 
@@ -257,7 +265,7 @@
             // 
             this.jurnalToolStripMenuItem.Name = "jurnalToolStripMenuItem";
             this.jurnalToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9;
-            this.jurnalToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.jurnalToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.jurnalToolStripMenuItem.Text = "Jurnal";
             this.jurnalToolStripMenuItem.Click += new System.EventHandler(this.jurnalToolStripMenuItem_Click);
             // 
@@ -265,7 +273,7 @@
             // 
             this.attachmentsToolStripMenuItem.Name = "attachmentsToolStripMenuItem";
             this.attachmentsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F10;
-            this.attachmentsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.attachmentsToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.attachmentsToolStripMenuItem.Text = "Attachments";
             this.attachmentsToolStripMenuItem.Click += new System.EventHandler(this.attachmentsToolStripMenuItem_Click);
             // 
@@ -273,27 +281,27 @@
             // 
             this.bookmarkToolStripMenuItem.Name = "bookmarkToolStripMenuItem";
             this.bookmarkToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
-            this.bookmarkToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.bookmarkToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.bookmarkToolStripMenuItem.Text = "Bookmark";
             this.bookmarkToolStripMenuItem.Click += new System.EventHandler(this.bookmarkToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
             // 
             // onaylaToolStripMenuItem
             // 
             this.onaylaToolStripMenuItem.Name = "onaylaToolStripMenuItem";
             this.onaylaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
-            this.onaylaToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.onaylaToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.onaylaToolStripMenuItem.Text = "Onayla";
             this.onaylaToolStripMenuItem.Click += new System.EventHandler(this.onaylaToolStripMenuItem_Click);
             // 
             // kPISetToolStripMenuItem
             // 
             this.kPISetToolStripMenuItem.Name = "kPISetToolStripMenuItem";
-            this.kPISetToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.kPISetToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.kPISetToolStripMenuItem.Text = "KPI Set";
             this.kPISetToolStripMenuItem.Click += new System.EventHandler(this.kPISetToolStripMenuItem_Click);
             // 
@@ -301,14 +309,14 @@
             // 
             this.kapatToolStripMenuItem.Name = "kapatToolStripMenuItem";
             this.kapatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.K)));
-            this.kapatToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.kapatToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.kapatToolStripMenuItem.Text = "Kapat";
             this.kapatToolStripMenuItem.Click += new System.EventHandler(this.kapatToolStripMenuItem_Click);
             // 
             // acToolStripMenuItem
             // 
             this.acToolStripMenuItem.Name = "acToolStripMenuItem";
-            this.acToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.acToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.acToolStripMenuItem.Text = "Aç";
             this.acToolStripMenuItem.Click += new System.EventHandler(this.acToolStripMenuItem_Click);
             // 
@@ -318,7 +326,7 @@
             this.newFtrNoToolStripTextBox,
             this.degistirToolStripMenuItem});
             this.ftrNoDegistirToolStripMenuItem.Name = "ftrNoDegistirToolStripMenuItem";
-            this.ftrNoDegistirToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.ftrNoDegistirToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.ftrNoDegistirToolStripMenuItem.Text = "FtrNo değiştir";
             // 
             // newFtrNoToolStripTextBox
@@ -340,7 +348,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(267, 6);
             // 
             // printToolStripMenuItem
             // 
@@ -355,7 +363,7 @@
             this.faturaListesiToolStripMenuItem,
             this.ticariFatura2ToolStripMenuItem});
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.printToolStripMenuItem.Text = "Print";
             // 
             // ticariFaturaToolStripMenuItem
@@ -428,20 +436,20 @@
             // eMailFaturaToolStripMenuItem
             // 
             this.eMailFaturaToolStripMenuItem.Name = "eMailFaturaToolStripMenuItem";
-            this.eMailFaturaToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.eMailFaturaToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.eMailFaturaToolStripMenuItem.Text = "eMail Fatura";
             this.eMailFaturaToolStripMenuItem.Click += new System.EventHandler(this.eMailFaturaToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
             // 
             // showPreviewToolStripMenuItem
             // 
             this.showPreviewToolStripMenuItem.Name = "showPreviewToolStripMenuItem";
             this.showPreviewToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
-            this.showPreviewToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.showPreviewToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.showPreviewToolStripMenuItem.Text = "Show Preview";
             this.showPreviewToolStripMenuItem.Click += new System.EventHandler(this.showPreviewToolStripMenuItem_Click);
             // 
@@ -449,35 +457,56 @@
             // 
             this.layoutsToolStripMenuItem.Name = "layoutsToolStripMenuItem";
             this.layoutsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
-            this.layoutsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.layoutsToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.layoutsToolStripMenuItem.Text = "Layouts";
             this.layoutsToolStripMenuItem.Click += new System.EventHandler(this.layoutsToolStripMenuItem_Click);
             // 
             // exportToETAToolStripMenuItem
             // 
             this.exportToETAToolStripMenuItem.Name = "exportToETAToolStripMenuItem";
-            this.exportToETAToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.exportToETAToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.exportToETAToolStripMenuItem.Text = "Export to ETA";
             this.exportToETAToolStripMenuItem.Click += new System.EventHandler(this.exportToETAToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(267, 6);
             // 
             // markenFaturaListesiToolStripMenuItem
             // 
             this.markenFaturaListesiToolStripMenuItem.Name = "markenFaturaListesiToolStripMenuItem";
-            this.markenFaturaListesiToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.markenFaturaListesiToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.markenFaturaListesiToolStripMenuItem.Text = "Marken Fatura Listesi TEK";
             this.markenFaturaListesiToolStripMenuItem.Click += new System.EventHandler(this.markenFaturaListesiToolStripMenuItem_Click);
             // 
             // tAGUpdateToolStripMenuItem
             // 
             this.tAGUpdateToolStripMenuItem.Name = "tAGUpdateToolStripMenuItem";
-            this.tAGUpdateToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.tAGUpdateToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.tAGUpdateToolStripMenuItem.Text = "TAG update";
             this.tAGUpdateToolStripMenuItem.Click += new System.EventHandler(this.tAGUpdateToolStripMenuItem_Click);
+            // 
+            // kurFarkiFaturaEkleToolStripMenuItem
+            // 
+            this.kurFarkiFaturaEkleToolStripMenuItem.Name = "kurFarkiFaturaEkleToolStripMenuItem";
+            this.kurFarkiFaturaEkleToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.kurFarkiFaturaEkleToolStripMenuItem.Text = "Seçilen Faturaya KurFarkıFaturası Ekle";
+            this.kurFarkiFaturaEkleToolStripMenuItem.Click += new System.EventHandler(this.kurFarkiFaturaEkleToolStripMenuItem_Click);
+            // 
+            // refFaturaToolStripMenuItem
+            // 
+            this.refFaturaToolStripMenuItem.Name = "refFaturaToolStripMenuItem";
+            this.refFaturaToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.refFaturaToolStripMenuItem.Text = "ReferansFatura";
+            this.refFaturaToolStripMenuItem.Click += new System.EventHandler(this.refFaturaToolStripMenuItem_Click);
+            // 
+            // kurFarkiFaturasiToolStripMenuItem
+            // 
+            this.kurFarkiFaturasiToolStripMenuItem.Name = "kurFarkiFaturasiToolStripMenuItem";
+            this.kurFarkiFaturasiToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.kurFarkiFaturasiToolStripMenuItem.Text = "KurFarkıFaturası";
+            this.kurFarkiFaturasiToolStripMenuItem.Click += new System.EventHandler(this.kurFarkiFaturasiToolStripMenuItem_Click);
             // 
             // afbBindingSource
             // 
@@ -489,6 +518,7 @@
             this.afbGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colAFBID,
             this.colFRTID,
+            this.colFRTTUR,
             this.colHSPNO,
             this.colEFTR,
             this.colDRM,
@@ -535,7 +565,8 @@
             this.colINSUSR,
             this.colINSTRH,
             this.colUPDUSR,
-            this.colUPDTRH});
+            this.colUPDTRH,
+            this.colREFAFBID});
             this.afbGridView.CustomizationFormBounds = new System.Drawing.Rectangle(1116, 337, 210, 179);
             this.afbGridView.FixedLineWidth = 4;
             gridFormatRule1.ApplyToRow = true;
@@ -606,6 +637,18 @@
             this.colFRTID.VisibleIndex = 6;
             this.colFRTID.Width = 131;
             // 
+            // colFRTTUR
+            // 
+            this.colFRTTUR.Caption = "frmTür";
+            this.colFRTTUR.FieldName = "FRTTUR";
+            this.colFRTTUR.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            this.colFRTTUR.Name = "colFRTTUR";
+            this.colFRTTUR.OptionsColumn.AllowEdit = false;
+            this.colFRTTUR.OptionsColumn.AllowFocus = false;
+            this.colFRTTUR.Visible = true;
+            this.colFRTTUR.VisibleIndex = 7;
+            this.colFRTTUR.Width = 40;
+            // 
             // colHSPNO
             // 
             this.colHSPNO.Caption = "HspNo";
@@ -616,7 +659,7 @@
             this.colHSPNO.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colHSPNO.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colHSPNO.Visible = true;
-            this.colHSPNO.VisibleIndex = 7;
+            this.colHSPNO.VisibleIndex = 8;
             this.colHSPNO.Width = 104;
             // 
             // colEFTR
@@ -632,7 +675,7 @@
             this.colEFTR.OptionsColumn.FixedWidth = true;
             this.colEFTR.ToolTip = "eFatura ?";
             this.colEFTR.Visible = true;
-            this.colEFTR.VisibleIndex = 8;
+            this.colEFTR.VisibleIndex = 9;
             this.colEFTR.Width = 26;
             // 
             // TFrepositoryItemCheckEdit
@@ -737,7 +780,7 @@
             this.colFTRNO.OptionsColumn.FixedWidth = true;
             this.colFTRNO.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colFTRNO.Visible = true;
-            this.colFTRNO.VisibleIndex = 9;
+            this.colFTRNO.VisibleIndex = 10;
             this.colFTRNO.Width = 60;
             // 
             // colFTRTRH
@@ -751,7 +794,7 @@
             this.colFTRTRH.OptionsColumn.FixedWidth = true;
             this.colFTRTRH.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.DateSmart;
             this.colFTRTRH.Visible = true;
-            this.colFTRTRH.VisibleIndex = 10;
+            this.colFTRTRH.VisibleIndex = 11;
             this.colFTRTRH.Width = 52;
             // 
             // colODMVDE
@@ -765,7 +808,7 @@
             this.colODMVDE.OptionsColumn.FixedWidth = true;
             this.colODMVDE.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.DateSmart;
             this.colODMVDE.Visible = true;
-            this.colODMVDE.VisibleIndex = 11;
+            this.colODMVDE.VisibleIndex = 12;
             this.colODMVDE.Width = 52;
             // 
             // colBDVZ
@@ -776,7 +819,7 @@
             this.colBDVZ.OptionsColumn.FixedWidth = true;
             this.colBDVZ.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colBDVZ.Visible = true;
-            this.colBDVZ.VisibleIndex = 13;
+            this.colBDVZ.VisibleIndex = 14;
             this.colBDVZ.Width = 32;
             // 
             // colBKUR
@@ -802,7 +845,7 @@
             this.colBTUTBRT.OptionsColumn.AllowFocus = false;
             this.colBTUTBRT.OptionsColumn.FixedWidth = true;
             this.colBTUTBRT.Visible = true;
-            this.colBTUTBRT.VisibleIndex = 12;
+            this.colBTUTBRT.VisibleIndex = 13;
             this.colBTUTBRT.Width = 60;
             // 
             // colRTUTBRT
@@ -818,7 +861,7 @@
             this.colRTUTBRT.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "RTUTBRT", "{0:n2}")});
             this.colRTUTBRT.Visible = true;
-            this.colRTUTBRT.VisibleIndex = 14;
+            this.colRTUTBRT.VisibleIndex = 15;
             this.colRTUTBRT.Width = 60;
             // 
             // colKLN
@@ -834,7 +877,7 @@
             this.colKLN.OptionsColumn.AllowFocus = false;
             this.colKLN.OptionsColumn.FixedWidth = true;
             this.colKLN.Visible = true;
-            this.colKLN.VisibleIndex = 16;
+            this.colKLN.VisibleIndex = 17;
             this.colKLN.Width = 60;
             // 
             // colODMTRH
@@ -847,7 +890,7 @@
             this.colODMTRH.OptionsColumn.AllowEdit = false;
             this.colODMTRH.OptionsColumn.AllowFocus = false;
             this.colODMTRH.Visible = true;
-            this.colODMTRH.VisibleIndex = 17;
+            this.colODMTRH.VisibleIndex = 18;
             // 
             // colVDEGUN
             // 
@@ -856,7 +899,7 @@
             this.colVDEGUN.Name = "colVDEGUN";
             this.colVDEGUN.ToolTip = "ÖdmVde - ÖdmTrh";
             this.colVDEGUN.Visible = true;
-            this.colVDEGUN.VisibleIndex = 18;
+            this.colVDEGUN.VisibleIndex = 19;
             // 
             // colODMGUN
             // 
@@ -865,7 +908,7 @@
             this.colODMGUN.Name = "colODMGUN";
             this.colODMGUN.ToolTip = "ÖdmTrh - FtrTrh";
             this.colODMGUN.Visible = true;
-            this.colODMGUN.VisibleIndex = 19;
+            this.colODMGUN.VisibleIndex = 20;
             // 
             // colODMGCK
             // 
@@ -875,7 +918,7 @@
             this.colODMGCK.OptionsColumn.AllowEdit = false;
             this.colODMGCK.OptionsColumn.AllowFocus = false;
             this.colODMGCK.Visible = true;
-            this.colODMGCK.VisibleIndex = 20;
+            this.colODMGCK.VisibleIndex = 21;
             // 
             // colONYYTK
             // 
@@ -887,7 +930,7 @@
             this.colONYYTK.OptionsColumn.FixedWidth = true;
             this.colONYYTK.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colONYYTK.Visible = true;
-            this.colONYYTK.VisibleIndex = 28;
+            this.colONYYTK.VisibleIndex = 29;
             this.colONYYTK.Width = 36;
             // 
             // colONYUSR
@@ -900,7 +943,7 @@
             this.colONYUSR.OptionsColumn.FixedWidth = true;
             this.colONYUSR.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colONYUSR.Visible = true;
-            this.colONYUSR.VisibleIndex = 29;
+            this.colONYUSR.VisibleIndex = 30;
             this.colONYUSR.Width = 36;
             // 
             // colONYTRH
@@ -942,7 +985,7 @@
             this.colOPID.OptionsColumn.FixedWidth = true;
             this.colOPID.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colOPID.Visible = true;
-            this.colOPID.VisibleIndex = 21;
+            this.colOPID.VisibleIndex = 22;
             this.colOPID.Width = 60;
             // 
             // colOPDPT
@@ -955,7 +998,7 @@
             this.colOPDPT.OptionsColumn.FixedWidth = true;
             this.colOPDPT.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colOPDPT.Visible = true;
-            this.colOPDPT.VisibleIndex = 22;
+            this.colOPDPT.VisibleIndex = 23;
             this.colOPDPT.Width = 40;
             // 
             // colOPATD
@@ -969,7 +1012,7 @@
             this.colOPATD.OptionsColumn.AllowFocus = false;
             this.colOPATD.OptionsColumn.FixedWidth = true;
             this.colOPATD.Visible = true;
-            this.colOPATD.VisibleIndex = 23;
+            this.colOPATD.VisibleIndex = 24;
             this.colOPATD.Width = 60;
             // 
             // colACIKLAMA
@@ -979,7 +1022,7 @@
             this.colACIKLAMA.Name = "colACIKLAMA";
             this.colACIKLAMA.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colACIKLAMA.Visible = true;
-            this.colACIKLAMA.VisibleIndex = 24;
+            this.colACIKLAMA.VisibleIndex = 25;
             this.colACIKLAMA.Width = 63;
             // 
             // colEDITABLE
@@ -1013,7 +1056,7 @@
             this.colTAGS.MaxWidth = 120;
             this.colTAGS.Name = "colTAGS";
             this.colTAGS.Visible = true;
-            this.colTAGS.VisibleIndex = 31;
+            this.colTAGS.VisibleIndex = 32;
             this.colTAGS.Width = 94;
             // 
             // colDKNFRTID
@@ -1023,7 +1066,7 @@
             this.colDKNFRTID.Name = "colDKNFRTID";
             this.colDKNFRTID.ToolTip = "Dekont karşı firma";
             this.colDKNFRTID.Visible = true;
-            this.colDKNFRTID.VisibleIndex = 25;
+            this.colDKNFRTID.VisibleIndex = 26;
             // 
             // colDKNDVZ
             // 
@@ -1033,7 +1076,7 @@
             this.colDKNDVZ.OptionsColumn.FixedWidth = true;
             this.colDKNDVZ.ToolTip = "Dekont karşı firma Döviz cinsi";
             this.colDKNDVZ.Visible = true;
-            this.colDKNDVZ.VisibleIndex = 26;
+            this.colDKNDVZ.VisibleIndex = 27;
             this.colDKNDVZ.Width = 47;
             // 
             // colDKNNO
@@ -1043,7 +1086,7 @@
             this.colDKNNO.Name = "colDKNNO";
             this.colDKNNO.ToolTip = "Dekont karşı firma DekontNo";
             this.colDKNNO.Visible = true;
-            this.colDKNNO.VisibleIndex = 27;
+            this.colDKNNO.VisibleIndex = 28;
             this.colDKNNO.Width = 66;
             // 
             // colARSIV
@@ -1055,7 +1098,7 @@
             this.colARSIV.OptionsColumn.AllowFocus = false;
             this.colARSIV.ToolTip = "Arşiv, Ödenmiş (Muhasebe kaydı yok)";
             this.colARSIV.Visible = true;
-            this.colARSIV.VisibleIndex = 30;
+            this.colARSIV.VisibleIndex = 31;
             this.colARSIV.Width = 36;
             // 
             // colPMRF
@@ -1089,7 +1132,7 @@
             this.colEMLD.OptionsColumn.AllowEdit = false;
             this.colEMLD.OptionsColumn.AllowFocus = false;
             this.colEMLD.Visible = true;
-            this.colEMLD.VisibleIndex = 32;
+            this.colEMLD.VisibleIndex = 33;
             // 
             // colEMLDINF
             // 
@@ -1099,7 +1142,7 @@
             this.colEMLDINF.OptionsColumn.AllowEdit = false;
             this.colEMLDINF.OptionsColumn.AllowFocus = false;
             this.colEMLDINF.Visible = true;
-            this.colEMLDINF.VisibleIndex = 33;
+            this.colEMLDINF.VisibleIndex = 34;
             // 
             // colMPOD
             // 
@@ -1111,7 +1154,7 @@
             this.colMPOD.OptionsColumn.AllowEdit = false;
             this.colMPOD.OptionsColumn.AllowFocus = false;
             this.colMPOD.Visible = true;
-            this.colMPOD.VisibleIndex = 34;
+            this.colMPOD.VisibleIndex = 35;
             // 
             // colKPI
             // 
@@ -1120,7 +1163,7 @@
             this.colKPI.OptionsColumn.AllowEdit = false;
             this.colKPI.OptionsColumn.AllowFocus = false;
             this.colKPI.Visible = true;
-            this.colKPI.VisibleIndex = 35;
+            this.colKPI.VisibleIndex = 36;
             // 
             // colKPIUSR
             // 
@@ -1130,7 +1173,7 @@
             this.colKPIUSR.OptionsColumn.AllowEdit = false;
             this.colKPIUSR.OptionsColumn.AllowFocus = false;
             this.colKPIUSR.Visible = true;
-            this.colKPIUSR.VisibleIndex = 36;
+            this.colKPIUSR.VisibleIndex = 37;
             // 
             // colKPITRH
             // 
@@ -1142,7 +1185,7 @@
             this.colKPITRH.OptionsColumn.AllowEdit = false;
             this.colKPITRH.OptionsColumn.AllowFocus = false;
             this.colKPITRH.Visible = true;
-            this.colKPITRH.VisibleIndex = 37;
+            this.colKPITRH.VisibleIndex = 38;
             // 
             // colINSUSR
             // 
@@ -1179,6 +1222,15 @@
             this.colUPDTRH.Name = "colUPDTRH";
             this.colUPDTRH.OptionsColumn.AllowEdit = false;
             this.colUPDTRH.OptionsColumn.AllowFocus = false;
+            // 
+            // colREFAFBID
+            // 
+            this.colREFAFBID.Caption = "RefAfbID";
+            this.colREFAFBID.FieldName = "REFAFBID";
+            this.colREFAFBID.Name = "colREFAFBID";
+            this.colREFAFBID.OptionsColumn.AllowEdit = false;
+            this.colREFAFBID.Visible = true;
+            this.colREFAFBID.VisibleIndex = 39;
             // 
             // layoutControl1
             // 
@@ -1401,5 +1453,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colKPITRH;
         private DevExpress.XtraGrid.Columns.GridColumn colVDEGUN;
         private DevExpress.XtraGrid.Columns.GridColumn colODMGUN;
+        private DevExpress.XtraGrid.Columns.GridColumn colFRTTUR;
+        private System.Windows.Forms.ToolStripMenuItem kurFarkiFaturaEkleToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colREFAFBID;
+        private System.Windows.Forms.ToolStripMenuItem refFaturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kurFarkiFaturasiToolStripMenuItem;
     }
 }

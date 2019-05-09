@@ -49,7 +49,7 @@ namespace tMax14.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("character set=WIN1254;data source=LOCALHOST;initial catalog=C:\\DATA\\tMax\\TMAX14-1" +
-            "81115.FDB;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30")]
+            "90425.FDB;user id=sysdba;password=masterkey;pooling=True;connectionlifetime=30")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

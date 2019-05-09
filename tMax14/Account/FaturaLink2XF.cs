@@ -516,6 +516,9 @@ namespace tMax14.Account
             if (!chargeGridView.IsDataRow(chargeGridView.FocusedRowHandle))
                 return;
 
+            if (chargeGridView.GetFocusedRowCellValue("EDITABLE").ToString() != "T")
+                return;
+
             AccountDataSet.AFDLRow sRow = (AccountDataSet.AFDLRow)chargeGridView.GetDataRow(chargeGridView.FocusedRowHandle);
             AccountDataSet.AFDLRow dRow = accountDataSet.AFDL.NewAFDLRow();
 
