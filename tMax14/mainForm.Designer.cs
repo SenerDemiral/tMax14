@@ -2281,7 +2281,9 @@
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("BM", "B FzlMsi"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("AM", "A FzlMsi"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("BD", "B Dknt"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("AD", "A Dknt")});
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("AD", "A Dknt"),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("BK", "B KurFrk"),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("AK", "A KurFrk")});
             this.afbTURrepositoryItemCheckedComboBoxEdit.Name = "afbTURrepositoryItemCheckedComboBoxEdit";
             // 
             // TAGselAFBrepositoryItemCheckedComboBoxEdit
@@ -2311,7 +2313,9 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("B FzlMsi", "BM", -1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("A FzlMsi", "AM", -1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("B Dknt", "BD", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("A Dknt", "AD", -1)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("A Dknt", "AD", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("KurFrkB", "SK", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("KurFrkA", "AK", -1)});
             this.afbTURrepositoryItemImageComboBox.Name = "afbTURrepositoryItemImageComboBox";
             // 
             // OpsStuNrmRepositoryItemLookUpEdit

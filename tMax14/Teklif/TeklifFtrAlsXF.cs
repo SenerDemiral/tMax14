@@ -30,8 +30,6 @@ namespace tMax14.Teklif
             colOK.ColumnEdit = Program.MF.TFrepositoryItemCheckEdit;
 
             //Program.MF.GridControlSettings(ftrAlsGridControl);
-
-
         }
 
         private void TeklifFtrAlsXF_Load(object sender, EventArgs e)

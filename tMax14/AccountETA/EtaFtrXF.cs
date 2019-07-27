@@ -73,13 +73,18 @@ namespace tMax14.AccountETA
 
         private void exportSimpleButton_Click(object sender, EventArgs e)
         {
-            accountEtaQueriesTableAdapter.ETA_FTR_EXPORTED(xIDs.ToString());
+            if (xIDs.Length > 0)
+            {
+                accountEtaQueriesTableAdapter.ETA_FTR_EXPORTED(xIDs.ToString());
 
-            System.IO.Directory.CreateDirectory(@"C:\tMax2ETA");    //Create Dir if not exists
-            string fileName = string.Format(@"C:\tMax2ETA\ETA-Fatura-{0:yyyy-MM-dd-HH-mm}.xml", DateTime.Now);
+                System.IO.Directory.CreateDirectory(@"C:\tMax2ETA");    //Create Dir if not exists
+                string fileName = string.Format(@"C:\tMax2ETA\ETA-Fatura-{0:yyyy-MM-dd-HH-mm}.xml", DateTime.Now);
 
-            System.IO.File.WriteAllText(fileName, sbXML.ToString(), Encoding.UTF8);
-            XtraMessageBox.Show("Dosya: " + fileName, "Fatura Export ETA");
+                System.IO.File.WriteAllText(fileName, sbXML.ToString(), Encoding.UTF8);
+                XtraMessageBox.Show("Dosya: " + fileName, "Fatura Export ETA");
+            }
+            else
+                XtraMessageBox.Show("Kayıt bulunamadı", "Fatura Export ETA");
         }
     }
 }

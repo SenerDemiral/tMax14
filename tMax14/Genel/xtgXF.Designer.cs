@@ -47,6 +47,8 @@
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.TAG2repositoryItemTextEdit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.TAG3repositoryItemTextEdit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.mainDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtgBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtgGridControl)).BeginInit();
@@ -99,28 +101,31 @@
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
             this.deleteUnSavedToolStripMenuItem,
-            this.saveToolStripMenuItem});
+            this.saveToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.deleteToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(157, 70);
+            this.contextMenuStrip.Size = new System.Drawing.Size(181, 120);
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // deleteUnSavedToolStripMenuItem
             // 
+            this.deleteUnSavedToolStripMenuItem.Enabled = false;
             this.deleteUnSavedToolStripMenuItem.Name = "deleteUnSavedToolStripMenuItem";
-            this.deleteUnSavedToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.deleteUnSavedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteUnSavedToolStripMenuItem.Text = "Delete UnSaved";
             this.deleteUnSavedToolStripMenuItem.Click += new System.EventHandler(this.deleteUnSavedToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -222,6 +227,18 @@
             this.TAG3repositoryItemTextEdit.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.TAG3repositoryItemTextEdit.Name = "TAG3repositoryItemTextEdit";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // xtgXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,5 +282,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox TbLrepositoryItemImageComboBox;
         private DevExpress.XtraGrid.Columns.GridColumn colINFO;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

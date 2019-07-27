@@ -210,26 +210,38 @@ namespace tMax14.Users
 
         private void usiPivotToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            usiPivot frm = new usiPivot();
-            frm.ShowDialog();
+            if (Program.MF.EntryCheck("Users.usiDP", true))
+            {
+                usiPivot frm = new usiPivot();
+                frm.ShowDialog();
+            }
         }
 
         private void usmPivotToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            usmPivot frm = new usmPivot();
-            frm.ShowDialog();
+            if (Program.MF.EntryCheck("Users.usmDP", true))
+            {
+                usmPivot frm = new usmPivot();
+                frm.ShowDialog();
+            }
         }
 
         private void uskPivotToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            uskPivot frm = new uskPivot();
-            frm.ShowDialog();
+            if (Program.MF.EntryCheck("Users.uskDP", true))
+            {
+                uskPivot frm = new uskPivot();
+                frm.ShowDialog();
+            }
         }
 
         private void usaPivotToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            usaPivot frm = new usaPivot();
-            frm.ShowDialog();
+            if (Program.MF.EntryCheck("Users.usaDP", true))
+            {
+                usaPivot frm = new usaPivot();
+                frm.ShowDialog();
+            }
         }
 
         private void ustGridView_ShowingEditor(object sender, CancelEventArgs e)
@@ -282,6 +294,9 @@ namespace tMax14.Users
 
         private void exportToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Program.USTid > 2)
+                colEMAILPWD.OptionsColumn.Printable = DefaultBoolean.False;
+
             PrintingSystem ps = new PrintingSystem();
             PrintableComponentLink link = new PrintableComponentLink(ps);
 
@@ -348,5 +363,9 @@ namespace tMax14.Users
             frm.Dispose();
         }
 
+        private void pivotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

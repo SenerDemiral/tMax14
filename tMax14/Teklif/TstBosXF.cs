@@ -19,7 +19,7 @@ namespace tMax14.Teklif
         {
             InitializeComponent();
             vGridControl1.ExternalRepository = Program.MF.mainPersistentRepository;
-            rowRFSTYP.Properties.RowEdit = Program.MF.OpsStuPrbRepositoryItemLookUpEdit;
+            rowRFSTYP.Properties.RowEdit = Program.MF.TstRfsTypRositoryItemLookUpEdit;
         }
 
         private void TstBosXF_Load(object sender, EventArgs e)

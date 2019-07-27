@@ -19,14 +19,14 @@ namespace tMax14.Firma
 
             fafGridControl.ExternalRepository = Program.MF.mainPersistentRepository;
             //colHMT1.ColumnEdit = Program.MF.hmRepositoryItemImageComboBox;    Teklif eklendi 
-            colTOB1.ColumnEdit = Program.MF.TOBrepositoryItemLookUpEdit;
-            colROT1.ColumnEdit = Program.MF.ROTrepositoryItemLookUpEdit;
-            colMOT1.ColumnEdit = Program.MF.MOTrepositoryItemLookUpEdit;
-            colFRTID1.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
-            colAHTID1.ColumnEdit = Program.MF.AHTrepositoryItemLookUpEdit;
-            colFTRTUR1.ColumnEdit = Program.MF.afbTurRepositoryItemLookUpEdit;
-            colDVZ1.ColumnEdit = Program.MF.DVTrepositoryItemLookUpEdit;
-            colBRM1.ColumnEdit = Program.MF.AFDbrmRepositoryItemLookUpEdit;
+            colTOB.ColumnEdit = Program.MF.TOBrepositoryItemLookUpEdit;
+            colROT.ColumnEdit = Program.MF.ROTrepositoryItemLookUpEdit;
+            colMOT.ColumnEdit = Program.MF.MOTrepositoryItemLookUpEdit;
+            colFRTID.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
+            colAHTID.ColumnEdit = Program.MF.AHTrepositoryItemLookUpEdit;
+            colFTRTUR.ColumnEdit = Program.MF.afbTurRepositoryItemLookUpEdit;
+            colDVZ.ColumnEdit = Program.MF.DVTrepositoryItemLookUpEdit;
+            colBRM.ColumnEdit = Program.MF.AFDbrmRepositoryItemLookUpEdit;
 
             fafTestGridControl.ExternalRepository = Program.MF.mainPersistentRepository;
             colHM2.ColumnEdit = Program.MF.hmRepositoryItemImageComboBox;
@@ -72,13 +72,14 @@ namespace tMax14.Firma
         {
             DevExpress.XtraGrid.Views.Grid.GridView view = sender as DevExpress.XtraGrid.Views.Grid.GridView;
             int PK = (int)firmaQueriesTableAdapter.GET_PK("FAF");
-            view.SetFocusedRowCellValue(colFAFID1, PK);
+            view.SetFocusedRowCellValue(colFAFID, PK);
+            view.SetFocusedRowCellValue(colHMT, "H");
 
         }
 
         private void OpsFrtRepositoryItemImageComboBox_CloseUp(object sender, DevExpress.XtraEditors.Controls.CloseUpEventArgs e)
         {
-            if (gridView1.GetFocusedRowCellValue(colHMT1).ToString() == "M" && e.Value.ToString().StartsWith("h"))
+            if (gridView1.GetFocusedRowCellValue(colHMT).ToString() == "M" && e.Value.ToString().StartsWith("h"))
                 e.AcceptValue = false;
         }
 
@@ -86,7 +87,7 @@ namespace tMax14.Firma
         {
             fAFBindingNavigatorSaveItem.PerformClick();
 
-            int PK = (int)gridView1.GetFocusedRowCellValue(colFAFID1);
+            int PK = (int)gridView1.GetFocusedRowCellValue(colFAFID);
             int dHid = (int)firmaQueriesTableAdapter.FAF_DUP(PK);
             if (dHid != 0)
             {

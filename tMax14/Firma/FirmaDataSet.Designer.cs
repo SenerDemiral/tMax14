@@ -10192,6 +10192,8 @@ namespace tMax14.Firma {
             
             private global::System.Data.DataColumn columnOPSFRT;
             
+            private global::System.Data.DataColumn columnCHRINFO;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public FAFDataTable() {
@@ -10347,6 +10349,14 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CHRINFOColumn {
+                get {
+                    return this.columnCHRINFO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10382,7 +10392,23 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FAFRow AddFAFRow(int FAFID, string HM, string TOB, string ROT, string MOT, int FRTID, int AHTID, string FTRTUR, string BRM, decimal FYT, string DVZ, int KDY, string INFO, string KURAL, string OPSFRT) {
+            public FAFRow AddFAFRow(
+                        int FAFID, 
+                        string HM, 
+                        string TOB, 
+                        string ROT, 
+                        string MOT, 
+                        int FRTID, 
+                        int AHTID, 
+                        string FTRTUR, 
+                        string BRM, 
+                        decimal FYT, 
+                        string DVZ, 
+                        int KDY, 
+                        string INFO, 
+                        string KURAL, 
+                        string OPSFRT, 
+                        string CHRINFO) {
                 FAFRow rowFAFRow = ((FAFRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FAFID,
@@ -10399,7 +10425,8 @@ namespace tMax14.Firma {
                         KDY,
                         INFO,
                         KURAL,
-                        OPSFRT};
+                        OPSFRT,
+                        CHRINFO};
                 rowFAFRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFAFRow);
                 return rowFAFRow;
@@ -10444,6 +10471,7 @@ namespace tMax14.Firma {
                 this.columnINFO = base.Columns["INFO"];
                 this.columnKURAL = base.Columns["KURAL"];
                 this.columnOPSFRT = base.Columns["OPSFRT"];
+                this.columnCHRINFO = base.Columns["CHRINFO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10479,6 +10507,8 @@ namespace tMax14.Firma {
                 base.Columns.Add(this.columnKURAL);
                 this.columnOPSFRT = new global::System.Data.DataColumn("OPSFRT", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOPSFRT);
+                this.columnCHRINFO = new global::System.Data.DataColumn("CHRINFO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCHRINFO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnFAFID}, true));
                 this.columnFAFID.AllowDBNull = false;
@@ -10493,6 +10523,7 @@ namespace tMax14.Firma {
                 this.columnINFO.MaxLength = 250;
                 this.columnKURAL.MaxLength = 2147483647;
                 this.columnOPSFRT.MaxLength = 4;
+                this.columnCHRINFO.MaxLength = 250;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10659,6 +10690,8 @@ namespace tMax14.Firma {
             private global::System.Data.DataColumn columnINFO;
             
             private global::System.Data.DataColumn columnKURAL;
+            
+            private global::System.Data.DataColumn columnCHRINFO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -10831,6 +10864,14 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CHRINFOColumn {
+                get {
+                    return this.columnCHRINFO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10883,7 +10924,8 @@ namespace tMax14.Firma {
                         string DVZ, 
                         int KDY, 
                         string INFO, 
-                        string KURAL) {
+                        string KURAL, 
+                        string CHRINFO) {
                 FAF_SEL_TESTRow rowFAF_SEL_TESTRow = ((FAF_SEL_TESTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OPHM,
@@ -10902,7 +10944,8 @@ namespace tMax14.Firma {
                         DVZ,
                         KDY,
                         INFO,
-                        KURAL};
+                        KURAL,
+                        CHRINFO};
                 rowFAF_SEL_TESTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFAF_SEL_TESTRow);
                 return rowFAF_SEL_TESTRow;
@@ -10942,6 +10985,7 @@ namespace tMax14.Firma {
                 this.columnKDY = base.Columns["KDY"];
                 this.columnINFO = base.Columns["INFO"];
                 this.columnKURAL = base.Columns["KURAL"];
+                this.columnCHRINFO = base.Columns["CHRINFO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10981,6 +11025,8 @@ namespace tMax14.Firma {
                 base.Columns.Add(this.columnINFO);
                 this.columnKURAL = new global::System.Data.DataColumn("KURAL", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKURAL);
+                this.columnCHRINFO = new global::System.Data.DataColumn("CHRINFO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCHRINFO);
                 this.columnOPHM.MaxLength = 1;
                 this.columnHM.MaxLength = 1;
                 this.columnTOB.MaxLength = 1;
@@ -10991,6 +11037,7 @@ namespace tMax14.Firma {
                 this.columnDVZ.MaxLength = 3;
                 this.columnINFO.MaxLength = 250;
                 this.columnKURAL.MaxLength = 2147483647;
+                this.columnCHRINFO.MaxLength = 250;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20605,6 +20652,22 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CHRINFO {
+                get {
+                    try {
+                        return ((string)(this[this.tableFAF.CHRINFOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CHRINFO\' in table \'FAF\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFAF.CHRINFOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsHMNull() {
                 return this.IsNull(this.tableFAF.HMColumn);
             }
@@ -20769,6 +20832,18 @@ namespace tMax14.Firma {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetOPSFRTNull() {
                 this[this.tableFAF.OPSFRTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCHRINFONull() {
+                return this.IsNull(this.tableFAF.CHRINFOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCHRINFONull() {
+                this[this.tableFAF.CHRINFOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -21060,6 +21135,22 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CHRINFO {
+                get {
+                    try {
+                        return ((string)(this[this.tableFAF_SEL_TEST.CHRINFOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CHRINFO\' in table \'FAF_SEL_TEST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFAF_SEL_TEST.CHRINFOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsOPHMNull() {
                 return this.IsNull(this.tableFAF_SEL_TEST.OPHMColumn);
             }
@@ -21260,6 +21351,18 @@ namespace tMax14.Firma {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetKURALNull() {
                 this[this.tableFAF_SEL_TEST.KURALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCHRINFONull() {
+                return this.IsNull(this.tableFAF_SEL_TEST.CHRINFOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCHRINFONull() {
+                this[this.tableFAF_SEL_TEST.CHRINFOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -28229,6 +28332,7 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("INFO", "INFO");
             tableMapping.ColumnMappings.Add("KURAL", "KURAL");
             tableMapping.ColumnMappings.Add("OPSFRT", "OPSFRT");
+            tableMapping.ColumnMappings.Add("CHRINFO", "CHRINFO");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -28244,10 +28348,7 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"FAF\" (\"FAFID\", \"HM\", \"TOB\", \"ROT\", \"MOT\", \"FRTID\", \"OPSFRT\", \"AHTID\"" +
-                ", \"FTRTUR\", \"BRM\", \"FYT\", \"DVZ\", \"KDY\", \"INFO\", \"KURAL\") VALUES (@FAFID, @HM, @T" +
-                "OB, @ROT, @MOT, @FRTID, @OPSFRT, @AHTID, @FTRTUR, @BRM, @FYT, @DVZ, @KDY, @INFO," +
-                " @KURAL)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""FAF"" (""FAFID"", ""HM"", ""TOB"", ""ROT"", ""MOT"", ""FRTID"", ""AHTID"", ""FTRTUR"", ""BRM"", ""FYT"", ""DVZ"", ""KDY"", ""INFO"", ""KURAL"", ""OPSFRT"", ""CHRINFO"") VALUES (@FAFID, @HM, @TOB, @ROT, @MOT, @FRTID, @AHTID, @FTRTUR, @BRM, @FYT, @DVZ, @KDY, @INFO, @KURAL, @OPSFRT, @CHRINFO)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@FAFID";
@@ -28288,12 +28389,6 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             param.SourceColumn = "FRTID";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@OPSFRT";
-            param.Size = 4;
-            param.IsNullable = true;
-            param.SourceColumn = "OPSFRT";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@AHTID";
             param.DbType = global::System.Data.DbType.Int32;
             param.Size = 4;
@@ -28344,9 +28439,21 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "KURAL";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@OPSFRT";
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "OPSFRT";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@CHRINFO";
+            param.Size = 250;
+            param.IsNullable = true;
+            param.SourceColumn = "CHRINFO";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""FAF"" SET ""FAFID"" = @FAFID, ""HM"" = @HM, ""TOB"" = @TOB, ""ROT"" = @ROT, ""MOT"" = @MOT, ""FRTID"" = @FRTID, ""OPSFRT"" = @OPSFRT, ""AHTID"" = @AHTID, ""FTRTUR"" = @FTRTUR, ""BRM"" = @BRM, ""FYT"" = @FYT, ""DVZ"" = @DVZ, ""KDY"" = @KDY, ""INFO"" = @INFO, ""KURAL"" = @KURAL WHERE ((""FAFID"" = @Original_FAFID))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""FAF"" SET ""FAFID"" = @FAFID, ""HM"" = @HM, ""TOB"" = @TOB, ""ROT"" = @ROT, ""MOT"" = @MOT, ""FRTID"" = @FRTID, ""AHTID"" = @AHTID, ""FTRTUR"" = @FTRTUR, ""BRM"" = @BRM, ""FYT"" = @FYT, ""DVZ"" = @DVZ, ""KDY"" = @KDY, ""INFO"" = @INFO, ""KURAL"" = @KURAL, ""OPSFRT"" = @OPSFRT, ""CHRINFO"" = @CHRINFO WHERE ((""FAFID"" = @Original_FAFID))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@FAFID";
@@ -28387,12 +28494,6 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             param.SourceColumn = "FRTID";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@OPSFRT";
-            param.Size = 4;
-            param.IsNullable = true;
-            param.SourceColumn = "OPSFRT";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@AHTID";
             param.DbType = global::System.Data.DbType.Int32;
             param.Size = 4;
@@ -28442,6 +28543,18 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             param.Size = 2147483647;
             param.IsNullable = true;
             param.SourceColumn = "KURAL";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@OPSFRT";
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "OPSFRT";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@CHRINFO";
+            param.Size = 250;
+            param.IsNullable = true;
+            param.SourceColumn = "CHRINFO";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_FAFID";
@@ -28623,6 +28736,7 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("KDY", "KDY");
             tableMapping.ColumnMappings.Add("INFO", "INFO");
             tableMapping.ColumnMappings.Add("KURAL", "KURAL");
+            tableMapping.ColumnMappings.Add("CHRINFO", "CHRINFO");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

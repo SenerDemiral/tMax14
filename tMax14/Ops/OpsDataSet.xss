@@ -45,8 +45,8 @@
     <Shape ID="DesignTable:RPR_OZTB" ZOrder="20" X="1089" Y="587" Height="134" Width="205" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="83" />
     <Shape ID="DesignTable:TST_LUP" ZOrder="3" X="258" Y="567" Height="75" Width="194" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="254" SplitterPosition="24" />
     <Shape ID="DesignTable:OPM_ACC_ONY_TOPLU" ZOrder="18" X="1310" Y="527" Height="75" Width="279" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="254" SplitterPosition="24" />
-    <Shape ID="DesignSources:OpsQueriesTableAdapter" ZOrder="17" X="2" Y="180" Height="28" Width="300" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="253" SplitterPosition="24" />
     <Shape ID="DesignTable:PRT" ZOrder="1" X="506" Y="536" Height="75" Width="192" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="254" SplitterPosition="24" />
+    <Shape ID="DesignSources:OpsQueriesTableAdapter" ZOrder="17" X="2" Y="180" Height="28" Width="300" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="253" SplitterPosition="24" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:OPOS_OPO" ZOrder="44" LineWidth="11">

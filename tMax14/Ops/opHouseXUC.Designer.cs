@@ -358,7 +358,7 @@
             this.gorulduOnayToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip.Size = new System.Drawing.Size(197, 556);
+            this.contextMenuStrip.Size = new System.Drawing.Size(197, 578);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // editToolStripMenuItem
@@ -822,14 +822,14 @@
             // icNakliyeBilgisiEMailToolStripMenuItem
             // 
             this.icNakliyeBilgisiEMailToolStripMenuItem.Name = "icNakliyeBilgisiEMailToolStripMenuItem";
-            this.icNakliyeBilgisiEMailToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.icNakliyeBilgisiEMailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.icNakliyeBilgisiEMailToolStripMenuItem.Text = "eMail";
             this.icNakliyeBilgisiEMailToolStripMenuItem.Click += new System.EventHandler(this.icNakliyeBilgisiEMailToolStripMenuItem_Click);
             // 
             // icNakliyeBilgisiPrintToolStripMenuItem
             // 
             this.icNakliyeBilgisiPrintToolStripMenuItem.Name = "icNakliyeBilgisiPrintToolStripMenuItem";
-            this.icNakliyeBilgisiPrintToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.icNakliyeBilgisiPrintToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.icNakliyeBilgisiPrintToolStripMenuItem.Text = "Print";
             this.icNakliyeBilgisiPrintToolStripMenuItem.Click += new System.EventHandler(this.icNakliyeBilgisiPrintToolStripMenuItem_Click);
             // 
@@ -846,14 +846,14 @@
             // icNakliyeTalimatiEMailToolStripMenuItem
             // 
             this.icNakliyeTalimatiEMailToolStripMenuItem.Name = "icNakliyeTalimatiEMailToolStripMenuItem";
-            this.icNakliyeTalimatiEMailToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.icNakliyeTalimatiEMailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.icNakliyeTalimatiEMailToolStripMenuItem.Text = "eMail";
             this.icNakliyeTalimatiEMailToolStripMenuItem.Click += new System.EventHandler(this.icNakliyeTalimatiEMailToolStripMenuItem_Click);
             // 
             // icNakliyeTalimatiPrintToolStripMenuItem
             // 
             this.icNakliyeTalimatiPrintToolStripMenuItem.Name = "icNakliyeTalimatiPrintToolStripMenuItem";
-            this.icNakliyeTalimatiPrintToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.icNakliyeTalimatiPrintToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.icNakliyeTalimatiPrintToolStripMenuItem.Text = "Print";
             this.icNakliyeTalimatiPrintToolStripMenuItem.Click += new System.EventHandler(this.icNakliyeTalimatiPrintToolStripMenuItem_Click);
             // 

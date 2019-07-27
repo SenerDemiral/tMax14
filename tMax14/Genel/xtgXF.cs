@@ -89,7 +89,12 @@ namespace tMax14.Genel
 
         private void xtgXUC_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Save();
+            //Save();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            xtgGridView.DeleteRow(xtgGridView.FocusedRowHandle);
         }
     }
 }

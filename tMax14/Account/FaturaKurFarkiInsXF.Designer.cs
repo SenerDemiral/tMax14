@@ -72,7 +72,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(581, 413);
+            this.layoutControl1.Size = new System.Drawing.Size(326, 173);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -80,7 +80,7 @@
             // 
             this.ftrNoTextEdit.Location = new System.Drawing.Point(90, 60);
             this.ftrNoTextEdit.Name = "ftrNoTextEdit";
-            this.ftrNoTextEdit.Size = new System.Drawing.Size(479, 20);
+            this.ftrNoTextEdit.Size = new System.Drawing.Size(224, 20);
             this.ftrNoTextEdit.StyleController = this.layoutControl1;
             this.ftrNoTextEdit.TabIndex = 10;
             // 
@@ -88,10 +88,10 @@
             // 
             this.simpleButton1.Location = new System.Drawing.Point(12, 132);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(557, 22);
+            this.simpleButton1.Size = new System.Drawing.Size(302, 22);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 9;
-            this.simpleButton1.Text = "KurFarkıFaturası Yarat ve Kapat";
+            this.simpleButton1.Text = "KurFarkıFaturası Yarat";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // topKurFarkiTLtextEdit
@@ -100,7 +100,7 @@
             this.topKurFarkiTLtextEdit.Name = "topKurFarkiTLtextEdit";
             this.topKurFarkiTLtextEdit.Properties.Mask.EditMask = "f";
             this.topKurFarkiTLtextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.topKurFarkiTLtextEdit.Size = new System.Drawing.Size(479, 20);
+            this.topKurFarkiTLtextEdit.Size = new System.Drawing.Size(224, 20);
             this.topKurFarkiTLtextEdit.StyleController = this.layoutControl1;
             this.topKurFarkiTLtextEdit.TabIndex = 8;
             // 
@@ -113,7 +113,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ftrTrhDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ftrTrhDateEdit.Size = new System.Drawing.Size(479, 20);
+            this.ftrTrhDateEdit.Size = new System.Drawing.Size(224, 20);
             this.ftrTrhDateEdit.StyleController = this.layoutControl1;
             this.ftrTrhDateEdit.TabIndex = 7;
             // 
@@ -122,7 +122,7 @@
             this.usrTextEdit.Location = new System.Drawing.Point(90, 108);
             this.usrTextEdit.Name = "usrTextEdit";
             this.usrTextEdit.Properties.ReadOnly = true;
-            this.usrTextEdit.Size = new System.Drawing.Size(479, 20);
+            this.usrTextEdit.Size = new System.Drawing.Size(224, 20);
             this.usrTextEdit.StyleController = this.layoutControl1;
             this.usrTextEdit.TabIndex = 6;
             // 
@@ -131,7 +131,7 @@
             this.refAfbIDtextEdit.Location = new System.Drawing.Point(90, 12);
             this.refAfbIDtextEdit.Name = "refAfbIDtextEdit";
             this.refAfbIDtextEdit.Properties.ReadOnly = true;
-            this.refAfbIDtextEdit.Size = new System.Drawing.Size(479, 20);
+            this.refAfbIDtextEdit.Size = new System.Drawing.Size(224, 20);
             this.refAfbIDtextEdit.StyleController = this.layoutControl1;
             this.refAfbIDtextEdit.TabIndex = 5;
             // 
@@ -148,7 +148,7 @@
             this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(581, 413);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(326, 173);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem2
@@ -156,7 +156,7 @@
             this.layoutControlItem2.Control = this.refAfbIDtextEdit;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(561, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(306, 24);
             this.layoutControlItem2.Text = "Referans AfbID";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(75, 13);
             // 
@@ -165,7 +165,7 @@
             this.layoutControlItem1.Control = this.usrTextEdit;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(561, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(306, 24);
             this.layoutControlItem1.Text = "Usr";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(75, 13);
             // 
@@ -174,7 +174,7 @@
             this.layoutControlItem4.Control = this.topKurFarkiTLtextEdit;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(561, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(306, 24);
             this.layoutControlItem4.Text = "KurFarkı TL";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(75, 13);
             // 
@@ -183,7 +183,7 @@
             this.layoutControlItem3.Control = this.ftrTrhDateEdit;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(561, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(306, 24);
             this.layoutControlItem3.Text = "FaturaTarih";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(75, 13);
             // 
@@ -192,7 +192,7 @@
             this.layoutControlItem5.Control = this.simpleButton1;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(561, 273);
+            this.layoutControlItem5.Size = new System.Drawing.Size(306, 33);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -201,7 +201,7 @@
             this.layoutControlItem6.Control = this.ftrNoTextEdit;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(561, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(306, 24);
             this.layoutControlItem6.Text = "FaturaNo";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(75, 13);
             // 
@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 413);
+            this.ClientSize = new System.Drawing.Size(326, 173);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FaturaKurFarkiInsXF";
             this.Text = "FaturaKurFarkiInsXF";

@@ -71,6 +71,7 @@
             this.colINFO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEMAIL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEMAILPWD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PWDrepositoryItemTextEdit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.colMKK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSKK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEY = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -134,12 +135,12 @@
             this.jurnalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersQueriesTableAdapter = new tMax14.Users.UsersDataSetTableAdapters.UsersQueriesTableAdapter();
-            this.PWDrepositoryItemTextEdit = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ustBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ustGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ustGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AC4repositoryItemTextEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PWDrepositoryItemTextEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
             this.hideContainerRight.SuspendLayout();
             this.uskDockPanel.SuspendLayout();
@@ -165,7 +166,6 @@
             this.contextMenuStripUSP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uspBindingSource)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PWDrepositoryItemTextEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // colDRM
@@ -580,6 +580,12 @@
             this.colEMAILPWD.Visible = true;
             this.colEMAILPWD.VisibleIndex = 41;
             // 
+            // PWDrepositoryItemTextEdit
+            // 
+            this.PWDrepositoryItemTextEdit.AutoHeight = false;
+            this.PWDrepositoryItemTextEdit.Name = "PWDrepositoryItemTextEdit";
+            this.PWDrepositoryItemTextEdit.PasswordChar = '*';
+            // 
             // colMKK
             // 
             this.colMKK.Caption = "CKK";
@@ -718,7 +724,7 @@
             this.uskDockPanel.OriginalSize = new System.Drawing.Size(293, 200);
             this.uskDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.uskDockPanel.SavedIndex = 0;
-            this.uskDockPanel.Size = new System.Drawing.Size(293, 549);
+            this.uskDockPanel.Size = new System.Drawing.Size(293, 455);
             this.uskDockPanel.Text = "Telefon";
             this.uskDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
@@ -726,9 +732,9 @@
             // 
             this.controlContainer3.AutoScroll = true;
             this.controlContainer3.Controls.Add(this.uskGridControl);
-            this.controlContainer3.Location = new System.Drawing.Point(4, 23);
+            this.controlContainer3.Location = new System.Drawing.Point(5, 23);
             this.controlContainer3.Name = "controlContainer3";
-            this.controlContainer3.Size = new System.Drawing.Size(285, 522);
+            this.controlContainer3.Size = new System.Drawing.Size(284, 428);
             this.controlContainer3.TabIndex = 0;
             // 
             // uskGridControl
@@ -738,7 +744,7 @@
             this.uskGridControl.Location = new System.Drawing.Point(0, 0);
             this.uskGridControl.MainView = this.uskGridView;
             this.uskGridControl.Name = "uskGridControl";
-            this.uskGridControl.Size = new System.Drawing.Size(285, 522);
+            this.uskGridControl.Size = new System.Drawing.Size(284, 428);
             this.uskGridControl.TabIndex = 0;
             this.uskGridControl.Tag = "Users.ustDP";
             this.uskGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -796,7 +802,7 @@
             this.usiDockPanel.OriginalSize = new System.Drawing.Size(246, 200);
             this.usiDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.usiDockPanel.SavedIndex = 1;
-            this.usiDockPanel.Size = new System.Drawing.Size(246, 549);
+            this.usiDockPanel.Size = new System.Drawing.Size(246, 455);
             this.usiDockPanel.Text = "İzinler";
             this.usiDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
@@ -804,9 +810,9 @@
             // 
             this.controlContainer2.AutoScroll = true;
             this.controlContainer2.Controls.Add(this.usiGridControl);
-            this.controlContainer2.Location = new System.Drawing.Point(4, 23);
+            this.controlContainer2.Location = new System.Drawing.Point(5, 23);
             this.controlContainer2.Name = "controlContainer2";
-            this.controlContainer2.Size = new System.Drawing.Size(238, 522);
+            this.controlContainer2.Size = new System.Drawing.Size(237, 428);
             this.controlContainer2.TabIndex = 0;
             // 
             // usiGridControl
@@ -816,7 +822,7 @@
             this.usiGridControl.Location = new System.Drawing.Point(0, 0);
             this.usiGridControl.MainView = this.usiGridView;
             this.usiGridControl.Name = "usiGridControl";
-            this.usiGridControl.Size = new System.Drawing.Size(238, 522);
+            this.usiGridControl.Size = new System.Drawing.Size(237, 428);
             this.usiGridControl.TabIndex = 0;
             this.usiGridControl.Tag = "Users.usiDP";
             this.usiGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -891,16 +897,16 @@
             this.usmDockPanel.OriginalSize = new System.Drawing.Size(252, 200);
             this.usmDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.usmDockPanel.SavedIndex = 1;
-            this.usmDockPanel.Size = new System.Drawing.Size(252, 549);
+            this.usmDockPanel.Size = new System.Drawing.Size(252, 455);
             this.usmDockPanel.Text = "Maaşlar";
             this.usmDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.usmGridControl);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(5, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(244, 522);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(243, 428);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // usmGridControl
@@ -921,7 +927,7 @@
             this.usmGridControl.Location = new System.Drawing.Point(0, 0);
             this.usmGridControl.MainView = this.usmGridView;
             this.usmGridControl.Name = "usmGridControl";
-            this.usmGridControl.Size = new System.Drawing.Size(244, 522);
+            this.usmGridControl.Size = new System.Drawing.Size(243, 428);
             this.usmGridControl.TabIndex = 3;
             this.usmGridControl.Tag = "Users.usmDP";
             this.usmGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1077,7 +1083,7 @@
             this.jurnalToolStripMenuItem,
             this.layoutsToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(181, 158);
+            this.contextMenuStrip.Size = new System.Drawing.Size(181, 180);
             // 
             // saveToolStripMenuItem
             // 
@@ -1097,6 +1103,7 @@
             this.pivotToolStripMenuItem.Name = "pivotToolStripMenuItem";
             this.pivotToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pivotToolStripMenuItem.Text = "Pivot";
+            this.pivotToolStripMenuItem.Click += new System.EventHandler(this.pivotToolStripMenuItem_Click);
             // 
             // usiPivotToolStripMenuItem
             // 
@@ -1165,12 +1172,6 @@
             this.layoutsToolStripMenuItem.Text = "Layouts";
             this.layoutsToolStripMenuItem.Click += new System.EventHandler(this.layoutsToolStripMenuItem_Click);
             // 
-            // PWDrepositoryItemTextEdit
-            // 
-            this.PWDrepositoryItemTextEdit.AutoHeight = false;
-            this.PWDrepositoryItemTextEdit.Name = "PWDrepositoryItemTextEdit";
-            this.PWDrepositoryItemTextEdit.PasswordChar = '*';
-            // 
             // ustForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1190,6 +1191,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ustGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ustGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AC4repositoryItemTextEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PWDrepositoryItemTextEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).EndInit();
             this.hideContainerRight.ResumeLayout(false);
             this.uskDockPanel.ResumeLayout(false);
@@ -1215,7 +1217,6 @@
             this.contextMenuStripUSP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uspBindingSource)).EndInit();
             this.contextMenuStrip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PWDrepositoryItemTextEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
