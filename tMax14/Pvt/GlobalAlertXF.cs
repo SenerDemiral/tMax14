@@ -315,6 +315,11 @@ namespace tMax14.Pvt
                 attEmpty(rptKod, "OPM", opID);
                 // Rapor&Ek yok sadece Subject/Body gidecek
             }
+            else if (rptID == 920)    // ZiyaretAnketi
+            {
+                attEmpty(rptKod, "FRT", opID);
+                // Rapor&Ek yok sadece Subject/Body gidecek
+            }
             else if (rptID == 5)    // POD
             {
                 attPOD(opID);
