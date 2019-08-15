@@ -6128,6 +6128,8 @@ namespace tMax14.Pvt {
             
             private global::System.Data.DataColumn columnCNTNOS;
             
+            private global::System.Data.DataColumn columnINSUSR;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PVT_AFDDataTable() {
@@ -6355,6 +6357,14 @@ namespace tMax14.Pvt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn INSUSRColumn {
+                get {
+                    return this.columnINSUSR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6414,7 +6424,8 @@ namespace tMax14.Pvt {
                         string BPRTNO, 
                         string INSTYP, 
                         string KARNENO, 
-                        string CNTNOS) {
+                        string CNTNOS, 
+                        string INSUSR) {
                 PVT_AFDRow rowPVT_AFDRow = ((PVT_AFDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         AFDID,
@@ -6440,7 +6451,8 @@ namespace tMax14.Pvt {
                         BPRTNO,
                         INSTYP,
                         KARNENO,
-                        CNTNOS};
+                        CNTNOS,
+                        INSUSR};
                 rowPVT_AFDRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPVT_AFDRow);
                 return rowPVT_AFDRow;
@@ -6487,6 +6499,7 @@ namespace tMax14.Pvt {
                 this.columnINSTYP = base.Columns["INSTYP"];
                 this.columnKARNENO = base.Columns["KARNENO"];
                 this.columnCNTNOS = base.Columns["CNTNOS"];
+                this.columnINSUSR = base.Columns["INSUSR"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6540,6 +6553,8 @@ namespace tMax14.Pvt {
                 base.Columns.Add(this.columnKARNENO);
                 this.columnCNTNOS = new global::System.Data.DataColumn("CNTNOS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCNTNOS);
+                this.columnINSUSR = new global::System.Data.DataColumn("INSUSR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINSUSR);
                 this.columnTUR.MaxLength = 2;
                 this.columnFTRDRM.MaxLength = 1;
                 this.columnAHTAD.MaxLength = 50;
@@ -6557,6 +6572,7 @@ namespace tMax14.Pvt {
                 this.columnINSTYP.MaxLength = 1;
                 this.columnKARNENO.MaxLength = 20;
                 this.columnCNTNOS.MaxLength = 2147483647;
+                this.columnINSUSR.MaxLength = 4;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -27282,6 +27298,22 @@ namespace tMax14.Pvt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string INSUSR {
+                get {
+                    try {
+                        return ((string)(this[this.tablePVT_AFD.INSUSRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INSUSR\' in table \'PVT_AFD\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePVT_AFD.INSUSRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsAFDIDNull() {
                 return this.IsNull(this.tablePVT_AFD.AFDIDColumn);
             }
@@ -27566,6 +27598,18 @@ namespace tMax14.Pvt {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCNTNOSNull() {
                 this[this.tablePVT_AFD.CNTNOSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsINSUSRNull() {
+                return this.IsNull(this.tablePVT_AFD.INSUSRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetINSUSRNull() {
+                this[this.tablePVT_AFD.INSUSRColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -47339,6 +47383,7 @@ namespace tMax14.Pvt.PvtDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("INSTYP", "INSTYP");
             tableMapping.ColumnMappings.Add("KARNENO", "KARNENO");
             tableMapping.ColumnMappings.Add("CNTNOS", "CNTNOS");
+            tableMapping.ColumnMappings.Add("INSUSR", "INSUSR");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

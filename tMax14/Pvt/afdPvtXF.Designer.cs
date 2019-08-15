@@ -33,8 +33,6 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pVTAFDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pvtDataSet = new tMax14.Pvt.PvtDataSet();
             this.fieldAFDID = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldTUR = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldAFBID = new DevExpress.XtraPivotGrid.PivotGridField();
@@ -63,9 +61,12 @@
             this.fieldFTRTRHm = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldBPRTNO = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldINSTYP = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.pVT_AFDTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.PVT_AFDTableAdapter();
             this.fieldKARNENO = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldCNTNOS = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.pVTAFDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pvtDataSet = new tMax14.Pvt.PvtDataSet();
+            this.pVT_AFDTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.PVT_AFDTableAdapter();
+            this.fieldINSUSR = new DevExpress.XtraPivotGrid.PivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pVTAFDBindingSource)).BeginInit();
@@ -107,7 +108,8 @@
             this.fieldBPRTNO,
             this.fieldINSTYP,
             this.fieldKARNENO,
-            this.fieldCNTNOS});
+            this.fieldCNTNOS,
+            this.fieldINSUSR});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.OptionsDataField.RowHeaderWidth = 131;
@@ -137,16 +139,6 @@
             this.layoutsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.layoutsToolStripMenuItem.Text = "Layouts";
             this.layoutsToolStripMenuItem.Click += new System.EventHandler(this.layoutsToolStripMenuItem_Click);
-            // 
-            // pVTAFDBindingSource
-            // 
-            this.pVTAFDBindingSource.DataMember = "PVT_AFD";
-            this.pVTAFDBindingSource.DataSource = this.pvtDataSet;
-            // 
-            // pvtDataSet
-            // 
-            this.pvtDataSet.DataSetName = "PvtDataSet";
-            this.pvtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // fieldAFDID
             // 
@@ -417,10 +409,6 @@
             this.fieldINSTYP.FieldName = "INSTYP";
             this.fieldINSTYP.Name = "fieldINSTYP";
             // 
-            // pVT_AFDTableAdapter
-            // 
-            this.pVT_AFDTableAdapter.ClearBeforeFill = true;
-            // 
             // fieldKARNENO
             // 
             this.fieldKARNENO.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
@@ -438,6 +426,29 @@
             this.fieldCNTNOS.Caption = "CntNoS";
             this.fieldCNTNOS.FieldName = "CNTNOS";
             this.fieldCNTNOS.Name = "fieldCNTNOS";
+            // 
+            // pVTAFDBindingSource
+            // 
+            this.pVTAFDBindingSource.DataMember = "PVT_AFD";
+            this.pVTAFDBindingSource.DataSource = this.pvtDataSet;
+            // 
+            // pvtDataSet
+            // 
+            this.pvtDataSet.DataSetName = "PvtDataSet";
+            this.pvtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pVT_AFDTableAdapter
+            // 
+            this.pVT_AFDTableAdapter.ClearBeforeFill = true;
+            // 
+            // fieldINSUSR
+            // 
+            this.fieldINSUSR.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
+            | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
+            this.fieldINSUSR.AreaIndex = 27;
+            this.fieldINSUSR.Caption = "InsUsr";
+            this.fieldINSUSR.FieldName = "INSUSR";
+            this.fieldINSUSR.Name = "fieldINSUSR";
             // 
             // afdPvtXF
             // 
@@ -495,5 +506,6 @@
         private DevExpress.XtraPivotGrid.PivotGridField fieldINSTYP;
         private DevExpress.XtraPivotGrid.PivotGridField fieldKARNENO;
         private DevExpress.XtraPivotGrid.PivotGridField fieldCNTNOS;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldINSUSR;
     }
 }

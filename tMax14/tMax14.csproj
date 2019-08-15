@@ -27,8 +27,8 @@
     <ProductName>tMax14</ProductName>
     <PublisherName>Şener DEMİRAL</PublisherName>
     <SuiteName>tMax14</SuiteName>
-    <MinimumRequiredVersion>1.6.0.492</MinimumRequiredVersion>
-    <ApplicationRevision>493</ApplicationRevision>
+    <MinimumRequiredVersion>1.6.0.493</MinimumRequiredVersion>
+    <ApplicationRevision>494</ApplicationRevision>
     <ApplicationVersion>1.6.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
