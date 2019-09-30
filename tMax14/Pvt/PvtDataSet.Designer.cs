@@ -3037,6 +3037,10 @@ namespace tMax14.Pvt {
             
             private global::System.Data.DataColumn columnPOR;
             
+            private global::System.Data.DataColumn columnACCTAGS;
+            
+            private global::System.Data.DataColumn columnACCSLSREP;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public OPH_PVTDataTable() {
@@ -3528,6 +3532,22 @@ namespace tMax14.Pvt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ACCTAGSColumn {
+                get {
+                    return this.columnACCTAGS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ACCSLSREPColumn {
+                get {
+                    return this.columnACCSLSREP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3620,7 +3640,9 @@ namespace tMax14.Pvt {
                         string CRRTAGS, 
                         decimal MVM3, 
                         string DTM, 
-                        string POR) {
+                        string POR, 
+                        string ACCTAGS, 
+                        string ACCSLSREP) {
                 OPH_PVTRow rowOPH_PVTRow = ((OPH_PVTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OPHID,
@@ -3679,7 +3701,9 @@ namespace tMax14.Pvt {
                         CRRTAGS,
                         MVM3,
                         DTM,
-                        POR};
+                        POR,
+                        ACCTAGS,
+                        ACCSLSREP};
                 rowOPH_PVTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOPH_PVTRow);
                 return rowOPH_PVTRow;
@@ -3759,6 +3783,8 @@ namespace tMax14.Pvt {
                 this.columnMVM3 = base.Columns["MVM3"];
                 this.columnDTM = base.Columns["DTM"];
                 this.columnPOR = base.Columns["POR"];
+                this.columnACCTAGS = base.Columns["ACCTAGS"];
+                this.columnACCSLSREP = base.Columns["ACCSLSREP"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3878,6 +3904,10 @@ namespace tMax14.Pvt {
                 base.Columns.Add(this.columnDTM);
                 this.columnPOR = new global::System.Data.DataColumn("POR", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPOR);
+                this.columnACCTAGS = new global::System.Data.DataColumn("ACCTAGS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACCTAGS);
+                this.columnACCSLSREP = new global::System.Data.DataColumn("ACCSLSREP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACCSLSREP);
                 this.columnNSTU.MaxLength = 2;
                 this.columnPSTU.MaxLength = 2;
                 this.columnOWNR.MaxLength = 1;
@@ -3909,6 +3939,8 @@ namespace tMax14.Pvt {
                 this.columnCRRTAGS.MaxLength = 2147483647;
                 this.columnDTM.MaxLength = 5;
                 this.columnPOR.MaxLength = 5;
+                this.columnACCTAGS.MaxLength = 2147483647;
+                this.columnACCSLSREP.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -24111,6 +24143,38 @@ namespace tMax14.Pvt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ACCTAGS {
+                get {
+                    try {
+                        return ((string)(this[this.tableOPH_PVT.ACCTAGSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ACCTAGS\' in table \'OPH_PVT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOPH_PVT.ACCTAGSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ACCSLSREP {
+                get {
+                    try {
+                        return ((string)(this[this.tableOPH_PVT.ACCSLSREPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ACCSLSREP\' in table \'OPH_PVT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOPH_PVT.ACCSLSREPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsOPHIDNull() {
                 return this.IsNull(this.tableOPH_PVT.OPHIDColumn);
             }
@@ -24791,6 +24855,30 @@ namespace tMax14.Pvt {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPORNull() {
                 this[this.tableOPH_PVT.PORColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsACCTAGSNull() {
+                return this.IsNull(this.tableOPH_PVT.ACCTAGSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetACCTAGSNull() {
+                this[this.tableOPH_PVT.ACCTAGSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsACCSLSREPNull() {
+                return this.IsNull(this.tableOPH_PVT.ACCSLSREPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetACCSLSREPNull() {
+                this[this.tableOPH_PVT.ACCSLSREPColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -46460,6 +46548,8 @@ namespace tMax14.Pvt.PvtDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("MVM3", "MVM3");
             tableMapping.ColumnMappings.Add("DTM", "DTM");
             tableMapping.ColumnMappings.Add("POR", "POR");
+            tableMapping.ColumnMappings.Add("ACCTAGS", "ACCTAGS");
+            tableMapping.ColumnMappings.Add("ACCSLSREP", "ACCSLSREP");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

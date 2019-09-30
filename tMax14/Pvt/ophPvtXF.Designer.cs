@@ -97,8 +97,10 @@
             this.fieldCRRTAGS = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldMVM3 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldDTM = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.ophPvtTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.OPH_PVTTableAdapter();
             this.fieldPOR = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.ophPvtTableAdapter = new tMax14.Pvt.PvtDataSetTableAdapters.OPH_PVTTableAdapter();
+            this.fieldACCSLSREP = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldACCTAGS = new DevExpress.XtraPivotGrid.PivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ophPvtBindingSource)).BeginInit();
@@ -173,7 +175,9 @@
             this.fieldCRRTAGS,
             this.fieldMVM3,
             this.fieldDTM,
-            this.fieldPOR});
+            this.fieldPOR,
+            this.fieldACCSLSREP,
+            this.fieldACCTAGS});
             this.pivotGridControl.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl.Name = "pivotGridControl";
             this.pivotGridControl.OptionsPrint.PageSettings.Landscape = true;
@@ -819,10 +823,6 @@
             this.fieldDTM.FieldName = "DTM";
             this.fieldDTM.Name = "fieldDTM";
             // 
-            // ophPvtTableAdapter
-            // 
-            this.ophPvtTableAdapter.ClearBeforeFill = true;
-            // 
             // fieldPOR
             // 
             this.fieldPOR.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
@@ -830,6 +830,28 @@
             this.fieldPOR.AreaIndex = 58;
             this.fieldPOR.FieldName = "POR";
             this.fieldPOR.Name = "fieldPOR";
+            // 
+            // ophPvtTableAdapter
+            // 
+            this.ophPvtTableAdapter.ClearBeforeFill = true;
+            // 
+            // fieldACCSLSREP
+            // 
+            this.fieldACCSLSREP.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
+            | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
+            this.fieldACCSLSREP.AreaIndex = 59;
+            this.fieldACCSLSREP.Caption = "AccSlsRep";
+            this.fieldACCSLSREP.FieldName = "ACCSLSREP";
+            this.fieldACCSLSREP.Name = "fieldACCSLSREP";
+            // 
+            // fieldACCTAGS
+            // 
+            this.fieldACCTAGS.AllowedAreas = ((DevExpress.XtraPivotGrid.PivotGridAllowedAreas)(((DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea) 
+            | DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea)));
+            this.fieldACCTAGS.AreaIndex = 60;
+            this.fieldACCTAGS.Caption = "AccTAGs";
+            this.fieldACCTAGS.FieldName = "ACCTAGS";
+            this.fieldACCTAGS.Name = "fieldACCTAGS";
             // 
             // ophPvtXF
             // 
@@ -920,5 +942,7 @@
         private DevExpress.XtraPivotGrid.PivotGridField fieldMVM3;
         private DevExpress.XtraPivotGrid.PivotGridField fieldDTM;
         private DevExpress.XtraPivotGrid.PivotGridField fieldPOR;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldACCSLSREP;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldACCTAGS;
     }
 }

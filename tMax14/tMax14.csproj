@@ -27,8 +27,8 @@
     <ProductName>tMax14</ProductName>
     <PublisherName>Şener DEMİRAL</PublisherName>
     <SuiteName>tMax14</SuiteName>
-    <MinimumRequiredVersion>1.6.0.493</MinimumRequiredVersion>
-    <ApplicationRevision>494</ApplicationRevision>
+    <MinimumRequiredVersion>1.6.0.494</MinimumRequiredVersion>
+    <ApplicationRevision>495</ApplicationRevision>
     <ApplicationVersion>1.6.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -1199,6 +1199,11 @@
     <Compile Include="Pvt\opccPvtXF.Designer.cs">
       <DependentUpon>opccPvtXF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pvt\PvtDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PvtDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Pvt\RprEcsExcelXF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1258,11 +1263,6 @@
     </Compile>
     <Compile Include="Pvt\Pivot3XF.Designer.cs">
       <DependentUpon>Pivot3XF.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pvt\PvtDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PvtDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Pvt\PvtNetworkXF.cs">
       <SubType>Form</SubType>
