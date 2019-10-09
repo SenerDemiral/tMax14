@@ -288,6 +288,7 @@
             this.ophSelTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OPH_SELTableAdapter();
             this.opsQueriesTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.OpsQueriesTableAdapter();
             this.rprOztbTableAdapter = new tMax14.Ops.OpsDataSetTableAdapters.RPR_OZTBTableAdapter();
+            this.colSENARYO = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.opsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ophGridControl)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
@@ -358,7 +359,7 @@
             this.gorulduOnayToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip.Size = new System.Drawing.Size(197, 578);
+            this.contextMenuStrip.Size = new System.Drawing.Size(197, 556);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // editToolStripMenuItem
@@ -822,14 +823,14 @@
             // icNakliyeBilgisiEMailToolStripMenuItem
             // 
             this.icNakliyeBilgisiEMailToolStripMenuItem.Name = "icNakliyeBilgisiEMailToolStripMenuItem";
-            this.icNakliyeBilgisiEMailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.icNakliyeBilgisiEMailToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.icNakliyeBilgisiEMailToolStripMenuItem.Text = "eMail";
             this.icNakliyeBilgisiEMailToolStripMenuItem.Click += new System.EventHandler(this.icNakliyeBilgisiEMailToolStripMenuItem_Click);
             // 
             // icNakliyeBilgisiPrintToolStripMenuItem
             // 
             this.icNakliyeBilgisiPrintToolStripMenuItem.Name = "icNakliyeBilgisiPrintToolStripMenuItem";
-            this.icNakliyeBilgisiPrintToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.icNakliyeBilgisiPrintToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.icNakliyeBilgisiPrintToolStripMenuItem.Text = "Print";
             this.icNakliyeBilgisiPrintToolStripMenuItem.Click += new System.EventHandler(this.icNakliyeBilgisiPrintToolStripMenuItem_Click);
             // 
@@ -846,14 +847,14 @@
             // icNakliyeTalimatiEMailToolStripMenuItem
             // 
             this.icNakliyeTalimatiEMailToolStripMenuItem.Name = "icNakliyeTalimatiEMailToolStripMenuItem";
-            this.icNakliyeTalimatiEMailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.icNakliyeTalimatiEMailToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.icNakliyeTalimatiEMailToolStripMenuItem.Text = "eMail";
             this.icNakliyeTalimatiEMailToolStripMenuItem.Click += new System.EventHandler(this.icNakliyeTalimatiEMailToolStripMenuItem_Click);
             // 
             // icNakliyeTalimatiPrintToolStripMenuItem
             // 
             this.icNakliyeTalimatiPrintToolStripMenuItem.Name = "icNakliyeTalimatiPrintToolStripMenuItem";
-            this.icNakliyeTalimatiPrintToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.icNakliyeTalimatiPrintToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.icNakliyeTalimatiPrintToolStripMenuItem.Text = "Print";
             this.icNakliyeTalimatiPrintToolStripMenuItem.Click += new System.EventHandler(this.icNakliyeTalimatiPrintToolStripMenuItem_Click);
             // 
@@ -1244,7 +1245,8 @@
             this.colGROUSR,
             this.colGROTRH,
             this.colVGM,
-            this.colBYNMDRM});
+            this.colBYNMDRM,
+            this.colSENARYO});
             styleFormatCondition1.Appearance.ForeColor = System.Drawing.Color.Coral;
             styleFormatCondition1.Appearance.Options.UseForeColor = true;
             styleFormatCondition1.ApplyToRow = true;
@@ -2514,6 +2516,16 @@
             // 
             this.rprOztbTableAdapter.ClearBeforeFill = true;
             // 
+            // colSENARYO
+            // 
+            this.colSENARYO.Caption = "Senaryo";
+            this.colSENARYO.FieldName = "SENARYO";
+            this.colSENARYO.Name = "colSENARYO";
+            this.colSENARYO.OptionsColumn.AllowEdit = false;
+            this.colSENARYO.OptionsColumn.AllowFocus = false;
+            this.colSENARYO.Visible = true;
+            this.colSENARYO.VisibleIndex = 59;
+            // 
             // opHouseXUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2797,5 +2809,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colVGM;
         private System.Windows.Forms.ToolStripMenuItem gumrukBilgiToolStripMenuItem;
         private DevExpress.XtraGrid.Columns.GridColumn colBYNMDRM;
+        private DevExpress.XtraGrid.Columns.GridColumn colSENARYO;
     }
 }

@@ -3572,7 +3572,8 @@
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("R", "Refused"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("C", "Cancelled"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("Q", "Quote Request"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("O", "Overtime")});
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("O", "Overtime"),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("N", "N/I")});
             this.TklfStuRepositoryItemCheckedComboBoxEdit.Name = "TklfStuRepositoryItemCheckedComboBoxEdit";
             // 
             // KkfTurRepositoryItemLookUpEdit

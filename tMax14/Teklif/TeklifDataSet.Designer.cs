@@ -54,6 +54,8 @@ namespace tMax14.Teklif {
         
         private RPR_ATIDataTable tableRPR_ATI;
         
+        private TTTDataTable tableTTT;
+        
         private global::System.Data.DataRelation relationTAF_TAC;
         
         private global::System.Data.DataRelation relationTST_TSF;
@@ -132,6 +134,9 @@ namespace tMax14.Teklif {
                 }
                 if ((ds.Tables["RPR_ATI"] != null)) {
                     base.Tables.Add(new RPR_ATIDataTable(ds.Tables["RPR_ATI"]));
+                }
+                if ((ds.Tables["TTT"] != null)) {
+                    base.Tables.Add(new TTTDataTable(ds.Tables["TTT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -303,6 +308,16 @@ namespace tMax14.Teklif {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TTTDataTable TTT {
+            get {
+                return this.tableTTT;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -412,6 +427,9 @@ namespace tMax14.Teklif {
                 }
                 if ((ds.Tables["RPR_ATI"] != null)) {
                     base.Tables.Add(new RPR_ATIDataTable(ds.Tables["RPR_ATI"]));
+                }
+                if ((ds.Tables["TTT"] != null)) {
+                    base.Tables.Add(new TTTDataTable(ds.Tables["TTT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -536,6 +554,12 @@ namespace tMax14.Teklif {
                     this.tableRPR_ATI.InitVars();
                 }
             }
+            this.tableTTT = ((TTTDataTable)(base.Tables["TTT"]));
+            if ((initTable == true)) {
+                if ((this.tableTTT != null)) {
+                    this.tableTTT.InitVars();
+                }
+            }
             this.relationTAF_TAC = this.Relations["TAF_TAC"];
             this.relationTST_TSF = this.Relations["TST_TSF"];
             this.relationTSF_TAF = this.Relations["TSF_TAF"];
@@ -579,6 +603,8 @@ namespace tMax14.Teklif {
             base.Tables.Add(this.tableFRC_EMAILS);
             this.tableRPR_ATI = new RPR_ATIDataTable();
             base.Tables.Add(this.tableRPR_ATI);
+            this.tableTTT = new TTTDataTable();
+            base.Tables.Add(this.tableTTT);
             this.relationTAF_TAC = new global::System.Data.DataRelation("TAF_TAC", new global::System.Data.DataColumn[] {
                         this.tableTAF.CRRIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTAC.FRTIDColumn}, false);
@@ -685,6 +711,12 @@ namespace tMax14.Teklif {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeTTT() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -782,6 +814,9 @@ namespace tMax14.Teklif {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void RPR_ATIRowChangeEventHandler(object sender, RPR_ATIRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void TTTRowChangeEventHandler(object sender, TTTRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3767,6 +3802,8 @@ namespace tMax14.Teklif {
             
             private global::System.Data.DataColumn columnFREETIME;
             
+            private global::System.Data.DataColumn columnTTTID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public TSTDataTable() {
@@ -4306,6 +4343,14 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TTTIDColumn {
+                get {
+                    return this.columnTTTID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4404,7 +4449,8 @@ namespace tMax14.Teklif {
                         string FRTTUR, 
                         string FRTGRP, 
                         string EMAILS, 
-                        string FREETIME) {
+                        string FREETIME, 
+                        int TTTID) {
                 TSTRow rowTSTRow = ((TSTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TSTID,
@@ -4469,7 +4515,8 @@ namespace tMax14.Teklif {
                         FRTTUR,
                         FRTGRP,
                         EMAILS,
-                        FREETIME};
+                        FREETIME,
+                        TTTID};
                 rowTSTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTSTRow);
                 return rowTSTRow;
@@ -4562,6 +4609,7 @@ namespace tMax14.Teklif {
                 this.columnFRTGRP = base.Columns["FRTGRP"];
                 this.columnEMAILS = base.Columns["EMAILS"];
                 this.columnFREETIME = base.Columns["FREETIME"];
+                this.columnTTTID = base.Columns["TTTID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4693,6 +4741,8 @@ namespace tMax14.Teklif {
                 base.Columns.Add(this.columnEMAILS);
                 this.columnFREETIME = new global::System.Data.DataColumn("FREETIME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFREETIME);
+                this.columnTTTID = new global::System.Data.DataColumn("TTTID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTTTID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTSTID}, true));
                 this.columnTSTID.AllowDBNull = false;
@@ -10797,6 +10847,499 @@ namespace tMax14.Teklif {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TTTDataTable : global::System.Data.TypedTableBase<TTTRow> {
+            
+            private global::System.Data.DataColumn columnTTTID;
+            
+            private global::System.Data.DataColumn columnFRTID;
+            
+            private global::System.Data.DataColumn columnHNDID;
+            
+            private global::System.Data.DataColumn columnSRCTYP;
+            
+            private global::System.Data.DataColumn columnROTS;
+            
+            private global::System.Data.DataColumn columnMOTS;
+            
+            private global::System.Data.DataColumn columnROUTE;
+            
+            private global::System.Data.DataColumn columnRSPUSRS;
+            
+            private global::System.Data.DataColumn columnORGDST;
+            
+            private global::System.Data.DataColumn columnREGION;
+            
+            private global::System.Data.DataColumn columnR1A;
+            
+            private global::System.Data.DataColumn columnR1E;
+            
+            private global::System.Data.DataColumn columnR2A;
+            
+            private global::System.Data.DataColumn columnR2E;
+            
+            private global::System.Data.DataColumn columnCOMMENTS;
+            
+            private global::System.Data.DataColumn columnSTU;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public TTTDataTable() {
+                this.TableName = "TTT";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal TTTDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected TTTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TTTIDColumn {
+                get {
+                    return this.columnTTTID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FRTIDColumn {
+                get {
+                    return this.columnFRTID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn HNDIDColumn {
+                get {
+                    return this.columnHNDID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn SRCTYPColumn {
+                get {
+                    return this.columnSRCTYP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ROTSColumn {
+                get {
+                    return this.columnROTS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn MOTSColumn {
+                get {
+                    return this.columnMOTS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ROUTEColumn {
+                get {
+                    return this.columnROUTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn RSPUSRSColumn {
+                get {
+                    return this.columnRSPUSRS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ORGDSTColumn {
+                get {
+                    return this.columnORGDST;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn REGIONColumn {
+                get {
+                    return this.columnREGION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn R1AColumn {
+                get {
+                    return this.columnR1A;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn R1EColumn {
+                get {
+                    return this.columnR1E;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn R2AColumn {
+                get {
+                    return this.columnR2A;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn R2EColumn {
+                get {
+                    return this.columnR2E;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn COMMENTSColumn {
+                get {
+                    return this.columnCOMMENTS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn STUColumn {
+                get {
+                    return this.columnSTU;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public TTTRow this[int index] {
+                get {
+                    return ((TTTRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event TTTRowChangeEventHandler TTTRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event TTTRowChangeEventHandler TTTRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event TTTRowChangeEventHandler TTTRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event TTTRowChangeEventHandler TTTRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddTTTRow(TTTRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public TTTRow AddTTTRow(
+                        int TTTID, 
+                        int FRTID, 
+                        int HNDID, 
+                        string SRCTYP, 
+                        string ROTS, 
+                        string MOTS, 
+                        string ROUTE, 
+                        string RSPUSRS, 
+                        string ORGDST, 
+                        string REGION, 
+                        System.DateTime R1A, 
+                        System.DateTime R1E, 
+                        System.DateTime R2A, 
+                        System.DateTime R2E, 
+                        string COMMENTS, 
+                        string STU) {
+                TTTRow rowTTTRow = ((TTTRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TTTID,
+                        FRTID,
+                        HNDID,
+                        SRCTYP,
+                        ROTS,
+                        MOTS,
+                        ROUTE,
+                        RSPUSRS,
+                        ORGDST,
+                        REGION,
+                        R1A,
+                        R1E,
+                        R2A,
+                        R2E,
+                        COMMENTS,
+                        STU};
+                rowTTTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTTTRow);
+                return rowTTTRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public TTTRow FindByTTTID(int TTTID) {
+                return ((TTTRow)(this.Rows.Find(new object[] {
+                            TTTID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TTTDataTable cln = ((TTTDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TTTDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnTTTID = base.Columns["TTTID"];
+                this.columnFRTID = base.Columns["FRTID"];
+                this.columnHNDID = base.Columns["HNDID"];
+                this.columnSRCTYP = base.Columns["SRCTYP"];
+                this.columnROTS = base.Columns["ROTS"];
+                this.columnMOTS = base.Columns["MOTS"];
+                this.columnROUTE = base.Columns["ROUTE"];
+                this.columnRSPUSRS = base.Columns["RSPUSRS"];
+                this.columnORGDST = base.Columns["ORGDST"];
+                this.columnREGION = base.Columns["REGION"];
+                this.columnR1A = base.Columns["R1A"];
+                this.columnR1E = base.Columns["R1E"];
+                this.columnR2A = base.Columns["R2A"];
+                this.columnR2E = base.Columns["R2E"];
+                this.columnCOMMENTS = base.Columns["COMMENTS"];
+                this.columnSTU = base.Columns["STU"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnTTTID = new global::System.Data.DataColumn("TTTID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTTTID);
+                this.columnFRTID = new global::System.Data.DataColumn("FRTID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFRTID);
+                this.columnHNDID = new global::System.Data.DataColumn("HNDID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHNDID);
+                this.columnSRCTYP = new global::System.Data.DataColumn("SRCTYP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSRCTYP);
+                this.columnROTS = new global::System.Data.DataColumn("ROTS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnROTS);
+                this.columnMOTS = new global::System.Data.DataColumn("MOTS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMOTS);
+                this.columnROUTE = new global::System.Data.DataColumn("ROUTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnROUTE);
+                this.columnRSPUSRS = new global::System.Data.DataColumn("RSPUSRS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRSPUSRS);
+                this.columnORGDST = new global::System.Data.DataColumn("ORGDST", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORGDST);
+                this.columnREGION = new global::System.Data.DataColumn("REGION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREGION);
+                this.columnR1A = new global::System.Data.DataColumn("R1A", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnR1A);
+                this.columnR1E = new global::System.Data.DataColumn("R1E", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnR1E);
+                this.columnR2A = new global::System.Data.DataColumn("R2A", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnR2A);
+                this.columnR2E = new global::System.Data.DataColumn("R2E", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnR2E);
+                this.columnCOMMENTS = new global::System.Data.DataColumn("COMMENTS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCOMMENTS);
+                this.columnSTU = new global::System.Data.DataColumn("STU", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTU);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTTTID}, true));
+                this.columnTTTID.AllowDBNull = false;
+                this.columnTTTID.Unique = true;
+                this.columnSRCTYP.MaxLength = 1;
+                this.columnROTS.MaxLength = 40;
+                this.columnMOTS.MaxLength = 40;
+                this.columnROUTE.MaxLength = 2147483647;
+                this.columnRSPUSRS.MaxLength = 2147483647;
+                this.columnORGDST.MaxLength = 5;
+                this.columnREGION.MaxLength = 2147483647;
+                this.columnCOMMENTS.MaxLength = 2147483647;
+                this.columnSTU.MaxLength = 1;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public TTTRow NewTTTRow() {
+                return ((TTTRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TTTRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TTTRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TTTRowChanged != null)) {
+                    this.TTTRowChanged(this, new TTTRowChangeEvent(((TTTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TTTRowChanging != null)) {
+                    this.TTTRowChanging(this, new TTTRowChangeEvent(((TTTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TTTRowDeleted != null)) {
+                    this.TTTRowDeleted(this, new TTTRowChangeEvent(((TTTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TTTRowDeleting != null)) {
+                    this.TTTRowDeleting(this, new TTTRowChangeEvent(((TTTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveTTTRow(TTTRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TeklifDataSet ds = new TeklifDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TTTDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class TAFRow : global::System.Data.DataRow {
@@ -15200,6 +15743,22 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int TTTID {
+                get {
+                    try {
+                        return ((int)(this[this.tableTST.TTTIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TTTID\' in table \'TST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTST.TTTIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFRTIDNull() {
                 return this.IsNull(this.tableTST.FRTIDColumn);
             }
@@ -15940,6 +16499,18 @@ namespace tMax14.Teklif {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFREETIMENull() {
                 this[this.tableTST.FREETIMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTTTIDNull() {
+                return this.IsNull(this.tableTST.TTTIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTTTIDNull() {
+                this[this.tableTST.TTTIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22431,6 +23002,452 @@ namespace tMax14.Teklif {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TTTRow : global::System.Data.DataRow {
+            
+            private TTTDataTable tableTTT;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal TTTRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTTT = ((TTTDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int TTTID {
+                get {
+                    return ((int)(this[this.tableTTT.TTTIDColumn]));
+                }
+                set {
+                    this[this.tableTTT.TTTIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int FRTID {
+                get {
+                    try {
+                        return ((int)(this[this.tableTTT.FRTIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FRTID\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.FRTIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int HNDID {
+                get {
+                    try {
+                        return ((int)(this[this.tableTTT.HNDIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HNDID\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.HNDIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string SRCTYP {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.SRCTYPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SRCTYP\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.SRCTYPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ROTS {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.ROTSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ROTS\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.ROTSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string MOTS {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.MOTSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MOTS\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.MOTSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ROUTE {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.ROUTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ROUTE\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.ROUTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string RSPUSRS {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.RSPUSRSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RSPUSRS\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.RSPUSRSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ORGDST {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.ORGDSTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ORGDST\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.ORGDSTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string REGION {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.REGIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REGION\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.REGIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime R1A {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTTT.R1AColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'R1A\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.R1AColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime R1E {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTTT.R1EColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'R1E\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.R1EColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime R2A {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTTT.R2AColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'R2A\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.R2AColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime R2E {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTTT.R2EColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'R2E\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.R2EColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string COMMENTS {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.COMMENTSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'COMMENTS\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.COMMENTSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string STU {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.STUColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'STU\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.STUColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFRTIDNull() {
+                return this.IsNull(this.tableTTT.FRTIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFRTIDNull() {
+                this[this.tableTTT.FRTIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsHNDIDNull() {
+                return this.IsNull(this.tableTTT.HNDIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetHNDIDNull() {
+                this[this.tableTTT.HNDIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSRCTYPNull() {
+                return this.IsNull(this.tableTTT.SRCTYPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSRCTYPNull() {
+                this[this.tableTTT.SRCTYPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsROTSNull() {
+                return this.IsNull(this.tableTTT.ROTSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetROTSNull() {
+                this[this.tableTTT.ROTSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsMOTSNull() {
+                return this.IsNull(this.tableTTT.MOTSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetMOTSNull() {
+                this[this.tableTTT.MOTSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsROUTENull() {
+                return this.IsNull(this.tableTTT.ROUTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetROUTENull() {
+                this[this.tableTTT.ROUTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsRSPUSRSNull() {
+                return this.IsNull(this.tableTTT.RSPUSRSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetRSPUSRSNull() {
+                this[this.tableTTT.RSPUSRSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsORGDSTNull() {
+                return this.IsNull(this.tableTTT.ORGDSTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetORGDSTNull() {
+                this[this.tableTTT.ORGDSTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsREGIONNull() {
+                return this.IsNull(this.tableTTT.REGIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetREGIONNull() {
+                this[this.tableTTT.REGIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsR1ANull() {
+                return this.IsNull(this.tableTTT.R1AColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetR1ANull() {
+                this[this.tableTTT.R1AColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsR1ENull() {
+                return this.IsNull(this.tableTTT.R1EColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetR1ENull() {
+                this[this.tableTTT.R1EColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsR2ANull() {
+                return this.IsNull(this.tableTTT.R2AColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetR2ANull() {
+                this[this.tableTTT.R2AColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsR2ENull() {
+                return this.IsNull(this.tableTTT.R2EColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetR2ENull() {
+                this[this.tableTTT.R2EColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCOMMENTSNull() {
+                return this.IsNull(this.tableTTT.COMMENTSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCOMMENTSNull() {
+                this[this.tableTTT.COMMENTSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSTUNull() {
+                return this.IsNull(this.tableTTT.STUColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSTUNull() {
+                this[this.tableTTT.STUColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -22926,6 +23943,40 @@ namespace tMax14.Teklif {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public RPR_ATIRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class TTTRowChangeEvent : global::System.EventArgs {
+            
+            private TTTRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public TTTRowChangeEvent(TTTRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public TTTRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -26051,6 +27102,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("FRTGRP", "FRTGRP");
             tableMapping.ColumnMappings.Add("EMAILS", "EMAILS");
             tableMapping.ColumnMappings.Add("FREETIME", "FREETIME");
+            tableMapping.ColumnMappings.Add("TTTID", "TTTID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -26351,6 +27403,13 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "FREETIME";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "TTTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TTTID";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "\"TST_UPD\"";
@@ -26639,6 +27698,13 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "FREETIME";
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "TTTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TTTID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -26801,7 +27867,8 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
                     string RFSTYP, 
                     string ASK, 
                     string EMAILS, 
-                    string FREETIME) {
+                    string FREETIME, 
+                    global::System.Nullable<int> TTTID) {
             if ((TSTID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(TSTID.Value));
             }
@@ -27078,6 +28145,12 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[45].Value = ((string)(FREETIME));
             }
+            if ((TTTID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[46].Value = ((int)(TTTID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -27144,7 +28217,8 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
                     string ASK, 
                     string RFSTYP, 
                     string EMAILS, 
-                    string FREETIME) {
+                    string FREETIME, 
+                    global::System.Nullable<int> TTTID) {
             if ((TSTID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(TSTID.Value));
             }
@@ -27420,6 +28494,12 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(FREETIME));
+            }
+            if ((TTTID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(TTTID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -31393,6 +32473,776 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             }
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class TTTTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::FirebirdSql.Data.FirebirdClient.FbDataAdapter _adapter;
+        
+        private global::FirebirdSql.Data.FirebirdClient.FbConnection _connection;
+        
+        private global::FirebirdSql.Data.FirebirdClient.FbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public TTTTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private global::FirebirdSql.Data.FirebirdClient.FbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::FirebirdSql.Data.FirebirdClient.FbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::FirebirdSql.Data.FirebirdClient.FbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::FirebirdSql.Data.FirebirdClient.FbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "TTT";
+            tableMapping.ColumnMappings.Add("TTTID", "TTTID");
+            tableMapping.ColumnMappings.Add("FRTID", "FRTID");
+            tableMapping.ColumnMappings.Add("HNDID", "HNDID");
+            tableMapping.ColumnMappings.Add("SRCTYP", "SRCTYP");
+            tableMapping.ColumnMappings.Add("ROTS", "ROTS");
+            tableMapping.ColumnMappings.Add("MOTS", "MOTS");
+            tableMapping.ColumnMappings.Add("ROUTE", "ROUTE");
+            tableMapping.ColumnMappings.Add("RSPUSRS", "RSPUSRS");
+            tableMapping.ColumnMappings.Add("ORGDST", "ORGDST");
+            tableMapping.ColumnMappings.Add("REGION", "REGION");
+            tableMapping.ColumnMappings.Add("R1A", "R1A");
+            tableMapping.ColumnMappings.Add("R1E", "R1E");
+            tableMapping.ColumnMappings.Add("R2A", "R2A");
+            tableMapping.ColumnMappings.Add("R2E", "R2E");
+            tableMapping.ColumnMappings.Add("COMMENTS", "COMMENTS");
+            tableMapping.ColumnMappings.Add("STU", "STU");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""TTT"" WHERE ((""TTTID"" = @Original_TTTID) AND ((@IsNull_FRTID = 1 AND ""FRTID"" IS NULL) OR (""FRTID"" = @Original_FRTID)) AND ((@IsNull_HNDID = 1 AND ""HNDID"" IS NULL) OR (""HNDID"" = @Original_HNDID)) AND ((@IsNull_SRCTYP = 1 AND ""SRCTYP"" IS NULL) OR (""SRCTYP"" = @Original_SRCTYP)) AND ((@IsNull_ROTS = 1 AND ""ROTS"" IS NULL) OR (""ROTS"" = @Original_ROTS)) AND ((@IsNull_MOTS = 1 AND ""MOTS"" IS NULL) OR (""MOTS"" = @Original_MOTS)) AND ((@IsNull_ORGDST = 1 AND ""ORGDST"" IS NULL) OR (""ORGDST"" = @Original_ORGDST)) AND ((@IsNull_R1A = 1 AND ""R1A"" IS NULL) OR (""R1A"" = @Original_R1A)) AND ((@IsNull_R1E = 1 AND ""R1E"" IS NULL) OR (""R1E"" = @Original_R1E)) AND ((@IsNull_R2A = 1 AND ""R2A"" IS NULL) OR (""R2A"" = @Original_R2A)) AND ((@IsNull_R2E = 1 AND ""R2E"" IS NULL) OR (""R2E"" = @Original_R2E)) AND ((@IsNull_STU = 1 AND ""STU"" IS NULL) OR (""STU"" = @Original_STU)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_TTTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TTTID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_FRTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "FRTID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_FRTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "FRTID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_HNDID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "HNDID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_HNDID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "HNDID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_SRCTYP";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "SRCTYP";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_SRCTYP";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "SRCTYP";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_ROTS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "ROTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_ROTS";
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "ROTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_MOTS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "MOTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_MOTS";
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "MOTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_ORGDST";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "ORGDST";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_ORGDST";
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "ORGDST";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_R1A";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1A";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_R1A";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1A";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_R1E";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1E";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_R1E";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1E";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_R2A";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2A";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_R2A";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2A";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_R2E";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2E";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_R2E";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2E";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_STU";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "STU";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_STU";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "STU";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            this._adapter.InsertCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""TTT"" (""TTTID"", ""FRTID"", ""HNDID"", ""SRCTYP"", ""ROTS"", ""MOTS"", ""ROUTE"", ""RSPUSRS"", ""ORGDST"", ""REGION"", ""R1A"", ""R1E"", ""R2A"", ""R2E"", ""COMMENTS"", ""STU"") VALUES (@TTTID, @FRTID, @HNDID, @SRCTYP, @ROTS, @MOTS, @ROUTE, @RSPUSRS, @ORGDST, @REGION, @R1A, @R1E, @R2A, @R2E, @COMMENTS, @STU)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@TTTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TTTID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@FRTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "FRTID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@HNDID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "HNDID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@SRCTYP";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "SRCTYP";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@ROTS";
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "ROTS";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@MOTS";
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "MOTS";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@ROUTE";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "ROUTE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@RSPUSRS";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "RSPUSRS";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@ORGDST";
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "ORGDST";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@REGION";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "REGION";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@R1A";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1A";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@R1E";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1E";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@R2A";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2A";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@R2E";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2E";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@COMMENTS";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "COMMENTS";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@STU";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "STU";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""TTT"" SET ""TTTID"" = @TTTID, ""FRTID"" = @FRTID, ""HNDID"" = @HNDID, ""SRCTYP"" = @SRCTYP, ""ROTS"" = @ROTS, ""MOTS"" = @MOTS, ""ROUTE"" = @ROUTE, ""RSPUSRS"" = @RSPUSRS, ""ORGDST"" = @ORGDST, ""REGION"" = @REGION, ""R1A"" = @R1A, ""R1E"" = @R1E, ""R2A"" = @R2A, ""R2E"" = @R2E, ""COMMENTS"" = @COMMENTS, ""STU"" = @STU WHERE ((""TTTID"" = @Original_TTTID) AND ((@IsNull_FRTID = 1 AND ""FRTID"" IS NULL) OR (""FRTID"" = @Original_FRTID)) AND ((@IsNull_HNDID = 1 AND ""HNDID"" IS NULL) OR (""HNDID"" = @Original_HNDID)) AND ((@IsNull_SRCTYP = 1 AND ""SRCTYP"" IS NULL) OR (""SRCTYP"" = @Original_SRCTYP)) AND ((@IsNull_ROTS = 1 AND ""ROTS"" IS NULL) OR (""ROTS"" = @Original_ROTS)) AND ((@IsNull_MOTS = 1 AND ""MOTS"" IS NULL) OR (""MOTS"" = @Original_MOTS)) AND ((@IsNull_ORGDST = 1 AND ""ORGDST"" IS NULL) OR (""ORGDST"" = @Original_ORGDST)) AND ((@IsNull_R1A = 1 AND ""R1A"" IS NULL) OR (""R1A"" = @Original_R1A)) AND ((@IsNull_R1E = 1 AND ""R1E"" IS NULL) OR (""R1E"" = @Original_R1E)) AND ((@IsNull_R2A = 1 AND ""R2A"" IS NULL) OR (""R2A"" = @Original_R2A)) AND ((@IsNull_R2E = 1 AND ""R2E"" IS NULL) OR (""R2E"" = @Original_R2E)) AND ((@IsNull_STU = 1 AND ""STU"" IS NULL) OR (""STU"" = @Original_STU)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@TTTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TTTID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@FRTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "FRTID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@HNDID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "HNDID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@SRCTYP";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "SRCTYP";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@ROTS";
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "ROTS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@MOTS";
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "MOTS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@ROUTE";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "ROUTE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@RSPUSRS";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "RSPUSRS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@ORGDST";
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "ORGDST";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@REGION";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "REGION";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@R1A";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1A";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@R1E";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1E";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@R2A";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2A";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@R2E";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2E";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@COMMENTS";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "COMMENTS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@STU";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "STU";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_TTTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TTTID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_FRTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "FRTID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_FRTID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "FRTID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_HNDID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "HNDID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_HNDID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "HNDID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_SRCTYP";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "SRCTYP";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_SRCTYP";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "SRCTYP";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_ROTS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "ROTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_ROTS";
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "ROTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_MOTS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "MOTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_MOTS";
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "MOTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_ORGDST";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "ORGDST";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_ORGDST";
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "ORGDST";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_R1A";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1A";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_R1A";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1A";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_R1E";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1E";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_R1E";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R1E";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_R2A";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2A";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_R2A";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2A";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_R2E";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2E";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_R2E";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "R2E";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_STU";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "STU";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_STU";
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "STU";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
+            this._connection.ConnectionString = global::tMax14.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::FirebirdSql.Data.FirebirdClient.FbCommand[1];
+            this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT * FROM TTT";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(TeklifDataSet.TTTDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TeklifDataSet.TTTDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TeklifDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "TTT");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
         }
     }
     

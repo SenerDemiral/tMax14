@@ -268,6 +268,7 @@
             this.rprTklfTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.RPR_TKLFTableAdapter();
             this.fRC_EMAILSTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.FRC_EMAILSTableAdapter();
             this.rprAtiTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.RPR_ATITableAdapter();
+            this.colTTTID = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tafGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsfGridControl)).BeginInit();
             this.contextMenuStripTeklif.SuspendLayout();
@@ -796,14 +797,14 @@
             // exportTurkceToolStripMenuItem1
             // 
             this.exportTurkceToolStripMenuItem1.Name = "exportTurkceToolStripMenuItem1";
-            this.exportTurkceToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.exportTurkceToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
             this.exportTurkceToolStripMenuItem1.Text = "Export Türkçe";
             this.exportTurkceToolStripMenuItem1.Click += new System.EventHandler(this.exportTurkceToolStripMenuItem1_Click);
             // 
             // exportIngilizceToolStripMenuItem
             // 
             this.exportIngilizceToolStripMenuItem.Name = "exportIngilizceToolStripMenuItem";
-            this.exportIngilizceToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.exportIngilizceToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.exportIngilizceToolStripMenuItem.Text = "Export İngilizce";
             this.exportIngilizceToolStripMenuItem.Click += new System.EventHandler(this.exportIngilizceToolStripMenuItem_Click);
             // 
@@ -1939,7 +1940,8 @@
             this.colTKLTRH_TLPTRHt,
             this.colFRTTURt,
             this.colEMAILt,
-            this.colFREETIMEt});
+            this.colFREETIMEt,
+            this.colTTTID});
             this.tstGridView.GridControl = this.tstGridControl;
             this.tstGridView.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "TSTID", null, "")});
@@ -2722,6 +2724,14 @@
             // 
             this.rprAtiTableAdapter.ClearBeforeFill = true;
             // 
+            // colTTTID
+            // 
+            this.colTTTID.Caption = "TndrID";
+            this.colTTTID.FieldName = "TTTID";
+            this.colTTTID.Name = "colTTTID";
+            this.colTTTID.Visible = true;
+            this.colTTTID.VisibleIndex = 62;
+            // 
             // TeklifSatisTalepXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3002,5 +3012,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFREETIMEt;
         private System.Windows.Forms.ToolStripMenuItem alisTeklifIstegiToolStripMenuItem;
         private TeklifDataSetTableAdapters.RPR_ATITableAdapter rprAtiTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colTTTID;
     }
 }

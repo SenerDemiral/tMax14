@@ -27,8 +27,8 @@
     <ProductName>tMax14</ProductName>
     <PublisherName>Şener DEMİRAL</PublisherName>
     <SuiteName>tMax14</SuiteName>
-    <MinimumRequiredVersion>1.6.0.494</MinimumRequiredVersion>
-    <ApplicationRevision>495</ApplicationRevision>
+    <MinimumRequiredVersion>1.6.0.497</MinimumRequiredVersion>
+    <ApplicationRevision>498</ApplicationRevision>
     <ApplicationVersion>1.6.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -1471,6 +1471,12 @@
     <Compile Include="Teklif\TeklifSatisXF.Designer.cs">
       <DependentUpon>TeklifSatisXF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teklif\TenderTakipXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TenderTakipXF.Designer.cs">
+      <DependentUpon>TenderTakipXF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teklif\TstBosXF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2140,6 +2146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teklif\TeklifSatisXF.resx">
       <DependentUpon>TeklifSatisXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TenderTakipXF.resx">
+      <DependentUpon>TenderTakipXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teklif\TstBosXF.resx">
       <DependentUpon>TstBosXF.cs</DependentUpon>

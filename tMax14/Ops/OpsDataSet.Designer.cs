@@ -4796,6 +4796,8 @@ namespace tMax14.Ops {
             
             private global::System.Data.DataColumn columnBYNMDRM;
             
+            private global::System.Data.DataColumn columnSENARYO;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public OPH_SELDataTable() {
@@ -6055,6 +6057,14 @@ namespace tMax14.Ops {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn SENARYOColumn {
+                get {
+                    return this.columnSENARYO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6243,7 +6253,8 @@ namespace tMax14.Ops {
                         string GROUSR, 
                         System.DateTime GROTRH, 
                         string VGM, 
-                        string BYNMDRM) {
+                        string BYNMDRM, 
+                        string SENARYO) {
                 OPH_SELRow rowOPH_SELRow = ((OPH_SELRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OPHID,
@@ -6398,7 +6409,8 @@ namespace tMax14.Ops {
                         GROUSR,
                         GROTRH,
                         VGM,
-                        BYNMDRM};
+                        BYNMDRM,
+                        SENARYO};
                 rowOPH_SELRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOPH_SELRow);
                 return rowOPH_SELRow;
@@ -6581,6 +6593,7 @@ namespace tMax14.Ops {
                 this.columnGROTRH = base.Columns["GROTRH"];
                 this.columnVGM = base.Columns["VGM"];
                 this.columnBYNMDRM = base.Columns["BYNMDRM"];
+                this.columnSENARYO = base.Columns["SENARYO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6892,6 +6905,8 @@ namespace tMax14.Ops {
                 base.Columns.Add(this.columnVGM);
                 this.columnBYNMDRM = new global::System.Data.DataColumn("BYNMDRM", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBYNMDRM);
+                this.columnSENARYO = new global::System.Data.DataColumn("SENARYO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSENARYO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnOPHID}, true));
                 this.columnOPHID.AllowDBNull = false;
@@ -6978,6 +6993,7 @@ namespace tMax14.Ops {
                 this.columnGROUSR.MaxLength = 4;
                 this.columnVGM.MaxLength = 1;
                 this.columnBYNMDRM.MaxLength = 1;
+                this.columnSENARYO.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -31000,6 +31016,22 @@ namespace tMax14.Ops {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string SENARYO {
+                get {
+                    try {
+                        return ((string)(this[this.tableOPH_SEL.SENARYOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SENARYO\' in table \'OPH_SEL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOPH_SEL.SENARYOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsREFNONull() {
                 return this.IsNull(this.tableOPH_SEL.REFNOColumn);
             }
@@ -32820,6 +32852,18 @@ namespace tMax14.Ops {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetBYNMDRMNull() {
                 this[this.tableOPH_SEL.BYNMDRMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSENARYONull() {
+                return this.IsNull(this.tableOPH_SEL.SENARYOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSENARYONull() {
+                this[this.tableOPH_SEL.SENARYOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -59303,6 +59347,7 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("GROTRH", "GROTRH");
             tableMapping.ColumnMappings.Add("VGM", "VGM");
             tableMapping.ColumnMappings.Add("BYNMDRM", "BYNMDRM");
+            tableMapping.ColumnMappings.Add("SENARYO", "SENARYO");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
