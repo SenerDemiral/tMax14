@@ -249,6 +249,7 @@
             this.colFRTTURt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEMAILt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFREETIMEt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTTTID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.FRCeMailsRepositoryItemCheckedComboBoxEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
             this.fRCEMAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -268,7 +269,6 @@
             this.rprTklfTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.RPR_TKLFTableAdapter();
             this.fRC_EMAILSTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.FRC_EMAILSTableAdapter();
             this.rprAtiTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.RPR_ATITableAdapter();
-            this.colTTTID = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tafGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsfGridControl)).BeginInit();
             this.contextMenuStripTeklif.SuspendLayout();
@@ -1289,7 +1289,8 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("mCrr", "MCRR", -1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("mCne", "MCNE", -1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("mShp", "MSHP", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("mAcc", "MACC", -1)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("mAcc", "MACC", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("hFtr", "HFTR", -1)});
             this.KIMErepositoryItemImageComboBox.Name = "KIMErepositoryItemImageComboBox";
             // 
             // colAFYT1f
@@ -2574,6 +2575,14 @@
             this.colFREETIMEt.Visible = true;
             this.colFREETIMEt.VisibleIndex = 61;
             // 
+            // colTTTID
+            // 
+            this.colTTTID.Caption = "TndrID";
+            this.colTTTID.FieldName = "TTTID";
+            this.colTTTID.Name = "colTTTID";
+            this.colTTTID.Visible = true;
+            this.colTTTID.VisibleIndex = 62;
+            // 
             // FRCeMailsRepositoryItemCheckedComboBoxEdit
             // 
             this.FRCeMailsRepositoryItemCheckedComboBoxEdit.AutoHeight = false;
@@ -2723,14 +2732,6 @@
             // rprAtiTableAdapter
             // 
             this.rprAtiTableAdapter.ClearBeforeFill = true;
-            // 
-            // colTTTID
-            // 
-            this.colTTTID.Caption = "TndrID";
-            this.colTTTID.FieldName = "TTTID";
-            this.colTTTID.Name = "colTTTID";
-            this.colTTTID.Visible = true;
-            this.colTTTID.VisibleIndex = 62;
             // 
             // TeklifSatisTalepXF
             // 

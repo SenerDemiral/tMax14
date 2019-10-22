@@ -8779,6 +8779,8 @@ namespace tMax14.Ops {
             
             private global::System.Data.DataColumn columnRROS;
             
+            private global::System.Data.DataColumn columnFTRID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public OPHDataTable() {
@@ -10182,6 +10184,14 @@ namespace tMax14.Ops {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FTRIDColumn {
+                get {
+                    return this.columnFTRID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10388,7 +10398,8 @@ namespace tMax14.Ops {
                         string BTY, 
                         string KTN, 
                         string BYNMDRM, 
-                        System.DateTime RROS) {
+                        System.DateTime RROS, 
+                        int FTRID) {
                 OPHRow rowOPHRow = ((OPHRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OPHID,
@@ -10561,7 +10572,8 @@ namespace tMax14.Ops {
                         BTY,
                         KTN,
                         BYNMDRM,
-                        RROS};
+                        RROS,
+                        FTRID};
                 if ((parentOPMRowByOPH_OPM != null)) {
                     columnValuesArray[3] = parentOPMRowByOPH_OPM[0];
                 }
@@ -10765,6 +10777,7 @@ namespace tMax14.Ops {
                 this.columnKTN = base.Columns["KTN"];
                 this.columnBYNMDRM = base.Columns["BYNMDRM"];
                 this.columnRROS = base.Columns["RROS"];
+                this.columnFTRID = base.Columns["FTRID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11112,6 +11125,8 @@ namespace tMax14.Ops {
                 base.Columns.Add(this.columnBYNMDRM);
                 this.columnRROS = new global::System.Data.DataColumn("RROS", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRROS);
+                this.columnFTRID = new global::System.Data.DataColumn("FTRID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFTRID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnOPHID}, true));
                 this.columnOPHID.AllowDBNull = false;
@@ -37544,6 +37559,22 @@ namespace tMax14.Ops {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int FTRID {
+                get {
+                    try {
+                        return ((int)(this[this.tableOPH.FTRIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FTRID\' in table \'OPH\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOPH.FTRIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public OPMRow OPMRow {
                 get {
                     return ((OPMRow)(this.GetParentRow(this.Table.ParentRelations["OPH_OPM"])));
@@ -39591,6 +39622,18 @@ namespace tMax14.Ops {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetRROSNull() {
                 this[this.tableOPH.RROSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFTRIDNull() {
+                return this.IsNull(this.tableOPH.FTRIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFTRIDNull() {
+                this[this.tableOPH.FTRIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -60103,6 +60146,7 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("KTN", "KTN");
             tableMapping.ColumnMappings.Add("BYNMDRM", "BYNMDRM");
             tableMapping.ColumnMappings.Add("RROS", "RROS");
+            tableMapping.ColumnMappings.Add("FTRID", "FTRID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -60137,24 +60181,24 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
                 "\", \"TRI\", \"PAG2\", \"TSTID\", \"ARP\", \"ITOP\", \"TRXNOP\", \"TRXGRW\", \"B_NOTF\", \"B_NOTA\"" +
                 ", \"B_NOTR\", \"DDT\", \"INFOOPS\", \"INFOFIN\", \"PRFT\", \"INFOTQM\", \"IVHC\", \"INFOSLS\", \"" +
                 "CABW\", \"B_DIKG\", \"KPI\", \"KPIUSR\", \"KPITRH\", \"CUSLOC\", \"B_BOXTYP\", \"SENARYO\", \"VG" +
-                "M\", \"BTY\", \"KTN\", \"BYNMDRM\", \"RROS\") VALUES (@OPHID, @REFNO, @OPMID, @MIDX, @EXD" +
-                ", @ROT, @MOT, @OWNR, @NSTU, @NSTUTS, @PSTU, @PSTUTS, @DPSTU, @ONYYTK, @ONYUSR, @" +
-                "ONYTRH, @ORG, @DST, @RCPADR, @DLVADR, @SHPID, @MNFID, @CNEID, @NFYID, @NF2ID, @A" +
-                "GNID, @DCNID, @CRRID, @ACCID, @PRJID, @NOP, @PCS, @VM3, @GRW, @V2W, @CHW, @DTM, " +
-                "@DTP, @PTM, @POR, @TOL, @PAG, @TOS, @WBRD, @WBD, @RRT, @EOH, @ROH, @AOH, @RTR, @" +
-                "ATR, @BRD, @AOC, @ROS, @RTD, @POD, @PODINF, @HNDINF, @ORDINF, @GODINF, @OTHINF, " +
-                "@ACCINF, @DOCINF, @TAGS, @BKMS, @BYNMNO, @DPOGIRTRH, @DPOCIKTRH, @DPOFTRDVZ, @DP" +
-                "OFTRTUT, @IRSINF, @SGRTRH, @SGRPRMYZD, @CIKKAPI, @ANTRP, @KARNENO, @LM_TS, @XTTX" +
-                "T, @XTBLB, @MALBDL, @MALBDLDVZ, @MALGTIPNO, @ACD, @DOW, @DRBD, @DRCD, @ORD, @REO" +
-                "H, @PEOH, @LORD, @CACD, @CCT, @HSD, @HSRFID, @HSINF, @TUS, @TUSQ, @TOB, @FPT, @E" +
-                "XPR, @SPRNO, @TKLFNO, @OGRF, @DSRF, @DLVID, @RCPID, @B_CCSD, @B_PRTNO, @B_PRJNO," +
-                " @B_SITENO, @B_SMPTYP, @B_NOF, @B_NOA, @B_NOR, @B_OFCNO, @B_CCC, @B_SNDINFO, @B_" +
-                "RCVINFO, @B_STUDYNO, @B_PUDPT, @B_KUTUGONDER, @B_KUTUDONDU, @B_BLDTRH, @INF, @B_" +
-                "DLGONDER, @B_DLDONDU, @B_TEMPLATE, @B_MRKBILDIR, @B_NOT, @B_TOS, @OVERTIME, @PEN" +
-                "ALTY, @PENALTYINFO, @PALLETIZING, @RROH, @TRO, @TRS, @TRI, @PAG2, @TSTID, @ARP, " +
-                "@ITOP, @TRXNOP, @TRXGRW, @B_NOTF, @B_NOTA, @B_NOTR, @DDT, @INFOOPS, @INFOFIN, @P" +
-                "RFT, @INFOTQM, @IVHC, @INFOSLS, @CABW, @B_DIKG, @KPI, @KPIUSR, @KPITRH, @CUSLOC," +
-                " @B_BOXTYP, @SENARYO, @VGM, @BTY, @KTN, @BYNMDRM, @RROS)";
+                "M\", \"BTY\", \"KTN\", \"BYNMDRM\", \"RROS\", \"FTRID\") VALUES (@OPHID, @REFNO, @OPMID, @M" +
+                "IDX, @EXD, @ROT, @MOT, @OWNR, @NSTU, @NSTUTS, @PSTU, @PSTUTS, @DPSTU, @ONYYTK, @" +
+                "ONYUSR, @ONYTRH, @ORG, @DST, @RCPADR, @DLVADR, @SHPID, @MNFID, @CNEID, @NFYID, @" +
+                "NF2ID, @AGNID, @DCNID, @CRRID, @ACCID, @PRJID, @NOP, @PCS, @VM3, @GRW, @V2W, @CH" +
+                "W, @DTM, @DTP, @PTM, @POR, @TOL, @PAG, @TOS, @WBRD, @WBD, @RRT, @EOH, @ROH, @AOH" +
+                ", @RTR, @ATR, @BRD, @AOC, @ROS, @RTD, @POD, @PODINF, @HNDINF, @ORDINF, @GODINF, " +
+                "@OTHINF, @ACCINF, @DOCINF, @TAGS, @BKMS, @BYNMNO, @DPOGIRTRH, @DPOCIKTRH, @DPOFT" +
+                "RDVZ, @DPOFTRTUT, @IRSINF, @SGRTRH, @SGRPRMYZD, @CIKKAPI, @ANTRP, @KARNENO, @LM_" +
+                "TS, @XTTXT, @XTBLB, @MALBDL, @MALBDLDVZ, @MALGTIPNO, @ACD, @DOW, @DRBD, @DRCD, @" +
+                "ORD, @REOH, @PEOH, @LORD, @CACD, @CCT, @HSD, @HSRFID, @HSINF, @TUS, @TUSQ, @TOB," +
+                " @FPT, @EXPR, @SPRNO, @TKLFNO, @OGRF, @DSRF, @DLVID, @RCPID, @B_CCSD, @B_PRTNO, " +
+                "@B_PRJNO, @B_SITENO, @B_SMPTYP, @B_NOF, @B_NOA, @B_NOR, @B_OFCNO, @B_CCC, @B_SND" +
+                "INFO, @B_RCVINFO, @B_STUDYNO, @B_PUDPT, @B_KUTUGONDER, @B_KUTUDONDU, @B_BLDTRH, " +
+                "@INF, @B_DLGONDER, @B_DLDONDU, @B_TEMPLATE, @B_MRKBILDIR, @B_NOT, @B_TOS, @OVERT" +
+                "IME, @PENALTY, @PENALTYINFO, @PALLETIZING, @RROH, @TRO, @TRS, @TRI, @PAG2, @TSTI" +
+                "D, @ARP, @ITOP, @TRXNOP, @TRXGRW, @B_NOTF, @B_NOTA, @B_NOTR, @DDT, @INFOOPS, @IN" +
+                "FOFIN, @PRFT, @INFOTQM, @IVHC, @INFOSLS, @CABW, @B_DIKG, @KPI, @KPIUSR, @KPITRH," +
+                " @CUSLOC, @B_BOXTYP, @SENARYO, @VGM, @BTY, @KTN, @BYNMDRM, @RROS, @FTRID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@OPHID";
@@ -61234,6 +61278,13 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "RROS";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@FTRID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "FTRID";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE \"OPH\" SET \"OPHID\" = @OPHID, \"REFNO\" = @REFNO, \"OPMID\" = @OPMID, \"MIDX\" = @" +
@@ -61274,8 +61325,8 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
                 "NFOTQM\" = @INFOTQM, \"IVHC\" = @IVHC, \"INFOSLS\" = @INFOSLS, \"CABW\" = @CABW, \"B_DIK" +
                 "G\" = @B_DIKG, \"KPI\" = @KPI, \"KPIUSR\" = @KPIUSR, \"KPITRH\" = @KPITRH, \"CUSLOC\" = @" +
                 "CUSLOC, \"B_BOXTYP\" = @B_BOXTYP, \"SENARYO\" = @SENARYO, \"VGM\" = @VGM, \"BTY\" = @BTY" +
-                ", \"KTN\" = @KTN, \"BYNMDRM\" = @BYNMDRM, \"RROS\" = @RROS WHERE ((\"OPHID\" = @Original" +
-                "_OPHID))";
+                ", \"KTN\" = @KTN, \"BYNMDRM\" = @BYNMDRM, \"RROS\" = @RROS, \"FTRID\" = @FTRID WHERE ((\"" +
+                "OPHID\" = @Original_OPHID))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@OPHID";
@@ -62356,6 +62407,13 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             param.SourceColumn = "RROS";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@FTRID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "FTRID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_OPHID";
             param.DbType = global::System.Data.DbType.Int32;
             param.Size = 4;
@@ -62382,11 +62440,11 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT ACCID, ACCINF, ACD, AGNID, ANTRP, AOC, AOH, ARP, ATR, BKMS, BRD, BTY, BYNMDRM, BYNMNO, B_BLDTRH, B_BOXTYP, B_CCC, B_CCSD, B_DIKG, B_DLDONDU, B_DLGONDER, B_KUTUDONDU, B_KUTUGONDER, B_MRKBILDIR, B_NOA, B_NOF, B_NOR, B_NOT, B_NOTA, B_NOTF, B_NOTR, B_OFCNO, B_PRJNO, B_PRTNO, B_PUDPT, B_RCVINFO, B_SITENO, B_SMPTYP, B_SNDINFO, B_STUDYNO, B_TEMPLATE, B_TOS, CABW, CACD, CCT, CHW, CIKKAPI, CNEID, CRRID, CUSLOC, DCNID, DDT, DLVADR, DLVID, DOCINF, DOW, DPOCIKTRH, DPOFTRDVZ, DPOFTRTUT, DPOGIRTRH, DPSTU, DRBD, DRCD, DSRF, DST, DTM, DTP, EOH, EXD, EXPR, FPT, GODINF, GRW, HNDINF, HSD, HSINF, HSRFID, INF, INFOFIN, INFOOPS, INFOSLS, INFOTQM, IRSINF, ITOP, IVHC, KARNENO, KPI, KPITRH, KPIUSR, KTN, LM_TS, LORD, MALBDL, MALBDLDVZ, MALGTIPNO, MATA, MATD, META, MIDX, MNFID, MOT, NF2ID, NFYID, NOP, NSTU, NSTUTS, OGRF, ONYTRH, ONYUSR, ONYYTK, OPHID, OPMID, ORD, ORDINF, ORG, OTHINF, OVERTIME, OWNR, PAG, PAG2, PALLETIZING, PCS, PENALTY, PENALTYINFO, PEOH, POD, PODINF, POR, PRFT, PRJID, PSTU, PSTUTS, PTM, RCPADR, RCPID, REFNO, REOH, ROH, ROS, ROT, RROH, RROS, RRT, RTD, RTR, SENARYO, SGRPRMYZD, SGRTRH, SHPID, SPRNO, TAGS, TKLFNO, TOB, TOL, TOS, TRI, TRO, TRS, TRXGRW, TRXNOP, TSTID, TUS, TUSQ, V2W, VGM, VM3, WBD, WBRD, XTBLB, XTTXT FROM OPH WHERE (OPMID IS NULL) AND (NSTU NOT IN ('C', 'QC', 'AB'))";
+            this._commandCollection[1].CommandText = @"SELECT ACCID, ACCINF, ACD, AGNID, ANTRP, AOC, AOH, ARP, ATR, BKMS, BRD, BTY, BYNMDRM, BYNMNO, B_BLDTRH, B_BOXTYP, B_CCC, B_CCSD, B_DIKG, B_DLDONDU, B_DLGONDER, B_KUTUDONDU, B_KUTUGONDER, B_MRKBILDIR, B_NOA, B_NOF, B_NOR, B_NOT, B_NOTA, B_NOTF, B_NOTR, B_OFCNO, B_PRJNO, B_PRTNO, B_PUDPT, B_RCVINFO, B_SITENO, B_SMPTYP, B_SNDINFO, B_STUDYNO, B_TEMPLATE, B_TOS, CABW, CACD, CCT, CHW, CIKKAPI, CNEID, CRRID, CUSLOC, DCNID, DDT, DLVADR, DLVID, DOCINF, DOW, DPOCIKTRH, DPOFTRDVZ, DPOFTRTUT, DPOGIRTRH, DPSTU, DRBD, DRCD, DSRF, DST, DTM, DTP, EOH, EXD, EXPR, FPT, FTRID, GODINF, GRW, HNDINF, HSD, HSINF, HSRFID, INF, INFOFIN, INFOOPS, INFOSLS, INFOTQM, IRSINF, ITOP, IVHC, KARNENO, KPI, KPITRH, KPIUSR, KTN, LM_TS, LORD, MALBDL, MALBDLDVZ, MALGTIPNO, MATA, MATD, META, MIDX, MNFID, MOT, NF2ID, NFYID, NOP, NSTU, NSTUTS, OGRF, ONYTRH, ONYUSR, ONYYTK, OPHID, OPMID, ORD, ORDINF, ORG, OTHINF, OVERTIME, OWNR, PAG, PAG2, PALLETIZING, PCS, PENALTY, PENALTYINFO, PEOH, POD, PODINF, POR, PRFT, PRJID, PSTU, PSTUTS, PTM, RCPADR, RCPID, REFNO, REOH, ROH, ROS, ROT, RROH, RROS, RRT, RTD, RTR, SENARYO, SGRPRMYZD, SGRTRH, SHPID, SPRNO, TAGS, TKLFNO, TOB, TOL, TOS, TRI, TRO, TRS, TRXGRW, TRXNOP, TSTID, TUS, TUSQ, V2W, VGM, VM3, WBD, WBRD, XTBLB, XTTXT FROM OPH WHERE (OPMID IS NULL) AND (NSTU NOT IN ('C', 'QC', 'AB'))";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT ACCID, ACCINF, ACD, AGNID, ANTRP, AOC, AOH, ARP, ATR, BKMS, BRD, BTY, BYNMDRM, BYNMNO, B_BLDTRH, B_BOXTYP, B_CCC, B_CCSD, B_DIKG, B_DLDONDU, B_DLGONDER, B_KUTUDONDU, B_KUTUGONDER, B_MRKBILDIR, B_NOA, B_NOF, B_NOR, B_NOT, B_NOTA, B_NOTF, B_NOTR, B_OFCNO, B_PRJNO, B_PRTNO, B_PUDPT, B_RCVINFO, B_SITENO, B_SMPTYP, B_SNDINFO, B_STUDYNO, B_TEMPLATE, B_TOS, CABW, CACD, CCT, CHW, CIKKAPI, CNEID, CRRID, CUSLOC, DCNID, DDT, DLVADR, DLVID, DOCINF, DOW, DPOCIKTRH, DPOFTRDVZ, DPOFTRTUT, DPOGIRTRH, DPSTU, DRBD, DRCD, DSRF, DST, DTM, DTP, EOH, EXD, EXPR, FPT, GODINF, GRW, HNDINF, HSD, HSINF, HSRFID, INF, INFOFIN, INFOOPS, INFOSLS, INFOTQM, IRSINF, ITOP, IVHC, KARNENO, KPI, KPITRH, KPIUSR, KTN, LM_TS, LORD, MALBDL, MALBDLDVZ, MALGTIPNO, MATA, MATD, META, MIDX, MNFID, MOT, NF2ID, NFYID, NOP, NSTU, NSTUTS, OGRF, ONYTRH, ONYUSR, ONYYTK, OPHID, OPMID, ORD, ORDINF, ORG, OTHINF, OVERTIME, OWNR, PAG, PAG2, PALLETIZING, PCS, PENALTY, PENALTYINFO, PEOH, POD, PODINF, POR, PRFT, PRJID, PSTU, PSTUTS, PTM, RCPADR, RCPID, REFNO, REOH, ROH, ROS, ROT, RROH, RROS, RRT, RTD, RTR, SENARYO, SGRPRMYZD, SGRTRH, SHPID, SPRNO, TAGS, TKLFNO, TOB, TOL, TOS, TRI, TRO, TRS, TRXGRW, TRXNOP, TSTID, TUS, TUSQ, V2W, VGM, VM3, WBD, WBRD, XTBLB, XTTXT FROM OPH WHERE (OPMID = @OPMID)";
+            this._commandCollection[2].CommandText = @"SELECT ACCID, ACCINF, ACD, AGNID, ANTRP, AOC, AOH, ARP, ATR, BKMS, BRD, BTY, BYNMDRM, BYNMNO, B_BLDTRH, B_BOXTYP, B_CCC, B_CCSD, B_DIKG, B_DLDONDU, B_DLGONDER, B_KUTUDONDU, B_KUTUGONDER, B_MRKBILDIR, B_NOA, B_NOF, B_NOR, B_NOT, B_NOTA, B_NOTF, B_NOTR, B_OFCNO, B_PRJNO, B_PRTNO, B_PUDPT, B_RCVINFO, B_SITENO, B_SMPTYP, B_SNDINFO, B_STUDYNO, B_TEMPLATE, B_TOS, CABW, CACD, CCT, CHW, CIKKAPI, CNEID, CRRID, CUSLOC, DCNID, DDT, DLVADR, DLVID, DOCINF, DOW, DPOCIKTRH, DPOFTRDVZ, DPOFTRTUT, DPOGIRTRH, DPSTU, DRBD, DRCD, DSRF, DST, DTM, DTP, EOH, EXD, EXPR, FPT, FTRID, GODINF, GRW, HNDINF, HSD, HSINF, HSRFID, INF, INFOFIN, INFOOPS, INFOSLS, INFOTQM, IRSINF, ITOP, IVHC, KARNENO, KPI, KPITRH, KPIUSR, KTN, LM_TS, LORD, MALBDL, MALBDLDVZ, MALGTIPNO, MATA, MATD, META, MIDX, MNFID, MOT, NF2ID, NFYID, NOP, NSTU, NSTUTS, OGRF, ONYTRH, ONYUSR, ONYYTK, OPHID, OPMID, ORD, ORDINF, ORG, OTHINF, OVERTIME, OWNR, PAG, PAG2, PALLETIZING, PCS, PENALTY, PENALTYINFO, PEOH, POD, PODINF, POR, PRFT, PRJID, PSTU, PSTUTS, PTM, RCPADR, RCPID, REFNO, REOH, ROH, ROS, ROT, RROH, RROS, RRT, RTD, RTR, SENARYO, SGRPRMYZD, SGRTRH, SHPID, SPRNO, TAGS, TKLFNO, TOB, TOL, TOS, TRI, TRO, TRS, TRXGRW, TRXNOP, TSTID, TUS, TUSQ, V2W, VGM, VM3, WBD, WBRD, XTBLB, XTTXT FROM OPH WHERE (OPMID = @OPMID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@OPMID";
@@ -62397,7 +62455,7 @@ namespace tMax14.Ops.OpsDataSetTableAdapters {
             this._commandCollection[2].Parameters.Add(param);
             this._commandCollection[3] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT ACCID, ACCINF, ACD, AGNID, ANTRP, AOC, AOH, ARP, ATR, BKMS, BRD, BTY, BYNMDRM, BYNMNO, B_BLDTRH, B_BOXTYP, B_CCC, B_CCSD, B_DIKG, B_DLDONDU, B_DLGONDER, B_KUTUDONDU, B_KUTUGONDER, B_MRKBILDIR, B_NOA, B_NOF, B_NOR, B_NOT, B_NOTA, B_NOTF, B_NOTR, B_OFCNO, B_PRJNO, B_PRTNO, B_PUDPT, B_RCVINFO, B_SITENO, B_SMPTYP, B_SNDINFO, B_STUDYNO, B_TEMPLATE, B_TOS, CABW, CACD, CCT, CHW, CIKKAPI, CNEID, CRRID, CUSLOC, DCNID, DDT, DLVADR, DLVID, DOCINF, DOW, DPOCIKTRH, DPOFTRDVZ, DPOFTRTUT, DPOGIRTRH, DPSTU, DRBD, DRCD, DSRF, DST, DTM, DTP, EOH, EXD, EXPR, FPT, GODINF, GRW, HNDINF, HSD, HSINF, HSRFID, INF, INFOFIN, INFOOPS, INFOSLS, INFOTQM, IRSINF, ITOP, IVHC, KARNENO, KPI, KPITRH, KPIUSR, KTN, LM_TS, LORD, MALBDL, MALBDLDVZ, MALGTIPNO, MATA, MATD, META, MIDX, MNFID, MOT, NF2ID, NFYID, NOP, NSTU, NSTUTS, OGRF, ONYTRH, ONYUSR, ONYYTK, OPHID, OPMID, ORD, ORDINF, ORG, OTHINF, OVERTIME, OWNR, PAG, PAG2, PALLETIZING, PCS, PENALTY, PENALTYINFO, PEOH, POD, PODINF, POR, PRFT, PRJID, PSTU, PSTUTS, PTM, RCPADR, RCPID, REFNO, REOH, ROH, ROS, ROT, RROH, RROS, RRT, RTD, RTR, SENARYO, SGRPRMYZD, SGRTRH, SHPID, SPRNO, TAGS, TKLFNO, TOB, TOL, TOS, TRI, TRO, TRS, TRXGRW, TRXNOP, TSTID, TUS, TUSQ, V2W, VGM, VM3, WBD, WBRD, XTBLB, XTTXT FROM OPH WHERE (OPHID = @OPHID)";
+            this._commandCollection[3].CommandText = @"SELECT ACCID, ACCINF, ACD, AGNID, ANTRP, AOC, AOH, ARP, ATR, BKMS, BRD, BTY, BYNMDRM, BYNMNO, B_BLDTRH, B_BOXTYP, B_CCC, B_CCSD, B_DIKG, B_DLDONDU, B_DLGONDER, B_KUTUDONDU, B_KUTUGONDER, B_MRKBILDIR, B_NOA, B_NOF, B_NOR, B_NOT, B_NOTA, B_NOTF, B_NOTR, B_OFCNO, B_PRJNO, B_PRTNO, B_PUDPT, B_RCVINFO, B_SITENO, B_SMPTYP, B_SNDINFO, B_STUDYNO, B_TEMPLATE, B_TOS, CABW, CACD, CCT, CHW, CIKKAPI, CNEID, CRRID, CUSLOC, DCNID, DDT, DLVADR, DLVID, DOCINF, DOW, DPOCIKTRH, DPOFTRDVZ, DPOFTRTUT, DPOGIRTRH, DPSTU, DRBD, DRCD, DSRF, DST, DTM, DTP, EOH, EXD, EXPR, FPT, FTRID, GODINF, GRW, HNDINF, HSD, HSINF, HSRFID, INF, INFOFIN, INFOOPS, INFOSLS, INFOTQM, IRSINF, ITOP, IVHC, KARNENO, KPI, KPITRH, KPIUSR, KTN, LM_TS, LORD, MALBDL, MALBDLDVZ, MALGTIPNO, MATA, MATD, META, MIDX, MNFID, MOT, NF2ID, NFYID, NOP, NSTU, NSTUTS, OGRF, ONYTRH, ONYUSR, ONYYTK, OPHID, OPMID, ORD, ORDINF, ORG, OTHINF, OVERTIME, OWNR, PAG, PAG2, PALLETIZING, PCS, PENALTY, PENALTYINFO, PEOH, POD, PODINF, POR, PRFT, PRJID, PSTU, PSTUTS, PTM, RCPADR, RCPID, REFNO, REOH, ROH, ROS, ROT, RROH, RROS, RRT, RTD, RTR, SENARYO, SGRPRMYZD, SGRTRH, SHPID, SPRNO, TAGS, TKLFNO, TOB, TOL, TOS, TRI, TRO, TRS, TRXGRW, TRXNOP, TSTID, TUS, TUSQ, V2W, VGM, VM3, WBD, WBRD, XTBLB, XTTXT FROM OPH WHERE (OPHID = @OPHID)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@OPHID";

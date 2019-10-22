@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.compBA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.accountDataSet = new tMax14.Account.AccountDataSet();
             this.afbGridControl = new DevExpress.XtraGrid.GridControl();
@@ -226,7 +226,7 @@
             this.refFaturaToolStripMenuItem,
             this.kurFarkiFaturasiToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(271, 512);
+            this.contextMenuStrip.Size = new System.Drawing.Size(271, 534);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // faturaDetaylariToolStripMenuItem
@@ -569,24 +569,24 @@
             this.colREFAFBID});
             this.afbGridView.CustomizationFormBounds = new System.Drawing.Rectangle(1116, 337, 210, 179);
             this.afbGridView.FixedLineWidth = 4;
-            gridFormatRule1.ApplyToRow = true;
-            gridFormatRule1.Column = this.compBA;
-            gridFormatRule1.Name = "Format0";
-            formatConditionRuleValue1.Appearance.ForeColor = System.Drawing.Color.Red;
-            formatConditionRuleValue1.Appearance.Options.UseForeColor = true;
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
-            formatConditionRuleValue1.Value1 = "A";
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            gridFormatRule2.ApplyToRow = true;
-            gridFormatRule2.Column = this.compBA;
-            gridFormatRule2.Name = "Format1";
-            formatConditionRuleValue2.Appearance.ForeColor = System.Drawing.Color.Blue;
-            formatConditionRuleValue2.Appearance.Options.UseForeColor = true;
-            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
-            formatConditionRuleValue2.Value1 = "B";
-            gridFormatRule2.Rule = formatConditionRuleValue2;
-            this.afbGridView.FormatRules.Add(gridFormatRule1);
-            this.afbGridView.FormatRules.Add(gridFormatRule2);
+            gridFormatRule3.ApplyToRow = true;
+            gridFormatRule3.Column = this.compBA;
+            gridFormatRule3.Name = "Format0";
+            formatConditionRuleValue3.Appearance.ForeColor = System.Drawing.Color.Red;
+            formatConditionRuleValue3.Appearance.Options.UseForeColor = true;
+            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue3.Value1 = "A";
+            gridFormatRule3.Rule = formatConditionRuleValue3;
+            gridFormatRule4.ApplyToRow = true;
+            gridFormatRule4.Column = this.compBA;
+            gridFormatRule4.Name = "Format1";
+            formatConditionRuleValue4.Appearance.ForeColor = System.Drawing.Color.Blue;
+            formatConditionRuleValue4.Appearance.Options.UseForeColor = true;
+            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue4.Value1 = "B";
+            gridFormatRule4.Rule = formatConditionRuleValue4;
+            this.afbGridView.FormatRules.Add(gridFormatRule3);
+            this.afbGridView.FormatRules.Add(gridFormatRule4);
             this.afbGridView.GridControl = this.afbGridControl;
             this.afbGridView.GroupFormat = "{0}: [#image]{1}, {2}";
             this.afbGridView.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {

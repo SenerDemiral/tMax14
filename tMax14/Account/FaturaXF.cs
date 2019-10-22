@@ -483,7 +483,7 @@ namespace tMax14.Account
 
         private void faturaListesiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            colTAGS.Visible = false;
+            //colTAGS.Visible = false;
 
 
             PrintingSystem ps = new PrintingSystem();
