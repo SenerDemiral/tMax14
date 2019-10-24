@@ -120,7 +120,7 @@
   <data name="memoEdit2.EditValue" xml:space="preserve">
     <value>Kullanılabilen alanlar: 
 Master: [MORG], [MDST], [MPOL], [MRPL], [MGUMRUK], [MSHP], [MCNE], [MACC], [MCRR], [MTAGS], [MTOPS], [MTOL]
-House: [HORG], [HDST], [HCNE], [HDCN], [HACC], [HCRR], [HPTM], [HNOP], [HCHW], [HSENARYO], [HTAGS], [HVGM]</value>
+House: [HORG], [HDST], [HCNE], [HDCN], [HACC], [HCRR], [HFTR], [HPTM], [HNOP], [HCHW], [HSENARYO], [HTAGS], [HVGM]</value>
   </data>
   <metadata name="fAFBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>139, 17</value>
@@ -128,11 +128,11 @@ House: [HORG], [HDST], [HCNE], [HDCN], [HACC], [HCRR], [HPTM], [HNOP], [HCHW], [
   <metadata name="firmaDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="fAF_SEL_TESTBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>595, 17</value>
-  </metadata>
   <metadata name="fillToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>995, 17</value>
+  </metadata>
+  <metadata name="fAF_SEL_TESTBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>595, 17</value>
   </metadata>
   <metadata name="fAFBindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>430, 17</value>

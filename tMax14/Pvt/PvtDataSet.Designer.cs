@@ -18162,6 +18162,8 @@ namespace tMax14.Pvt {
             
             private global::System.Data.DataColumn columnHRROS;
             
+            private global::System.Data.DataColumn columnMAOC;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PVT_KPI_HDataTable() {
@@ -19501,6 +19503,14 @@ namespace tMax14.Pvt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn MAOCColumn {
+                get {
+                    return this.columnMAOC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -19699,7 +19709,8 @@ namespace tMax14.Pvt {
                         string HGBUSR, 
                         System.DateTime HGB, 
                         System.DateTime MRTR, 
-                        System.DateTime HRROS) {
+                        System.DateTime HRROS, 
+                        System.DateTime MAOC) {
                 PVT_KPI_HRow rowPVT_KPI_HRow = ((PVT_KPI_HRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         HID,
@@ -19864,7 +19875,8 @@ namespace tMax14.Pvt {
                         HGBUSR,
                         HGB,
                         MRTR,
-                        HRROS};
+                        HRROS,
+                        MAOC};
                 rowPVT_KPI_HRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPVT_KPI_HRow);
                 return rowPVT_KPI_HRow;
@@ -20050,6 +20062,7 @@ namespace tMax14.Pvt {
                 this.columnHGB = base.Columns["HGB"];
                 this.columnMRTR = base.Columns["MRTR"];
                 this.columnHRROS = base.Columns["HRROS"];
+                this.columnMAOC = base.Columns["MAOC"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20381,6 +20394,8 @@ namespace tMax14.Pvt {
                 base.Columns.Add(this.columnMRTR);
                 this.columnHRROS = new global::System.Data.DataColumn("HRROS", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHRROS);
+                this.columnMAOC = new global::System.Data.DataColumn("MAOC", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMAOC);
                 this.columnHNSTU.MaxLength = 2;
                 this.columnHPSTU.MaxLength = 2;
                 this.columnHTOB.MaxLength = 1;
@@ -41853,6 +41868,22 @@ namespace tMax14.Pvt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime MAOC {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablePVT_KPI_H.MAOCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MAOC\' in table \'PVT_KPI_H\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePVT_KPI_H.MAOCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsHIDNull() {
                 return this.IsNull(this.tablePVT_KPI_H.HIDColumn);
             }
@@ -43805,6 +43836,18 @@ namespace tMax14.Pvt {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetHRROSNull() {
                 this[this.tablePVT_KPI_H.HRROSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsMAOCNull() {
+                return this.IsNull(this.tablePVT_KPI_H.MAOCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetMAOCNull() {
+                this[this.tablePVT_KPI_H.MAOCColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -51881,6 +51924,7 @@ namespace tMax14.Pvt.PvtDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("HGB", "HGB");
             tableMapping.ColumnMappings.Add("MRTR", "MRTR");
             tableMapping.ColumnMappings.Add("HRROS", "HRROS");
+            tableMapping.ColumnMappings.Add("MAOC", "MAOC");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

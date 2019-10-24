@@ -55,6 +55,7 @@ namespace tMax14.Ops
             colNF2ID.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
             colACCID.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
             colAGNID.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
+            colFTRID.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
             colHSRFID.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
             colPRJID.ColumnEdit = Program.MF.PRTrepositoryItemSearchLookUpEdit;
 
