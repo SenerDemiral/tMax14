@@ -10869,10 +10869,6 @@ namespace tMax14.Teklif {
             
             private global::System.Data.DataColumn columnRSPUSRS;
             
-            private global::System.Data.DataColumn columnORGDST;
-            
-            private global::System.Data.DataColumn columnREGION;
-            
             private global::System.Data.DataColumn columnR1A;
             
             private global::System.Data.DataColumn columnR1E;
@@ -10884,6 +10880,14 @@ namespace tMax14.Teklif {
             private global::System.Data.DataColumn columnCOMMENTS;
             
             private global::System.Data.DataColumn columnSTU;
+            
+            private global::System.Data.DataColumn columnORGS;
+            
+            private global::System.Data.DataColumn columnDSTS;
+            
+            private global::System.Data.DataColumn columnTKPTRH;
+            
+            private global::System.Data.DataColumn columnREGION;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -10984,22 +10988,6 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ORGDSTColumn {
-                get {
-                    return this.columnORGDST;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn REGIONColumn {
-                get {
-                    return this.columnREGION;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn R1AColumn {
                 get {
                     return this.columnR1A;
@@ -11043,6 +11031,38 @@ namespace tMax14.Teklif {
             public global::System.Data.DataColumn STUColumn {
                 get {
                     return this.columnSTU;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ORGSColumn {
+                get {
+                    return this.columnORGS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DSTSColumn {
+                get {
+                    return this.columnDSTS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TKPTRHColumn {
+                get {
+                    return this.columnTKPTRH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn REGIONColumn {
+                get {
+                    return this.columnREGION;
                 }
             }
             
@@ -11092,14 +11112,16 @@ namespace tMax14.Teklif {
                         string MOTS, 
                         string ROUTE, 
                         string RSPUSRS, 
-                        string ORGDST, 
-                        string REGION, 
                         System.DateTime R1A, 
                         System.DateTime R1E, 
                         System.DateTime R2A, 
                         System.DateTime R2E, 
                         string COMMENTS, 
-                        string STU) {
+                        string STU, 
+                        string ORGS, 
+                        string DSTS, 
+                        System.DateTime TKPTRH, 
+                        string REGION) {
                 TTTRow rowTTTRow = ((TTTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TTTID,
@@ -11110,14 +11132,16 @@ namespace tMax14.Teklif {
                         MOTS,
                         ROUTE,
                         RSPUSRS,
-                        ORGDST,
-                        REGION,
                         R1A,
                         R1E,
                         R2A,
                         R2E,
                         COMMENTS,
-                        STU};
+                        STU,
+                        ORGS,
+                        DSTS,
+                        TKPTRH,
+                        REGION};
                 rowTTTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTTTRow);
                 return rowTTTRow;
@@ -11155,14 +11179,16 @@ namespace tMax14.Teklif {
                 this.columnMOTS = base.Columns["MOTS"];
                 this.columnROUTE = base.Columns["ROUTE"];
                 this.columnRSPUSRS = base.Columns["RSPUSRS"];
-                this.columnORGDST = base.Columns["ORGDST"];
-                this.columnREGION = base.Columns["REGION"];
                 this.columnR1A = base.Columns["R1A"];
                 this.columnR1E = base.Columns["R1E"];
                 this.columnR2A = base.Columns["R2A"];
                 this.columnR2E = base.Columns["R2E"];
                 this.columnCOMMENTS = base.Columns["COMMENTS"];
                 this.columnSTU = base.Columns["STU"];
+                this.columnORGS = base.Columns["ORGS"];
+                this.columnDSTS = base.Columns["DSTS"];
+                this.columnTKPTRH = base.Columns["TKPTRH"];
+                this.columnREGION = base.Columns["REGION"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11184,10 +11210,6 @@ namespace tMax14.Teklif {
                 base.Columns.Add(this.columnROUTE);
                 this.columnRSPUSRS = new global::System.Data.DataColumn("RSPUSRS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRSPUSRS);
-                this.columnORGDST = new global::System.Data.DataColumn("ORGDST", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnORGDST);
-                this.columnREGION = new global::System.Data.DataColumn("REGION", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnREGION);
                 this.columnR1A = new global::System.Data.DataColumn("R1A", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnR1A);
                 this.columnR1E = new global::System.Data.DataColumn("R1E", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -11200,19 +11222,28 @@ namespace tMax14.Teklif {
                 base.Columns.Add(this.columnCOMMENTS);
                 this.columnSTU = new global::System.Data.DataColumn("STU", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSTU);
+                this.columnORGS = new global::System.Data.DataColumn("ORGS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORGS);
+                this.columnDSTS = new global::System.Data.DataColumn("DSTS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDSTS);
+                this.columnTKPTRH = new global::System.Data.DataColumn("TKPTRH", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTKPTRH);
+                this.columnREGION = new global::System.Data.DataColumn("REGION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREGION);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTTTID}, true));
                 this.columnTTTID.AllowDBNull = false;
                 this.columnTTTID.Unique = true;
-                this.columnSRCTYP.MaxLength = 1;
+                this.columnSRCTYP.MaxLength = 5;
                 this.columnROTS.MaxLength = 40;
                 this.columnMOTS.MaxLength = 40;
                 this.columnROUTE.MaxLength = 2147483647;
                 this.columnRSPUSRS.MaxLength = 2147483647;
-                this.columnORGDST.MaxLength = 5;
-                this.columnREGION.MaxLength = 2147483647;
                 this.columnCOMMENTS.MaxLength = 2147483647;
                 this.columnSTU.MaxLength = 1;
+                this.columnORGS.MaxLength = 2147483647;
+                this.columnDSTS.MaxLength = 2147483647;
+                this.columnREGION.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -23140,38 +23171,6 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string ORGDST {
-                get {
-                    try {
-                        return ((string)(this[this.tableTTT.ORGDSTColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ORGDST\' in table \'TTT\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTTT.ORGDSTColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string REGION {
-                get {
-                    try {
-                        return ((string)(this[this.tableTTT.REGIONColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'REGION\' in table \'TTT\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTTT.REGIONColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime R1A {
                 get {
                     try {
@@ -23268,6 +23267,70 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ORGS {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.ORGSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ORGS\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.ORGSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DSTS {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.DSTSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DSTS\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.DSTSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime TKPTRH {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTTT.TKPTRHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TKPTRH\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.TKPTRHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string REGION {
+                get {
+                    try {
+                        return ((string)(this[this.tableTTT.REGIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REGION\' in table \'TTT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTTT.REGIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFRTIDNull() {
                 return this.IsNull(this.tableTTT.FRTIDColumn);
             }
@@ -23352,30 +23415,6 @@ namespace tMax14.Teklif {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsORGDSTNull() {
-                return this.IsNull(this.tableTTT.ORGDSTColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetORGDSTNull() {
-                this[this.tableTTT.ORGDSTColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsREGIONNull() {
-                return this.IsNull(this.tableTTT.REGIONColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetREGIONNull() {
-                this[this.tableTTT.REGIONColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsR1ANull() {
                 return this.IsNull(this.tableTTT.R1AColumn);
             }
@@ -23444,6 +23483,54 @@ namespace tMax14.Teklif {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetSTUNull() {
                 this[this.tableTTT.STUColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsORGSNull() {
+                return this.IsNull(this.tableTTT.ORGSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetORGSNull() {
+                this[this.tableTTT.ORGSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDSTSNull() {
+                return this.IsNull(this.tableTTT.DSTSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDSTSNull() {
+                this[this.tableTTT.DSTSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTKPTRHNull() {
+                return this.IsNull(this.tableTTT.TKPTRHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTKPTRHNull() {
+                this[this.tableTTT.TKPTRHColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsREGIONNull() {
+                return this.IsNull(this.tableTTT.REGIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetREGIONNull() {
+                this[this.tableTTT.REGIONColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -32577,18 +32664,20 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("MOTS", "MOTS");
             tableMapping.ColumnMappings.Add("ROUTE", "ROUTE");
             tableMapping.ColumnMappings.Add("RSPUSRS", "RSPUSRS");
-            tableMapping.ColumnMappings.Add("ORGDST", "ORGDST");
-            tableMapping.ColumnMappings.Add("REGION", "REGION");
             tableMapping.ColumnMappings.Add("R1A", "R1A");
             tableMapping.ColumnMappings.Add("R1E", "R1E");
             tableMapping.ColumnMappings.Add("R2A", "R2A");
             tableMapping.ColumnMappings.Add("R2E", "R2E");
             tableMapping.ColumnMappings.Add("COMMENTS", "COMMENTS");
             tableMapping.ColumnMappings.Add("STU", "STU");
+            tableMapping.ColumnMappings.Add("ORGS", "ORGS");
+            tableMapping.ColumnMappings.Add("DSTS", "DSTS");
+            tableMapping.ColumnMappings.Add("TKPTRH", "TKPTRH");
+            tableMapping.ColumnMappings.Add("REGION", "REGION");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""TTT"" WHERE ((""TTTID"" = @Original_TTTID) AND ((@IsNull_FRTID = 1 AND ""FRTID"" IS NULL) OR (""FRTID"" = @Original_FRTID)) AND ((@IsNull_HNDID = 1 AND ""HNDID"" IS NULL) OR (""HNDID"" = @Original_HNDID)) AND ((@IsNull_SRCTYP = 1 AND ""SRCTYP"" IS NULL) OR (""SRCTYP"" = @Original_SRCTYP)) AND ((@IsNull_ROTS = 1 AND ""ROTS"" IS NULL) OR (""ROTS"" = @Original_ROTS)) AND ((@IsNull_MOTS = 1 AND ""MOTS"" IS NULL) OR (""MOTS"" = @Original_MOTS)) AND ((@IsNull_ORGDST = 1 AND ""ORGDST"" IS NULL) OR (""ORGDST"" = @Original_ORGDST)) AND ((@IsNull_R1A = 1 AND ""R1A"" IS NULL) OR (""R1A"" = @Original_R1A)) AND ((@IsNull_R1E = 1 AND ""R1E"" IS NULL) OR (""R1E"" = @Original_R1E)) AND ((@IsNull_R2A = 1 AND ""R2A"" IS NULL) OR (""R2A"" = @Original_R2A)) AND ((@IsNull_R2E = 1 AND ""R2E"" IS NULL) OR (""R2E"" = @Original_R2E)) AND ((@IsNull_STU = 1 AND ""STU"" IS NULL) OR (""STU"" = @Original_STU)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""TTT"" WHERE ((""TTTID"" = @Original_TTTID) AND ((@IsNull_FRTID = 1 AND ""FRTID"" IS NULL) OR (""FRTID"" = @Original_FRTID)) AND ((@IsNull_HNDID = 1 AND ""HNDID"" IS NULL) OR (""HNDID"" = @Original_HNDID)) AND ((@IsNull_SRCTYP = 1 AND ""SRCTYP"" IS NULL) OR (""SRCTYP"" = @Original_SRCTYP)) AND ((@IsNull_ROTS = 1 AND ""ROTS"" IS NULL) OR (""ROTS"" = @Original_ROTS)) AND ((@IsNull_MOTS = 1 AND ""MOTS"" IS NULL) OR (""MOTS"" = @Original_MOTS)) AND ((@IsNull_R1A = 1 AND ""R1A"" IS NULL) OR (""R1A"" = @Original_R1A)) AND ((@IsNull_R1E = 1 AND ""R1E"" IS NULL) OR (""R1E"" = @Original_R1E)) AND ((@IsNull_R2A = 1 AND ""R2A"" IS NULL) OR (""R2A"" = @Original_R2A)) AND ((@IsNull_R2E = 1 AND ""R2E"" IS NULL) OR (""R2E"" = @Original_R2E)) AND ((@IsNull_STU = 1 AND ""STU"" IS NULL) OR (""STU"" = @Original_STU)) AND ((@IsNull_TKPTRH = 1 AND ""TKPTRH"" IS NULL) OR (""TKPTRH"" = @Original_TKPTRH)) AND ((@IsNull_REGION = 1 AND ""REGION"" IS NULL) OR (""REGION"" = @Original_REGION)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_TTTID";
@@ -32635,7 +32724,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@IsNull_SRCTYP";
             param.DbType = global::System.Data.DbType.Int32;
-            param.Size = 1;
+            param.Size = 5;
             param.IsNullable = true;
             param.SourceColumn = "SRCTYP";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -32643,7 +32732,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_SRCTYP";
-            param.Size = 1;
+            param.Size = 5;
             param.IsNullable = true;
             param.SourceColumn = "SRCTYP";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -32678,22 +32767,6 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.Size = 40;
             param.IsNullable = true;
             param.SourceColumn = "MOTS";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@IsNull_ORGDST";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.Size = 5;
-            param.IsNullable = true;
-            param.SourceColumn = "ORGDST";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@Original_ORGDST";
-            param.Size = 5;
-            param.IsNullable = true;
-            param.SourceColumn = "ORGDST";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -32780,9 +32853,42 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.SourceColumn = "STU";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_TKPTRH";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TKPTRH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_TKPTRH";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TKPTRH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_REGION";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "REGION";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_REGION";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "REGION";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""TTT"" (""TTTID"", ""FRTID"", ""HNDID"", ""SRCTYP"", ""ROTS"", ""MOTS"", ""ROUTE"", ""RSPUSRS"", ""ORGDST"", ""REGION"", ""R1A"", ""R1E"", ""R2A"", ""R2E"", ""COMMENTS"", ""STU"") VALUES (@TTTID, @FRTID, @HNDID, @SRCTYP, @ROTS, @MOTS, @ROUTE, @RSPUSRS, @ORGDST, @REGION, @R1A, @R1E, @R2A, @R2E, @COMMENTS, @STU)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""TTT"" (""TTTID"", ""FRTID"", ""HNDID"", ""SRCTYP"", ""ROTS"", ""MOTS"", ""ROUTE"", ""RSPUSRS"", ""R1A"", ""R1E"", ""R2A"", ""R2E"", ""COMMENTS"", ""STU"", ""ORGS"", ""DSTS"", ""TKPTRH"", ""REGION"") VALUES (@TTTID, @FRTID, @HNDID, @SRCTYP, @ROTS, @MOTS, @ROUTE, @RSPUSRS, @R1A, @R1E, @R2A, @R2E, @COMMENTS, @STU, @ORGS, @DSTS, @TKPTRH, @REGION)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@TTTID";
@@ -32807,7 +32913,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@SRCTYP";
-            param.Size = 1;
+            param.Size = 5;
             param.IsNullable = true;
             param.SourceColumn = "SRCTYP";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -32834,18 +32940,6 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.Size = 2147483647;
             param.IsNullable = true;
             param.SourceColumn = "RSPUSRS";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@ORGDST";
-            param.Size = 5;
-            param.IsNullable = true;
-            param.SourceColumn = "ORGDST";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@REGION";
-            param.Size = 2147483647;
-            param.IsNullable = true;
-            param.SourceColumn = "REGION";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@R1A";
@@ -32887,9 +32981,34 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "STU";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@ORGS";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "ORGS";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@DSTS";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "DSTS";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@TKPTRH";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TKPTRH";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@REGION";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "REGION";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""TTT"" SET ""TTTID"" = @TTTID, ""FRTID"" = @FRTID, ""HNDID"" = @HNDID, ""SRCTYP"" = @SRCTYP, ""ROTS"" = @ROTS, ""MOTS"" = @MOTS, ""ROUTE"" = @ROUTE, ""RSPUSRS"" = @RSPUSRS, ""ORGDST"" = @ORGDST, ""REGION"" = @REGION, ""R1A"" = @R1A, ""R1E"" = @R1E, ""R2A"" = @R2A, ""R2E"" = @R2E, ""COMMENTS"" = @COMMENTS, ""STU"" = @STU WHERE ((""TTTID"" = @Original_TTTID) AND ((@IsNull_FRTID = 1 AND ""FRTID"" IS NULL) OR (""FRTID"" = @Original_FRTID)) AND ((@IsNull_HNDID = 1 AND ""HNDID"" IS NULL) OR (""HNDID"" = @Original_HNDID)) AND ((@IsNull_SRCTYP = 1 AND ""SRCTYP"" IS NULL) OR (""SRCTYP"" = @Original_SRCTYP)) AND ((@IsNull_ROTS = 1 AND ""ROTS"" IS NULL) OR (""ROTS"" = @Original_ROTS)) AND ((@IsNull_MOTS = 1 AND ""MOTS"" IS NULL) OR (""MOTS"" = @Original_MOTS)) AND ((@IsNull_ORGDST = 1 AND ""ORGDST"" IS NULL) OR (""ORGDST"" = @Original_ORGDST)) AND ((@IsNull_R1A = 1 AND ""R1A"" IS NULL) OR (""R1A"" = @Original_R1A)) AND ((@IsNull_R1E = 1 AND ""R1E"" IS NULL) OR (""R1E"" = @Original_R1E)) AND ((@IsNull_R2A = 1 AND ""R2A"" IS NULL) OR (""R2A"" = @Original_R2A)) AND ((@IsNull_R2E = 1 AND ""R2E"" IS NULL) OR (""R2E"" = @Original_R2E)) AND ((@IsNull_STU = 1 AND ""STU"" IS NULL) OR (""STU"" = @Original_STU)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""TTT"" SET ""TTTID"" = @TTTID, ""FRTID"" = @FRTID, ""HNDID"" = @HNDID, ""SRCTYP"" = @SRCTYP, ""ROTS"" = @ROTS, ""MOTS"" = @MOTS, ""ROUTE"" = @ROUTE, ""RSPUSRS"" = @RSPUSRS, ""R1A"" = @R1A, ""R1E"" = @R1E, ""R2A"" = @R2A, ""R2E"" = @R2E, ""COMMENTS"" = @COMMENTS, ""STU"" = @STU, ""ORGS"" = @ORGS, ""DSTS"" = @DSTS, ""TKPTRH"" = @TKPTRH, ""REGION"" = @REGION WHERE ((""TTTID"" = @Original_TTTID) AND ((@IsNull_FRTID = 1 AND ""FRTID"" IS NULL) OR (""FRTID"" = @Original_FRTID)) AND ((@IsNull_HNDID = 1 AND ""HNDID"" IS NULL) OR (""HNDID"" = @Original_HNDID)) AND ((@IsNull_SRCTYP = 1 AND ""SRCTYP"" IS NULL) OR (""SRCTYP"" = @Original_SRCTYP)) AND ((@IsNull_ROTS = 1 AND ""ROTS"" IS NULL) OR (""ROTS"" = @Original_ROTS)) AND ((@IsNull_MOTS = 1 AND ""MOTS"" IS NULL) OR (""MOTS"" = @Original_MOTS)) AND ((@IsNull_R1A = 1 AND ""R1A"" IS NULL) OR (""R1A"" = @Original_R1A)) AND ((@IsNull_R1E = 1 AND ""R1E"" IS NULL) OR (""R1E"" = @Original_R1E)) AND ((@IsNull_R2A = 1 AND ""R2A"" IS NULL) OR (""R2A"" = @Original_R2A)) AND ((@IsNull_R2E = 1 AND ""R2E"" IS NULL) OR (""R2E"" = @Original_R2E)) AND ((@IsNull_STU = 1 AND ""STU"" IS NULL) OR (""STU"" = @Original_STU)) AND ((@IsNull_TKPTRH = 1 AND ""TKPTRH"" IS NULL) OR (""TKPTRH"" = @Original_TKPTRH)) AND ((@IsNull_REGION = 1 AND ""REGION"" IS NULL) OR (""REGION"" = @Original_REGION)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@TTTID";
@@ -32914,7 +33033,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@SRCTYP";
-            param.Size = 1;
+            param.Size = 5;
             param.IsNullable = true;
             param.SourceColumn = "SRCTYP";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -32941,18 +33060,6 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.Size = 2147483647;
             param.IsNullable = true;
             param.SourceColumn = "RSPUSRS";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@ORGDST";
-            param.Size = 5;
-            param.IsNullable = true;
-            param.SourceColumn = "ORGDST";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@REGION";
-            param.Size = 2147483647;
-            param.IsNullable = true;
-            param.SourceColumn = "REGION";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@R1A";
@@ -32993,6 +33100,31 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.Size = 1;
             param.IsNullable = true;
             param.SourceColumn = "STU";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@ORGS";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "ORGS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@DSTS";
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "DSTS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@TKPTRH";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TKPTRH";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@REGION";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "REGION";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_TTTID";
@@ -33039,7 +33171,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@IsNull_SRCTYP";
             param.DbType = global::System.Data.DbType.Int32;
-            param.Size = 1;
+            param.Size = 5;
             param.IsNullable = true;
             param.SourceColumn = "SRCTYP";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -33047,7 +33179,7 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_SRCTYP";
-            param.Size = 1;
+            param.Size = 5;
             param.IsNullable = true;
             param.SourceColumn = "SRCTYP";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -33082,22 +33214,6 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.Size = 40;
             param.IsNullable = true;
             param.SourceColumn = "MOTS";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@IsNull_ORGDST";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.Size = 5;
-            param.IsNullable = true;
-            param.SourceColumn = "ORGDST";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@Original_ORGDST";
-            param.Size = 5;
-            param.IsNullable = true;
-            param.SourceColumn = "ORGDST";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -33182,6 +33298,39 @@ namespace tMax14.Teklif.TeklifDataSetTableAdapters {
             param.Size = 1;
             param.IsNullable = true;
             param.SourceColumn = "STU";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_TKPTRH";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TKPTRH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_TKPTRH";
+            param.DbType = global::System.Data.DbType.Date;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "TKPTRH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_REGION";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "REGION";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_REGION";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "REGION";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
         }

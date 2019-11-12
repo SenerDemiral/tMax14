@@ -117,7 +117,7 @@ namespace tMax14.Pvt
 
         private void PrintRow(PvtDataSet.RPR_GLOBAL_ALERT_FINDRow row, int rptID, string rptKod, string HM, int opID, string ROT, string MOT)
         {
-            attCheckedListBoxControl.Items.Clear();
+            attCheckedListBoxControl.Items.Clear(); // Clear previous attachments
 
             topluAlertParams(rptID, HM, opID);
             
@@ -269,6 +269,22 @@ namespace tMax14.Pvt
                 attSAM(opID);
                 attDocuments(rptKod, "OPM", opID, "MBLD", false);
 
+                string[] hIDs = row.AGNHIDS.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                int hID;
+                foreach (string shID in hIDs)
+                {
+                    hID = Convert.ToInt32(shID);
+                    docSelDetTableAdapter.Fill(pvtDataSet.DOC_SEL_DET, "OPH", hID, "FBLD");
+                    int rowCount = pvtDataSet.DOC_SEL_DET.Rows.Count;
+
+                    if (rowCount == 0)  // Doc da bulunamadi, uret
+                        attFBLalways(hID, rptKod);
+                    else
+                        attDocuments(rptKod, "OPH", hID, "FBLD", false);
+                }
+
+
+                /* 10.09.18
                 // House da FBLD varsa gonder yoksa uret gonder. Houselarin sadece birine gider
                 int hID = int.Parse(row.AGNHIDS);
                 docSelDetTableAdapter.Fill(pvtDataSet.DOC_SEL_DET, "OPH", hID, "FBLD");
@@ -278,6 +294,7 @@ namespace tMax14.Pvt
                     attFBLalways(hID, rptKod);
                 else
                     attAsAnaDocuments(rptKod, "OPH", hID, "FBLD", false);
+                */
             }
             else if (rptID == 900)    // KonsimentoOnay (Sadece E/S)   ////////////////////////////////////////////////
             {
@@ -899,7 +916,6 @@ namespace tMax14.Pvt
                     hata = true;
                 }
                 //attCheckedListBoxControl.Items.Add(null, string.Format("Attachment {0}: Bulunamadı", disEvrkTur), CheckState.Indeterminate, false);
-
                 return;
             }
 
@@ -922,7 +938,6 @@ namespace tMax14.Pvt
                     attCheckedListBoxControl.Items.Add(rpt, string.Format("Attachment [{0}]: {1}", attName, row.AD), CheckState.Checked, true);
                 }
             }
-
         }
 
         private void attDocuments(string rptKod, string refTO, int refID, string disEvrkTur, bool zorunlu)
@@ -938,7 +953,6 @@ namespace tMax14.Pvt
                     hata = true;
                 }
                 //attCheckedListBoxControl.Items.Add(null, string.Format("Attachment {0}: Bulunamadı", disEvrkTur), CheckState.Indeterminate, false);
-
                 return;
             }
 
@@ -961,7 +975,6 @@ namespace tMax14.Pvt
                     attCheckedListBoxControl.Items.Add(rpt, string.Format("Attachment [{0}]: {1}", attName, row.AD), CheckState.Checked, true);
                 }
             }
-
         }
 
         private void attDocumentSon(string rptKod, string refTO, int refID, string disEvrkTur, bool zorunlu)

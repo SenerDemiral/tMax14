@@ -3559,7 +3559,9 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Refused", "R", -1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Cancelled", "C", -1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Quote Request", "Q", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Overtime", "O", -1)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Overtime", "O", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("N/I", "N", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("ECS will apply", "E", -1)});
             this.TklfStuRepositoryItemImageComboBox.Name = "TklfStuRepositoryItemImageComboBox";
             // 
             // TklfStuRepositoryItemCheckedComboBoxEdit
@@ -3573,7 +3575,8 @@
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("C", "Cancelled"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("Q", "Quote Request"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("O", "Overtime"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("N", "N/I")});
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("N", "N/I"),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("E", "ECS will apply")});
             this.TklfStuRepositoryItemCheckedComboBoxEdit.Name = "TklfStuRepositoryItemCheckedComboBoxEdit";
             // 
             // KkfTurRepositoryItemLookUpEdit

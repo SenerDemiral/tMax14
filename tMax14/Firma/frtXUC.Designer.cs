@@ -87,13 +87,15 @@
             this.colODMSKL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLMTTUT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSRVULK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDVZ = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.qsDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.firmaQueriesTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FirmaQueriesTableAdapter();
             this.frtTableAdapter = new tMax14.Firma.FirmaDataSetTableAdapters.FRT_REC_SELTableAdapter();
-            this.colDVZ = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colINSUSR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colINSTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.firmaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frtGridControl)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
@@ -392,7 +394,9 @@
             this.colODMSKL,
             this.colLMTTUT,
             this.colSRVULK,
-            this.colDVZ});
+            this.colDVZ,
+            this.colINSUSR,
+            this.colINSTRH});
             styleFormatCondition1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             styleFormatCondition1.Appearance.ForeColor = System.Drawing.Color.Coral;
             styleFormatCondition1.Appearance.Options.UseForeColor = true;
@@ -657,6 +661,15 @@
             this.colSRVULK.Visible = true;
             this.colSRVULK.VisibleIndex = 19;
             // 
+            // colDVZ
+            // 
+            this.colDVZ.Caption = "Dvz";
+            this.colDVZ.FieldName = "DVZ";
+            this.colDVZ.Name = "colDVZ";
+            this.colDVZ.OptionsColumn.ReadOnly = true;
+            this.colDVZ.Visible = true;
+            this.colDVZ.VisibleIndex = 20;
+            // 
             // dockManager
             // 
             this.dockManager.AutoHideContainers.AddRange(new DevExpress.XtraBars.Docking.AutoHideContainer[] {
@@ -708,14 +721,25 @@
             // 
             this.frtTableAdapter.ClearBeforeFill = true;
             // 
-            // colDVZ
+            // colINSUSR
             // 
-            this.colDVZ.Caption = "Dvz";
-            this.colDVZ.FieldName = "DVZ";
-            this.colDVZ.Name = "colDVZ";
-            this.colDVZ.OptionsColumn.ReadOnly = true;
-            this.colDVZ.Visible = true;
-            this.colDVZ.VisibleIndex = 20;
+            this.colINSUSR.Caption = "InsUsr";
+            this.colINSUSR.FieldName = "INSUSR";
+            this.colINSUSR.Name = "colINSUSR";
+            this.colINSUSR.OptionsColumn.AllowEdit = false;
+            this.colINSUSR.OptionsColumn.AllowFocus = false;
+            this.colINSUSR.Visible = true;
+            this.colINSUSR.VisibleIndex = 21;
+            // 
+            // colINSTRH
+            // 
+            this.colINSTRH.Caption = "InsTrh";
+            this.colINSTRH.FieldName = "INSTRH";
+            this.colINSTRH.Name = "colINSTRH";
+            this.colINSTRH.OptionsColumn.AllowEdit = false;
+            this.colINSTRH.OptionsColumn.AllowFocus = false;
+            this.colINSTRH.Visible = true;
+            this.colINSTRH.VisibleIndex = 22;
             // 
             // frtXUC
             // 
@@ -806,5 +830,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colLMTTUT;
         private DevExpress.XtraGrid.Columns.GridColumn colSRVULK;
         private DevExpress.XtraGrid.Columns.GridColumn colDVZ;
+        private DevExpress.XtraGrid.Columns.GridColumn colINSUSR;
+        private DevExpress.XtraGrid.Columns.GridColumn colINSTRH;
     }
 }

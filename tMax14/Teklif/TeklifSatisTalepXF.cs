@@ -1082,9 +1082,9 @@ private void Form1_Load(object sender, EventArgs e) {
                 return;
             }
 
-            if (XtraMessageBox.Show($"Mail gönderilecekler: {eMails}", "ATI", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            if (XtraMessageBox.Show($"Mail gönderilecekler: {eMails}", "ATI", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                //rpti.put("ATI", "TST", PK, Program.USR, "F", "eMail");
+                rpti.put("ATI", "TST", PK, Program.USR, "F", "eMail");
                 MailClass.MailReportTask(rpti, "ATI", null, eMails, eMailSubject, eMailBody, "");  // NoAttachment
             }
         }
@@ -1100,7 +1100,7 @@ private void Form1_Load(object sender, EventArgs e) {
                 XtraMessageBox.Show("eMail adresi bulunamadı", "ECS Rate Request", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-            if (XtraMessageBox.Show(string.Format("Mail gonderilecekler: {0}", rpr.eMails), "ECS Rate Request",  MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            if (XtraMessageBox.Show(string.Format("Mail gonderilecekler: {0}", rpr.eMails), "ECS Rate Request",  MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 rpti.put("ECSRR", "TST", tstID, Program.USR, "F", "eMail");
 

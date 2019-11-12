@@ -22,7 +22,8 @@ namespace tMax14.Teklif
 
             colFRTID.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
             colHNDID.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
-            colORGDST.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
+            colORGS.ColumnEdit = Program.MF.locRepositoryItemCheckedComboBoxEdit;
+            colDSTS.ColumnEdit = Program.MF.locRepositoryItemCheckedComboBoxEdit;
 
             colSTU.ColumnEdit = Program.MF.TklfStuRepositoryItemImageComboBox;
             colROTS.ColumnEdit = Program.MF.ROTrepositoryItemCheckedComboBoxEdit;

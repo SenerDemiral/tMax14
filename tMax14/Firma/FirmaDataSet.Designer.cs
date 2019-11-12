@@ -993,9 +993,9 @@ namespace tMax14.Firma {
             
             private global::System.Data.DataColumn columnMOT;
             
-            private global::System.Data.DataColumn columnORG;
+            private global::System.Data.DataColumn columnORGS;
             
-            private global::System.Data.DataColumn columnDST;
+            private global::System.Data.DataColumn columnDSTS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -1200,17 +1200,17 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ORGColumn {
+            public global::System.Data.DataColumn ORGSColumn {
                 get {
-                    return this.columnORG;
+                    return this.columnORGS;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DSTColumn {
+            public global::System.Data.DataColumn DSTSColumn {
                 get {
-                    return this.columnDST;
+                    return this.columnDSTS;
                 }
             }
             
@@ -1273,8 +1273,8 @@ namespace tMax14.Firma {
                         System.DateTime DGMTRH, 
                         string ROT, 
                         string MOT, 
-                        string ORG, 
-                        string DST) {
+                        string ORGS, 
+                        string DSTS) {
                 FRCRow rowFRCRow = ((FRCRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FRCID,
@@ -1298,8 +1298,8 @@ namespace tMax14.Firma {
                         DGMTRH,
                         ROT,
                         MOT,
-                        ORG,
-                        DST};
+                        ORGS,
+                        DSTS};
                 if ((parentFRTeditRowByFRC_FRT1 != null)) {
                     columnValuesArray[1] = parentFRTeditRowByFRC_FRT1[0];
                 }
@@ -1353,8 +1353,8 @@ namespace tMax14.Firma {
                 this.columnDGMTRH = base.Columns["DGMTRH"];
                 this.columnROT = base.Columns["ROT"];
                 this.columnMOT = base.Columns["MOT"];
-                this.columnORG = base.Columns["ORG"];
-                this.columnDST = base.Columns["DST"];
+                this.columnORGS = base.Columns["ORGS"];
+                this.columnDSTS = base.Columns["DSTS"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1402,10 +1402,10 @@ namespace tMax14.Firma {
                 base.Columns.Add(this.columnROT);
                 this.columnMOT = new global::System.Data.DataColumn("MOT", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMOT);
-                this.columnORG = new global::System.Data.DataColumn("ORG", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnORG);
-                this.columnDST = new global::System.Data.DataColumn("DST", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDST);
+                this.columnORGS = new global::System.Data.DataColumn("ORGS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORGS);
+                this.columnDSTS = new global::System.Data.DataColumn("DSTS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDSTS);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnFRCID}, true));
                 this.columnFRCID.AllowDBNull = false;
@@ -1429,8 +1429,8 @@ namespace tMax14.Firma {
                 this.columnFACEBOOK.MaxLength = 20;
                 this.columnROT.MaxLength = 1;
                 this.columnMOT.MaxLength = 1;
-                this.columnORG.MaxLength = 5;
-                this.columnDST.MaxLength = 5;
+                this.columnORGS.MaxLength = 2147483647;
+                this.columnDSTS.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2161,6 +2161,10 @@ namespace tMax14.Firma {
             
             private global::System.Data.DataColumn columnDVZ;
             
+            private global::System.Data.DataColumn columnINSTRH;
+            
+            private global::System.Data.DataColumn columnINSUSR;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public FRT_REC_SELDataTable() {
@@ -2396,6 +2400,22 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn INSTRHColumn {
+                get {
+                    return this.columnINSTRH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn INSUSRColumn {
+                get {
+                    return this.columnINSUSR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2456,7 +2476,9 @@ namespace tMax14.Firma {
                         string ODMSKL, 
                         decimal LMTTUT, 
                         string SRVULK, 
-                        string DVZ) {
+                        string DVZ, 
+                        System.DateTime INSTRH, 
+                        string INSUSR) {
                 FRT_REC_SELRow rowFRT_REC_SELRow = ((FRT_REC_SELRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FRTID,
@@ -2483,7 +2505,9 @@ namespace tMax14.Firma {
                         ODMSKL,
                         LMTTUT,
                         SRVULK,
-                        DVZ};
+                        DVZ,
+                        INSTRH,
+                        INSUSR};
                 rowFRT_REC_SELRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFRT_REC_SELRow);
                 return rowFRT_REC_SELRow;
@@ -2538,6 +2562,8 @@ namespace tMax14.Firma {
                 this.columnLMTTUT = base.Columns["LMTTUT"];
                 this.columnSRVULK = base.Columns["SRVULK"];
                 this.columnDVZ = base.Columns["DVZ"];
+                this.columnINSTRH = base.Columns["INSTRH"];
+                this.columnINSUSR = base.Columns["INSUSR"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2593,6 +2619,10 @@ namespace tMax14.Firma {
                 base.Columns.Add(this.columnSRVULK);
                 this.columnDVZ = new global::System.Data.DataColumn("DVZ", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDVZ);
+                this.columnINSTRH = new global::System.Data.DataColumn("INSTRH", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINSTRH);
+                this.columnINSUSR = new global::System.Data.DataColumn("INSUSR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINSUSR);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnFRTID}, true));
                 this.columnFRTID.AllowDBNull = false;
@@ -2616,6 +2646,7 @@ namespace tMax14.Firma {
                 this.columnODMSKL.MaxLength = 1;
                 this.columnSRVULK.MaxLength = 2147483647;
                 this.columnDVZ.MaxLength = 3;
+                this.columnINSUSR.MaxLength = 4;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11506,33 +11537,33 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string ORG {
+            public string ORGS {
                 get {
                     try {
-                        return ((string)(this[this.tableFRC.ORGColumn]));
+                        return ((string)(this[this.tableFRC.ORGSColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ORG\' in table \'FRC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ORGS\' in table \'FRC\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFRC.ORGColumn] = value;
+                    this[this.tableFRC.ORGSColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string DST {
+            public string DSTS {
                 get {
                     try {
-                        return ((string)(this[this.tableFRC.DSTColumn]));
+                        return ((string)(this[this.tableFRC.DSTSColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DST\' in table \'FRC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DSTS\' in table \'FRC\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFRC.DSTColumn] = value;
+                    this[this.tableFRC.DSTSColumn] = value;
                 }
             }
             
@@ -11777,26 +11808,26 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsORGNull() {
-                return this.IsNull(this.tableFRC.ORGColumn);
+            public bool IsORGSNull() {
+                return this.IsNull(this.tableFRC.ORGSColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetORGNull() {
-                this[this.tableFRC.ORGColumn] = global::System.Convert.DBNull;
+            public void SetORGSNull() {
+                this[this.tableFRC.ORGSColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDSTNull() {
-                return this.IsNull(this.tableFRC.DSTColumn);
+            public bool IsDSTSNull() {
+                return this.IsNull(this.tableFRC.DSTSColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDSTNull() {
-                this[this.tableFRC.DSTColumn] = global::System.Convert.DBNull;
+            public void SetDSTSNull() {
+                this[this.tableFRC.DSTSColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -12746,6 +12777,38 @@ namespace tMax14.Firma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime INSTRH {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFRT_REC_SEL.INSTRHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INSTRH\' in table \'FRT_REC_SEL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFRT_REC_SEL.INSTRHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string INSUSR {
+                get {
+                    try {
+                        return ((string)(this[this.tableFRT_REC_SEL.INSUSRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INSUSR\' in table \'FRT_REC_SEL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFRT_REC_SEL.INSUSRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDRMNull() {
                 return this.IsNull(this.tableFRT_REC_SEL.DRMColumn);
             }
@@ -13030,6 +13093,30 @@ namespace tMax14.Firma {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDVZNull() {
                 this[this.tableFRT_REC_SEL.DVZColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsINSTRHNull() {
+                return this.IsNull(this.tableFRT_REC_SEL.INSTRHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetINSTRHNull() {
+                this[this.tableFRT_REC_SEL.INSTRHColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsINSUSRNull() {
+                return this.IsNull(this.tableFRT_REC_SEL.INSUSRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetINSUSRNull() {
+                this[this.tableFRT_REC_SEL.INSUSRColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -22130,8 +22217,8 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("DGMTRH", "DGMTRH");
             tableMapping.ColumnMappings.Add("ROT", "ROT");
             tableMapping.ColumnMappings.Add("MOT", "MOT");
-            tableMapping.ColumnMappings.Add("ORG", "ORG");
-            tableMapping.ColumnMappings.Add("DST", "DST");
+            tableMapping.ColumnMappings.Add("ORGS", "ORGS");
+            tableMapping.ColumnMappings.Add("DSTS", "DSTS");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -22147,7 +22234,7 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""FRC"" (""FRCID"", ""FRTID"", ""AD"", ""SEX"", ""UNVN"", ""UYRK"", ""WTEL"", ""TEL"", ""MTEL"", ""FAX"", ""ADRES"", ""EMAIL"", ""SKYPE"", ""TWITTER"", ""FACEBOOK"", ""ALTLIST"", ""BJDIDS"", ""RPTIDS"", ""DGMTRH"", ""ROT"", ""MOT"", ""ORG"", ""DST"") VALUES (@FRCID, @FRTID, @AD, @SEX, @UNVN, @UYRK, @WTEL, @TEL, @MTEL, @FAX, @ADRES, @EMAIL, @SKYPE, @TWITTER, @FACEBOOK, @ALTLIST, @BJDIDS, @RPTIDS, @DGMTRH, @ROT, @MOT, @ORG, @DST)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""FRC"" (""FRCID"", ""FRTID"", ""AD"", ""SEX"", ""UNVN"", ""UYRK"", ""WTEL"", ""TEL"", ""MTEL"", ""FAX"", ""ADRES"", ""EMAIL"", ""SKYPE"", ""TWITTER"", ""FACEBOOK"", ""ALTLIST"", ""BJDIDS"", ""RPTIDS"", ""DGMTRH"", ""ROT"", ""MOT"", ""ORGS"", ""DSTS"") VALUES (@FRCID, @FRTID, @AD, @SEX, @UNVN, @UYRK, @WTEL, @TEL, @MTEL, @FAX, @ADRES, @EMAIL, @SKYPE, @TWITTER, @FACEBOOK, @ALTLIST, @BJDIDS, @RPTIDS, @DGMTRH, @ROT, @MOT, @ORGS, @DSTS)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@FRCID";
@@ -22279,20 +22366,20 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             param.SourceColumn = "MOT";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@ORG";
-            param.Size = 5;
+            param.ParameterName = "@ORGS";
+            param.Size = 2147483647;
             param.IsNullable = true;
-            param.SourceColumn = "ORG";
+            param.SourceColumn = "ORGS";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@DST";
-            param.Size = 5;
+            param.ParameterName = "@DSTS";
+            param.Size = 2147483647;
             param.IsNullable = true;
-            param.SourceColumn = "DST";
+            param.SourceColumn = "DSTS";
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""FRC"" SET ""FRCID"" = @FRCID, ""FRTID"" = @FRTID, ""AD"" = @AD, ""SEX"" = @SEX, ""UNVN"" = @UNVN, ""UYRK"" = @UYRK, ""WTEL"" = @WTEL, ""TEL"" = @TEL, ""MTEL"" = @MTEL, ""FAX"" = @FAX, ""ADRES"" = @ADRES, ""EMAIL"" = @EMAIL, ""SKYPE"" = @SKYPE, ""TWITTER"" = @TWITTER, ""FACEBOOK"" = @FACEBOOK, ""ALTLIST"" = @ALTLIST, ""BJDIDS"" = @BJDIDS, ""RPTIDS"" = @RPTIDS, ""DGMTRH"" = @DGMTRH, ""ROT"" = @ROT, ""MOT"" = @MOT, ""ORG"" = @ORG, ""DST"" = @DST WHERE ((""FRCID"" = @Original_FRCID))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""FRC"" SET ""FRCID"" = @FRCID, ""FRTID"" = @FRTID, ""AD"" = @AD, ""SEX"" = @SEX, ""UNVN"" = @UNVN, ""UYRK"" = @UYRK, ""WTEL"" = @WTEL, ""TEL"" = @TEL, ""MTEL"" = @MTEL, ""FAX"" = @FAX, ""ADRES"" = @ADRES, ""EMAIL"" = @EMAIL, ""SKYPE"" = @SKYPE, ""TWITTER"" = @TWITTER, ""FACEBOOK"" = @FACEBOOK, ""ALTLIST"" = @ALTLIST, ""BJDIDS"" = @BJDIDS, ""RPTIDS"" = @RPTIDS, ""DGMTRH"" = @DGMTRH, ""ROT"" = @ROT, ""MOT"" = @MOT, ""ORGS"" = @ORGS, ""DSTS"" = @DSTS WHERE ((""FRCID"" = @Original_FRCID))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@FRCID";
@@ -22424,16 +22511,16 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             param.SourceColumn = "MOT";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@ORG";
-            param.Size = 5;
+            param.ParameterName = "@ORGS";
+            param.Size = 2147483647;
             param.IsNullable = true;
-            param.SourceColumn = "ORG";
+            param.SourceColumn = "ORGS";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@DST";
-            param.Size = 5;
+            param.ParameterName = "@DSTS";
+            param.Size = 2147483647;
             param.IsNullable = true;
-            param.SourceColumn = "DST";
+            param.SourceColumn = "DSTS";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_FRCID";
@@ -22462,9 +22549,9 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT AD, ADRES, ALTLIST, BJDIDS, DGMTRH, DST, EMAIL, FACEBOOK, FAX, FRCID, FRTI" +
-                "D, MOT, MTEL, ORG, ROT, RPTIDS, SEX, SKYPE, TEL, TWITTER, UNVN, UYRK, WTEL FROM " +
-                "FRC WHERE (FRTID = @FRTID)";
+            this._commandCollection[1].CommandText = "SELECT AD, ADRES, ALTLIST, BJDIDS, DGMTRH, DSTS, EMAIL, FACEBOOK, FAX, FRCID, FRT" +
+                "ID, MOT, MTEL, ORGS, ROT, RPTIDS, SEX, SKYPE, TEL, TWITTER, UNVN, UYRK, WTEL FRO" +
+                "M FRC WHERE (FRTID = @FRTID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@FRTID";
@@ -23105,6 +23192,8 @@ namespace tMax14.Firma.FirmaDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("LMTTUT", "LMTTUT");
             tableMapping.ColumnMappings.Add("SRVULK", "SRVULK");
             tableMapping.ColumnMappings.Add("DVZ", "DVZ");
+            tableMapping.ColumnMappings.Add("INSTRH", "INSTRH");
+            tableMapping.ColumnMappings.Add("INSUSR", "INSUSR");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;

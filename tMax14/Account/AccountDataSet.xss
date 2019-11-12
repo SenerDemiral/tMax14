@@ -42,7 +42,7 @@
     <Shape ID="DesignTable:ARD" ZOrder="26" X="432" Y="280" Height="69" Width="166" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="126" SplitterPosition="22" />
     <Shape ID="DesignTable:AHPX" ZOrder="14" X="662" Y="226" Height="75" Width="159" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="83" SplitterPosition="24" />
     <Shape ID="DesignTable:AVB_KAPAMA_KAPA_SEL" ZOrder="17" X="377" Y="686" Height="75" Width="291" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="254" SplitterPosition="24" />
-    <Shape ID="DesignTable:AFB" ZOrder="1" X="211" Y="-27" Height="305" Width="167" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="254" />
+    <Shape ID="DesignTable:AFB" ZOrder="1" X="211" Y="-27" Height="75" Width="167" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="254" SplitterPosition="24" />
     <Shape ID="DesignTable:AVD_HRKT" ZOrder="5" X="1281" Y="50" Height="75" Width="208" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="178" SplitterPosition="24" />
     <Shape ID="DesignTable:CBB" ZOrder="12" X="11" Y="582" Height="75" Width="193" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="235" SplitterPosition="24" />
     <Shape ID="DesignTable:CBD" ZOrder="11" X="12" Y="665" Height="75" Width="169" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="84" OldDataTableHeight="254" SplitterPosition="24" />

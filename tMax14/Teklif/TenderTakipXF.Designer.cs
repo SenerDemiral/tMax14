@@ -49,6 +49,7 @@
             this.tttGridControl = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.jurnalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.attachmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTTTID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFRTID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,7 +60,6 @@
             this.colROUTE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.colRSPUSRS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colORGDST = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colREGION = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colR1A = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colR1E = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,9 +67,11 @@
             this.colR2E = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCOMMENTS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSTU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colORGS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDSTS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTKPTRH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.teklifQueriesTableAdapter = new tMax14.Teklif.TeklifDataSetTableAdapters.TeklifQueriesTableAdapter();
-            this.attachmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.teklifDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tttBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tttBindingNavigator)).BeginInit();
@@ -241,14 +243,21 @@
             this.jurnalToolStripMenuItem,
             this.attachmentToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(138, 48);
             // 
             // jurnalToolStripMenuItem
             // 
             this.jurnalToolStripMenuItem.Name = "jurnalToolStripMenuItem";
-            this.jurnalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jurnalToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.jurnalToolStripMenuItem.Text = "Jurnal";
             this.jurnalToolStripMenuItem.Click += new System.EventHandler(this.jurnalToolStripMenuItem_Click);
+            // 
+            // attachmentToolStripMenuItem
+            // 
+            this.attachmentToolStripMenuItem.Name = "attachmentToolStripMenuItem";
+            this.attachmentToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.attachmentToolStripMenuItem.Text = "Attachment";
+            this.attachmentToolStripMenuItem.Click += new System.EventHandler(this.attachmentToolStripMenuItem_Click);
             // 
             // gridView1
             // 
@@ -261,14 +270,16 @@
             this.colMOTS,
             this.colROUTE,
             this.colRSPUSRS,
-            this.colORGDST,
             this.colREGION,
             this.colR1A,
             this.colR1E,
             this.colR2A,
             this.colR2E,
             this.colCOMMENTS,
-            this.colSTU});
+            this.colSTU,
+            this.colORGS,
+            this.colDSTS,
+            this.colTKPTRH});
             this.gridView1.GridControl = this.tttGridControl;
             this.gridView1.Name = "gridView1";
             this.gridView1.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridView1_InitNewRow);
@@ -345,22 +356,13 @@
             this.colRSPUSRS.Visible = true;
             this.colRSPUSRS.VisibleIndex = 7;
             // 
-            // colORGDST
-            // 
-            this.colORGDST.Caption = "Org-Dst";
-            this.colORGDST.FieldName = "ORGDST";
-            this.colORGDST.Name = "colORGDST";
-            this.colORGDST.Visible = true;
-            this.colORGDST.VisibleIndex = 8;
-            // 
             // colREGION
             // 
             this.colREGION.Caption = "Region";
-            this.colREGION.ColumnEdit = this.repositoryItemMemoExEdit1;
             this.colREGION.FieldName = "REGION";
             this.colREGION.Name = "colREGION";
             this.colREGION.Visible = true;
-            this.colREGION.VisibleIndex = 9;
+            this.colREGION.VisibleIndex = 10;
             // 
             // colR1A
             // 
@@ -368,7 +370,7 @@
             this.colR1A.FieldName = "R1A";
             this.colR1A.Name = "colR1A";
             this.colR1A.Visible = true;
-            this.colR1A.VisibleIndex = 10;
+            this.colR1A.VisibleIndex = 11;
             // 
             // colR1E
             // 
@@ -376,7 +378,7 @@
             this.colR1E.FieldName = "R1E";
             this.colR1E.Name = "colR1E";
             this.colR1E.Visible = true;
-            this.colR1E.VisibleIndex = 11;
+            this.colR1E.VisibleIndex = 12;
             // 
             // colR2A
             // 
@@ -384,7 +386,7 @@
             this.colR2A.FieldName = "R2A";
             this.colR2A.Name = "colR2A";
             this.colR2A.Visible = true;
-            this.colR2A.VisibleIndex = 12;
+            this.colR2A.VisibleIndex = 13;
             // 
             // colR2E
             // 
@@ -392,7 +394,7 @@
             this.colR2E.FieldName = "R2E";
             this.colR2E.Name = "colR2E";
             this.colR2E.Visible = true;
-            this.colR2E.VisibleIndex = 13;
+            this.colR2E.VisibleIndex = 14;
             // 
             // colCOMMENTS
             // 
@@ -401,7 +403,7 @@
             this.colCOMMENTS.FieldName = "COMMENTS";
             this.colCOMMENTS.Name = "colCOMMENTS";
             this.colCOMMENTS.Visible = true;
-            this.colCOMMENTS.VisibleIndex = 14;
+            this.colCOMMENTS.VisibleIndex = 16;
             // 
             // colSTU
             // 
@@ -409,18 +411,35 @@
             this.colSTU.FieldName = "STU";
             this.colSTU.Name = "colSTU";
             this.colSTU.Visible = true;
-            this.colSTU.VisibleIndex = 15;
+            this.colSTU.VisibleIndex = 17;
+            // 
+            // colORGS
+            // 
+            this.colORGS.Caption = "ORGs";
+            this.colORGS.FieldName = "ORGS";
+            this.colORGS.Name = "colORGS";
+            this.colORGS.Visible = true;
+            this.colORGS.VisibleIndex = 8;
+            // 
+            // colDSTS
+            // 
+            this.colDSTS.Caption = "DSTs";
+            this.colDSTS.FieldName = "DSTS";
+            this.colDSTS.Name = "colDSTS";
+            this.colDSTS.Visible = true;
+            this.colDSTS.VisibleIndex = 9;
+            // 
+            // colTKPTRH
+            // 
+            this.colTKPTRH.Caption = "TkpTrh";
+            this.colTKPTRH.FieldName = "TKPTRH";
+            this.colTKPTRH.Name = "colTKPTRH";
+            this.colTKPTRH.Visible = true;
+            this.colTKPTRH.VisibleIndex = 15;
             // 
             // repositoryItemMemoEdit1
             // 
             this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
-            // 
-            // attachmentToolStripMenuItem
-            // 
-            this.attachmentToolStripMenuItem.Name = "attachmentToolStripMenuItem";
-            this.attachmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.attachmentToolStripMenuItem.Text = "Attachment";
-            this.attachmentToolStripMenuItem.Click += new System.EventHandler(this.attachmentToolStripMenuItem_Click);
             // 
             // TenderTakipXF
             // 
@@ -475,7 +494,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMOTS;
         private DevExpress.XtraGrid.Columns.GridColumn colROUTE;
         private DevExpress.XtraGrid.Columns.GridColumn colRSPUSRS;
-        private DevExpress.XtraGrid.Columns.GridColumn colORGDST;
         private DevExpress.XtraGrid.Columns.GridColumn colREGION;
         private DevExpress.XtraGrid.Columns.GridColumn colR1A;
         private DevExpress.XtraGrid.Columns.GridColumn colR1E;
@@ -489,5 +507,8 @@
         private TeklifDataSetTableAdapters.TeklifQueriesTableAdapter teklifQueriesTableAdapter;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit1;
         private System.Windows.Forms.ToolStripMenuItem attachmentToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colORGS;
+        private DevExpress.XtraGrid.Columns.GridColumn colDSTS;
+        private DevExpress.XtraGrid.Columns.GridColumn colTKPTRH;
     }
 }

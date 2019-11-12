@@ -47,13 +47,13 @@ namespace tMax14.Firma
             colUYRKc.ColumnEdit = Program.MF.CNTRYrepositoryItemLookUpEdit;
             colROTc.ColumnEdit = Program.MF.ROTrepositoryItemLookUpEdit;
             colMOTc.ColumnEdit = Program.MF.MOTrepositoryItemLookUpEdit;
-            colORGc.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
-            colDSTc.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
+            colORGc.ColumnEdit = Program.MF.locRepositoryItemCheckedComboBoxEdit;
+            colDSTc.ColumnEdit = Program.MF.locRepositoryItemCheckedComboBoxEdit;
 
             frsGridControl.ExternalRepository = Program.MF.mainPersistentRepository;
             colSREPIDs.ColumnEdit = Program.MF.ustRepositoryItemLookUpEdit;
             colSUSRIDs.ColumnEdit = Program.MF.ustRepositoryItemLookUpEdit;
-            colORGs.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
+            colORGs.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit; // locRepositoryItemCheckedComboBoxEdit;
             colDSTs.ColumnEdit = Program.MF.locRepositoryItemLookUpEdit;
             colACCIDs.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
             colRAKIPs.ColumnEdit = Program.MF.FRTrepositoryItemLookUpEdit;
