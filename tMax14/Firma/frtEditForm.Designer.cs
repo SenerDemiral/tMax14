@@ -326,18 +326,18 @@
             this.dockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.hideContainerBottom = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.panelContainer1 = new DevExpress.XtraBars.Docking.DockPanel();
-            this.frcDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
-            this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.frsDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer5 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.frrDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.froDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.fraDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer2 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.frcDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.frocDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer4 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.frsDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
-            this.controlContainer5 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.frlDockPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.frlGridControl = new DevExpress.XtraGrid.GridControl();
@@ -484,18 +484,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
             this.hideContainerBottom.SuspendLayout();
             this.panelContainer1.SuspendLayout();
-            this.frcDockPanel.SuspendLayout();
-            this.controlContainer3.SuspendLayout();
+            this.frsDockPanel.SuspendLayout();
+            this.controlContainer5.SuspendLayout();
             this.frrDockPanel.SuspendLayout();
             this.dockPanel2_Container.SuspendLayout();
             this.froDockPanel.SuspendLayout();
             this.controlContainer1.SuspendLayout();
             this.fraDockPanel.SuspendLayout();
             this.controlContainer2.SuspendLayout();
+            this.frcDockPanel.SuspendLayout();
+            this.controlContainer3.SuspendLayout();
             this.frocDockPanel.SuspendLayout();
             this.controlContainer4.SuspendLayout();
-            this.frsDockPanel.SuspendLayout();
-            this.controlContainer5.SuspendLayout();
             this.frlDockPanel.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frlGridControl)).BeginInit();
@@ -3489,24 +3489,24 @@
             this.panelContainer1.Text = "panelContainer1";
             this.panelContainer1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
-            // frcDockPanel
+            // frsDockPanel
             // 
-            this.frcDockPanel.Controls.Add(this.controlContainer3);
-            this.frcDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.frcDockPanel.ID = new System.Guid("15cfbd3a-620c-4878-b436-052d8663d397");
-            this.frcDockPanel.Location = new System.Drawing.Point(4, 24);
-            this.frcDockPanel.Name = "frcDockPanel";
-            this.frcDockPanel.OriginalSize = new System.Drawing.Size(991, 326);
-            this.frcDockPanel.Size = new System.Drawing.Size(991, 326);
-            this.frcDockPanel.Text = "Contacts";
+            this.frsDockPanel.Controls.Add(this.controlContainer5);
+            this.frsDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
+            this.frsDockPanel.ID = new System.Guid("9cd6d9eb-23c5-4375-888a-46fdc36871f8");
+            this.frsDockPanel.Location = new System.Drawing.Point(4, 24);
+            this.frsDockPanel.Name = "frsDockPanel";
+            this.frsDockPanel.OriginalSize = new System.Drawing.Size(991, 326);
+            this.frsDockPanel.Size = new System.Drawing.Size(991, 326);
+            this.frsDockPanel.Text = "Service";
             // 
-            // controlContainer3
+            // controlContainer5
             // 
-            this.controlContainer3.Controls.Add(this.frcGridControl);
-            this.controlContainer3.Location = new System.Drawing.Point(0, 0);
-            this.controlContainer3.Name = "controlContainer3";
-            this.controlContainer3.Size = new System.Drawing.Size(991, 326);
-            this.controlContainer3.TabIndex = 0;
+            this.controlContainer5.Controls.Add(this.frsGridControl);
+            this.controlContainer5.Location = new System.Drawing.Point(0, 0);
+            this.controlContainer5.Name = "controlContainer5";
+            this.controlContainer5.Size = new System.Drawing.Size(991, 326);
+            this.controlContainer5.TabIndex = 0;
             // 
             // frrDockPanel
             // 
@@ -3567,6 +3567,25 @@
             this.controlContainer2.Size = new System.Drawing.Size(991, 326);
             this.controlContainer2.TabIndex = 0;
             // 
+            // frcDockPanel
+            // 
+            this.frcDockPanel.Controls.Add(this.controlContainer3);
+            this.frcDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
+            this.frcDockPanel.ID = new System.Guid("15cfbd3a-620c-4878-b436-052d8663d397");
+            this.frcDockPanel.Location = new System.Drawing.Point(4, 24);
+            this.frcDockPanel.Name = "frcDockPanel";
+            this.frcDockPanel.OriginalSize = new System.Drawing.Size(991, 326);
+            this.frcDockPanel.Size = new System.Drawing.Size(991, 326);
+            this.frcDockPanel.Text = "Contacts";
+            // 
+            // controlContainer3
+            // 
+            this.controlContainer3.Controls.Add(this.frcGridControl);
+            this.controlContainer3.Location = new System.Drawing.Point(0, 0);
+            this.controlContainer3.Name = "controlContainer3";
+            this.controlContainer3.Size = new System.Drawing.Size(991, 326);
+            this.controlContainer3.TabIndex = 0;
+            // 
             // frocDockPanel
             // 
             this.frocDockPanel.Controls.Add(this.controlContainer4);
@@ -3585,25 +3604,6 @@
             this.controlContainer4.Name = "controlContainer4";
             this.controlContainer4.Size = new System.Drawing.Size(991, 326);
             this.controlContainer4.TabIndex = 0;
-            // 
-            // frsDockPanel
-            // 
-            this.frsDockPanel.Controls.Add(this.controlContainer5);
-            this.frsDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.frsDockPanel.ID = new System.Guid("9cd6d9eb-23c5-4375-888a-46fdc36871f8");
-            this.frsDockPanel.Location = new System.Drawing.Point(4, 24);
-            this.frsDockPanel.Name = "frsDockPanel";
-            this.frsDockPanel.OriginalSize = new System.Drawing.Size(991, 326);
-            this.frsDockPanel.Size = new System.Drawing.Size(991, 326);
-            this.frsDockPanel.Text = "Service";
-            // 
-            // controlContainer5
-            // 
-            this.controlContainer5.Controls.Add(this.frsGridControl);
-            this.controlContainer5.Location = new System.Drawing.Point(0, 0);
-            this.controlContainer5.Name = "controlContainer5";
-            this.controlContainer5.Size = new System.Drawing.Size(991, 326);
-            this.controlContainer5.TabIndex = 0;
             // 
             // frlDockPanel
             // 
@@ -3856,18 +3856,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).EndInit();
             this.hideContainerBottom.ResumeLayout(false);
             this.panelContainer1.ResumeLayout(false);
-            this.frcDockPanel.ResumeLayout(false);
-            this.controlContainer3.ResumeLayout(false);
+            this.frsDockPanel.ResumeLayout(false);
+            this.controlContainer5.ResumeLayout(false);
             this.frrDockPanel.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
             this.froDockPanel.ResumeLayout(false);
             this.controlContainer1.ResumeLayout(false);
             this.fraDockPanel.ResumeLayout(false);
             this.controlContainer2.ResumeLayout(false);
+            this.frcDockPanel.ResumeLayout(false);
+            this.controlContainer3.ResumeLayout(false);
             this.frocDockPanel.ResumeLayout(false);
             this.controlContainer4.ResumeLayout(false);
-            this.frsDockPanel.ResumeLayout(false);
-            this.controlContainer5.ResumeLayout(false);
             this.frlDockPanel.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.frlGridControl)).EndInit();

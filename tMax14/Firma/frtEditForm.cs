@@ -15,6 +15,7 @@ namespace tMax14.Firma
     public partial class frtEditForm : DevExpress.XtraEditors.XtraForm
     {
         public int FRTid = 0;
+        private bool isEditable = false;
 
         public frtEditForm()
         {
@@ -82,7 +83,7 @@ namespace tMax14.Firma
 
         private void frtEditForm_Load(object sender, EventArgs e)
         {
-            bool isEditable = Program.MF.ModifyCheck("Firma.frtEditForm", true);
+            isEditable = Program.MF.ModifyCheck("Firma.frtEditForm", true);
             frtLayoutView.OptionsBehavior.Editable = isEditable;
             fraGridView.OptionsBehavior.Editable = isEditable;
             froGridView.OptionsBehavior.Editable = isEditable;
@@ -144,9 +145,9 @@ namespace tMax14.Firma
 
         private void frtEditForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dr = SaveAll();
-            if (dr == System.Windows.Forms.DialogResult.Cancel)
-                e.Cancel = true;
+                DialogResult dr = SaveAll();
+                if (dr == System.Windows.Forms.DialogResult.Cancel)
+                    e.Cancel = true;
         }
 
         private DialogResult SaveAll()
@@ -277,11 +278,14 @@ namespace tMax14.Firma
 
         private void yeniKayitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dr = SaveAll();
-            if (dr != System.Windows.Forms.DialogResult.Cancel)
+            if (isEditable)
             {
-                firmaDataSet.Clear();
-                frtLayoutView.AddNewRow();
+                DialogResult dr = SaveAll();
+                if (dr != System.Windows.Forms.DialogResult.Cancel)
+                {
+                    firmaDataSet.Clear();
+                    frtLayoutView.AddNewRow();
+                }
             }
         }
 
@@ -298,122 +302,136 @@ namespace tMax14.Firma
 
         private void yeniContactToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frcGridView.AddNewRow();
+            if (frcGridView.OptionsBehavior.Editable)
+                frcGridView.AddNewRow();
         }
-
         private void silContactToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frcGridView.DeleteRow(frcGridView.FocusedRowHandle);
+            if (frcGridView.OptionsBehavior.Editable)
+                frcGridView.DeleteRow(frcGridView.FocusedRowHandle);
         }
-
-        private void yeniServisToolStripMenuItem_Click(object sender, EventArgs e)
+        private void duplicateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frsGridView.AddNewRow();
-        }
+            if (frcGridView.OptionsBehavior.Editable)
+            {
+                frcBindingSource.EndEdit();
+                frcTableAdapter.Update(firmaDataSet.FRC);
 
-        private void silServisToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frsGridView.DeleteRow(frsGridView.FocusedRowHandle);
-        }
+                firmaQueriesTableAdapter.FRC_DUP((int)frcGridView.GetFocusedRowCellValue(colFRCIDc));
 
-        private void yeniOCtoolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frocGridView.AddNewRow();
+                frcTableAdapter.FillByFRT(firmaDataSet.FRC, FRTid);
+            }
         }
-
-        private void silOCtoolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frocGridView.DeleteRow(frocGridView.FocusedRowHandle);
-        }
-
-        private void yeniAgentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fraGridView.AddNewRow();
-        }
-
-        private void silAgentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fraGridView.DeleteRow(fraGridView.FocusedRowHandle);
-        }
-
-        private void frrYeniToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frrGridView.AddNewRow();
-        }
-
-        private void frrSilToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frrGridView.DeleteRow(frrGridView.FocusedRowHandle);
-        }
-
-        private void froYeniToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            froGridView.AddNewRow();
-        }
-
-        private void froSilToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            froGridView.DeleteRow(froGridView.FocusedRowHandle);
-        }
-
-        private void yeniFRLtoolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frlGridView.AddNewRow();
-        }
-
-        private void silFRLtoolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frlGridView.DeleteRow(frlGridView.FocusedRowHandle);
-        }
-
         private void frcGridView_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
         {
             frcGridView.SetRowCellValue(e.RowHandle, colFRCIDc, Program.MF.mainQueriesTableAdapter.GET_PK("FR"));
             frcGridView.SetRowCellValue(e.RowHandle, colFRTIDc, FRTid);
             string CNTRY = frtLayoutView.GetFocusedRowCellDisplayText(colLOCID);
             if (!string.IsNullOrWhiteSpace(CNTRY))
-                frcGridView.SetRowCellValue(e.RowHandle, colUYRKc, CNTRY.Substring(0,2));
+                frcGridView.SetRowCellValue(e.RowHandle, colUYRKc, CNTRY.Substring(0, 2));
         }
 
+        private void yeniServisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frsGridView.OptionsBehavior.Editable)
+                frsGridView.AddNewRow();
+        }
+        private void silServisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frsGridView.OptionsBehavior.Editable)
+                frsGridView.DeleteRow(frsGridView.FocusedRowHandle);
+        }
         private void frsGridView_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
         {
             frsGridView.SetRowCellValue(e.RowHandle, colFRSIDs, Program.MF.mainQueriesTableAdapter.GET_PK("FR"));
             frsGridView.SetRowCellValue(e.RowHandle, colFRTIDs, FRTid);
         }
 
+
+        private void yeniOCtoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frocGridView.OptionsBehavior.Editable)
+                frocGridView.AddNewRow();
+        }
+        private void silOCtoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frocGridView.OptionsBehavior.Editable)
+                frocGridView.DeleteRow(frocGridView.FocusedRowHandle);
+        }
         private void frocGridView_InitNewRow(object sender, InitNewRowEventArgs e)
         {
             //frocGridView.SetRowCellValue(e.RowHandle, colFROCIDoc, Program.MF.mainQueriesTableAdapter.GET_PK("FR")); //Kalkti PK = FRTid+AHTid
             frocGridView.SetRowCellValue(e.RowHandle, colFRTIDoc, FRTid);
-
         }
 
+
+        private void yeniAgentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fraGridView.OptionsBehavior.Editable)
+                fraGridView.AddNewRow();
+        }
+        private void silAgentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fraGridView.OptionsBehavior.Editable)
+                fraGridView.DeleteRow(fraGridView.FocusedRowHandle);
+        }
         private void fraGridView_InitNewRow(object sender, InitNewRowEventArgs e)
         {
             fraGridView.SetRowCellValue(e.RowHandle, colFRAIDa, Program.MF.mainQueriesTableAdapter.GET_PK("FR"));
             fraGridView.SetRowCellValue(e.RowHandle, colFRTIDa, FRTid);
         }
 
-        private void tabbedControlGroup1_DoubleClick(object sender, EventArgs e)
-        {
-            //MessageBox.Show(item2.Width.ToString());
-        }
 
+        private void frrYeniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frrGridView.OptionsBehavior.Editable)
+                frrGridView.AddNewRow();
+        }
+        private void frrSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frrGridView.OptionsBehavior.Editable)
+                frrGridView.DeleteRow(frrGridView.FocusedRowHandle);
+        }
         private void frrGridView_InitNewRow(object sender, InitNewRowEventArgs e)
         {
             frrGridView.SetRowCellValue(e.RowHandle, colFRRIDr, Program.MF.mainQueriesTableAdapter.GET_PK("FR"));
             frrGridView.SetRowCellValue(e.RowHandle, colFRTIDr, FRTid);
         }
 
+        private void froYeniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (froGridView.OptionsBehavior.Editable)
+                froGridView.AddNewRow();
+        }
+        private void froSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (froGridView.OptionsBehavior.Editable)
+                froGridView.DeleteRow(froGridView.FocusedRowHandle);
+        }
         private void froGridView_InitNewRow(object sender, InitNewRowEventArgs e)
         {
             froGridView.SetRowCellValue(e.RowHandle, colFROIDo, Program.MF.mainQueriesTableAdapter.GET_PK("FR"));
             froGridView.SetRowCellValue(e.RowHandle, colFRTIDo, FRTid);
         }
 
+        private void yeniFRLtoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frlGridView.OptionsBehavior.Editable)
+                frlGridView.AddNewRow();
+        }
+        private void silFRLtoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frlGridView.OptionsBehavior.Editable)
+                frlGridView.DeleteRow(frlGridView.FocusedRowHandle);
+        }
         private void frlGridView_InitNewRow(object sender, InitNewRowEventArgs e)
         {
             frlGridView.SetRowCellValue(e.RowHandle, colFRTIDl, FRTid);
+        }
+
+        private void tabbedControlGroup1_DoubleClick(object sender, EventArgs e)
+        {
+            //MessageBox.Show(item2.Width.ToString());
         }
 
         private void teklifTalepOlusturToolStripMenuItem_Click(object sender, EventArgs e)
@@ -428,16 +446,6 @@ namespace tMax14.Firma
 
                 //var frsRow = (FirmaDataSet.FRSRow)frsGridView.GetFocusedDataRow();
             }
-        }
-
-        private void duplicateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frcBindingSource.EndEdit();
-            frcTableAdapter.Update(firmaDataSet.FRC);
-
-            firmaQueriesTableAdapter.FRC_DUP((int)frcGridView.GetFocusedRowCellValue(colFRCIDc));
-
-            frcTableAdapter.FillByFRT(firmaDataSet.FRC, FRTid);
         }
 
         private void frtLayoutView_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)

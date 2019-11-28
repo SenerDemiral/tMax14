@@ -793,6 +793,7 @@
               <Mapping SourceColumn="AOH" DataSetColumn="AOH" />
               <Mapping SourceColumn="INF" DataSetColumn="INF" />
               <Mapping SourceColumn="CNTNOS" DataSetColumn="CNTNOS" />
+              <Mapping SourceColumn="ACC" DataSetColumn="ACC" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1308,6 +1309,7 @@
               <Mapping SourceColumn="MRTR" DataSetColumn="MRTR" />
               <Mapping SourceColumn="HRROS" DataSetColumn="HRROS" />
               <Mapping SourceColumn="MAOC" DataSetColumn="MAOC" />
+              <Mapping SourceColumn="HMNF" DataSetColumn="HMNF" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -3325,6 +3327,13 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ACC" msprop:Generator_ColumnVarNameInTable="columnACC" msprop:Generator_ColumnPropNameInRow="ACC" msprop:Generator_ColumnPropNameInTable="ACCColumn" msprop:Generator_UserColumnName="ACC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -4517,6 +4526,13 @@
               <xs:element name="MRTR" msprop:Generator_ColumnVarNameInTable="columnMRTR" msprop:Generator_ColumnPropNameInRow="MRTR" msprop:Generator_ColumnPropNameInTable="MRTRColumn" msprop:Generator_UserColumnName="MRTR" type="xs:dateTime" minOccurs="0" />
               <xs:element name="HRROS" msprop:Generator_ColumnVarNameInTable="columnHRROS" msprop:Generator_ColumnPropNameInRow="HRROS" msprop:Generator_ColumnPropNameInTable="HRROSColumn" msprop:Generator_UserColumnName="HRROS" type="xs:dateTime" minOccurs="0" />
               <xs:element name="MAOC" msprop:Generator_ColumnVarNameInTable="columnMAOC" msprop:Generator_ColumnPropNameInRow="MAOC" msprop:Generator_ColumnPropNameInTable="MAOCColumn" msprop:Generator_UserColumnName="MAOC" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HMNF" msprop:Generator_ColumnVarNameInTable="columnHMNF" msprop:Generator_ColumnPropNameInRow="HMNF" msprop:Generator_ColumnPropNameInTable="HMNFColumn" msprop:Generator_UserColumnName="HMNF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -133,6 +133,7 @@
             this.colCNTNOS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colINF = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colROH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colACC = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pvtDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvtKpiMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvtKpiMGridControl)).BeginInit();
@@ -162,7 +163,7 @@
             this.pvtKpiMGridControl.Location = new System.Drawing.Point(0, 0);
             this.pvtKpiMGridControl.MainView = this.gridView1;
             this.pvtKpiMGridControl.Name = "pvtKpiMGridControl";
-            this.pvtKpiMGridControl.Size = new System.Drawing.Size(875, 320);
+            this.pvtKpiMGridControl.Size = new System.Drawing.Size(963, 320);
             this.pvtKpiMGridControl.TabIndex = 1;
             this.pvtKpiMGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -207,6 +208,7 @@
             this.colSHP,
             this.colCNE,
             this.colCRR,
+            this.colACC,
             this.colONYUSR,
             this.colONYYTK,
             this.colONYTRH,
@@ -449,7 +451,7 @@
             this.colONYUSR.Name = "colONYUSR";
             this.colONYUSR.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colONYUSR.Visible = true;
-            this.colONYUSR.VisibleIndex = 15;
+            this.colONYUSR.VisibleIndex = 16;
             // 
             // colONYYTK
             // 
@@ -458,7 +460,7 @@
             this.colONYYTK.Name = "colONYYTK";
             this.colONYYTK.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colONYYTK.Visible = true;
-            this.colONYYTK.VisibleIndex = 16;
+            this.colONYYTK.VisibleIndex = 17;
             // 
             // colONYTRH
             // 
@@ -468,7 +470,7 @@
             this.colONYTRH.FieldName = "ONYTRH";
             this.colONYTRH.Name = "colONYTRH";
             this.colONYTRH.Visible = true;
-            this.colONYTRH.VisibleIndex = 17;
+            this.colONYTRH.VisibleIndex = 18;
             // 
             // colONYAUSR
             // 
@@ -477,7 +479,7 @@
             this.colONYAUSR.Name = "colONYAUSR";
             this.colONYAUSR.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colONYAUSR.Visible = true;
-            this.colONYAUSR.VisibleIndex = 18;
+            this.colONYAUSR.VisibleIndex = 19;
             // 
             // colONYAYTK
             // 
@@ -486,7 +488,7 @@
             this.colONYAYTK.Name = "colONYAYTK";
             this.colONYAYTK.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colONYAYTK.Visible = true;
-            this.colONYAYTK.VisibleIndex = 19;
+            this.colONYAYTK.VisibleIndex = 20;
             // 
             // colONYATRH
             // 
@@ -494,7 +496,7 @@
             this.colONYATRH.FieldName = "ONYATRH";
             this.colONYATRH.Name = "colONYATRH";
             this.colONYATRH.Visible = true;
-            this.colONYATRH.VisibleIndex = 20;
+            this.colONYATRH.VisibleIndex = 21;
             // 
             // colETD
             // 
@@ -503,35 +505,35 @@
             this.colETD.FieldName = "ETD";
             this.colETD.Name = "colETD";
             this.colETD.Visible = true;
-            this.colETD.VisibleIndex = 21;
+            this.colETD.VisibleIndex = 22;
             // 
             // colETA
             // 
             this.colETA.FieldName = "ETA";
             this.colETA.Name = "colETA";
             this.colETA.Visible = true;
-            this.colETA.VisibleIndex = 22;
+            this.colETA.VisibleIndex = 23;
             // 
             // colATD
             // 
             this.colATD.FieldName = "ATD";
             this.colATD.Name = "colATD";
             this.colATD.Visible = true;
-            this.colATD.VisibleIndex = 23;
+            this.colATD.VisibleIndex = 24;
             // 
             // colATA
             // 
             this.colATA.FieldName = "ATA";
             this.colATA.Name = "colATA";
             this.colATA.Visible = true;
-            this.colATA.VisibleIndex = 24;
+            this.colATA.VisibleIndex = 25;
             // 
             // colTPAD
             // 
             this.colTPAD.FieldName = "TPAD";
             this.colTPAD.Name = "colTPAD";
             this.colTPAD.Visible = true;
-            this.colTPAD.VisibleIndex = 25;
+            this.colTPAD.VisibleIndex = 26;
             // 
             // colSAM
             // 
@@ -541,7 +543,7 @@
             this.colSAM.FieldName = "SAM";
             this.colSAM.Name = "colSAM";
             this.colSAM.Visible = true;
-            this.colSAM.VisibleIndex = 37;
+            this.colSAM.VisibleIndex = 38;
             this.colSAM.Width = 92;
             // 
             // colSAMUSR
@@ -551,7 +553,7 @@
             this.colSAMUSR.Name = "colSAMUSR";
             this.colSAMUSR.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList;
             this.colSAMUSR.Visible = true;
-            this.colSAMUSR.VisibleIndex = 38;
+            this.colSAMUSR.VisibleIndex = 39;
             this.colSAMUSR.Width = 108;
             // 
             // colONY_ATD
@@ -563,7 +565,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "ONY_ATD", "AVG={0:0.##}")});
             this.colONY_ATD.ToolTip = "ONY_ATD";
             this.colONY_ATD.Visible = true;
-            this.colONY_ATD.VisibleIndex = 39;
+            this.colONY_ATD.VisibleIndex = 40;
             this.colONY_ATD.Width = 112;
             // 
             // colSAM_ATD
@@ -575,7 +577,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "SAM_ATD", "AVG={0:0.##}")});
             this.colSAM_ATD.ToolTip = "SAM_ATD";
             this.colSAM_ATD.Visible = true;
-            this.colSAM_ATD.VisibleIndex = 40;
+            this.colSAM_ATD.VisibleIndex = 41;
             // 
             // colETD_SAM
             // 
@@ -586,7 +588,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "ETD_SAM", "AVG={0:0.##}")});
             this.colETD_SAM.ToolTip = "ETD_SAM";
             this.colETD_SAM.Visible = true;
-            this.colETD_SAM.VisibleIndex = 41;
+            this.colETD_SAM.VisibleIndex = 42;
             // 
             // colONYA_ATD
             // 
@@ -597,7 +599,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "ONYA_ATD", "AVG={0:0.##}")});
             this.colONYA_ATD.ToolTip = "ONYA_ATD";
             this.colONYA_ATD.Visible = true;
-            this.colONYA_ATD.VisibleIndex = 42;
+            this.colONYA_ATD.VisibleIndex = 43;
             this.colONYA_ATD.Width = 80;
             // 
             // colONYA_ATA
@@ -609,7 +611,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "ONYA_ATA", "AVG={0:0.##}")});
             this.colONYA_ATA.ToolTip = "ONYA_ATA";
             this.colONYA_ATA.Visible = true;
-            this.colONYA_ATA.VisibleIndex = 43;
+            this.colONYA_ATA.VisibleIndex = 44;
             this.colONYA_ATA.Width = 80;
             // 
             // colATD_ETD
@@ -621,7 +623,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "ATD_ETD", "AVG={0:0.##}")});
             this.colATD_ETD.ToolTip = "ATD_ETD";
             this.colATD_ETD.Visible = true;
-            this.colATD_ETD.VisibleIndex = 44;
+            this.colATD_ETD.VisibleIndex = 45;
             this.colATD_ETD.Width = 130;
             // 
             // colATA_ETA
@@ -633,7 +635,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "ATA_ETA", "AVG={0:0.##}")});
             this.colATA_ETA.ToolTip = "ATA_ETA";
             this.colATA_ETA.Visible = true;
-            this.colATA_ETA.VisibleIndex = 45;
+            this.colATA_ETA.VisibleIndex = 46;
             this.colATA_ETA.Width = 112;
             // 
             // colACD
@@ -641,7 +643,7 @@
             this.colACD.FieldName = "ACD";
             this.colACD.Name = "colACD";
             this.colACD.Visible = true;
-            this.colACD.VisibleIndex = 29;
+            this.colACD.VisibleIndex = 30;
             // 
             // colAOC
             // 
@@ -650,7 +652,7 @@
             this.colAOC.FieldName = "AOC";
             this.colAOC.Name = "colAOC";
             this.colAOC.Visible = true;
-            this.colAOC.VisibleIndex = 30;
+            this.colAOC.VisibleIndex = 31;
             // 
             // colCOD
             // 
@@ -659,7 +661,7 @@
             this.colCOD.FieldName = "COD";
             this.colCOD.Name = "colCOD";
             this.colCOD.Visible = true;
-            this.colCOD.VisibleIndex = 31;
+            this.colCOD.VisibleIndex = 32;
             // 
             // colLCD
             // 
@@ -668,56 +670,56 @@
             this.colLCD.FieldName = "LCD";
             this.colLCD.Name = "colLCD";
             this.colLCD.Visible = true;
-            this.colLCD.VisibleIndex = 32;
+            this.colLCD.VisibleIndex = 33;
             // 
             // colPAT
             // 
             this.colPAT.FieldName = "PAT";
             this.colPAT.Name = "colPAT";
             this.colPAT.Visible = true;
-            this.colPAT.VisibleIndex = 33;
+            this.colPAT.VisibleIndex = 34;
             // 
             // colROS
             // 
             this.colROS.FieldName = "ROS";
             this.colROS.Name = "colROS";
             this.colROS.Visible = true;
-            this.colROS.VisibleIndex = 34;
+            this.colROS.VisibleIndex = 35;
             // 
             // colRTD
             // 
             this.colRTD.FieldName = "RTD";
             this.colRTD.Name = "colRTD";
             this.colRTD.Visible = true;
-            this.colRTD.VisibleIndex = 35;
+            this.colRTD.VisibleIndex = 36;
             // 
             // colRTR
             // 
             this.colRTR.FieldName = "RTR";
             this.colRTR.Name = "colRTR";
             this.colRTR.Visible = true;
-            this.colRTR.VisibleIndex = 36;
+            this.colRTR.VisibleIndex = 37;
             // 
             // colTPAD2
             // 
             this.colTPAD2.FieldName = "TPAD2";
             this.colTPAD2.Name = "colTPAD2";
             this.colTPAD2.Visible = true;
-            this.colTPAD2.VisibleIndex = 26;
+            this.colTPAD2.VisibleIndex = 27;
             // 
             // colTPDD
             // 
             this.colTPDD.FieldName = "TPDD";
             this.colTPDD.Name = "colTPDD";
             this.colTPDD.Visible = true;
-            this.colTPDD.VisibleIndex = 27;
+            this.colTPDD.VisibleIndex = 28;
             // 
             // colTPDD2
             // 
             this.colTPDD2.FieldName = "TPDD2";
             this.colTPDD2.Name = "colTPDD2";
             this.colTPDD2.Visible = true;
-            this.colTPDD2.VisibleIndex = 28;
+            this.colTPDD2.VisibleIndex = 29;
             // 
             // colATA_ATD
             // 
@@ -728,7 +730,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "ATA_ATD", "AVG={0:0.##}")});
             this.colATA_ATD.ToolTip = "ATA_ATD";
             this.colATA_ATD.Visible = true;
-            this.colATA_ATD.VisibleIndex = 46;
+            this.colATA_ATD.VisibleIndex = 47;
             this.colATA_ATD.Width = 112;
             // 
             // colAWBTYP
@@ -736,14 +738,14 @@
             this.colAWBTYP.FieldName = "AWBTYP";
             this.colAWBTYP.Name = "colAWBTYP";
             this.colAWBTYP.Visible = true;
-            this.colAWBTYP.VisibleIndex = 47;
+            this.colAWBTYP.VisibleIndex = 48;
             // 
             // colMO
             // 
             this.colMO.FieldName = "MO";
             this.colMO.Name = "colMO";
             this.colMO.Visible = true;
-            this.colMO.VisibleIndex = 48;
+            this.colMO.VisibleIndex = 49;
             // 
             // colONY_ATA
             // 
@@ -754,7 +756,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "ONY_ATA", "AVG={0:0.##}")});
             this.colONY_ATA.ToolTip = "ONY_ATA";
             this.colONY_ATA.Visible = true;
-            this.colONY_ATA.VisibleIndex = 49;
+            this.colONY_ATA.VisibleIndex = 50;
             this.colONY_ATA.Width = 112;
             // 
             // colRETA
@@ -762,14 +764,14 @@
             this.colRETA.FieldName = "RETA";
             this.colRETA.Name = "colRETA";
             this.colRETA.Visible = true;
-            this.colRETA.VisibleIndex = 50;
+            this.colRETA.VisibleIndex = 51;
             // 
             // colRETD
             // 
             this.colRETD.FieldName = "RETD";
             this.colRETD.Name = "colRETD";
             this.colRETD.Visible = true;
-            this.colRETD.VisibleIndex = 51;
+            this.colRETD.VisibleIndex = 52;
             // 
             // colTRXMSGID
             // 
@@ -777,7 +779,7 @@
             this.colTRXMSGID.FieldName = "TRXMSGID";
             this.colTRXMSGID.Name = "colTRXMSGID";
             this.colTRXMSGID.Visible = true;
-            this.colTRXMSGID.VisibleIndex = 52;
+            this.colTRXMSGID.VisibleIndex = 53;
             // 
             // colTRXINSTS
             // 
@@ -785,7 +787,7 @@
             this.colTRXINSTS.FieldName = "TRXINSTS";
             this.colTRXINSTS.Name = "colTRXINSTS";
             this.colTRXINSTS.Visible = true;
-            this.colTRXINSTS.VisibleIndex = 53;
+            this.colTRXINSTS.VisibleIndex = 54;
             // 
             // colTRXUSR
             // 
@@ -793,14 +795,14 @@
             this.colTRXUSR.FieldName = "TRXUSR";
             this.colTRXUSR.Name = "colTRXUSR";
             this.colTRXUSR.Visible = true;
-            this.colTRXUSR.VisibleIndex = 54;
+            this.colTRXUSR.VisibleIndex = 55;
             // 
             // colYT
             // 
             this.colYT.FieldName = "YT";
             this.colYT.Name = "colYT";
             this.colYT.Visible = true;
-            this.colYT.VisibleIndex = 55;
+            this.colYT.VisibleIndex = 56;
             // 
             // colYT_ETD
             // 
@@ -811,7 +813,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "YT_ETD", "AVG={0:0.##}")});
             this.colYT_ETD.ToolTip = "YT_ETD";
             this.colYT_ETD.Visible = true;
-            this.colYT_ETD.VisibleIndex = 56;
+            this.colYT_ETD.VisibleIndex = 57;
             this.colYT_ETD.Width = 90;
             // 
             // colYTUSR
@@ -819,21 +821,21 @@
             this.colYTUSR.FieldName = "YTUSR";
             this.colYTUSR.Name = "colYTUSR";
             this.colYTUSR.Visible = true;
-            this.colYTUSR.VisibleIndex = 57;
+            this.colYTUSR.VisibleIndex = 58;
             // 
             // colOCD
             // 
             this.colOCD.FieldName = "OCD";
             this.colOCD.Name = "colOCD";
             this.colOCD.Visible = true;
-            this.colOCD.VisibleIndex = 58;
+            this.colOCD.VisibleIndex = 59;
             // 
             // colPOD
             // 
             this.colPOD.FieldName = "POD";
             this.colPOD.Name = "colPOD";
             this.colPOD.Visible = true;
-            this.colPOD.VisibleIndex = 59;
+            this.colPOD.VisibleIndex = 60;
             // 
             // colONYA_POD
             // 
@@ -841,14 +843,14 @@
             this.colONYA_POD.FieldName = "ONYA_POD";
             this.colONYA_POD.Name = "colONYA_POD";
             this.colONYA_POD.Visible = true;
-            this.colONYA_POD.VisibleIndex = 60;
+            this.colONYA_POD.VisibleIndex = 61;
             // 
             // colOCD_ATD
             // 
             this.colOCD_ATD.FieldName = "OCD_ATD";
             this.colOCD_ATD.Name = "colOCD_ATD";
             this.colOCD_ATD.Visible = true;
-            this.colOCD_ATD.VisibleIndex = 61;
+            this.colOCD_ATD.VisibleIndex = 62;
             // 
             // colKARNENO
             // 
@@ -856,7 +858,7 @@
             this.colKARNENO.FieldName = "KARNENO";
             this.colKARNENO.Name = "colKARNENO";
             this.colKARNENO.Visible = true;
-            this.colKARNENO.VisibleIndex = 62;
+            this.colKARNENO.VisibleIndex = 63;
             // 
             // colAMHRD
             // 
@@ -864,7 +866,7 @@
             this.colAMHRD.FieldName = "AMHRD";
             this.colAMHRD.Name = "colAMHRD";
             this.colAMHRD.Visible = true;
-            this.colAMHRD.VisibleIndex = 63;
+            this.colAMHRD.VisibleIndex = 64;
             // 
             // colAMHRUSR
             // 
@@ -872,7 +874,7 @@
             this.colAMHRUSR.FieldName = "AMHRUSR";
             this.colAMHRUSR.Name = "colAMHRUSR";
             this.colAMHRUSR.Visible = true;
-            this.colAMHRUSR.VisibleIndex = 64;
+            this.colAMHRUSR.VisibleIndex = 65;
             // 
             // colATD_AMHRD
             // 
@@ -881,7 +883,7 @@
             this.colATD_AMHRD.Name = "colATD_AMHRD";
             this.colATD_AMHRD.ToolTip = "ATD-aMhrD";
             this.colATD_AMHRD.Visible = true;
-            this.colATD_AMHRD.VisibleIndex = 65;
+            this.colATD_AMHRD.VisibleIndex = 66;
             // 
             // colAT1D
             // 
@@ -889,7 +891,7 @@
             this.colAT1D.FieldName = "AT1D";
             this.colAT1D.Name = "colAT1D";
             this.colAT1D.Visible = true;
-            this.colAT1D.VisibleIndex = 66;
+            this.colAT1D.VisibleIndex = 67;
             // 
             // colAT1USR
             // 
@@ -897,7 +899,7 @@
             this.colAT1USR.FieldName = "AT1USR";
             this.colAT1USR.Name = "colAT1USR";
             this.colAT1USR.Visible = true;
-            this.colAT1USR.VisibleIndex = 67;
+            this.colAT1USR.VisibleIndex = 68;
             // 
             // colATD_AT1D
             // 
@@ -906,7 +908,7 @@
             this.colATD_AT1D.Name = "colATD_AT1D";
             this.colATD_AT1D.ToolTip = "ATD-aT1D";
             this.colATD_AT1D.Visible = true;
-            this.colATD_AT1D.VisibleIndex = 68;
+            this.colATD_AT1D.VisibleIndex = 69;
             // 
             // colETD_RTMAD
             // 
@@ -914,7 +916,7 @@
             this.colETD_RTMAD.FieldName = "ETD_RTMAD";
             this.colETD_RTMAD.Name = "colETD_RTMAD";
             this.colETD_RTMAD.Visible = true;
-            this.colETD_RTMAD.VisibleIndex = 69;
+            this.colETD_RTMAD.VisibleIndex = 70;
             // 
             // colRTMAD
             // 
@@ -922,7 +924,7 @@
             this.colRTMAD.FieldName = "RTMAD";
             this.colRTMAD.Name = "colRTMAD";
             this.colRTMAD.Visible = true;
-            this.colRTMAD.VisibleIndex = 70;
+            this.colRTMAD.VisibleIndex = 71;
             // 
             // colRTMAUSR
             // 
@@ -930,7 +932,7 @@
             this.colRTMAUSR.FieldName = "RTMAUSR";
             this.colRTMAUSR.Name = "colRTMAUSR";
             this.colRTMAUSR.Visible = true;
-            this.colRTMAUSR.VisibleIndex = 71;
+            this.colRTMAUSR.VisibleIndex = 72;
             // 
             // colAECSD
             // 
@@ -938,7 +940,7 @@
             this.colAECSD.FieldName = "AECSD";
             this.colAECSD.Name = "colAECSD";
             this.colAECSD.Visible = true;
-            this.colAECSD.VisibleIndex = 72;
+            this.colAECSD.VisibleIndex = 73;
             // 
             // colAECSUSR
             // 
@@ -946,7 +948,7 @@
             this.colAECSUSR.FieldName = "AECSUSR";
             this.colAECSUSR.Name = "colAECSUSR";
             this.colAECSUSR.Visible = true;
-            this.colAECSUSR.VisibleIndex = 73;
+            this.colAECSUSR.VisibleIndex = 74;
             // 
             // colATD_AECSD
             // 
@@ -954,28 +956,28 @@
             this.colATD_AECSD.FieldName = "ATD_AECSD";
             this.colATD_AECSD.Name = "colATD_AECSD";
             this.colATD_AECSD.Visible = true;
-            this.colATD_AECSD.VisibleIndex = 74;
+            this.colATD_AECSD.VisibleIndex = 75;
             // 
             // colPOL
             // 
             this.colPOL.FieldName = "POL";
             this.colPOL.Name = "colPOL";
             this.colPOL.Visible = true;
-            this.colPOL.VisibleIndex = 75;
+            this.colPOL.VisibleIndex = 76;
             // 
             // colPOU
             // 
             this.colPOU.FieldName = "POU";
             this.colPOU.Name = "colPOU";
             this.colPOU.Visible = true;
-            this.colPOU.VisibleIndex = 76;
+            this.colPOU.VisibleIndex = 77;
             // 
             // colACOT
             // 
             this.colACOT.FieldName = "ACOT";
             this.colACOT.Name = "colACOT";
             this.colACOT.Visible = true;
-            this.colACOT.VisibleIndex = 77;
+            this.colACOT.VisibleIndex = 78;
             // 
             // colAMRKAW
             // 
@@ -983,7 +985,7 @@
             this.colAMRKAW.FieldName = "AMRKAW";
             this.colAMRKAW.Name = "colAMRKAW";
             this.colAMRKAW.Visible = true;
-            this.colAMRKAW.VisibleIndex = 78;
+            this.colAMRKAW.VisibleIndex = 79;
             // 
             // colAMRKAWUSR
             // 
@@ -991,7 +993,7 @@
             this.colAMRKAWUSR.FieldName = "AMRKAWUSR";
             this.colAMRKAWUSR.Name = "colAMRKAWUSR";
             this.colAMRKAWUSR.Visible = true;
-            this.colAMRKAWUSR.VisibleIndex = 79;
+            this.colAMRKAWUSR.VisibleIndex = 80;
             // 
             // colOBTNO
             // 
@@ -999,7 +1001,7 @@
             this.colOBTNO.FieldName = "OBTNO";
             this.colOBTNO.Name = "colOBTNO";
             this.colOBTNO.Visible = true;
-            this.colOBTNO.VisibleIndex = 80;
+            this.colOBTNO.VisibleIndex = 81;
             // 
             // colOBTT
             // 
@@ -1007,7 +1009,7 @@
             this.colOBTT.FieldName = "OBTT";
             this.colOBTT.Name = "colOBTT";
             this.colOBTT.Visible = true;
-            this.colOBTT.VisibleIndex = 81;
+            this.colOBTT.VisibleIndex = 82;
             // 
             // colREFNO
             // 
@@ -1015,7 +1017,7 @@
             this.colREFNO.FieldName = "REFNO";
             this.colREFNO.Name = "colREFNO";
             this.colREFNO.Visible = true;
-            this.colREFNO.VisibleIndex = 82;
+            this.colREFNO.VisibleIndex = 83;
             // 
             // colTAGS
             // 
@@ -1023,7 +1025,7 @@
             this.colTAGS.FieldName = "TAGS";
             this.colTAGS.Name = "colTAGS";
             this.colTAGS.Visible = true;
-            this.colTAGS.VisibleIndex = 83;
+            this.colTAGS.VisibleIndex = 84;
             // 
             // colAOC_ATD
             // 
@@ -1031,7 +1033,7 @@
             this.colAOC_ATD.FieldName = "AOC_ATD";
             this.colAOC_ATD.Name = "colAOC_ATD";
             this.colAOC_ATD.Visible = true;
-            this.colAOC_ATD.VisibleIndex = 84;
+            this.colAOC_ATD.VisibleIndex = 85;
             // 
             // colTRXINS_ACOT
             // 
@@ -1039,14 +1041,14 @@
             this.colTRXINS_ACOT.FieldName = "TRXINS_ACOT";
             this.colTRXINS_ACOT.Name = "colTRXINS_ACOT";
             this.colTRXINS_ACOT.Visible = true;
-            this.colTRXINS_ACOT.VisibleIndex = 85;
+            this.colTRXINS_ACOT.VisibleIndex = 86;
             // 
             // colTOL
             // 
             this.colTOL.FieldName = "TOL";
             this.colTOL.Name = "colTOL";
             this.colTOL.Visible = true;
-            this.colTOL.VisibleIndex = 86;
+            this.colTOL.VisibleIndex = 87;
             // 
             // colSHN
             // 
@@ -1055,21 +1057,21 @@
             this.colSHN.Name = "colSHN";
             this.colSHN.ToolTip = "StatuHistoryN";
             this.colSHN.Visible = true;
-            this.colSHN.VisibleIndex = 87;
+            this.colSHN.VisibleIndex = 88;
             // 
             // colPOT
             // 
             this.colPOT.FieldName = "POT";
             this.colPOT.Name = "colPOT";
             this.colPOT.Visible = true;
-            this.colPOT.VisibleIndex = 88;
+            this.colPOT.VisibleIndex = 89;
             // 
             // colDTM
             // 
             this.colDTM.FieldName = "DTM";
             this.colDTM.Name = "colDTM";
             this.colDTM.Visible = true;
-            this.colDTM.VisibleIndex = 89;
+            this.colDTM.VisibleIndex = 90;
             // 
             // colHVM3
             // 
@@ -1077,48 +1079,56 @@
             this.colHVM3.FieldName = "HVM3";
             this.colHVM3.Name = "colHVM3";
             this.colHVM3.Visible = true;
-            this.colHVM3.VisibleIndex = 90;
+            this.colHVM3.VisibleIndex = 91;
             // 
             // colTOC
             // 
             this.colTOC.FieldName = "TOC";
             this.colTOC.Name = "colTOC";
             this.colTOC.Visible = true;
-            this.colTOC.VisibleIndex = 91;
+            this.colTOC.VisibleIndex = 92;
             // 
             // colAOH
             // 
             this.colAOH.FieldName = "AOH";
             this.colAOH.Name = "colAOH";
             this.colAOH.Visible = true;
-            this.colAOH.VisibleIndex = 92;
+            this.colAOH.VisibleIndex = 93;
             // 
             // colCNTNOS
             // 
             this.colCNTNOS.FieldName = "CNTNOS";
             this.colCNTNOS.Name = "colCNTNOS";
             this.colCNTNOS.Visible = true;
-            this.colCNTNOS.VisibleIndex = 93;
+            this.colCNTNOS.VisibleIndex = 94;
             // 
             // colINF
             // 
             this.colINF.FieldName = "INF";
             this.colINF.Name = "colINF";
             this.colINF.Visible = true;
-            this.colINF.VisibleIndex = 94;
+            this.colINF.VisibleIndex = 95;
             // 
             // colROH
             // 
             this.colROH.FieldName = "ROH";
             this.colROH.Name = "colROH";
             this.colROH.Visible = true;
-            this.colROH.VisibleIndex = 95;
+            this.colROH.VisibleIndex = 96;
+            // 
+            // colACC
+            // 
+            this.colACC.Caption = "Acc";
+            this.colACC.FieldName = "ACC";
+            this.colACC.Name = "colACC";
+            this.colACC.Visible = true;
+            this.colACC.VisibleIndex = 15;
             // 
             // kpiMasterXF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 320);
+            this.ClientSize = new System.Drawing.Size(963, 320);
             this.Controls.Add(this.pvtKpiMGridControl);
             this.Name = "kpiMasterXF";
             this.Text = "kpiMasterXF";
@@ -1238,5 +1248,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colCNTNOS;
         private DevExpress.XtraGrid.Columns.GridColumn colINF;
         private DevExpress.XtraGrid.Columns.GridColumn colROH;
+        private DevExpress.XtraGrid.Columns.GridColumn colACC;
     }
 }
