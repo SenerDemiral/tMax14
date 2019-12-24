@@ -280,7 +280,7 @@
             this.muhasebeFisiOlusturToolStripMenuItem,
             this.exportToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(190, 76);
+            this.contextMenuStrip.Size = new System.Drawing.Size(190, 98);
             // 
             // downloadToolStripMenuItem
             // 

@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>tMax14</RootNamespace>
     <AssemblyName>tMax14</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
@@ -27,8 +27,8 @@
     <ProductName>tMax14</ProductName>
     <PublisherName>Şener DEMİRAL</PublisherName>
     <SuiteName>tMax14</SuiteName>
-    <MinimumRequiredVersion>1.6.0.272</MinimumRequiredVersion>
-    <ApplicationRevision>273</ApplicationRevision>
+    <MinimumRequiredVersion>1.6.0.508</MinimumRequiredVersion>
+    <ApplicationRevision>509</ApplicationRevision>
     <ApplicationVersion>1.6.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -104,105 +104,112 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="DevExpress.BonusSkins.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.BonusSkins.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Data.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v15.1.UI, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.DataAccess.v16.1.UI, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Images.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Map.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Diagram.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Pdf.v16.1.Drawing, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Pdf.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Docs.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Docs.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Snap.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Snap.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Snap.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Snap.v15.1.Extensions, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Snap.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Spreadsheet.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Snap.v16.1.Extensions, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v15.1.UI, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Web.ASPxThemes.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v15.1.Wizard, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+    <Reference Include="DevExpress.XtraCharts.v16.1.Extensions, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.UI, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.XtraCharts.v16.1.Web, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraMap.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPivotGrid.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.XtraDiagram.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v15.1.Extensions, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraSpreadsheet.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.XtraRichEdit.v16.1.Extensions, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="DevExpress.XtraSpreadsheet.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraWizard.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="Excel">
-      <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net20\Excel.dll</HintPath>
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files (x86)\FirebirdClient\Client4.5\net40\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    <Reference Include="DevExpress.XtraWizard.v16.1, Version=16.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ExcelDataReader, Version=3.0.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.0.0-develop00019\lib\net45\ExcelDataReader.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=5.12.1.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.5.12.1\lib\net452\FirebirdSql.Data.FirebirdClient.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -211,8 +218,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
@@ -225,7 +234,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="UIAutomationClient" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountAk\AccountAkDataSet.Designer.cs">
@@ -316,6 +324,12 @@
     <Compile Include="AccountRpr\AccAvddxPvtXF.Designer.cs">
       <DependentUpon>AccAvddxPvtXF.cs</DependentUpon>
     </Compile>
+    <Compile Include="AccountRpr\AccAvdHspTopXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccAvdHspTopXF.Designer.cs">
+      <DependentUpon>AccAvdHspTopXF.cs</DependentUpon>
+    </Compile>
     <Compile Include="AccountRpr\AccKdvAlsXF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,9 +360,11 @@
     <Compile Include="AccountRpr\AccMarkenFtrXF.Designer.cs">
       <DependentUpon>AccMarkenFtrXF.cs</DependentUpon>
     </Compile>
-    <Compile Include="AccountRpr\AccountRprDataSet.cs">
-      <DependentUpon>AccountRprDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="AccountRpr\AccOdmPerformansXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRpr\AccOdmPerformansXF.Designer.cs">
+      <DependentUpon>AccOdmPerformansXF.cs</DependentUpon>
     </Compile>
     <Compile Include="AccountRpr\AccountRprDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -405,12 +421,29 @@
     </Compile>
     <Compile Include="Account\AccountDataSet.cs">
       <DependentUpon>AccountDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Account\AccountDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AfdFytUpdXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\AfdFytUpdXF.Designer.cs">
+      <DependentUpon>AfdFytUpdXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\CbbXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\CbbXF.Designer.cs">
+      <DependentUpon>CbbXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\CbdXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\CbdXF.Designer.cs">
+      <DependentUpon>CbdXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Account\CekXF.cs">
       <SubType>Form</SubType>
@@ -454,6 +487,12 @@
     <Compile Include="Account\FaturaKapaXF.Designer.cs">
       <DependentUpon>FaturaKapaXF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Account\FaturaKurFarkiInsXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FaturaKurFarkiInsXF.Designer.cs">
+      <DependentUpon>FaturaKurFarkiInsXF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Account\FaturaLink2XF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -477,6 +516,12 @@
     </Compile>
     <Compile Include="Account\FirmaDvzBkyXF.Designer.cs">
       <DependentUpon>FirmaDvzBkyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\FisDetayHareketXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\FisDetayHareketXF.Designer.cs">
+      <DependentUpon>FisDetayHareketXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Account\FisDetayHistoryXF.cs">
       <SubType>UserControl</SubType>
@@ -591,6 +636,12 @@
     <Compile Include="Firma\AnlasmaOdemeXR.Designer.cs">
       <DependentUpon>AnlasmaOdemeXR.cs</DependentUpon>
     </Compile>
+    <Compile Include="Firma\fafXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Firma\fafXF.Designer.cs">
+      <DependentUpon>fafXF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Firma\FirmaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -658,7 +709,6 @@
     </Compile>
     <Compile Include="Genel\GenelDataSet.cs">
       <DependentUpon>GenelDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Genel\GenelDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -670,6 +720,12 @@
     </Compile>
     <Compile Include="Genel\kkesXF.Designer.cs">
       <DependentUpon>kkesXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\KpiSetXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\KpiSetXF.Designer.cs">
+      <DependentUpon>KpiSetXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Genel\locForm.cs">
       <SubType>Form</SubType>
@@ -688,6 +744,18 @@
     </Compile>
     <Compile Include="Genel\newTagXF.Designer.cs">
       <DependentUpon>newTagXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\OnaylaTopluMhsbXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\OnaylaTopluMhsbXF.Designer.cs">
+      <DependentUpon>OnaylaTopluMhsbXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\OnaylaTopluOpsXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\OnaylaTopluOpsXF.Designer.cs">
+      <DependentUpon>OnaylaTopluOpsXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Genel\onayXF.cs">
       <SubType>Form</SubType>
@@ -725,11 +793,23 @@
     <Compile Include="Genel\rptXUC.Designer.cs">
       <DependentUpon>rptXUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Genel\TarihKilitleXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\TarihKilitleXF.Designer.cs">
+      <DependentUpon>TarihKilitleXF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Genel\TblTagMdfyXF.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Genel\TblTagMdfyXF.Designer.cs">
       <DependentUpon>TblTagMdfyXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genel\TrhLockXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genel\TrhLockXF.Designer.cs">
+      <DependentUpon>TrhLockXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Genel\uytXUC.cs">
       <SubType>UserControl</SubType>
@@ -839,7 +919,6 @@
     <Compile Include="MailClass.cs" />
     <Compile Include="MainDataSet.cs">
       <DependentUpon>MainDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="MainDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -910,6 +989,24 @@
     <Compile Include="Ops\MarkenSiteListXF.Designer.cs">
       <DependentUpon>MarkenSiteListXF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ops\obsdEkleXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\obsdEkleXF.Designer.cs">
+      <DependentUpon>obsdEkleXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\obsdXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\obsdXF.Designer.cs">
+      <DependentUpon>obsdXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\obsXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\obsXF.Designer.cs">
+      <DependentUpon>obsXF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ops\opContainerLoadingXF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -951,6 +1048,12 @@
     </Compile>
     <Compile Include="Ops\opHouseXUC.Designer.cs">
       <DependentUpon>opHouseXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\opmAccOnyTopluXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\opmAccOnyTopluXF.Designer.cs">
+      <DependentUpon>opmAccOnyTopluXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Ops\opMasterEditXF.cs">
       <SubType>Form</SubType>
@@ -994,14 +1097,16 @@
     <Compile Include="Ops\opPackageTypeXF.Designer.cs">
       <DependentUpon>opPackageTypeXF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ops\OpsDataSet.cs">
-      <DependentUpon>OpsDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Ops\OpsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OpsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\ProjeFaliyetXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\ProjeFaliyetXF.Designer.cs">
+      <DependentUpon>ProjeFaliyetXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Ops\ProjeSablonEditXF.cs">
       <SubType>Form</SubType>
@@ -1020,6 +1125,12 @@
     </Compile>
     <Compile Include="Ops\ProjeXUC.Designer.cs">
       <DependentUpon>ProjeXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ops\TstSecXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ops\TstSecXF.Designer.cs">
+      <DependentUpon>TstSecXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Order\ophoXF.cs">
       <SubType>Form</SubType>
@@ -1046,6 +1157,18 @@
     <Compile Include="Pvt\afdPvtXF.Designer.cs">
       <DependentUpon>afdPvtXF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pvt\GlobalAlertXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\GlobalAlertXF.Designer.cs">
+      <DependentUpon>GlobalAlertXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\kpiHouseTransitTimeXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\kpiHouseTransitTimeXF.Designer.cs">
+      <DependentUpon>kpiHouseTransitTimeXF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pvt\kpiHouseXF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1057,6 +1180,12 @@
     </Compile>
     <Compile Include="Pvt\kpiMasterXF.Designer.cs">
       <DependentUpon>kpiMasterXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\KpiSetRprXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\KpiSetRprXF.Designer.cs">
+      <DependentUpon>KpiSetRprXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Pvt\opcChargesXF.cs">
       <SubType>Form</SubType>
@@ -1070,11 +1199,22 @@
     <Compile Include="Pvt\opccPvtXF.Designer.cs">
       <DependentUpon>opccPvtXF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pvt\OphPgExcelXF.cs">
+    <Compile Include="Pvt\PvtDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PvtDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\RprEcsExcelXF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pvt\OphPgExcelXF.Designer.cs">
-      <DependentUpon>OphPgExcelXF.cs</DependentUpon>
+    <Compile Include="Pvt\RprEcsExcelXF.Designer.cs">
+      <DependentUpon>RprEcsExcelXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\RprPgExcelXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\RprPgExcelXF.Designer.cs">
+      <DependentUpon>RprPgExcelXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Pvt\OphPgXF.cs">
       <SubType>Form</SubType>
@@ -1124,11 +1264,6 @@
     <Compile Include="Pvt\Pivot3XF.Designer.cs">
       <DependentUpon>Pivot3XF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pvt\PvtDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PvtDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Pvt\PvtNetworkXF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1146,6 +1281,12 @@
     </Compile>
     <Compile Include="Pvt\rprCMgridFX.Designer.cs">
       <DependentUpon>rprCMgridFX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pvt\RprPdpExcelXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pvt\RprPdpExcelXF.Designer.cs">
+      <DependentUpon>RprPdpExcelXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Pvt\salesRepOpsXF.cs">
       <SubType>Form</SubType>
@@ -1214,7 +1355,6 @@
     </Compile>
     <Compile Include="Qry\QryDataSet.cs">
       <DependentUpon>QryDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Qry\qryPrmsForm.cs">
       <SubType>Form</SubType>
@@ -1270,6 +1410,11 @@
     <Compile Include="Qry\qsvTstXUC.Designer.cs">
       <DependentUpon>qsvTstXUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Teklif\TeklifAlisFiyatRprXF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1290,7 +1435,6 @@
     </Compile>
     <Compile Include="Teklif\TeklifDataSet.cs">
       <DependentUpon>TeklifDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Teklif\TeklifDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1326,6 +1470,18 @@
     </Compile>
     <Compile Include="Teklif\TeklifSatisXF.Designer.cs">
       <DependentUpon>TeklifSatisXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TenderTakipXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TenderTakipXF.Designer.cs">
+      <DependentUpon>TenderTakipXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teklif\TstBosXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teklif\TstBosXF.Designer.cs">
+      <DependentUpon>TstBosXF.cs</DependentUpon>
     </Compile>
     <Compile Include="Traxon\TraxonDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1367,6 +1523,12 @@
     <Compile Include="Users\usmPivot.Designer.cs">
       <DependentUpon>usmPivot.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\uspXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\uspXF.Designer.cs">
+      <DependentUpon>uspXF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\ustForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1378,6 +1540,18 @@
     </Compile>
     <Compile Include="Users\ustInfoForm.Designer.cs">
       <DependentUpon>ustInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ustXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ustXF.Designer.cs">
+      <DependentUpon>ustXF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\uyiXF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\uyiXF.Designer.cs">
+      <DependentUpon>uyiXF.cs</DependentUpon>
     </Compile>
     <Compile Include="WAN\matalanOrderXF.cs">
       <SubType>Form</SubType>
@@ -1435,6 +1609,9 @@
     <EmbeddedResource Include="AccountRpr\AccAvddxPvtXF.resx">
       <DependentUpon>AccAvddxPvtXF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccAvdHspTopXF.resx">
+      <DependentUpon>AccAvdHspTopXF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AccountRpr\AccKdvAlsXF.resx">
       <DependentUpon>AccKdvAlsXF.cs</DependentUpon>
     </EmbeddedResource>
@@ -1449,6 +1626,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountRpr\AccMarkenFtrXF.resx">
       <DependentUpon>AccMarkenFtrXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRpr\AccOdmPerformansXF.resx">
+      <DependentUpon>AccOdmPerformansXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountRpr\AvdHstXF.resx">
       <DependentUpon>AvdHstXF.cs</DependentUpon>
@@ -1473,6 +1653,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Account\AccMusteriBkyXF.resx">
       <DependentUpon>AccMusteriBkyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\AfdFytUpdXF.resx">
+      <DependentUpon>AfdFytUpdXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\CbbXF.resx">
+      <DependentUpon>CbbXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\CbdXF.resx">
+      <DependentUpon>CbdXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Account\CekXF.resx">
       <DependentUpon>CekXF.cs</DependentUpon>
@@ -1499,6 +1688,9 @@
     <EmbeddedResource Include="Account\FaturaKapaXF.resx">
       <DependentUpon>FaturaKapaXF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Account\FaturaKurFarkiInsXF.resx">
+      <DependentUpon>FaturaKurFarkiInsXF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Account\FaturaLink2XF.resx">
       <DependentUpon>FaturaLink2XF.cs</DependentUpon>
     </EmbeddedResource>
@@ -1511,6 +1703,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Account\FirmaDvzBkyXF.resx">
       <DependentUpon>FirmaDvzBkyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\FisDetayHareketXF.resx">
+      <DependentUpon>FisDetayHareketXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Account\FisDetayHistoryXF.resx">
       <DependentUpon>FisDetayHistoryXF.cs</DependentUpon>
@@ -1566,6 +1761,9 @@
     <EmbeddedResource Include="Firma\AnlasmaOdemeXR.resx">
       <DependentUpon>AnlasmaOdemeXR.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Firma\fafXF.resx">
+      <DependentUpon>fafXF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Firma\frcaXF.resx">
       <DependentUpon>frcaXF.cs</DependentUpon>
     </EmbeddedResource>
@@ -1599,6 +1797,9 @@
     <EmbeddedResource Include="Genel\kkesXF.resx">
       <DependentUpon>kkesXF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Genel\KpiSetXF.resx">
+      <DependentUpon>KpiSetXF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Genel\locForm.resx">
       <DependentUpon>locForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1608,6 +1809,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Genel\newTagXF.resx">
       <DependentUpon>newTagXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\OnaylaTopluMhsbXF.resx">
+      <DependentUpon>OnaylaTopluMhsbXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\OnaylaTopluOpsXF.resx">
+      <DependentUpon>OnaylaTopluOpsXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Genel\onayXF.resx">
       <DependentUpon>onayXF.cs</DependentUpon>
@@ -1629,6 +1836,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Genel\TblTagMdfyXF.resx">
       <DependentUpon>TblTagMdfyXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genel\TrhLockXF.resx">
+      <DependentUpon>TrhLockXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Genel\uytXUC.resx">
       <DependentUpon>uytXUC.cs</DependentUpon>
@@ -1703,6 +1913,15 @@
     <EmbeddedResource Include="Ops\MarkenSiteListXF.resx">
       <DependentUpon>MarkenSiteListXF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ops\obsdEkleXF.resx">
+      <DependentUpon>obsdEkleXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\obsdXF.resx">
+      <DependentUpon>obsdXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\obsXF.resx">
+      <DependentUpon>obsXF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ops\opContainerLoadingXF.resx">
       <DependentUpon>opContainerLoadingXF.cs</DependentUpon>
     </EmbeddedResource>
@@ -1726,6 +1945,9 @@
     <EmbeddedResource Include="Ops\opHouseXUC.resx">
       <DependentUpon>opHouseXUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ops\opmAccOnyTopluXF.resx">
+      <DependentUpon>opmAccOnyTopluXF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ops\opMasterEditXF.resx">
       <DependentUpon>opMasterEditXF.cs</DependentUpon>
     </EmbeddedResource>
@@ -1748,6 +1970,9 @@
     <EmbeddedResource Include="Ops\opPackageTypeXF.resx">
       <DependentUpon>opPackageTypeXF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ops\ProjeFaliyetXF.resx">
+      <DependentUpon>ProjeFaliyetXF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ops\ProjeSablonEditXF.resx">
       <DependentUpon>ProjeSablonEditXF.cs</DependentUpon>
     </EmbeddedResource>
@@ -1756,6 +1981,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ops\ProjeXUC.resx">
       <DependentUpon>ProjeXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ops\TstSecXF.resx">
+      <DependentUpon>TstSecXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Order\ophoXF.resx">
       <DependentUpon>ophoXF.cs</DependentUpon>
@@ -1777,11 +2005,20 @@
     <EmbeddedResource Include="Pvt\afdPvtXF.resx">
       <DependentUpon>afdPvtXF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\GlobalAlertXF.resx">
+      <DependentUpon>GlobalAlertXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\kpiHouseTransitTimeXF.resx">
+      <DependentUpon>kpiHouseTransitTimeXF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pvt\kpiHouseXF.resx">
       <DependentUpon>kpiHouseXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pvt\kpiMasterXF.resx">
       <DependentUpon>kpiMasterXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\KpiSetRprXF.resx">
+      <DependentUpon>KpiSetRprXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pvt\opcChargesXF.resx">
       <DependentUpon>opcChargesXF.cs</DependentUpon>
@@ -1789,8 +2026,11 @@
     <EmbeddedResource Include="Pvt\opccPvtXF.resx">
       <DependentUpon>opccPvtXF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pvt\OphPgExcelXF.resx">
-      <DependentUpon>OphPgExcelXF.cs</DependentUpon>
+    <EmbeddedResource Include="Pvt\RprEcsExcelXF.resx">
+      <DependentUpon>RprEcsExcelXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\RprPgExcelXF.resx">
+      <DependentUpon>RprPgExcelXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pvt\OphPgXF.resx">
       <DependentUpon>OphPgXF.cs</DependentUpon>
@@ -1821,6 +2061,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pvt\rprCMgridFX.resx">
       <DependentUpon>rprCMgridFX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pvt\RprPdpExcelXF.resx">
+      <DependentUpon>RprPdpExcelXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pvt\salesRepOpsXF.resx">
       <DependentUpon>salesRepOpsXF.cs</DependentUpon>
@@ -1904,6 +2147,12 @@
     <EmbeddedResource Include="Teklif\TeklifSatisXF.resx">
       <DependentUpon>TeklifSatisXF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TenderTakipXF.resx">
+      <DependentUpon>TenderTakipXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teklif\TstBosXF.resx">
+      <DependentUpon>TstBosXF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Traxon\Trx2XF.resx">
       <DependentUpon>Trx2XF.cs</DependentUpon>
     </EmbeddedResource>
@@ -1919,11 +2168,20 @@
     <EmbeddedResource Include="Users\usmPivot.resx">
       <DependentUpon>usmPivot.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Users\uspXF.resx">
+      <DependentUpon>uspXF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Users\ustForm.resx">
       <DependentUpon>ustForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\ustInfoForm.resx">
       <DependentUpon>ustInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ustXF.resx">
+      <DependentUpon>ustXF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\uyiXF.resx">
+      <DependentUpon>uyiXF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WAN\matalanOrderXF.resx">
       <DependentUpon>matalanOrderXF.cs</DependentUpon>
@@ -2129,6 +2387,13 @@
     <None Include="Qry\QryDataSet.xss">
       <DependentUpon>QryDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Service References\ServiceReference1\FirmAccountActivitySoap.wsdl" />
+    <None Include="Service References\ServiceReference1\tMax14.ServiceReference1.FirmAccountActivityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\tMax14.ServiceReference1.FirmAccountActivityResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Teklif\TeklifDataSet.xsc">
       <DependentUpon>TeklifDataSet.xsd</DependentUpon>
     </None>
@@ -2182,9 +2447,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -2197,459 +2462,19 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 4.5</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Cari\" />
   </ItemGroup>
-  <ItemGroup>
-    <PublishFile Include="DevExpress.BonusSkins.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Charts.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.CodeParser.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Data.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.DataAccess.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.DataAccess.v15.1.UI">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Docs.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Images.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Map.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Office.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Pdf.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Pdf.v15.1.Drawing">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.PivotGrid.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Printing.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.RichEdit.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Snap.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Snap.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Snap.v15.1.Extensions">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Sparkline.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Spreadsheet.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Utils.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Utils.v15.1.UI">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.Xpo.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraBars.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraCharts.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraCharts.v15.1.Extensions">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraCharts.v15.1.UI">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraCharts.v15.1.Wizard">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraEditors.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraGauges.v15.1.Core">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraGrid.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraLayout.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraMap.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraNavBar.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraPivotGrid.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraPrinting.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraReports.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraReports.v15.1.Extensions">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraRichEdit.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraRichEdit.v15.1.Extensions">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraTreeList.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraVerticalGrid.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="DevExpress.XtraWizard.v15.1">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="FirebirdSql.Data.FirebirdClient">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="animals-doves_of_peace.ico" />
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <None Include="Resources\BrcIcon.ico" />
     <None Include="Resources\BrcIcon.bmp" />
     <None Include="Resources\BarIcon.ico" />
@@ -2663,6 +2488,12 @@
       <Project>{13d4de43-a926-4c29-9410-02221735767a}</Project>
       <Name>tMax14ReportClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
